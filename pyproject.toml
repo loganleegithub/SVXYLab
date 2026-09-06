@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "svxylab"
+version = "0.0.1"
+description = "SVXYLab P0 local environment and arithmetic checks"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+markers = ["synthetic: 合成测试夹具；仅检查算术，不是真实行情或回测"]

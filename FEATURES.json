@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "definition_status": "DESIGN_NOT_EMPIRICALLY_VALIDATED",
+  "core_count": 19,
+  "extension_count": 2,
+  "notation": {
+    "t": "特征对应的美国股票交易日；不等于实际下载日期",
+    "t-k": "向前 k 个股票交易日，必须按同一 session 索引",
+    "F1_F2_F3": "t 收盘时尚未到期的前三个标准月度 VX 合约结算价；不是周合约，也不是连续合约拼接价",
+    "tau": "真实到期日期减 t 的日历天数；按官方合约日历确定",
+    "TR": "按已核验分红/拆分构建的总回报财富序列，仅用于回报与无量纲路径特征",
+    "r": "ln(TR_t/TR_t-1)；波动单位为小数，VIX 点数先除以 100",
+    "source_ids": "来源编号见 SOURCES.md；P01/P02 指附件"
+  },
+  "features": [
+    {
+      "id": "A01",
+      "family": "A_真实期货曲线",
+      "name_zh": "近远月斜率",
+      "tier": "core",
+      "formula": "30*ln(F2/F1)/(tau2-tau1)",
+      "inputs": [
+        "F1",
+        "F2",
+        "tau1",
+        "tau2"
+      ],
+      "economic_question": "近端期货风险定价结构，而非保证的展期收益。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S02",
+        "S04",
+        "S14"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "A02",
+      "family": "A_真实期货曲线",
+      "name_zh": "曲率",
+      "tier": "core",
+      "formula": "30*ln(F3/F2)/(tau3-tau2)-A01",
+      "inputs": [
+        "F1",
+        "F2",
+        "F3",
+        "tau1",
+        "tau2",
+        "tau3"
+      ],
+      "economic_question": "近端与更远端是否出现不同程度的紧张。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S04",
+        "S14"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "A03",
+      "family": "A_真实期货曲线",
+      "name_zh": "近月相对现货基差",
+      "tier": "core",
+      "formula": "ln(F1/VIX)",
+      "inputs": [
+        "F1",
+        "VIX"
+      ],
+      "economic_question": "现货与近月定价差异，配合到期日解释。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S04",
+        "S17"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "A04",
+      "family": "A_真实期货曲线",
+      "name_zh": "同合约五日重定价",
+      "tier": "core",
+      "formula": "ln(F(contract=front_at_t,t)/F(same_contract,t-5))",
+      "inputs": [
+        "VX_contract_daily_settlement"
+      ],
+      "economic_question": "避免把主力换月的价格跳跃当作收益。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S02",
+        "S04"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "A05",
+      "family": "A_真实期货曲线",
+      "name_zh": "近月剩余日历天数",
+      "tier": "core",
+      "formula": "tau1",
+      "inputs": [
+        "VX_actual_expiration_calendar"
+      ],
+      "economic_question": "控制近月敏感度与到期位置；不是预测权重。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S02",
+        "S04"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "B01",
+      "family": "B_隐含波动期限",
+      "name_zh": "VIX 水平",
+      "tier": "core",
+      "formula": "ln(VIX)",
+      "inputs": [
+        "VIX"
+      ],
+      "economic_question": "总体隐含波动定价水平。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S03"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "B02",
+      "family": "B_隐含波动期限",
+      "name_zh": "短端相对一个月",
+      "tier": "core",
+      "formula": "ln(VIX9D/VIX)",
+      "inputs": [
+        "VIX9D",
+        "VIX"
+      ],
+      "economic_question": "短期压力是否比一个月更集中。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S03"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "B03",
+      "family": "B_隐含波动期限",
+      "name_zh": "一个月相对三个月",
+      "tier": "core",
+      "formula": "ln(VIX/VIX3M)",
+      "inputs": [
+        "VIX",
+        "VIX3M"
+      ],
+      "economic_question": "隐含波动曲线形态；不能替代真实 VX 曲线。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S03"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "C01",
+      "family": "C_压力与变化",
+      "name_zh": "VVIX 水平",
+      "tier": "core",
+      "formula": "ln(VVIX)",
+      "inputs": [
+        "VVIX"
+      ],
+      "economic_question": "VIX 波动本身的不确定性定价。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S06"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "C02",
+      "family": "C_压力与变化",
+      "name_zh": "VVIX 五日变化",
+      "tier": "core",
+      "formula": "ln(VVIX_t/VVIX_t-5)",
+      "inputs": [
+        "VVIX"
+      ],
+      "economic_question": "这种不确定性正在增强还是缓解。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S06"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "C03",
+      "family": "C_压力与变化",
+      "name_zh": "VIX 五日变化",
+      "tier": "core",
+      "formula": "ln(VIX_t/VIX_t-5)",
+      "inputs": [
+        "VIX"
+      ],
+      "economic_question": "高位恶化与高位修复分开表达。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S03"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "D01",
+      "family": "D_已发生波动",
+      "name_zh": "SPY 五日收盘波动代理",
+      "tier": "core",
+      "formula": "sqrt(252*mean(r_SPY^2,last=5))",
+      "inputs": [
+        "SPY_total_return"
+      ],
+      "economic_question": "近期价格路径强度。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S15"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "D02",
+      "family": "D_已发生波动",
+      "name_zh": "SPY 二十一日收盘波动代理",
+      "tier": "core",
+      "formula": "sqrt(252*mean(r_SPY^2,last=21))",
+      "inputs": [
+        "SPY_total_return"
+      ],
+      "economic_question": "较慢尺度波动背景。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S15"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "D03",
+      "family": "D_已发生波动",
+      "name_zh": "下跌半方差占比",
+      "tier": "core",
+      "formula": "sum(min(r_SPY,0)^2,last=21)/sum(r_SPY^2,last=21)",
+      "inputs": [
+        "SPY_total_return"
+      ],
+      "economic_question": "波动是否主要由下跌贡献。分母为零置缺失并说明。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S15"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "E01",
+      "family": "E_定价与已实现差",
+      "name_zh": "隐含与历史方差差",
+      "tier": "core",
+      "formula": "(VIX/100)^2-D02^2",
+      "inputs": [
+        "VIX",
+        "SPY_total_return"
+      ],
+      "economic_question": "与近期实现波动相比，当前隐含方差是否昂贵；这是差值代理，不是真实前瞻 VRP。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S15",
+        "S17"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "F01",
+      "family": "F_价格路径与标的",
+      "name_zh": "SPY 五日动量",
+      "tier": "core",
+      "formula": "ln(TR_SPY_t/TR_SPY_t-5)",
+      "inputs": [
+        "SPY_total_return"
+      ],
+      "economic_question": "股票市场是否继续承压。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "F02",
+      "family": "F_价格路径与标的",
+      "name_zh": "SPY 二十一日收盘回撤",
+      "tier": "core",
+      "formula": "TR_SPY_t/max(TR_SPY,last=21)-1",
+      "inputs": [
+        "SPY_total_return"
+      ],
+      "economic_question": "距离近期高点有多远。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "F03",
+      "family": "F_价格路径与标的",
+      "name_zh": "SVXY 五日动量",
+      "tier": "core",
+      "formula": "ln(TR_SVXY_t/TR_SVXY_t-5)",
+      "inputs": [
+        "SVXY_total_return"
+      ],
+      "economic_question": "目标资产自身的修复/恶化状态。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S01"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "F04",
+      "family": "F_价格路径与标的",
+      "name_zh": "SVXY 二十一日收盘波动代理",
+      "tier": "core",
+      "formula": "sqrt(252*mean(r_SVXY^2,last=21))",
+      "inputs": [
+        "SVXY_total_return"
+      ],
+      "economic_question": "目标资产本身承担的风险强度。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "S01"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "G01",
+      "family": "G_尾部与偏斜",
+      "name_zh": "SKEW 水平",
+      "tier": "extension",
+      "formula": "SKEW",
+      "inputs": [
+        "SKEW"
+      ],
+      "economic_question": "股票期权尾部相对定价；不视为物理崩盘概率。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S07"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    },
+    {
+      "id": "G02",
+      "family": "G_尾部与偏斜",
+      "name_zh": "SKEW 五日变化",
+      "tier": "extension",
+      "formula": "SKEW_t-SKEW_t-5",
+      "inputs": [
+        "SKEW"
+      ],
+      "economic_question": "尾部相对定价正在如何变化。",
+      "timing_rule": "仅使用 as_of_session<=t 且在 t+1 预定决策截止前可得的数据；历史发布时间不能验证时标为 ASSUMED_NEXT_SESSION，并做额外延迟敏感性。",
+      "source_ids": [
+        "P01",
+        "S07"
+      ],
+      "evidence_status": "UNTESTED_DESIGN",
+      "independent_information_claim": false
+    }
+  ],
+  "interactions": [
+    {
+      "id": "I01",
+      "features": [
+        "A01",
+        "C02"
+      ],
+      "question": "有利曲线的含义是否会随 VVIX 变化而改变？"
+    },
+    {
+      "id": "I02",
+      "features": [
+        "B01",
+        "C03"
+      ],
+      "question": "同一 VIX 高位，恶化与修复是否不同？"
+    },
+    {
+      "id": "I03",
+      "features": [
+        "B02",
+        "F01"
+      ],
+      "question": "短端紧张与股票实际方向是否共同改变风险？"
+    },
+    {
+      "id": "I04",
+      "features": [
+        "E01",
+        "D03"
+      ],
+      "question": "历史方差差的含义是否取决于下行波动占比？"
+    },
+    {
+      "id": "I05",
+      "features": [
+        "A01",
+        "C01"
+      ],
+      "question": "相同曲线，在不同 VVIX 下是否有不同条件收益？"
+    },
+    {
+      "id": "I06",
+      "features": [
+        "F03",
+        "F04"
+      ],
+      "question": "相同 SVXY 动量，在高/低自身波动环境下是否不同？"
+    }
+  ],
+  "extensions_not_enabled": [
+    "Nations VOLI/SDEX/TDEX：方法版本、许可、连续历史验证后才加入；不得把 RiskDex 自动拼成 SDEX",
+    "Put/Call：先指定 SPX、交易所范围、成交量口径与发布时间；不能混用总市场比率",
+    "GEX：需要历史期权链、当时 Greeks/OI 与方向假设；总 OI 不等于净做市商仓位",
+    "CFE volume/OI：可作数据诊断；核实晚发布时钟后再作为研究特征",
+    "VIX1D、MOVE、信用利差、宏观日历：另轮研究，先解决同历史覆盖与 PIT",
+    "EMA/RSI/ATR/Stochastic/MACD：候选工程变换，不批量展开成独立经济因子",
+    "VX30、Cash VIX Oscillator：附件没有足够公式，不能宣称复刻；自定义版本必须另名"
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "stage": "P0",
+  "generated_at_local": "2026-09-07T01:26:49.588287+08:00",
+  "project_root": "/Users/logan/SVXYLab",
+  "invocation": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab environment --open",
+  "engineering_checks_complete": true,
+  "research_result": "尚未开展",
+  "real_market_data": "尚未取得",
+  "software": {
+    "CPU 架构": "arm64",
+    "Python 进程架构": "arm64",
+    "macOS": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "Python": "3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "项目解释器": "/Users/logan/SVXYLab/.venv/bin/python",
+    "复用的基础 Python": "/Users/logan/.pyenv/versions/3.12.13",
+    "虚拟环境": "/Users/logan/SVXYLab/.venv",
+    "Python TLS": "OpenSSL 3.6.1 27 Jan 2026",
+    "Git": "git version 2.50.1 (Apple Git-155)",
+    "curl": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1",
+    "Git 远端": "无",
+    "Git 提交": "尚未提交；等待 P0 验收"
+  },
+  "packages": {
+    "iniconfig": "2.3.0",
+    "packaging": "26.0",
+    "pip": "25.0.1",
+    "pluggy": "1.6.0",
+    "Pygments": "2.19.2",
+    "pytest": "8.4.2",
+    "setuptools": "84.0.0",
+    "svxylab": "0.0.1"
+  },
+  "network": [
+    {
+      "url": "https://pypi.org/simple/pytest/",
+      "result": "HTTP 200：本次 HEAD 请求成功",
+      "fields": {
+        "http": "200",
+        "dns_seconds": "0.002380",
+        "total_seconds": "0.507413",
+        "ssl_verify": "0",
+        "url": "https://pypi.org/simple/pytest/"
+      },
+      "execution": {
+        "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://pypi.org/simple/pytest/",
+        "started_at": "2026-09-06T17:26:49.783501+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 0.516,
+        "output": "http=200\ndns_seconds=0.002380\ntotal_seconds=0.507413\nssl_verify=0\nurl=https://pypi.org/simple/pytest/\n"
+      }
+    },
+    {
+      "url": "https://files.pythonhosted.org/",
+      "result": "HTTP 200：本次 HEAD 请求成功",
+      "fields": {
+        "http": "200",
+        "dns_seconds": "0.004471",
+        "total_seconds": "0.500040",
+        "ssl_verify": "0",
+        "url": "https://files.pythonhosted.org/"
+      },
+      "execution": {
+        "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://files.pythonhosted.org/",
+        "started_at": "2026-09-06T17:26:50.299932+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 0.521,
+        "output": "http=200\ndns_seconds=0.004471\ntotal_seconds=0.500040\nssl_verify=0\nurl=https://files.pythonhosted.org/\n"
+      }
+    },
+    {
+      "url": "https://www.cboe.com/tradable-products/vix/vix-historical-data/",
+      "result": "HTTP 200：本次 HEAD 请求成功",
+      "fields": {
+        "http": "200",
+        "dns_seconds": "0.003854",
+        "total_seconds": "0.721154",
+        "ssl_verify": "0",
+        "url": "https://www.cboe.com/tradable-products/vix/vix-historical-data/"
+      },
+      "execution": {
+        "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://www.cboe.com/tradable-products/vix/vix-historical-data/",
+        "started_at": "2026-09-06T17:26:50.820895+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 0.741,
+        "output": "http=200\ndns_seconds=0.003854\ntotal_seconds=0.721154\nssl_verify=0\nurl=https://www.cboe.com/tradable-products/vix/vix-historical-data/\n"
+      }
+    },
+    {
+      "url": "https://cdn.cboe.com/",
+      "result": "HTTP 403：已收到服务器响应，端点未返回成功状态",
+      "fields": {
+        "http": "403",
+        "dns_seconds": "0.004758",
+        "total_seconds": "1.250315",
+        "ssl_verify": "0",
+        "url": "https://cdn.cboe.com/"
+      },
+      "execution": {
+        "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://cdn.cboe.com/",
+        "started_at": "2026-09-06T17:26:51.562402+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.272,
+        "output": "http=403\ndns_seconds=0.004758\ntotal_seconds=1.250315\nssl_verify=0\nurl=https://cdn.cboe.com/\n"
+      }
+    }
+  ],
+  "tests": {
+    "total": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "data_files": {
+    "raw": 0,
+    "clean": 0
+  },
+  "config_status": "DESIGN_ONLY",
+  "training_cutoff": null,
+  "predictions": null,
+  "portfolio_ledger": null,
+  "sha256": {
+    "RESEARCH_SPEC.md": "f439b22cefa14366c8ecb1a11c9b09a8cb821ce3f5143f2e9364c3dbd8c6b14c",
+    "FEATURES.json": "410c408e2cb84ad4c2911479174f713256caab7b494ddadd26806d9e3dd356b2",
+    "experiment.toml": "af484d45bfce4550c40114ce8660699802244686494ec353925f401205f24ddd",
+    "pyproject.toml": "cf94ddaffbe4394b30aeca8d7a3eb1a3e4dcb105e2ace686b657588aeb4d4b4b",
+    "requirements-dev.txt": "e0d170dfe140eaca0fd74ce3250800285ae425944389efc06e68e599c5d4f843",
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "ecea594fd4d19723eed4f6aec4aedd3ce73b66594316e1674088365cfa24547c",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/environment.py": "89b7c45dd57ad541a11d958993219a1b9969d8fe116214c14ae0631848fe8869",
+    "tests/conftest.py": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+    "tests/test_arithmetic.py": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09"
+  },
+  "setup_commands": [
+    {
+      "command": "python3 -c 'import importlib.metadata as m, json, platform, ssl, sys, sysconfig; print(json.dumps({'\\''executable'\\'': sys.executable, '\\''version'\\'': sys.version, '\\''machine'\\'': platform.machine(), '\\''platform'\\'': sysconfig.get_platform(), '\\''openssl'\\'': ssl.OPENSSL_VERSION, '\\''dependencies'\\'': {p: m.version(p) for p in ['\\''pip'\\'', '\\''setuptools'\\'', '\\''pytest'\\'', '\\''iniconfig'\\'', '\\''packaging'\\'', '\\''pluggy'\\'', '\\''pygments'\\'']}}, indent=2))'",
+      "started_at": "2026-09-06T17:21:10.673Z",
+      "exit_code": 0,
+      "output": "{\n  \"executable\": \"/Users/logan/.pyenv/versions/3.12.13/bin/python3\",\n  \"version\": \"3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]\",\n  \"machine\": \"arm64\",\n  \"platform\": \"macosx-26.2-arm64\",\n  \"openssl\": \"OpenSSL 3.6.1 27 Jan 2026\",\n  \"dependencies\": {\n    \"pip\": \"25.0.1\",\n    \"setuptools\": \"84.0.0\",\n    \"pytest\": \"8.4.2\",\n    \"iniconfig\": \"2.3.0\",\n    \"packaging\": \"26.0\",\n    \"pluggy\": \"1.6.0\",\n    \"pygments\": \"2.19.2\"\n  }\n}\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --version",
+      "started_at": "2026-09-06T17:21:10.675Z",
+      "exit_code": 0,
+      "output": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1\nRelease-Date: 2024-03-27\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp\nFeatures: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\nremote_ip=%{remote_ip}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url 'https://pypi.org/simple/pytest/'",
+      "started_at": "2026-09-06T17:21:10.675Z",
+      "exit_code": 0,
+      "output": "http=200\nremote_ip=198.18.0.113\ndns_seconds=0.002830\ntotal_seconds=0.762314\nssl_verify=0\nurl=https://pypi.org/simple/pytest/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\nremote_ip=%{remote_ip}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url 'https://files.pythonhosted.org/'",
+      "started_at": "2026-09-06T17:21:10.675Z",
+      "exit_code": 0,
+      "output": "http=200\nremote_ip=198.18.0.112\ndns_seconds=0.002350\ntotal_seconds=0.472748\nssl_verify=0\nurl=https://files.pythonhosted.org/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\nremote_ip=%{remote_ip}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url 'https://www.cboe.com/tradable-products/vix/vix-historical-data/'",
+      "started_at": "2026-09-06T17:21:10.675Z",
+      "exit_code": 0,
+      "output": "http=200\nremote_ip=198.18.0.80\ndns_seconds=0.002574\ntotal_seconds=2.612071\nssl_verify=0\nurl=https://www.cboe.com/tradable-products/vix/vix-historical-data/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\nremote_ip=%{remote_ip}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url 'https://cdn.cboe.com/'",
+      "started_at": "2026-09-06T17:21:10.675Z",
+      "exit_code": 0,
+      "output": "http=403\nremote_ip=198.18.0.52\ndns_seconds=0.002698\ntotal_seconds=1.292924\nssl_verify=0\nurl=https://cdn.cboe.com/\n"
+    },
+    {
+      "command": "/Users/logan/.pyenv/versions/3.12.13/bin/python3 -m venv .venv",
+      "started_at": "2026-09-06T17:21:41.013Z",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "git init --initial-branch=main",
+      "started_at": "2026-09-06T17:23:12.223Z",
+      "exit_code": 0,
+      "output": "Initialized empty Git repository in /Users/logan/SVXYLab/.git/\n"
+    },
+    {
+      "command": ".venv/bin/python -m pip --isolated --disable-pip-version-check install --no-cache-dir --retries 1 --timeout 15 --index-url https://pypi.org/simple/ -r requirements-dev.txt",
+      "started_at": "2026-09-06T17:23:26.370Z",
+      "exit_code": 0,
+      "output": "Looking in indexes: https://pypi.org/simple/\nCollecting setuptools==84.0.0 (from -r requirements-dev.txt (line 2))\n  Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)\nCollecting pytest==8.4.2 (from -r requirements-dev.txt (line 3))\n  Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)\nCollecting iniconfig==2.3.0 (from -r requirements-dev.txt (line 4))\n  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)\nCollecting packaging==26.0 (from -r requirements-dev.txt (line 5))\n  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)\nCollecting pluggy==1.6.0 (from -r requirements-dev.txt (line 6))\n  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\nCollecting Pygments==2.19.2 (from -r requirements-dev.txt (line 7))\n  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)\nDownloading setuptools-84.0.0-py3-none-any.whl (818 kB)\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 1.2 MB/s eta 0:00:00\nDownloading pytest-8.4.2-py3-none-any.whl (365 kB)\nDownloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)\nDownloading packaging-26.0-py3-none-any.whl (74 kB)\nDownloading pluggy-1.6.0-py3-none-any.whl (20 kB)\nDownloading pygments-2.19.2-py3-none-any.whl (1.2 MB)\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.6 MB/s eta 0:00:00\nInstalling collected packages: setuptools, Pygments, pluggy, packaging, iniconfig, pytest\nSuccessfully installed Pygments-2.19.2 iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pytest-8.4.2 setuptools-84.0.0\n"
+    },
+    {
+      "command": ".venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .",
+      "started_at": "2026-09-06T17:26:22.134Z",
+      "exit_code": 0,
+      "output": "Obtaining file:///Users/logan/SVXYLab\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: svxylab\n  Building editable for svxylab (pyproject.toml): started\n  Building editable for svxylab (pyproject.toml): finished with status 'done'\n  Created wheel for svxylab: filename=svxylab-0.0.1-0.editable-py3-none-any.whl size=1221 sha256=6510113e498e420ff686647fba992f441a9d08bda16bd32fb3aebbe5d2e2473e\n  Stored in directory: /private/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/pip-ephem-wheel-cache-w6fps7aa/wheels/65/bf/00/8ab7572a3497ce027520da5f0d059a85848efb5ac47537961f\nSuccessfully built svxylab\nInstalling collected packages: svxylab\nSuccessfully installed svxylab-0.0.1\n"
+    },
+    {
+      "command": ".venv/bin/python -m svxylab --help",
+      "started_at": "2026-09-06T17:26:49.343Z",
+      "exit_code": 0,
+      "output": "usage: __main__.py [-h] [--open] {environment}\n\nSVXYLab 本地研究程序（当前仅 P0）\n\npositional arguments:\n  {environment}  检查环境、运行 pytest 并生成环境报告\n\noptions:\n  -h, --help     show this help message and exit\n  --open         生成后用 macOS 默认应用打开报告\n"
+    },
+    {
+      "command": ".venv/bin/python -m pytest -q",
+      "started_at": "2026-09-06T17:26:49.343Z",
+      "exit_code": 0,
+      "output": "....                                                                     [100%]\n4 passed in 0.01s\n"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/usr/bin/uname -m",
+      "started_at": "2026-09-06T17:26:49.588516+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "output": "arm64\n"
+    },
+    {
+      "command": "/usr/bin/sw_vers",
+      "started_at": "2026-09-06T17:26:49.590511+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.008,
+      "output": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n"
+    },
+    {
+      "command": "git --version",
+      "started_at": "2026-09-06T17:26:49.598312+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": "git version 2.50.1 (Apple Git-155)\n"
+    },
+    {
+      "command": "/usr/bin/curl --version",
+      "started_at": "2026-09-06T17:26:49.608867+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.006,
+      "output": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1\nRelease-Date: 2024-03-27\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp\nFeatures: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets\n"
+    },
+    {
+      "command": "git rev-parse --show-toplevel",
+      "started_at": "2026-09-06T17:26:49.615200+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.01,
+      "output": "/Users/logan/SVXYLab\n"
+    },
+    {
+      "command": "git remote",
+      "started_at": "2026-09-06T17:26:49.625364+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": ""
+    },
+    {
+      "command": "git rev-parse --verify -q HEAD",
+      "started_at": "2026-09-06T17:26:49.636199+00:00",
+      "exit_code": 1,
+      "elapsed_seconds": 0.01,
+      "output": ""
+    },
+    {
+      "command": "git status --short",
+      "started_at": "2026-09-06T17:26:49.646394+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": "?? .gitignore\n?? .python-version\n?? AGENTS.md\n?? FEATURES.json\n?? README.md\n?? RESEARCH_SPEC.md\n?? SOURCES.md\n?? STATUS.md\n?? TASKS.md\n?? data/\n?? experiment.toml\n?? pyproject.toml\n?? requirements-dev.txt\n?? runs/\n?? src/\n?? tests/\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check",
+      "started_at": "2026-09-06T17:26:49.657844+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.126,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://pypi.org/simple/pytest/",
+      "started_at": "2026-09-06T17:26:49.783501+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.516,
+      "output": "http=200\ndns_seconds=0.002380\ntotal_seconds=0.507413\nssl_verify=0\nurl=https://pypi.org/simple/pytest/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://files.pythonhosted.org/",
+      "started_at": "2026-09-06T17:26:50.299932+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.521,
+      "output": "http=200\ndns_seconds=0.004471\ntotal_seconds=0.500040\nssl_verify=0\nurl=https://files.pythonhosted.org/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://www.cboe.com/tradable-products/vix/vix-historical-data/",
+      "started_at": "2026-09-06T17:26:50.820895+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.741,
+      "output": "http=200\ndns_seconds=0.003854\ntotal_seconds=0.721154\nssl_verify=0\nurl=https://www.cboe.com/tradable-products/vix/vix-historical-data/\n"
+    },
+    {
+      "command": "/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out 'http=%{http_code}\\ndns_seconds=%{time_namelookup}\\ntotal_seconds=%{time_total}\\nssl_verify=%{ssl_verify_result}\\nurl=%{url_effective}\\n' --url https://cdn.cboe.com/",
+      "started_at": "2026-09-06T17:26:51.562402+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 1.272,
+      "output": "http=403\ndns_seconds=0.004758\ntotal_seconds=1.250315\nssl_verify=0\nurl=https://cdn.cboe.com/\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p0/20260906T172649588287Z/pytest.xml",
+      "started_at": "2026-09-06T17:26:52.834840+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.133,
+      "output": "....                                                                     [100%]\n- generated xml file: /Users/logan/SVXYLab/runs/p0/20260906T172649588287Z/pytest.xml -\n4 passed in 0.01s\n"
+    },
+    {
+      "command": "/usr/bin/open /Users/logan/SVXYLab/reports/environment.html",
+      "started_at": "2026-09-06T17:26:52.973014+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.063,
+      "output": ""
+    }
+  ],
+  "open_exit_code": 0
+}

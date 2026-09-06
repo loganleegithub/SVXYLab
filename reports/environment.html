@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVXYLab · P0 环境检查</title>
+<style>
+body{font:16px/1.7 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:#17212b;background:#fff;margin:0}
+main{max-width:1000px;margin:auto;padding:32px 24px 64px}h1{font-size:28px}h2{font-size:21px;margin-top:32px}
+.status{border-left:4px solid #426078;padding:12px 20px;background:#f3f6f8}.table{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:10px;border:1px solid #dce2e6;overflow-wrap:anywhere}
+th{background:#f3f6f8}code,pre{font-family:ui-monospace,monospace;font-size:13px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f8fa;padding:12px}
+summary{cursor:pointer;overflow-wrap:anywhere}details{padding:10px 0;border-bottom:1px solid #dce2e6}a{color:#145b94}
+</style></head><body><main>
+<h1>SVXYLab · P0 环境检查</h1>
+<p>生成时间：2026-09-07T01:26:49.588287+08:00 · 仅限本地环境与纯算术验证</p>
+<div class="status"><p><strong>工程状态：</strong>P0 本地工程检查已完成，等待阶段验收。</p>
+<p><strong>研究结果：</strong>尚未开展；本页没有真实回测结果。</p>
+<p><strong>真实数据覆盖：</strong>尚未取得。data/raw 文件数 0，data/clean 文件数 0（不计占位文件）。</p></div>
+<h2>实际软件与环境</h2><div class='table'><table><thead><tr><th scope='col'>软件 / 环境</th><th scope='col'>实际观测</th></tr></thead><tbody><tr><td>CPU 架构</td><td>arm64</td></tr><tr><td>Python 进程架构</td><td>arm64</td></tr><tr><td>macOS</td><td>ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83</td></tr><tr><td>Python</td><td>3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]</td></tr><tr><td>项目解释器</td><td>/Users/logan/SVXYLab/.venv/bin/python</td></tr><tr><td>复用的基础 Python</td><td>/Users/logan/.pyenv/versions/3.12.13</td></tr><tr><td>虚拟环境</td><td>/Users/logan/SVXYLab/.venv</td></tr><tr><td>Python TLS</td><td>OpenSSL 3.6.1 27 Jan 2026</td></tr><tr><td>Git</td><td>git version 2.50.1 (Apple Git-155)</td></tr><tr><td>curl</td><td>curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1</td></tr><tr><td>Git 远端</td><td>无</td></tr><tr><td>Git 提交</td><td>尚未提交；等待 P0 验收</td></tr></tbody></table></div><p>复用本机已有 Python 3.12.13；项目虚拟环境隔离安装打包与测试依赖，运行逻辑使用标准库。</p><div class='table'><table><thead><tr><th scope='col'>项目虚拟环境中的包</th><th scope='col'>实际版本</th></tr></thead><tbody><tr><td>iniconfig</td><td>2.3.0</td></tr><tr><td>packaging</td><td>26.0</td></tr><tr><td>pip</td><td>25.0.1</td></tr><tr><td>pluggy</td><td>1.6.0</td></tr><tr><td>Pygments</td><td>2.19.2</td></tr><tr><td>pytest</td><td>8.4.2</td></tr><tr><td>setuptools</td><td>84.0.0</td></tr><tr><td>svxylab</td><td>0.0.1</td></tr></tbody></table></div>
+<h2>本机网络检查</h2><div class='table'><table><thead><tr><th scope='col'>检查地址</th><th scope='col'>实际结果</th></tr></thead><tbody><tr><td>https://pypi.org/simple/pytest/</td><td>HTTP 200：本次 HEAD 请求成功</td></tr><tr><td>https://files.pythonhosted.org/</td><td>HTTP 200：本次 HEAD 请求成功</td></tr><tr><td>https://www.cboe.com/tradable-products/vix/vix-historical-data/</td><td>HTTP 200：本次 HEAD 请求成功</td></tr><tr><td>https://cdn.cboe.com/</td><td>HTTP 403：已收到服务器响应，端点未返回成功状态</td></tr></tbody></table></div>
+<p>每个地址仅一次 HEAD 请求，无重试；连接上限 5 秒，总上限 15 秒，最多 3 次重定向。TLS 校验保持开启。结果仅代表本机当前网络路径。</p>
+<p>CDN 根地址的 HTTP 403 是端点拒绝响应，不是 DNS 失败，也不能据此判断具体 CSV 文件的访问权限。入口 HTTP 200 不等于取得行情、验证字段或拥有数据授权。P0 未请求行情正文。</p>
+<h2>实际测试结果</h2>
+<p>pytest：共 4 项，失败 0，错误 0，跳过 0；进程退出码 0。</p>
+<p><strong>合成测试 / SYNTHETIC：</strong>夹具中的指数 100 → 120 → 100；每日 -0.5x 理想化复利应为 100 → 90 → 97.5。</p>
+<p>首日指数 +20%，理想化产品 -10%；次日指数 -1/6，理想化产品 +1/12，90 × 13/12 = 97.5。此例只检查每日复利运算，不是历史行情、真实 SVXY 净值或真实回测。</p>
+<h2>已运行命令与结果</h2><p>执行目录：<code>/Users/logan/SVXYLab</code>。下方保留实际输出及退出码；Git 初始化前的“无仓库”和验收前的“无提交”是已记录的状态。</p><details><summary>退出码 0 · <code>python3 -c &#x27;import importlib.metadata as m, json, platform, ssl, sys, sysconfig; print(json.dumps({&#x27;\&#x27;&#x27;executable&#x27;\&#x27;&#x27;: sys.executable, &#x27;\&#x27;&#x27;version&#x27;\&#x27;&#x27;: sys.version, &#x27;\&#x27;&#x27;machine&#x27;\&#x27;&#x27;: platform.machine(), &#x27;\&#x27;&#x27;platform&#x27;\&#x27;&#x27;: sysconfig.get_platform(), &#x27;\&#x27;&#x27;openssl&#x27;\&#x27;&#x27;: ssl.OPENSSL_VERSION, &#x27;\&#x27;&#x27;dependencies&#x27;\&#x27;&#x27;: {p: m.version(p) for p in [&#x27;\&#x27;&#x27;pip&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;setuptools&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;pytest&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;iniconfig&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;packaging&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;pluggy&#x27;\&#x27;&#x27;, &#x27;\&#x27;&#x27;pygments&#x27;\&#x27;&#x27;]}}, indent=2))&#x27;</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.673Z</p><pre>{
+  &quot;executable&quot;: &quot;/Users/logan/.pyenv/versions/3.12.13/bin/python3&quot;,
+  &quot;version&quot;: &quot;3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;platform&quot;: &quot;macosx-26.2-arm64&quot;,
+  &quot;openssl&quot;: &quot;OpenSSL 3.6.1 27 Jan 2026&quot;,
+  &quot;dependencies&quot;: {
+    &quot;pip&quot;: &quot;25.0.1&quot;,
+    &quot;setuptools&quot;: &quot;84.0.0&quot;,
+    &quot;pytest&quot;: &quot;8.4.2&quot;,
+    &quot;iniconfig&quot;: &quot;2.3.0&quot;,
+    &quot;packaging&quot;: &quot;26.0&quot;,
+    &quot;pluggy&quot;: &quot;1.6.0&quot;,
+    &quot;pygments&quot;: &quot;2.19.2&quot;
+  }
+}
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --version</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.675Z</p><pre>curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1
+Release-Date: 2024-03-27
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\nremote_ip=%{remote_ip}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url &#x27;https://pypi.org/simple/pytest/&#x27;</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.675Z</p><pre>http=200
+remote_ip=198.18.0.113
+dns_seconds=0.002830
+total_seconds=0.762314
+ssl_verify=0
+url=https://pypi.org/simple/pytest/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\nremote_ip=%{remote_ip}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url &#x27;https://files.pythonhosted.org/&#x27;</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.675Z</p><pre>http=200
+remote_ip=198.18.0.112
+dns_seconds=0.002350
+total_seconds=0.472748
+ssl_verify=0
+url=https://files.pythonhosted.org/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\nremote_ip=%{remote_ip}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url &#x27;https://www.cboe.com/tradable-products/vix/vix-historical-data/&#x27;</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.675Z</p><pre>http=200
+remote_ip=198.18.0.80
+dns_seconds=0.002574
+total_seconds=2.612071
+ssl_verify=0
+url=https://www.cboe.com/tradable-products/vix/vix-historical-data/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\nremote_ip=%{remote_ip}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url &#x27;https://cdn.cboe.com/&#x27;</code></summary><p>开始时间（UTC）：2026-09-06T17:21:10.675Z</p><pre>http=403
+remote_ip=198.18.0.52
+dns_seconds=0.002698
+total_seconds=1.292924
+ssl_verify=0
+url=https://cdn.cboe.com/
+</pre></details><details><summary>退出码 0 · <code>/Users/logan/.pyenv/versions/3.12.13/bin/python3 -m venv .venv</code></summary><p>开始时间（UTC）：2026-09-06T17:21:41.013Z</p><pre>（无输出）</pre></details><details><summary>退出码 0 · <code>git init --initial-branch=main</code></summary><p>开始时间（UTC）：2026-09-06T17:23:12.223Z</p><pre>Initialized empty Git repository in /Users/logan/SVXYLab/.git/
+</pre></details><details><summary>退出码 0 · <code>.venv/bin/python -m pip --isolated --disable-pip-version-check install --no-cache-dir --retries 1 --timeout 15 --index-url https://pypi.org/simple/ -r requirements-dev.txt</code></summary><p>开始时间（UTC）：2026-09-06T17:23:26.370Z</p><pre>Looking in indexes: https://pypi.org/simple/
+Collecting setuptools==84.0.0 (from -r requirements-dev.txt (line 2))
+  Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting pytest==8.4.2 (from -r requirements-dev.txt (line 3))
+  Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+Collecting iniconfig==2.3.0 (from -r requirements-dev.txt (line 4))
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging==26.0 (from -r requirements-dev.txt (line 5))
+  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy==1.6.0 (from -r requirements-dev.txt (line 6))
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting Pygments==2.19.2 (from -r requirements-dev.txt (line 7))
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 1.2 MB/s eta 0:00:00
+Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.6 MB/s eta 0:00:00
+Installing collected packages: setuptools, Pygments, pluggy, packaging, iniconfig, pytest
+Successfully installed Pygments-2.19.2 iniconfig-2.3.0 packaging-26.0 pluggy-1.6.0 pytest-8.4.2 setuptools-84.0.0
+</pre></details><details><summary>退出码 0 · <code>.venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .</code></summary><p>开始时间（UTC）：2026-09-06T17:26:22.134Z</p><pre>Obtaining file:///Users/logan/SVXYLab
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status &#x27;done&#x27;
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status &#x27;done&#x27;
+Building wheels for collected packages: svxylab
+  Building editable for svxylab (pyproject.toml): started
+  Building editable for svxylab (pyproject.toml): finished with status &#x27;done&#x27;
+  Created wheel for svxylab: filename=svxylab-0.0.1-0.editable-py3-none-any.whl size=1221 sha256=6510113e498e420ff686647fba992f441a9d08bda16bd32fb3aebbe5d2e2473e
+  Stored in directory: /private/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/pip-ephem-wheel-cache-w6fps7aa/wheels/65/bf/00/8ab7572a3497ce027520da5f0d059a85848efb5ac47537961f
+Successfully built svxylab
+Installing collected packages: svxylab
+Successfully installed svxylab-0.0.1
+</pre></details><details><summary>退出码 0 · <code>.venv/bin/python -m svxylab --help</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.343Z</p><pre>usage: __main__.py [-h] [--open] {environment}
+
+SVXYLab 本地研究程序（当前仅 P0）
+
+positional arguments:
+  {environment}  检查环境、运行 pytest 并生成环境报告
+
+options:
+  -h, --help     show this help message and exit
+  --open         生成后用 macOS 默认应用打开报告
+</pre></details><details><summary>退出码 0 · <code>.venv/bin/python -m pytest -q</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.343Z</p><pre>....                                                                     [100%]
+4 passed in 0.01s
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/uname -m</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.588516+00:00</p><pre>arm64
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/sw_vers</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.590511+00:00</p><pre>ProductName:		macOS
+ProductVersion:		26.6.2
+BuildVersion:		25G83
+</pre></details><details><summary>退出码 0 · <code>git --version</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.598312+00:00</p><pre>git version 2.50.1 (Apple Git-155)
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --version</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.608867+00:00</p><pre>curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1
+Release-Date: 2024-03-27
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets
+</pre></details><details><summary>退出码 0 · <code>git rev-parse --show-toplevel</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.615200+00:00</p><pre>/Users/logan/SVXYLab
+</pre></details><details><summary>退出码 0 · <code>git remote</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.625364+00:00</p><pre>（无输出）</pre></details><details><summary>退出码 1 · <code>git rev-parse --verify -q HEAD</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.636199+00:00</p><pre>（无输出）</pre></details><details><summary>退出码 0 · <code>git status --short</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.646394+00:00</p><pre>?? .gitignore
+?? .python-version
+?? AGENTS.md
+?? FEATURES.json
+?? README.md
+?? RESEARCH_SPEC.md
+?? SOURCES.md
+?? STATUS.md
+?? TASKS.md
+?? data/
+?? experiment.toml
+?? pyproject.toml
+?? requirements-dev.txt
+?? runs/
+?? src/
+?? tests/
+</pre></details><details><summary>退出码 0 · <code>/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.657844+00:00</p><pre>No broken requirements found.
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url https://pypi.org/simple/pytest/</code></summary><p>开始时间（UTC）：2026-09-06T17:26:49.783501+00:00</p><pre>http=200
+dns_seconds=0.002380
+total_seconds=0.507413
+ssl_verify=0
+url=https://pypi.org/simple/pytest/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url https://files.pythonhosted.org/</code></summary><p>开始时间（UTC）：2026-09-06T17:26:50.299932+00:00</p><pre>http=200
+dns_seconds=0.004471
+total_seconds=0.500040
+ssl_verify=0
+url=https://files.pythonhosted.org/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url https://www.cboe.com/tradable-products/vix/vix-historical-data/</code></summary><p>开始时间（UTC）：2026-09-06T17:26:50.820895+00:00</p><pre>http=200
+dns_seconds=0.003854
+total_seconds=0.721154
+ssl_verify=0
+url=https://www.cboe.com/tradable-products/vix/vix-historical-data/
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/curl --disable --head --location --max-redirs 3 --connect-timeout 5 --max-time 15 --retry 0 --silent --show-error --output /dev/null --write-out &#x27;http=%{http_code}\ndns_seconds=%{time_namelookup}\ntotal_seconds=%{time_total}\nssl_verify=%{ssl_verify_result}\nurl=%{url_effective}\n&#x27; --url https://cdn.cboe.com/</code></summary><p>开始时间（UTC）：2026-09-06T17:26:51.562402+00:00</p><pre>http=403
+dns_seconds=0.004758
+total_seconds=1.250315
+ssl_verify=0
+url=https://cdn.cboe.com/
+</pre></details><details><summary>退出码 0 · <code>/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p0/20260906T172649588287Z/pytest.xml</code></summary><p>开始时间（UTC）：2026-09-06T17:26:52.834840+00:00</p><pre>....                                                                     [100%]
+- generated xml file: /Users/logan/SVXYLab/runs/p0/20260906T172649588287Z/pytest.xml -
+4 passed in 0.01s
+</pre></details><details><summary>退出码 0 · <code>/usr/bin/open /Users/logan/SVXYLab/reports/environment.html</code></summary><p>开始时间（UTC）：2026-09-06T17:26:52.973014+00:00</p><pre>（无输出）</pre></details>
+<h2>缺少什么</h2><div class='table'><table><thead><tr><th scope='col'>项目</th><th scope='col'>当前状态</th></tr></thead><tbody><tr><td>P0 环境 / 包 / 测试</td><td>完成</td></tr><tr><td>真实 VX、VIX、VVIX、VIX9D、VIX3M、SVXY / SPY 行情</td><td>尚未取得；P1 才下载并核对覆盖、字段和授权</td></tr><tr><td>SKEW 扩展数据</td><td>尚未取得；不阻塞核心研究</td></tr><tr><td>特征、训练、持仓回测与模型有效性</td><td>尚未实现 / 尚未研究；属于后续阶段</td></tr><tr><td>P0 真正技术阻塞项</td><td>无</td></tr><tr><td>阶段验收 / 本地 Git 检查点</td><td>等待用户验收；尚未提交 Git 检查点</td></tr></tbody></table></div>
+<p>报告生成入口：<code>.venv/bin/python -m svxylab environment --open</code><br>独立测试：<code>.venv/bin/python -m pytest -q</code></p>
+<p><a href="../runs/p0/20260906T172649588287Z/environment.json">本次环境 JSON 记录（含配置 / 代码 SHA-256）</a> · <a href="../STATUS.md">阶段进度</a></p>
+</main></body></html>

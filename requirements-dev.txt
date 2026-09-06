@@ -1,0 +1,7 @@
+# P0: reuse versions already available with the selected Python.
+setuptools==84.0.0
+pytest==8.4.2
+iniconfig==2.3.0
+packaging==26.0
+pluggy==1.6.0
+Pygments==2.19.2
