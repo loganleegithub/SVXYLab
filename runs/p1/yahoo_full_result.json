@@ -1,0 +1,51 @@
+{
+  "stage": "P1",
+  "started_at": "2026-09-06T18:30:57.545674+00:00",
+  "yfinance_version": "1.7.0",
+  "requested_start": "2019-01-01",
+  "requested_end_exclusive": "2026-09-05",
+  "auto_adjust": false,
+  "back_adjust": false,
+  "repair": false,
+  "actions": true,
+  "keepna": true,
+  "tickers": {
+    "SVXY": {
+      "rows": 1930,
+      "first": "2019-01-02 00:00:00-05:00",
+      "last": "2026-09-04 00:00:00-04:00",
+      "columns": [
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Adj Close",
+        "Volume",
+        "Dividends",
+        "Stock Splits",
+        "Capital Gains"
+      ],
+      "dividend_events": 0,
+      "split_events": 1
+    },
+    "SPY": {
+      "rows": 1930,
+      "first": "2019-01-02 00:00:00-05:00",
+      "last": "2026-09-04 00:00:00-04:00",
+      "columns": [
+        "Open",
+        "High",
+        "Low",
+        "Close",
+        "Adj Close",
+        "Volume",
+        "Dividends",
+        "Stock Splits",
+        "Capital Gains"
+      ],
+      "dividend_events": 30,
+      "split_events": 0
+    }
+  },
+  "requests": 4
+}

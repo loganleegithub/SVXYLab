@@ -7,6 +7,8 @@
 ## 做什么
 建设本地、日频、SVXY/CASH 的联合研究程序：真实数据→联合特征→滚动预测→真实时钟持仓回测→中文报告。LLM 负责开发和研究协助，不在每天临场解释后改权重。
 
+本轮数据请求与研究（含特征预热、训练和目标）统一从 2019-01-01 起；这是用户因 2018 年 SVXY 目标倍数变更而确认的选择。边界与首次预测条件见 RESEARCH_SPEC.md 和 experiment.toml，变更记录见 runs/p1/experiment_change.json。
+
 ## 怎么做
 - 每轮只完成用户指定的一个阶段。先给不超过五点的执行计划，然后自主完成常规实现、运行和修复；阶段完成后停下让用户验收。
 - 先检查现有 Python 与依赖；优先成熟库。用一个 Python 包、一个实验配置、一套普通测试、本地 CSV/JSON 和 HTML 报告。首版不建数据库服务、Web 后端、Docker、自治 Agent 平台或实时行情系统。
@@ -25,24 +27,30 @@
 断线后读 STATUS.md 和现有文件继续，不重新 clone、不重新建架构、不删除既有原始数据。
 
 ## 命令
-P0 已于 2026-09-07 在 `/Users/logan/SVXYLab` 实际验证。复用本机 Python 3.12.13，项目虚拟环境为 `.venv`。以下命令均在项目根目录执行，用户无需手写代码。
+以下命令在 `/Users/logan/SVXYLab` 执行。复用本机 Python 3.12.13 和已有 `.venv`；不重复建环境。唯一项目入口为 `.venv/bin/python -m svxylab`。
 
-唯一项目命令入口（检查环境、运行 pytest、生成并打开报告）：
+P1 数据复算与报告：
 ```sh
-.venv/bin/python -m svxylab environment --open
+.venv/bin/python -m svxylab data
 ```
-实际结果：退出码 0；生成并打开 `reports/environment.html`。每次运行的 JSON 与 pytest XML 保存在 `runs/p0/<UTC时间>/`。
+2026-09-07 实际退出码 0；核心共同样本 1930 日，冻结至 2026-09-04；内部普通 pytest 18 项通过。加 `--open` 后，macOS 打开 `reports/data.html` 的命令也已实际返回 0；随后浏览器工具提示 Mac 锁屏，页面显示确认仍待解锁。每次运行记录与 pytest XML 在 `runs/p1/<UTC时间>/`。优先验证并复用原件缓存，不刷新冻结截止日。
 
-独立运行普通测试：
+独立普通测试：
 ```sh
 .venv/bin/python -m pytest -q
 ```
-实际结果：4 passed。全部是明确标记的合成算术测试，不是真实回测。
+合成夹具只检查复利算术、日期/合约选择、字段与公司行动解析，不是真实回测；真实数据抽查另见数据报告。
 
-本次已运行的环境建立命令（环境已存在时不要重复创建）：
+P0 已验证的环境报告入口：
 ```sh
-/Users/logan/.pyenv/versions/3.12.13/bin/python3 -m venv .venv
-.venv/bin/python -m pip --isolated --disable-pip-version-check install --no-cache-dir --retries 1 --timeout 15 --index-url https://pypi.org/simple/ -r requirements-dev.txt
+.venv/bin/python -m svxylab environment --open
+```
+历史 P0 运行退出码 0、4 项合成测试通过；原报告和 `runs/p0/` 保留。今后再运行会检查当前环境，并引用最新 P1 覆盖记录，不用文件数量推定行情覆盖。
+
+P1 依赖锁定在 `pyproject.toml` 和实际版本快照 `requirements-lock.txt`。已成功执行的本地包元数据刷新命令：
+```sh
 .venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .
 ```
-安装命令均成功；实际版本见环境报告。P0 仅有环境报告与纯算术功能，研究配置、特征、模型和行情处理尚未实现。Git 已在本目录初始化，无远端；待用户验收后再保存本地提交。
+原始安装、失败及成功结果在 `runs/p0/setup.json`、`runs/p1/dependency_install.json`、`runs/p1/yfinance_install_failure.json`、`runs/p1/yfinance_install_cached.json` 和 `runs/p1/editable_refresh.json`。
+
+正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异。P1 没有实现总回报、标签、持仓账本或模型；验收后才能进入 P2。本地已验收检查点 `f3cc00f`，无 Git 远端，未改全局 Git 配置。

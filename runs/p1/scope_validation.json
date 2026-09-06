@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-09-06T17:37:18.977346+00:00",
+  "baseline_commit": "f3cc00f",
+  "engineering": {
+    "scope_update": "complete",
+    "toml_and_json_parse": "passed",
+    "only_research_parameter_changed": "data.feature_history_requested_start: 2013-01-01 -> 2019-01-01",
+    "feature_formulas_and_definitions_unchanged": true,
+    "experiment_record_matches_configuration": true,
+    "P1_data_acquisition": "not_complete",
+    "verification_commands": [
+      {
+        "command": ".venv/bin/python --version",
+        "exit_code": 0,
+        "result": "Python 3.12.13"
+      },
+      {
+        "command": ".venv/bin/python -m pip check",
+        "exit_code": 0,
+        "result": "No broken requirements found."
+      },
+      {
+        "command": ".venv/bin/python -m pytest -q",
+        "exit_code": 0,
+        "result": "4 passed; synthetic arithmetic only"
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      }
+    ]
+  },
+  "research_results": "not_run",
+  "real_data_coverage": {
+    "raw_files": 18,
+    "clean_files": 0,
+    "actual_first_prediction_date": null,
+    "interpretation": "目录快照包含来源页面和请求记录，仅确认文件存在；未在本次文档调整中核验实际行情范围或共同样本。"
+  }
+}

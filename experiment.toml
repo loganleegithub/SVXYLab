@@ -4,9 +4,13 @@ project = "SVXYLab"
 status = "DESIGN_ONLY"
 
 [data]
-feature_history_requested_start = "2013-01-01"
+# 用户于 2026-09-07 确认：因 2018 年 SVXY 目标倍数变更，数据、预热与研究统一从 2019 年起。
+feature_history_requested_start = "2019-01-01"
+# 基金制度生效的历史事实，不是本轮取数或训练起点。
 actual_svxy_mandate_start = "2018-02-28"
+# 最早候选训练截止；2019 年不足 400 行成熟样本，实际首次拟合须继续等待样本积累。
 initial_train_end = "2019-12-31"
+# 请求评估起点；实际首次预测还须满足全部训练、回看与标签成熟条件。
 outer_test_requested_start = "2020-01-02"
 locked_historical_start = "2024-01-01"
 cutoff_policy = "last_completed_common_session_at_P1_freeze"

@@ -1,0 +1,26 @@
+{
+  "stage": "P1",
+  "date_local": "2026-09-07",
+  "accepted_checkpoint": "f3cc00f",
+  "change": "data.feature_history_requested_start",
+  "previous_value": "2013-01-01",
+  "new_value": "2019-01-01",
+  "reason": "用户要求所有文档的数据请求与研究起点统一为 2019 年，原因是 SVXY 在 2018 年发生重大变化（每日目标倍数从 -1x 改为 -0.5x）",
+  "authorization": "用户对起点问题的明确答复",
+  "authorization_quote": "我建议改一下所有文档的口径，都改为 2019 年起，因为 2018 年 SVXY 这个标的发生了巨大的变化。",
+  "source": "https://www.proshares.com/our-etfs/strategic/svxy",
+  "mandate_fact": "2018-02-27 收盘后目标倍数变更；actual_svxy_mandate_start=2018-02-28 作为历史事实保留，不用作本轮起点",
+  "scope": "所有输入的数据请求、研究样本、特征预热、回看窗口、训练及目标统一从 2019-01-01 起；更早的供应商原始记录只读保留，不参与本轮研究计算",
+  "other_research_parameters_changed": false,
+  "unchanged_training_and_evaluation": {
+    "initial_train_end": "2019-12-31",
+    "outer_test_requested_start": "2020-01-02",
+    "min_outer_training_rows": 400,
+    "min_inner_training_rows": 200,
+    "max_window_sessions": 1260,
+    "locked_historical_start": "2024-01-01"
+  },
+  "implication": "仅 2019 年不足 400 行成熟样本；保留最早候选训练截止与请求评估起点，实际首次拟合须继续积累当时已成熟的样本并满足全部训练条件，因此首次预测晚于 2020 年初。首个可预测日待实测，之前的无预测日期如实报告，不以更早数据或降低门槛补齐。模型、公式、时点、成本和指标保持原值。",
+  "actual_first_prediction_date": null,
+  "research_results": "尚未研究或回测；本次仅统一文档与配置口径"
+}

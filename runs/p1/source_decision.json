@@ -1,0 +1,35 @@
+{
+  "stage": "P1",
+  "recorded_at": "2026-09-06T18:51:13.260242+00:00",
+  "research_start": "2019-01-01",
+  "frozen_end": "2026-09-04",
+  "accepted_checkpoint": "f3cc00f",
+  "authorization": "用户明确个人非商业研究，尝试公开接口、外部浏览器 QuantConnect，并允许核对 /Users/logan/DATA/VIX 原件",
+  "formal_index_and_futures": "Cboe official CSV and monthly VX contract catalog; existing local raw files verified by SHA-256 and official spot downloads",
+  "formal_etf": "Yahoo Chart via yfinance 1.7.0 / curl_cffi 0.16.3",
+  "reason": "Alpha Vantage demo 没有授权日线；Yahoo 成熟客户端实际返回两只 ETF 的完整 1930 日 OHLCV、adjclose 与明确请求的 div/splits/capitalGains 事件；校验无重复、无缺行、价格关系有效。Nasdaq 公司行动不可用且有一个异常参考日；QC 已实际读取并抽查，但完整云端文件未成功取得到本地。只维护一个正式 ETF 适配器。",
+  "request_options": {
+    "auto_adjust": false,
+    "back_adjust": false,
+    "repair": false,
+    "actions": true,
+    "keepna": true,
+    "interval": "1d",
+    "start": "2019-01-01",
+    "end_exclusive": "2026-09-05"
+  },
+  "quote_basis": "Yahoo quote OHLCV 已拆分调整；provider_* 保留原值。当时份额 OHLC = provider OHLC × 此日之后报告的拆分份额倍数；当时份额 volume = provider volume ÷ 同一倍数。恢复字段带明确 normalization 标记，并非供应商直接提供的未复权原始逐笔记录。",
+  "company_actions": "SVXY 2024-04-11 一次 2:1 拆分，无供应商报告的分红；SPY 30 次分红，无拆分。全部原始事件字段保留；不以未明确请求事件的本机旧 Yahoo 文件补齐。",
+  "reference_differences": [
+    "2020-03-16 SVXY 主源当时份额 Close 约 28.23，QC RAW 28.27；没有择价覆盖。",
+    "Nasdaq 2026-04-20 两只 ETF 成交量 N/A、OHLC 全同；Yahoo 当日 OHLC 与非零成交量完整，异常参考值单列保留。",
+    "拆分复原后 QC 与 Yahoo 成交量仍不同；如 2024-04-10 SVXY 1,813,029 对 1,898,100；不宣称逐笔或所有来源完全一致。"
+  ],
+  "historical_time": "published_at 未知；假设次一股票交易日收盘前 60 分钟可得；不作完整历史 PIT 声明",
+  "data_rights": "用于用户授权的个人非商业本地研究；公开可读不等于取得再分发授权；无购买、无交易账户连接、无 Git 远端上传",
+  "model_formula_window_clock_cost_changes": false,
+  "research_results": "无；未建立总回报、标签、持仓账本或模型",
+  "raw_manifest": "data/raw/downloads.jsonl",
+  "primary_selection_result": "runs/p1/yahoo_full_result.json",
+  "comparison": "runs/p1/source_comparison.json"
+}

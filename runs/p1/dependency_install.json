@@ -1,0 +1,25 @@
+{
+  "command": ".venv/bin/python -m pip --isolated --disable-pip-version-check install --no-cache-dir --retries 1 --timeout 15 --index-url https://pypi.org/simple/ --no-build-isolation -e .",
+  "observed_tool_results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "435366",
+        "wall_time_seconds": 1.001854208,
+        "session_id": 85509,
+        "original_token_count": 90,
+        "output": "Looking in indexes: https://pypi.org/simple/\nObtaining file:///Users/logan/SVXYLab\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "4b0349",
+        "wall_time_seconds": 4.936755292,
+        "exit_code": 0,
+        "original_token_count": 791,
+        "output": "Collecting numpy==2.4.3 (from svxylab==0.0.1)\n  Downloading numpy-2.4.3-cp312-cp312-macosx_14_0_arm64.whl.metadata (6.6 kB)\nCollecting pandas==3.0.3 (from svxylab==0.0.1)\n  Downloading pandas-3.0.3-cp312-cp312-macosx_11_0_arm64.whl.metadata (79 kB)\nCollecting exchange-calendars==4.13.2 (from svxylab==0.0.1)\n  Downloading exchange_calendars-4.13.2-py3-none-any.whl.metadata (26 kB)\nCollecting pyluach>=2.3.0 (from exchange-calendars==4.13.2->svxylab==0.0.1)\n  Downloading pyluach-2.3.0-py3-none-any.whl.metadata (4.3 kB)\nCollecting toolz>=1.0.0 (from exchange-calendars==4.13.2->svxylab==0.0.1)\n  Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)\nCollecting tzdata>=2025.2 (from exchange-calendars==4.13.2->svxylab==0.0.1)\n  Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)\nCollecting korean_lunar_calendar>=0.3.1 (from exchange-calendars==4.13.2->svxylab==0.0.1)\n  Downloading korean_lunar_calendar-0.4.0-py3-none-any.whl.metadata (6.6 kB)\nCollecting python-dateutil>=2.8.2 (from pandas==3.0.3->svxylab==0.0.1)\n  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)\nCollecting six>=1.5 (from python-dateutil>=2.8.2->pandas==3.0.3->svxylab==0.0.1)\n  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)\nDownloading exchange_calendars-4.13.2-py3-none-any.whl (213 kB)\nDownloading numpy-2.4.3-cp312-cp312-macosx_14_0_arm64.whl (5.2 MB)\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 7.0 MB/s eta 0:00:00\nDownloading pandas-3.0.3-cp312-cp312-macosx_11_0_arm64.whl (9.9 MB)\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 18.5 MB/s eta 0:00:00\nDownloading korean_lunar_calendar-0.4.0-py3-none-any.whl (11 kB)\nDownloading pyluach-2.3.0-py3-none-any.whl (25 kB)\nDownloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)\nDownloading toolz-1.1.0-py3-none-any.whl (58 kB)\nDownloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)\nDownloading six-1.17.0-py2.py3-none-any.whl (11 kB)\nBuilding wheels for collected packages: svxylab\n  Building editable for svxylab (pyproject.toml): started\n  Building editable for svxylab (pyproject.toml): finished with status 'done'\n  Created wheel for svxylab: filename=svxylab-0.0.1-0.editable-py3-none-any.whl size=1275 sha256=eaf99458b6fedfb4ae1fac288c4916b6a9533966bf27c5331748ccc74df78f39\n  Stored in directory: /private/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/pip-ephem-wheel-cache-j2jd78jq/wheels/65/bf/00/8ab7572a3497ce027520da5f0d059a85848efb5ac47537961f\nSuccessfully built svxylab\nInstalling collected packages: tzdata, toolz, six, pyluach, numpy, korean_lunar_calendar, python-dateutil, pandas, exchange-calendars, svxylab\n  Attempting uninstall: svxylab\n    Found existing installation: svxylab 0.0.1\n    Uninstalling svxylab-0.0.1:\n      Successfully uninstalled svxylab-0.0.1\nSuccessfully installed exchange-calendars-4.13.2 korean_lunar_calendar-0.4.0 numpy-2.4.3 pandas-3.0.3 pyluach-2.3.0 python-dateutil-2.9.0.post0 six-1.17.0 svxylab-0.0.1 toolz-1.1.0 tzdata-2026.3\n"
+      }
+    }
+  ]
+}

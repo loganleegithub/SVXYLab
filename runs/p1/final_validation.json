@@ -1,0 +1,31 @@
+{
+  "stage": "P1",
+  "recorded_at": "2026-09-06T18:58:28.557663+00:00",
+  "run_record": "runs/p1/20260906T185559137907Z/data_run.json",
+  "checks": {
+    "SVXY_provider_ohlcv_equal_original": true,
+    "SVXY_then_share_prices_recalculate": true,
+    "SVXY_then_share_volume_recalculate": true,
+    "SVXY_all_reported_actions_preserved": true,
+    "SVXY_no_zero_volume": true,
+    "SPY_provider_ohlcv_equal_original": true,
+    "SPY_then_share_prices_recalculate": true,
+    "SPY_then_share_volume_recalculate": true,
+    "SPY_all_reported_actions_preserved": true,
+    "SPY_no_zero_volume": true,
+    "all_5790_front_contract_identities": true,
+    "all_5790_settlement_values": true,
+    "three_real_spots_and_real_roll_in_report": true,
+    "real_split_matches_issuer": true,
+    "no_model_predictions_or_ledger": true,
+    "all_local_html_links_exist": true,
+    "no_script_canvas_or_fake_graph": true,
+    "all_preserved_raw_sha256_valid": true
+  },
+  "missing_links": [],
+  "raw_records": 141,
+  "raw_original_bytes": 9172441,
+  "display_check": "/usr/bin/open exit 0; CUA reports Mac locked, visible page confirmation pending manual unlock",
+  "limits": "独立复算核对数据来源、单位和合约映射；不证明供应商无误或研究有收益优势",
+  "display_annotation_in_report": true
+}

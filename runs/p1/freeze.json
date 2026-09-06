@@ -1,0 +1,9 @@
+{
+  "stage": "P1",
+  "requested_start": "2019-01-01",
+  "requested_end": "2026-09-04",
+  "public_common_cutoff": "2026-09-04",
+  "core_frozen_cutoff": "2026-09-04",
+  "complete_core_available": true,
+  "created_at": "2026-09-06T17:56:18.489082+00:00"
+}

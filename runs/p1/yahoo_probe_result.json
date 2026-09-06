@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-09-06T18:26:04.932786+00:00",
+  "yfinance_version": "1.7.0",
+  "auto_adjust": false,
+  "back_adjust": false,
+  "repair": false,
+  "actions": true,
+  "keepna": true,
+  "rows": 5,
+  "columns": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Adj Close",
+    "Volume",
+    "Dividends",
+    "Stock Splits",
+    "Capital Gains"
+  ],
+  "requests": 4
+}

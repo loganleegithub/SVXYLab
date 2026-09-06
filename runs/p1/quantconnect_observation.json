@@ -1,0 +1,72 @@
+{
+  "stage": "P1",
+  "source": "QuantConnect Research browser observation",
+  "project_url": "https://www.quantconnect.com/project/36195652",
+  "source_type": "BROWSER_VISIBLE_AUDIT_ONLY",
+  "full_local_file_obtained": false,
+  "exported_at_utc": "2026-09-06T18:09:11.591277+00:00",
+  "lean_version": "2.5.0.0.18057",
+  "python_version": "3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]",
+  "cloud_file_bytes": 2160617,
+  "cloud_file_sha256": "82ddd2a4a80f0c63c87a57206e85aa5c5f73fce97cd063fdbd400a705b895a38",
+  "coverage": {
+    "SVXY": {
+      "raw": 1930,
+      "adjusted": 1930,
+      "split_warnings": 1,
+      "splits_occurred": 1,
+      "dividends": 0
+    },
+    "SPY": {
+      "raw": 1930,
+      "adjusted": 1930,
+      "split_warnings": 0,
+      "splits_occurred": 0,
+      "dividends": 30
+    }
+  },
+  "first_session": "2019-01-02",
+  "last_session": "2026-09-04",
+  "spot_closes": {
+    "SVXY": {
+      "2019-07-01": 55.36,
+      "2020-03-16": 28.27,
+      "2025-04-04": 36.65
+    },
+    "SPY": {
+      "2019-07-01": 295.66,
+      "2020-03-16": 239.85,
+      "2025-04-04": 505.28
+    }
+  },
+  "split_check": {
+    "symbol": "SVXY",
+    "date": "2024-04-11",
+    "type": "SPLIT_OCCURRED",
+    "price_factor": 0.5,
+    "previous_raw_close": 109.17,
+    "raw_close": 55.08,
+    "shares_multiplier": 2,
+    "issuer_reference": "https://www.proshares.com/press-releases/proshares-announces-etf-share-splits2"
+  },
+  "warning": "本文件是浏览器可见结果的有限审计记录，不是完整原始行情文件，不据此宣布本地共同样本完整。",
+  "volume_spot_check": {
+    "source_type": "BROWSER_VISIBLE_AUDIT_ONLY",
+    "symbol": "SVXY",
+    "bars": [
+      {
+        "date": "2024-04-10",
+        "qc_raw_volume": 1813029,
+        "yahoo_provider_volume": 3796200,
+        "yahoo_then_share_volume": 1898100
+      },
+      {
+        "date": "2024-04-11",
+        "qc_raw_volume": 887384,
+        "yahoo_provider_volume": 956800,
+        "yahoo_then_share_volume": 956800
+      }
+    ],
+    "interpretation": "相同份额口径仍存在来源成交量差异，保留原值，不归零或择源替换"
+  }
+}

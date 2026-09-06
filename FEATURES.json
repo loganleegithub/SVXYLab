@@ -4,6 +4,7 @@
   "core_count": 19,
   "extension_count": 2,
   "notation": {
+    "history_boundary": "所有特征输入与回看窗口遵循 experiment.toml 的 data.feature_history_requested_start；本轮为 2019-01-01，不以更早记录预热，窗口不足保持缺失。",
     "t": "特征对应的美国股票交易日；不等于实际下载日期",
     "t-k": "向前 k 个股票交易日，必须按同一 session 索引",
     "F1_F2_F3": "t 收盘时尚未到期的前三个标准月度 VX 合约结算价；不是周合约，也不是连续合约拼接价",

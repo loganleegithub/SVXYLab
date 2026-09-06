@@ -2,46 +2,57 @@
 
 更新日期：2026-09-07（Asia/Shanghai）。
 
-状态：P0_ACCEPTED。用户已验收 P0 交付完整、真实且可复算；验收不代表模型有收益优势。本轮已授权先保存本地 Git 检查点，再仅执行 P1。
+状态：P1_ACCEPTED。用户已明确验收 P1 的完整、真实和可复算交付；不代表模型有收益优势。现保存 P1 本地检查点，随后仅执行 P2。P0 检查点为 `f3cc00f`。
 
 ## 工程完成 / 未完成
 
-P0 工程已完成：
-- 实测 CPU 与 Python 进程均为 arm64，macOS 26.6.2（25G83）；复用现有 pyenv Python 3.12.13。系统另有 Python 3.9.6，本项目使用 `.venv` 中的 3.12.13。
-- 建立一个 `src/svxylab` Python 包、项目虚拟环境、唯一 `python -m svxylab` 命令入口、普通 pytest。未安装系统软件。
-- 已安装 svxylab 0.0.1、pip 25.0.1、setuptools 84.0.0、pytest 8.4.2、iniconfig 2.3.0、packaging 26.0、pluggy 1.6.0、Pygments 2.19.2；`pip check` 退出码 0。
-- 独立执行 `.venv/bin/python -m pytest -q`：4 passed，退出码 0。包含合成指数 100→120→100、每日 -0.5x 理想化产品 100→90→97.5 的完整路径断言，以及 3 个无效输入检查；全部标记为 synthetic。
-- 执行 `.venv/bin/python -m svxylab environment --open`：退出码 0，生成 `reports/environment.html`，内部再次运行 pytest 得到 4 项通过。
-- `/usr/bin/open` 返回 0；浏览器清单确认 Chrome 已打开该本地文件，标题为“SVXYLab · P0 环境检查”。浏览器工具的 URL 策略不允许进一步读取本地 file 页面，未绕过；改用本地 HTML 解析检查文件链接，无脚本或假净值图。
-- AGENTS.md 已补充实际验证的运行、测试与环境建立命令。
-- Git 2.50.1（Apple Git-155）已在本目录初始化，分支 main，无远端、无提交。未修改全局 Git 配置；用户验收后再保存本地 Git 检查点。
+已完成：继续使用本机 arm64、macOS 26.6.2、Python 3.12.13 与原项目 `.venv`。仍为一个 Python 包、一个实验配置、唯一 `.venv/bin/python -m svxylab` 入口和普通 pytest。增加数据适配、逐合约选择、覆盖核验和静态 HTML 报告；没有安装系统工具、建立 Web 服务或新架构。
 
-后续工程尚未实现：真实行情适配、特征、时钟 / 持仓账本、模型、历史评估及日报。不以 P0 完成宣称整个研究程序完成。
+实际执行 `.venv/bin/python -m svxylab data` 和 `.venv/bin/python -m svxylab data --open` 均退出 0；每次内部普通 pytest **18 项通过**，pip check、git diff --check 均退出 0。14 份清洗 CSV 在重复运行前后 SHA-256 全部相同，冻结日期和原件清单未改变，没有重新下载。141 条原始响应/导入记录全部摘要相符，包含失败正文。另对两只 ETF 全部 OHLCV、公司行动以及 5790 个前三合约位置/结算值独立复算，检查通过。
+
+`/usr/bin/open /Users/logan/SVXYLab/reports/data.html` 已返回 0。随后的浏览器清单工具报告 Mac 锁屏且无法自动解锁，所以没有声称已看到页面；已请用户解锁后继续确认。HTML 本地链接全部存在，无脚本或净值图。该项是 P1 当时的工具显示限制；用户已在本轮明确验收，阶段待办已关闭，旧记录保留。
+
+版本锁定在 requirements-lock.txt；安装命令、曾发生的网络超时、解析错误及修复均保留在 runs/p1。未购买数据、未扩大系统权限。无 Git 远端，未改全局 Git 配置；P1 已验收，正在按用户指示保存本地检查点。
 
 ## 研究结果
 
-尚未开展真实研究或回测，没有有效性、收益或风险结论。100→90→97.5 只验证合成夹具的每日复利运算。
+尚未建立真实总回报、标签、持仓账本、特征或模型；没有收益优势结论。P0 的指数 100→120→100、每日 -0.5x 产品 100→90→97.5 仍只是合成算术测试。真实公司行动检查只核对一日数据单位，不是真实回测。
 
-`RESEARCH_SPEC.md`、`FEATURES.json`、`experiment.toml`、`SOURCES.md` 保持原研究定义；实验配置仍为 DESIGN_ONLY。未复用旧项目或旧因子库，未调整模型、公式、训练窗口、时点、成本、样本区间或研究指标。
+用户确认数据请求与全部研究输入（含预热、训练和目标）统一从 2019-01-01 起；变更原因、原值和首次预测影响保存在 runs/p1/experiment_change.json。2018 年基金制度生效事实保留。实验配置仍为 DESIGN_ONLY；模型、特征公式、400 行最低成熟训练样本、时点、成本和指标未改变。实际首次预测日仍待后续阶段计算，不能假定已覆盖 2020 年初压力窗口。
 
 ## 真实数据覆盖
 
-尚未取得。`data/raw` 和 `data/clean` 实际行情文件均为 0，仅有目录占位文件；原始用户附件仍在 `inputs/reference`。
+冻结请求：2019-01-01 至 2026-09-04；元旦非交易日，实际首日 2019-01-02。按 exchange_calendars 4.13.2 的 XNYS 日历，应有 **1930 个股票交易日**。
 
-本次 Mac 实测网络：PyPI 索引、包文件域名、S03 Cboe 官方历史入口均为 HTTP 200；`https://cdn.cboe.com/` 根地址为 HTTP 403，已收到服务器响应，不能记作本次 DNS 失败。每个端点仅做 HEAD 检查，0 次重试，连接上限 5 秒，总上限 15 秒。
+| 数据 | 实际股票交易日 | 缺失 | 来源与口径 |
+|---|---:|---:|---|
+| VIX、VVIX、VIX9D、VIX3M | 各 1930 | 0 | Cboe 官方日值 |
+| VX F1/F2/F3 | 1930 | 0 | 95 份官方标准月度合约，16910 行区间内逐合约 Settle；按真实到期日选取 |
+| SVXY | 1930 | 0 | Yahoo Chart OHLCV、adjclose、一次 2024-04-11 的 2:1 拆分；无报告分红 |
+| SPY | 1930 | 0 | Yahoo Chart OHLCV、adjclose、30 次分红；无拆分 |
+| SKEW（可选） | 1928 | 2 | 缺 2019-07-05、2024-11-29；不阻塞核心 |
 
-入口可达和 CDN 根地址拒绝均不能证明具体行情文件、字段、覆盖或许可。未下载行情正文、未请求付费数据、未读取交易账户。SOURCES.md 中旧沙盒 DNS 失败保留为历史记录，本机当前观测以上述结果为准。
+核心共同样本 1930/1930 日。VIX 另有 32 个非股票交易日记录，原件及日值表保留，不计入共同研究样本。全部更早的原始记录只读保留，清洗研究输入从 2019 年截取。
 
-## 交付位置与下一步
+本机 `/Users/logan/DATA/VIX` 中的月度 VX 原件先验证既有清单摘要，再核对官方合约目录；三份与本次官方下载逐字节一致，缺少的合约另行取得。没有复用旧因子、模型或结果。本机旧 Yahoo 文件因未明确包含分红请求，仅作为参考保留。
 
-- 可打开报告：`reports/environment.html`。
-- 本次检查、版本与配置 / 代码 SHA-256：`runs/p0/20260906T172649588287Z/environment.json`。
-- pytest 结果：同目录 `pytest.xml`。
-- 环境建立与初始网络检查记录：`runs/p0/setup.json`。
-- 实际运行 / 测试命令：AGENTS.md 的“命令”部分。
+ETF 正式来源统一为已落地的 Yahoo Chart 原始响应。供应商 quote OHLCV 已拆分调整；provider_* 保留原值，清洗 OHLCV 显式复原到当时份额单位，并带 normalization 标记。不是将复权价格冒称直接下载的未复权原始逐笔价。供应商 adjclose 与公司行动分列保留。
 
-P0 唯一真正技术阻塞项：无。真实数据尚未取得属于 P1 工作，不阻塞 P0 验收。
+已按用户要求在外部浏览器实际运行 QuantConnect Research，小样本、完整历史查询与公司行动均有实际输出；完整云端文件的两条标准链接无法下载到本地，故只保存有限可见核对记录，不计入本地完整覆盖。2020-03-16 SVXY 主源约 28.23，QC RAW 28.27，差约 -0.04 美元；拆分前后成交量亦不同，未按结果择价。Nasdaq 参考源 2026-04-20 的成交量 N/A、OHLC 全同；主源该日完整。参考原件和逐字段差异均保留。
 
-用户已验收 P0，正在将当前工作区保存为首个本地 Git 检查点；提交后在本文件记录提交号，再开始 P1。
+历史真实 published_at 尚未取得。仅声明“假设次股票交易日收盘前 60 分钟可得”，不称完整历史 PIT；本机旧文件原始下载时间未知，不能由文件名伪造。供应商精度、修订及源间差异是后续研究限制，不以完整日数消除这些限制。
 
-本轮读取现状：TASKS.md 的 P1 请求起点为 2019 年，研究规格与实验配置仍为 2013 年，已向用户核对，暂不修改研究参数。当前目录没有 START_HERE.html 或 inputs/reference；本轮未删除、移动或重建这些文件，仅保存当前实际存在的交付。既有 runs/p0 记录与环境报告保持保留。
+## 报告、记录与下一步
+
+- 报告：reports/data.html；P0 reports/environment.html 和全部 runs/p0 历史保持保留。
+- 最新运行：runs/p1/20260906T185559137907Z/data_run.json；同目录 pytest.xml。
+- 缓存复算：runs/p1/reproducibility.json；独立实际数据检查：runs/p1/final_validation.json。
+- 原件清单：data/raw/downloads.jsonl；清洗数据：data/clean/；冻结：runs/p1/freeze.json。
+- 来源口径：runs/p1/source_decision.json；交叉来源差异：runs/p1/source_comparison.json。
+- 实际运行/测试命令：AGENTS.md；失败过程：runs/p1/development_failures.json 及安装记录。
+
+核心数据取得与复算没有剩余阻塞。用户现已验收 P1；按明确指令保存本地检查点后进入 P2。P1 历史显示限制和失败结果均保留，无远端或交易账户连接。
+
+本轮开始时当前目录没有 START_HERE.html 或 inputs/reference；未删除、移动或重建这些文件。原有规格包的附件索引按历史保留，不声称本轮实际读取了缺失附件。
+
+本轮验收记录：runs/p1/acceptance.json。P2 尚未开始计算。

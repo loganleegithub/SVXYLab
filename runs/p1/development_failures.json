@@ -1,0 +1,57 @@
+{
+  "stage": "P1",
+  "date_local": "2026-09-07",
+  "failures_preserved": [
+    {
+      "command": ".venv/bin/python 调用 svxylab.data.prepare_data(Path.cwd())",
+      "exit_code": 1,
+      "error": "exchange_calendars.errors.DateOutOfBounds: start '2019-01-01' earlier than first actual session '2019-01-02'",
+      "reason": "元旦是请求边界但不是股票交易日；sessions_in_range 对新建日历首边界拒绝",
+      "fix": "以 calendar.schedule.loc[start:end] 选择实际排程，不制造元旦交易行",
+      "verification": "实际重跑退出码 0；Cboe 公共核心 1930/1930 日"
+    },
+    {
+      "operation": "QuantConnect Chrome 页签控制恢复",
+      "error": "原页签控制连接中断；原生备用通道权限未就绪",
+      "resolution": "复用相同 Chrome，新页签重新打开既有 P1 项目；控制恢复，无系统权限变更",
+      "data_result": "此时未取得 ETF；之后独立保留真实云端小样本及完整导出"
+    },
+    {
+      "operation": "Nasdaq 下载器空 Content-Type",
+      "exit_code": 1,
+      "error": "TypeError: argument of type NoneType is not iterable",
+      "fix": "使用 content_type or 空字符串；失败空正文仍保存",
+      "verification": "新增 test_empty_content_type_http_failure_is_preserved"
+    },
+    {
+      "operation": "Nasdaq 本机接口",
+      "error": "curl 92 HTTP2_STREAM 两次；一次 HTTP/1.1 诊断连接超过 30 秒",
+      "result": "没有取得完整响应；浏览器可显示小样本，继续核验公开下载"
+    },
+    {
+      "operation": "QuantConnect 文件下载",
+      "error": "绝对研究容器路径和标准 FileLink 指向的代码目录都无法由编辑器打开",
+      "result": "真实云端取数成功，不计入本地完整覆盖；未调用付费 Object Store 下载"
+    },
+    {
+      "operation": "本次浏览器 CSV 下载定位",
+      "error": "下载事件等待 15 秒未触发；Chrome 内部下载页被工具 URL 安全策略阻止",
+      "result": "未绕过被阻止的内部页面；停止没有返回结果的 Downloads 目录扫描，改核对公开数据接口"
+    },
+    {
+      "operation": "Nasdaq 参考源逐字段比较",
+      "exit_code": 1,
+      "error": "ValueError: Unable to parse string N/A",
+      "reason": "两只 ETF 的 2026-04-20 成交量明确为 N/A",
+      "fix": "仅在参考表将字面 N/A 记为缺失，保留日期并单列差异；不修改主源行情"
+    },
+    {
+      "operation": "独立复算结果写 JSON",
+      "exit_code": 1,
+      "error": "TypeError: Object of type bool is not JSON serializable",
+      "reason": "NumPy bool_ 不是 Python 标准 bool；检查本身已执行，结果写入失败",
+      "fix": "写入前将检查结果显式转换为 Python bool；不改变任何检查阈值或行情"
+    }
+  ],
+  "network_failures": "data/raw/downloads.jsonl 中保存 Yahoo HTTP 429 和 Alpha Vantage HTTP 200 授权提示原件；没有删除或合成替代"
+}

@@ -64,17 +64,17 @@ def render_report(data: dict, report: Path, record_path: Path) -> None:
         f"<p>开始时间（UTC）：{escape(r['started_at'])}</p><pre>{escape(r['output'] or '（无输出）')}</pre></details>"
         for r in data["setup_commands"] + data["commands"]
     )
-    engineering = "P0 本地工程检查已完成，等待阶段验收。" if data["engineering_checks_complete"] else "P0 工程检查未完成；见下方命令的失败结果。"
+    engineering = "本地环境检查已完成；当前阶段与验收状态见 STATUS.md。" if data["engineering_checks_complete"] else "本地环境检查未完成；见下方命令的失败结果。"
     software = table(["软件 / 环境", "实际观测"], data["software"].items())
     packages = table(["项目虚拟环境中的包", "实际版本"], data["packages"].items())
     network = table(["检查地址", "实际结果"], [(n["url"], n["result"]) for n in data["network"]])
     missing = table(["项目", "当前状态"], [
         ("P0 环境 / 包 / 测试", "完成" if data["engineering_checks_complete"] else "未完成，见命令结果"),
-        ("真实 VX、VIX、VVIX、VIX9D、VIX3M、SVXY / SPY 行情", "尚未取得；P1 才下载并核对覆盖、字段和授权"),
-        ("SKEW 扩展数据", "尚未取得；不阻塞核心研究"),
+        ("真实 VX、VIX、VVIX、VIX9D、VIX3M、SVXY / SPY 行情", data["real_market_data"]),
+        ("SKEW 扩展数据", data.get("skew_status", "尚未取得；不阻塞核心研究")),
         ("特征、训练、持仓回测与模型有效性", "尚未实现 / 尚未研究；属于后续阶段"),
         ("P0 真正技术阻塞项", "无" if data["engineering_checks_complete"] else "本地工程检查尚未通过"),
-        ("阶段验收 / 本地 Git 检查点", "等待用户验收；尚未提交 Git 检查点"),
+        ("本地 Git 检查点", data["software"]["Git 提交"]),
     ])
     raw_counts = data["data_files"]
     tests = data["tests"]
@@ -94,7 +94,7 @@ summary{{cursor:pointer;overflow-wrap:anywhere}}details{{padding:10px 0;border-b
 <p>生成时间：{escape(data['generated_at_local'])} · 仅限本地环境与纯算术验证</p>
 <div class="status"><p><strong>工程状态：</strong>{engineering}</p>
 <p><strong>研究结果：</strong>尚未开展；本页没有真实回测结果。</p>
-<p><strong>真实数据覆盖：</strong>尚未取得。data/raw 文件数 {raw_counts['raw']}，data/clean 文件数 {raw_counts['clean']}（不计占位文件）。</p></div>
+<p><strong>真实数据覆盖：</strong>{escape(data['real_market_data'])}。data/raw 文件数 {raw_counts['raw']}，data/clean 文件数 {raw_counts['clean']}（不计占位文件）。</p></div>
 <h2>实际软件与环境</h2>{software}<p>复用本机已有 Python 3.12.13；项目虚拟环境隔离安装打包与测试依赖，运行逻辑使用标准库。</p>{packages}
 <h2>本机网络检查</h2>{network}
 <p>每个地址仅一次 HEAD 请求，无重试；连接上限 5 秒，总上限 15 秒，最多 3 次重定向。TLS 校验保持开启。结果仅代表本机当前网络路径。</p>
@@ -156,6 +156,15 @@ def build_environment_report(root: Path, *, open_report: bool = False) -> int:
     source_paths = [root / name for name in ("RESEARCH_SPEC.md", "FEATURES.json", "experiment.toml", "pyproject.toml", "requirements-dev.txt")]
     source_paths += sorted((root / "src").rglob("*.py")) + sorted((root / "tests").rglob("*.py"))
     setup_path = root / "runs" / "p0" / "setup.json"
+    market_status, skew_status = "尚未取得", "尚未取得；不阻塞核心研究"
+    summary_path = root / "runs/p1/data_summary.json"
+    if summary_path.exists():
+        p1 = json.loads(summary_path.read_text())
+        market_status = (f"最近一次 P1 记录（{p1['generated_at']}）：核心共同样本 {len(p1['core_common_sessions'])} 日，"
+                         f"截至 {p1['core_frozen_cutoff'] or '尚未取得'}；本环境命令不重新核验行情，详见 reports/data.html")
+        skew = p1["coverage"].get("SKEW")
+        if skew:
+            skew_status = f"最近 P1 记录 {skew['observed']} / {skew['expected']} 日，缺 {skew['missing_count']} 日；详见数据报告"
     complete = (pytest["exit_code"] == 0 and tests["total"] > 0 and pip_check["exit_code"] == 0
                 and repo["exit_code"] == 0 and repo["output"].strip() == str(root)
                 and remotes["exit_code"] == 0 and not remotes["output"].strip()
@@ -163,7 +172,8 @@ def build_environment_report(root: Path, *, open_report: bool = False) -> int:
     data = {
         "stage": "P0", "generated_at_local": now.astimezone().isoformat(), "project_root": str(root),
         "invocation": shlex.join([sys.executable, "-m", "svxylab", *sys.argv[1:]]),
-        "engineering_checks_complete": complete, "research_result": "尚未开展", "real_market_data": "尚未取得",
+        "engineering_checks_complete": complete, "research_result": "尚未开展", "real_market_data": market_status,
+        "skew_status": skew_status,
         "software": {"CPU 架构": machine["output"].strip(), "Python 进程架构": platform.machine(),
                      "macOS": macos["output"].strip(), "Python": sys.version, "项目解释器": sys.executable,
                      "复用的基础 Python": sys.base_prefix, "虚拟环境": sys.prefix,
@@ -190,5 +200,5 @@ def build_environment_report(root: Path, *, open_report: bool = False) -> int:
         if opened["exit_code"] != 0:
             complete = data["engineering_checks_complete"] = False
         save()
-    print(f"环境报告：{report}\npytest：{tests['total']} 项，退出码 {tests['exit_code']}\n真实行情：尚未取得")
+    print(f"环境报告：{report}\npytest：{tests['total']} 项，退出码 {tests['exit_code']}\n真实行情：{market_status}")
     return 0 if complete else 1
