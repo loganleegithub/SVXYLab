@@ -1,0 +1,1055 @@
+{
+  "stage": "P3",
+  "generated_at": "2026-09-07T08:50:24.644219+08:00",
+  "result": {
+    "first": "2019-01-02",
+    "last": "2026-09-04",
+    "sessions": 1930,
+    "coverage": [
+      {
+        "feature": "A01",
+        "tier": "core",
+        "unit": "无量纲（30日标准化对数斜率）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "A02",
+        "tier": "core",
+        "unit": "无量纲（30日标准化斜率差）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "A03",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "A04",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "A05",
+        "tier": "core",
+        "unit": "日历天",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "B01",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "B02",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "B03",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "C01",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1930,
+        "missing": 0,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 0,
+        "missing_sessions": "[]"
+      },
+      {
+        "feature": "C02",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "C03",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "D01",
+        "tier": "core",
+        "unit": "年化波动（小数）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "D02",
+        "tier": "core",
+        "unit": "年化波动（小数）",
+        "expected": 1930,
+        "available": 1909,
+        "missing": 21,
+        "first_valid": "2019-02-01",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 21,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-01-09\", \"2019-01-10\", \"2019-01-11\", \"2019-01-14\", \"2019-01-15\", \"2019-01-16\", \"2019-01-17\", \"2019-01-18\", \"2019-01-22\", \"2019-01-23\", \"2019-01-24\", \"2019-01-25\", \"2019-01-28\", \"2019-01-29\", \"2019-01-30\", \"2019-01-31\"]"
+      },
+      {
+        "feature": "D03",
+        "tier": "core",
+        "unit": "比例（0至1）",
+        "expected": 1930,
+        "available": 1909,
+        "missing": 21,
+        "first_valid": "2019-02-01",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 21,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-01-09\", \"2019-01-10\", \"2019-01-11\", \"2019-01-14\", \"2019-01-15\", \"2019-01-16\", \"2019-01-17\", \"2019-01-18\", \"2019-01-22\", \"2019-01-23\", \"2019-01-24\", \"2019-01-25\", \"2019-01-28\", \"2019-01-29\", \"2019-01-30\", \"2019-01-31\"]"
+      },
+      {
+        "feature": "E01",
+        "tier": "core",
+        "unit": "年化方差（小数平方）",
+        "expected": 1930,
+        "available": 1909,
+        "missing": 21,
+        "first_valid": "2019-02-01",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 21,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-01-09\", \"2019-01-10\", \"2019-01-11\", \"2019-01-14\", \"2019-01-15\", \"2019-01-16\", \"2019-01-17\", \"2019-01-18\", \"2019-01-22\", \"2019-01-23\", \"2019-01-24\", \"2019-01-25\", \"2019-01-28\", \"2019-01-29\", \"2019-01-30\", \"2019-01-31\"]"
+      },
+      {
+        "feature": "F01",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "F02",
+        "tier": "core",
+        "unit": "收盘回撤（小数）",
+        "expected": 1930,
+        "available": 1910,
+        "missing": 20,
+        "first_valid": "2019-01-31",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 20,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-01-09\", \"2019-01-10\", \"2019-01-11\", \"2019-01-14\", \"2019-01-15\", \"2019-01-16\", \"2019-01-17\", \"2019-01-18\", \"2019-01-22\", \"2019-01-23\", \"2019-01-24\", \"2019-01-25\", \"2019-01-28\", \"2019-01-29\", \"2019-01-30\"]"
+      },
+      {
+        "feature": "F03",
+        "tier": "core",
+        "unit": "无量纲（自然对数或对数比）",
+        "expected": 1930,
+        "available": 1925,
+        "missing": 5,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\"]"
+      },
+      {
+        "feature": "F04",
+        "tier": "core",
+        "unit": "年化波动（小数）",
+        "expected": 1930,
+        "available": 1909,
+        "missing": 21,
+        "first_valid": "2019-02-01",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 21,
+        "other_missing": 0,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-01-09\", \"2019-01-10\", \"2019-01-11\", \"2019-01-14\", \"2019-01-15\", \"2019-01-16\", \"2019-01-17\", \"2019-01-18\", \"2019-01-22\", \"2019-01-23\", \"2019-01-24\", \"2019-01-25\", \"2019-01-28\", \"2019-01-29\", \"2019-01-30\", \"2019-01-31\"]"
+      },
+      {
+        "feature": "G01",
+        "tier": "extension",
+        "unit": "指数点",
+        "expected": 1930,
+        "available": 1928,
+        "missing": 2,
+        "first_valid": "2019-01-02",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 0,
+        "other_missing": 2,
+        "missing_sessions": "[\"2019-07-05\", \"2024-11-29\"]"
+      },
+      {
+        "feature": "G02",
+        "tier": "extension",
+        "unit": "指数点变化",
+        "expected": 1930,
+        "available": 1921,
+        "missing": 9,
+        "first_valid": "2019-01-09",
+        "last_valid": "2026-09-04",
+        "warmup_missing": 5,
+        "other_missing": 4,
+        "missing_sessions": "[\"2019-01-02\", \"2019-01-03\", \"2019-01-04\", \"2019-01-07\", \"2019-01-08\", \"2019-07-05\", \"2019-07-12\", \"2024-11-29\", \"2024-12-06\"]"
+      }
+    ],
+    "common": {
+      "core": {
+        "rows": 1909,
+        "first": "2019-02-01",
+        "last": "2026-09-04",
+        "missing_sessions": [
+          "2019-01-02",
+          "2019-01-03",
+          "2019-01-04",
+          "2019-01-07",
+          "2019-01-08",
+          "2019-01-09",
+          "2019-01-10",
+          "2019-01-11",
+          "2019-01-14",
+          "2019-01-15",
+          "2019-01-16",
+          "2019-01-17",
+          "2019-01-18",
+          "2019-01-22",
+          "2019-01-23",
+          "2019-01-24",
+          "2019-01-25",
+          "2019-01-28",
+          "2019-01-29",
+          "2019-01-30",
+          "2019-01-31"
+        ]
+      },
+      "extension_only": {
+        "rows": 1921,
+        "first": "2019-01-09",
+        "last": "2026-09-04",
+        "missing_sessions": [
+          "2019-01-02",
+          "2019-01-03",
+          "2019-01-04",
+          "2019-01-07",
+          "2019-01-08",
+          "2019-07-05",
+          "2019-07-12",
+          "2024-11-29",
+          "2024-12-06"
+        ]
+      },
+      "core_plus_extension": {
+        "rows": 1905,
+        "first": "2019-02-01",
+        "last": "2026-09-04",
+        "missing_sessions": [
+          "2019-01-02",
+          "2019-01-03",
+          "2019-01-04",
+          "2019-01-07",
+          "2019-01-08",
+          "2019-01-09",
+          "2019-01-10",
+          "2019-01-11",
+          "2019-01-14",
+          "2019-01-15",
+          "2019-01-16",
+          "2019-01-17",
+          "2019-01-18",
+          "2019-01-22",
+          "2019-01-23",
+          "2019-01-24",
+          "2019-01-25",
+          "2019-01-28",
+          "2019-01-29",
+          "2019-01-30",
+          "2019-01-31",
+          "2019-07-05",
+          "2019-07-12",
+          "2024-11-29",
+          "2024-12-06"
+        ]
+      }
+    },
+    "correlation": {
+      "core": {
+        "rows": 1237,
+        "first": "2019-02-01",
+        "last": "2023-12-29",
+        "largest_absolute_pairs": [
+          {
+            "feature_1": "A04",
+            "feature_2": "F03",
+            "pearson": -0.9751853331263651,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "A04",
+            "feature_2": "C03",
+            "pearson": 0.9222252432895875,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "C03",
+            "feature_2": "F03",
+            "pearson": -0.8939747279213585,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "A01",
+            "feature_2": "B03",
+            "pearson": -0.8864929996986748,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "D01",
+            "feature_2": "D02",
+            "pearson": 0.8237025431132757,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "A03",
+            "feature_2": "B03",
+            "pearson": -0.8179624764241706,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "D01",
+            "feature_2": "F02",
+            "pearson": -0.7904421402327328,
+            "common_rows": 1237
+          },
+          {
+            "feature_1": "F01",
+            "feature_2": "F03",
+            "pearson": 0.7772189604202147,
+            "common_rows": 1237
+          }
+        ]
+      },
+      "with_skew": {
+        "rows": 1235,
+        "first": "2019-02-01",
+        "last": "2023-12-29",
+        "largest_absolute_pairs": [
+          {
+            "feature_1": "A04",
+            "feature_2": "F03",
+            "pearson": -0.9752164117045905,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "A04",
+            "feature_2": "C03",
+            "pearson": 0.9221859406899239,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "C03",
+            "feature_2": "F03",
+            "pearson": -0.8938932249188389,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "A01",
+            "feature_2": "B03",
+            "pearson": -0.8864701909725593,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "D01",
+            "feature_2": "D02",
+            "pearson": 0.823574022980344,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "A03",
+            "feature_2": "B03",
+            "pearson": -0.8180932471893756,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "D01",
+            "feature_2": "F02",
+            "pearson": -0.79030982731892,
+            "common_rows": 1235
+          },
+          {
+            "feature_1": "F01",
+            "feature_2": "F03",
+            "pearson": 0.7770917860422125,
+            "common_rows": 1235
+          }
+        ]
+      }
+    },
+    "cards": [
+      {
+        "as_of_session": "2019-07-01",
+        "inputs": {
+          "VIX": 14.06,
+          "VVIX": 79.58,
+          "F1": 14.925,
+          "F2": 16.125,
+          "F3": 16.575,
+          "VIX9D": 12.51,
+          "VIX3M": 15.43,
+          "tau1": 16.0
+        },
+        "features": {
+          "A01": 0.06628560291700313,
+          "A02": -0.03679488142762105,
+          "A03": 0.05970377289614696,
+          "A04": -0.086592528815967,
+          "A05": 16.0,
+          "B01": 2.643333886382519,
+          "B02": -0.11680556190369912,
+          "B03": -0.09297977999255055,
+          "C01": 4.376762804998783,
+          "C02": -0.037125802823843077,
+          "C03": -0.08190113947379209,
+          "D01": 0.10498656615547153,
+          "D02": 0.11757270128029075,
+          "D03": 0.09777007549190574,
+          "E01": 0.00594501991365552,
+          "F01": 0.00685558073088119,
+          "F02": 0.0,
+          "F03": 0.033241539688028135,
+          "F04": 0.18021992677138146,
+          "G01": 119.86,
+          "G02": 2.769999999999996
+        },
+        "lag5_session": "2019-06-24",
+        "decision_at_new_york": "2019-07-02T15:00:00-04:00",
+        "execution_at": "2019-07-02T20:00:00+00:00"
+      },
+      {
+        "as_of_session": "2020-02-21",
+        "inputs": {
+          "VIX": 17.08,
+          "VVIX": 104.86,
+          "F1": 16.925,
+          "F2": 17.325,
+          "F3": 17.175,
+          "VIX9D": 15.77,
+          "VIX3M": 17.61,
+          "tau1": 26.0
+        },
+        "features": {
+          "A01": 0.025027206726030125,
+          "A02": -0.032480669841076254,
+          "A03": -0.009116369562084984,
+          "A04": 0.08312475412482187,
+          "A05": 26.0,
+          "B01": 2.837908188360424,
+          "B02": -0.0797987873854767,
+          "B03": -0.030558734147690992,
+          "C01": 4.652626127144386,
+          "C02": 0.05579057794635294,
+          "C03": 0.188193564271177,
+          "D01": 0.08869185963242449,
+          "D02": 0.13460674074761847,
+          "D03": 0.5549040868104949,
+          "E01": 0.011053665345303422,
+          "F01": -0.010678022317733531,
+          "F02": -0.014364205840769029,
+          "F03": -0.04554521400721197,
+          "F04": 0.3838365656955335,
+          "G01": 135.14,
+          "G02": 2.0999999999999943
+        },
+        "lag5_session": "2020-02-13",
+        "decision_at_new_york": "2020-02-24T15:00:00-05:00",
+        "execution_at": "2020-02-24T21:00:00+00:00"
+      },
+      {
+        "as_of_session": "2020-04-06",
+        "inputs": {
+          "VIX": 45.24,
+          "VVIX": 143.3,
+          "F1": 41.775,
+          "F2": 37.925,
+          "F3": 35.875,
+          "VIX9D": 47.02,
+          "VIX3M": 43.09,
+          "tau1": 9.0
+        },
+        "features": {
+          "A01": -0.0828750422115956,
+          "A02": 0.023335915974298467,
+          "A03": -0.0796835767664624,
+          "A04": -0.1752147754688025,
+          "A05": 9.0,
+          "B01": 3.81198165124792,
+          "B02": 0.03859139186400374,
+          "B03": 0.04869069962017301,
+          "C01": 4.964940334834126,
+          "C02": -0.09550048079763594,
+          "C03": -0.23247214136071592,
+          "D01": 0.6067445158040847,
+          "D02": 0.9177469730907096,
+          "D03": 0.5900348317810309,
+          "E01": -0.6375937466171596,
+          "F01": 0.012193619701282181,
+          "F02": -0.07604339048709896,
+          "F03": 0.06340149714746546,
+          "F04": 1.1978806991154607,
+          "G01": 121.01,
+          "G02": -1.1700000000000017
+        },
+        "lag5_session": "2020-03-30",
+        "decision_at_new_york": "2020-04-07T15:00:00-04:00",
+        "execution_at": "2020-04-07T20:00:00+00:00"
+      }
+    ],
+    "roll": {
+      "as_of_session": "2019-03-19",
+      "lag5_session": "2019-03-12",
+      "contract_at_t": "VX_2019-04-17",
+      "front_at_lag5": "VX_2019-03-19",
+      "current_settle": 15.125,
+      "same_contract_lag5_settle": 15.675,
+      "old_front_lag5_settle": 14.475,
+      "A04": -0.03571808260207923,
+      "incorrect_front_splice_log_change": 0.0439259804578463
+    },
+    "p1_clean_sha256": {
+      "data/clean/ETF_source_comparison.csv": "7db582d7ff844519006c7197d286f4654b3fc318ef873457cd2d23d2a0296a6c",
+      "data/clean/SKEW_daily.csv": "d204fa3e3be3980843eb1672a520a46876078d8c62cae930f194d6ef8d8c91be",
+      "data/clean/SPY_corporate_actions.csv": "476c42ec682ba9f75812d7250083e1da9c5287da46745581c4d42dbcbc71b676",
+      "data/clean/SPY_daily.csv": "6cfb6a68c1e93f31fa4281e09f031219e7b28672c6b3774d734f81049d400376",
+      "data/clean/SVXY_corporate_actions.csv": "2732e6c03641da89fa1efe1cfe192d2f8baefad6827de2297043d2fa2e5799ea",
+      "data/clean/SVXY_daily.csv": "4ab4692e58a4121df10afd7d00b606e4a452e4055097623cc7f5d64fe079dd43",
+      "data/clean/VIX3M_daily.csv": "c62f68d290fb9f5df9d83a60190ada149c1bb18bac31c29269d56de93cefbc2a",
+      "data/clean/VIX9D_daily.csv": "1678f7b6eb8b0f4123dea6adc9fc91aa37b706fa1c3b62ca7e1c9bcd80d20667",
+      "data/clean/VIX_daily.csv": "d5baeb7173c9c190acd8adaa39b227fcb27097964c70c76febd1786c2421b166",
+      "data/clean/VVIX_daily.csv": "6b2028dfc0737f9b60f38b0b9170a4bab30228c1cc17da17f5e0c674aaf2861e",
+      "data/clean/VX_contract_calendar.csv": "cf9772d8dab041a53640727e09502a698155a2f956a7c88d3d7058b538be1d3d",
+      "data/clean/VX_contract_daily.csv": "8c1959bf1433645ce06723f149a8e2990fd86830d8b91c1e21db06632da28329",
+      "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+      "data/clean/equity_sessions.csv": "ffd5ab0cdf15f3348e141c523464a9d807909a3357ad15be7be58cf02f11ce6d"
+    },
+    "p2_artifact_sha256": {
+      "data/clean/p2/20260907T000150426421Z/SPY_returns.csv": "8ffa1e1a2a853fda646d440557aca9b17ad56dc43c7483686f418696eaf6fdf0",
+      "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+      "data/clean/p2/20260907T000150426421Z/baselines.png": "a29863d28b4877e1897665f68d0d973bb32e4880e39f7e313863ed4805cfbdce",
+      "data/clean/p2/20260907T000150426421Z/baselines.svg": "57a1b88275a3079f3675e682ef13534bfaebb82bc5d77005cdf4483ff8089c9e",
+      "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+      "data/clean/p2/20260907T000150426421Z/labels.csv": "6af6fa44000e648f533dae6cb525bfd30a7fee3aa51a6698c5ac476937e09127",
+      "data/clean/p2/20260907T000150426421Z/ledger_cash.csv": "e4ca4a31d04758d4c08861eeb5d32d36f5cbbbb5ea2e946e3c65cbe95bd7287f",
+      "data/clean/p2/20260907T000150426421Z/ledger_curve.csv": "a19ad28dd59fe8fe0fa6f4095c9507c9cea7cd3b8f3f34d1d7989591060b0c01",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_100.csv": "7c501db3d4ed639aa8413fc61ac3b5e4fe0b8796bd4cb197be0075b9f757306f",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_25.csv": "41068514333e88edcf89f8cde5ae4a8f77ba754c384dcbdc3a7695114b1d6d67",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_50.csv": "da6dadc9990e2f34708dfbfffb91f9f6bc8cc0f2c7d18bd36aeb376ca2ea9b01",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_75.csv": "017811dd5118634b54dbc60a3f51ad2556b42d11e4bdf74d051a9973c9456a26",
+      "data/clean/p2/20260907T000150426421Z/metrics_2019_2023.csv": "fb197e89b7acfeae6c808481db513a086366a27f0f0ff89d8d0e46cec427b8cd"
+    },
+    "accepted_p2_run": "runs/p2/20260907T000150426421Z/baselines_run.json",
+    "raw_records_verified": 141,
+    "raw_manifest_sha256": "2314fb8bfdd9defc99d5ad8e2db633ee677a084691a483aa51d11365c65b70ec",
+    "output_dir": "data/clean/p3/20260907T005024644219Z"
+  },
+  "invocation": ".venv/bin/python -m svxylab features",
+  "engineering_complete": true,
+  "tests_passed": 69,
+  "tests_failed": 0,
+  "test_cases": [
+    {
+      "name": "test_synthetic_daily_minus_half_compounding",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels0]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels1]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels2]",
+      "result": "通过"
+    },
+    {
+      "name": "test_expiration_day_rolls_and_does_not_relabel_missing_front",
+      "result": "通过"
+    },
+    {
+      "name": "test_catalog_uses_only_monthly_and_rejects_gap",
+      "result": "通过"
+    },
+    {
+      "name": "test_vx_uses_settlement_and_checks_identity",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,12\\n01/02/2019,13\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,nan\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,-1\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_coverage_does_not_count_off_calendar_values",
+      "result": "通过"
+    },
+    {
+      "name": "test_local_import_checks_hash_and_preserves_original",
+      "result": "通过"
+    },
+    {
+      "name": "test_empty_content_type_http_failure_is_preserved",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_preserves_provider_values_and_restores_then_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_absent_dividend_request_is_not_zero_dividends",
+      "result": "通过"
+    },
+    {
+      "name": "test_dividend_is_preserved_in_then_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_rejects_missing_bar_without_filling",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_rejects_wrong_symbol",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A04]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A05]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[E01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F04]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_warmup_distinguishes_returns_from_levels",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_a04_roll_uses_current_contract_at_both_endpoints",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_skew_gap_does_not_shrink_core_or_shift_calendar",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_missing_core_window_never_skips_or_fills",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_zero_semivariance_denominator_is_missing",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_history_boundary_blocks_earlier_warmup",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_future_mutation_and_appending_leave_past_features_unchanged",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_enforces_next_close_minus_hour",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-03-08-15]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-11-27-12]",
+      "result": "通过"
+    },
+    {
+      "name": "test_split_creates_shares_not_return",
+      "result": "通过"
+    },
+    {
+      "name": "test_dividend_is_not_lost_or_double_counted",
+      "result": "通过"
+    },
+    {
+      "name": "test_split_and_dividend_use_same_current_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_old_position_owns_execution_day_profit",
+      "result": "通过"
+    },
+    {
+      "name": "test_exact_buy_cost_and_post_fee_weight",
+      "result": "通过"
+    },
+    {
+      "name": "test_exact_sell_cost",
+      "result": "通过"
+    },
+    {
+      "name": "test_fixed_target_drift_still_has_real_turnover",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_signal_holds_shares_and_keeps_losses",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_front_signal_is_not_a_cash_exit",
+      "result": "通过"
+    },
+    {
+      "name": "test_future_prices_and_signals_do_not_change_prior_account",
+      "result": "通过"
+    },
+    {
+      "name": "test_label_uses_next_close_through_sixth_close_and_entry_relative_loss",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_future_path_does_not_become_zero_label",
+      "result": "通过"
+    },
+    {
+      "name": "test_label_maturity_and_assumed_availability_are_separate",
+      "result": "通过"
+    },
+    {
+      "name": "test_future_changes_do_not_change_already_matured_labels",
+      "result": "通过"
+    },
+    {
+      "name": "test_real_early_close_and_dst_clock",
+      "result": "通过"
+    },
+    {
+      "name": "test_continuous_account_has_no_five_day_overlapping_leverage",
+      "result": "通过"
+    },
+    {
+      "name": "test_ledger_reconciles_cash_shares_cost_and_equity",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[nan]",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[0]",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[-1]",
+      "result": "通过"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check",
+      "started_at": "2026-09-07T00:50:25.913742+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.198,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p3/20260907T005024644219Z/pytest.xml",
+      "started_at": "2026-09-07T00:50:26.111563+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 1.185,
+      "output": ".....................................................................    [100%]\n- generated xml file: /Users/logan/SVXYLab/runs/p3/20260907T005024644219Z/pytest.xml -\n69 passed in 1.01s\n"
+    },
+    {
+      "command": "git diff --check",
+      "started_at": "2026-09-07T00:50:27.296449+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.015,
+      "output": ""
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "started_at": "2026-09-07T00:50:27.311690+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "output": "5912f3b701849ea80ac170ffc618f6941f7d1e5f\n"
+    },
+    {
+      "command": "git remote",
+      "started_at": "2026-09-07T00:50:27.324769+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "output": ""
+    }
+  ],
+  "python": "3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "beautifulsoup4": "4.15.0",
+    "certifi": "2026.7.22",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.1",
+    "contourpy": "1.3.3",
+    "curl_cffi": "0.16.3",
+    "cycler": "0.12.1",
+    "exchange_calendars": "4.13.2",
+    "fonttools": "4.64.0",
+    "idna": "3.19",
+    "iniconfig": "2.3.0",
+    "kiwisolver": "1.5.1",
+    "korean_lunar_calendar": "0.4.0",
+    "lxml": "6.1.3",
+    "matplotlib": "3.11.1",
+    "multitasking": "0.0.13",
+    "numpy": "2.4.3",
+    "packaging": "26.0",
+    "pandas": "3.0.3",
+    "peewee": "4.5.0",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "platformdirs": "4.11.7",
+    "pluggy": "1.6.0",
+    "protobuf": "7.36.1",
+    "pycparser": "3.0",
+    "Pygments": "2.19.2",
+    "pyluach": "2.3.0",
+    "pyparsing": "3.3.2",
+    "pytest": "8.4.2",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.3.post1",
+    "requests": "2.34.2",
+    "setuptools": "84.0.0",
+    "six": "1.17.0",
+    "soupsieve": "2.9.2",
+    "svxylab": "0.0.1",
+    "toolz": "1.1.0",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.3",
+    "urllib3": "2.7.0",
+    "websockets": "17.1",
+    "yfinance": "1.7.0"
+  },
+  "source_sha256": {
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "0abc8daa3efcdc9d3e3112fb3886a0ec21d7118fca2cfd3c3522f055d6414720",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/baselines.py": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+    "src/svxylab/baselines_report.py": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+    "src/svxylab/data.py": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+    "src/svxylab/data_report.py": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+    "src/svxylab/downloads.py": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+    "src/svxylab/environment.py": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+    "src/svxylab/etf.py": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+    "src/svxylab/features.py": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+    "src/svxylab/features_report.py": "97e9068f47cbef3be5eb2c7f0a3fd64d6483425ceec84a485b622c33d4e2dc66",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+    "tests/conftest.py": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+    "tests/test_arithmetic.py": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+    "tests/test_data.py": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+    "tests/test_features.py": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+    "tests/test_ledger.py": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+    "RESEARCH_SPEC.md": "40d1389bd5453bd65cfb3dbae5fe9ef79964a4f32ce6731277d5c0ba2802e941",
+    "pyproject.toml": "ebe3a5a3274cbb02ab721c97022fb9e77ce61cac04e7267ad0c4cfad1c2ba352",
+    "requirements-lock.txt": "8196f9749c5912a4a9374e0c3438da20c3a7e1400eeb892bc34d319dbded703d",
+    "runs/p3/experiment_record.json": "6b5d58e6591c0494f0aef4af74b3690d66dcc47a6db7991f16e40c7512cfcf6f"
+  },
+  "artifact_sha256": {
+    "data/clean/p3/20260907T005024644219Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e",
+    "data/clean/p3/20260907T005024644219Z/correlation.png": "17426a65bbca50e4e6c753475fa0fda4cd57036c5e6bb90acb15a885340dbb4f",
+    "data/clean/p3/20260907T005024644219Z/correlation.svg": "ddc4d8ea523ab055f59af0b278cae9e89ff83d2fc0a15dda2ef6b1e6079a0538",
+    "data/clean/p3/20260907T005024644219Z/correlation_core_2019_2023.csv": "1cfe81407d746021d03e112c3e0458349fc760daa967a14757aa769740c09677",
+    "data/clean/p3/20260907T005024644219Z/correlation_pairs_core_2019_2023.csv": "cff45a23c02e7be61527eefb76df6da882f6d75cf5dba8f3afa18b862b486f3a",
+    "data/clean/p3/20260907T005024644219Z/correlation_pairs_with_skew_2019_2023.csv": "74788b210e91eeb72832a8df46cd1b633381ee1bbc1c12028a84b5c4da7e0727",
+    "data/clean/p3/20260907T005024644219Z/correlation_with_skew_2019_2023.csv": "16bd925f10b6bb839b18d6703b0762231204bbba2a41e06350a3365d75883e81",
+    "data/clean/p3/20260907T005024644219Z/coverage.csv": "04011e14527f0c5381147dabc08ef1255f748eea16e68e6c6c164063338eddb0",
+    "data/clean/p3/20260907T005024644219Z/extension_features.csv": "71ced819b7196577065afde036eefab8220e46bd10263f53d843576b02b81425",
+    "data/clean/p3/20260907T005024644219Z/feature_availability.csv": "6d24a035e028804cadd0c4de4d842a9fa288eb59e4a68cb2143e29c6c20e6c06",
+    "data/clean/p3/20260907T005024644219Z/feature_inputs.csv": "600f19b02a5da6f1f5b9c004e5f94898ccf7fca1c45d89a2af5a94af85d1ddae",
+    "data/clean/p3/20260907T005024644219Z/feature_metadata.json": "ae83c1200031ee58dc52eb9c44cfbdd5568557dcdbe4bebea8cdd28d5486dcbc",
+    "data/clean/p3/20260907T005024644219Z/feature_observations.csv": "bd3c72e2135c03625e4f6d5137af3dff8f77b8cf595186b20c8e82b46328521f",
+    "data/clean/p3/20260907T005024644219Z/missing_reasons.csv": "f8ed1654a40128ad477bb53721bcef199995a558edc24fe03a63c93af3f46db3",
+    "data/clean/p3/20260907T005024644219Z/real_roll_check.json": "026fb5db895f28eba1048fa7b19598b6eb421c83ac4bedecbd329a5a48999afc",
+    "data/clean/p3/20260907T005024644219Z/state_cards.json": "04307914ed9ce2c7596bdce17a29192b9bd08aa4aae4d0191ac7eeff8a241ffe"
+  },
+  "labels_loaded_for_calculation": false,
+  "model_fitted": false,
+  "feature_selection": false,
+  "run_record": "runs/p3/20260907T005024644219Z/features_run.json"
+}

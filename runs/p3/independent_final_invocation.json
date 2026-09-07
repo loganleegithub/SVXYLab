@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python runs/p3/independent_recalculation.py",
+  "started_at": "2026-09-07T00:57:06.831249+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 0.224,
+  "output": "{\"passed\": true, \"sessions\": 1930, \"feature_cells_checked\": 40530, \"front_contract_selection_checks\": 5790, \"mismatch_count\": 0, \"correlation_checks\": {\"core\": {\"common_rows\": 1237, \"pairs\": 171, \"max_absolute_error\": 5.9396931817445875e-15, \"passed\": true}, \"with_skew\": {\"common_rows\": 1235, \"pairs\": 210, \"max_absolute_error\": 1.2288781103819701e-14, \"passed\": true}}}\n"
+}

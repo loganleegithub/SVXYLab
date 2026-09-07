@@ -1,0 +1,28 @@
+{
+  "stage": "P3",
+  "accepted_at": "2026-09-07T01:05:38.745665+00:00",
+  "authorization_quote": "我验收的是本阶段交付完整、结果真实且可复算，不代表模型有收益优势。请先保存本地 Git 检查点并更新 STATUS.md，然后仅执行 TASKS.md 中的下一个阶段；保留既有原始数据与失败结果，不重建架构，不连接远端或交易账户。",
+  "accepted_run": "runs/p3/20260907T005629664263Z/features_run.json",
+  "accepted_run_sha256": "be8670e1403b14345bb518482f9fc065f1aa51528495e066454262f226496460",
+  "accepted_artifact_sha256": {
+    "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e",
+    "data/clean/p3/20260907T005629664263Z/correlation.png": "17426a65bbca50e4e6c753475fa0fda4cd57036c5e6bb90acb15a885340dbb4f",
+    "data/clean/p3/20260907T005629664263Z/correlation.svg": "2b64c73c37f21cfc9bc6d2ed905093ea764bef5e58bfc0279283927c9dbccc1c",
+    "data/clean/p3/20260907T005629664263Z/correlation_core_2019_2023.csv": "1cfe81407d746021d03e112c3e0458349fc760daa967a14757aa769740c09677",
+    "data/clean/p3/20260907T005629664263Z/correlation_pairs_core_2019_2023.csv": "cff45a23c02e7be61527eefb76df6da882f6d75cf5dba8f3afa18b862b486f3a",
+    "data/clean/p3/20260907T005629664263Z/correlation_pairs_with_skew_2019_2023.csv": "74788b210e91eeb72832a8df46cd1b633381ee1bbc1c12028a84b5c4da7e0727",
+    "data/clean/p3/20260907T005629664263Z/correlation_with_skew_2019_2023.csv": "16bd925f10b6bb839b18d6703b0762231204bbba2a41e06350a3365d75883e81",
+    "data/clean/p3/20260907T005629664263Z/coverage.csv": "04011e14527f0c5381147dabc08ef1255f748eea16e68e6c6c164063338eddb0",
+    "data/clean/p3/20260907T005629664263Z/extension_features.csv": "71ced819b7196577065afde036eefab8220e46bd10263f53d843576b02b81425",
+    "data/clean/p3/20260907T005629664263Z/feature_availability.csv": "6d24a035e028804cadd0c4de4d842a9fa288eb59e4a68cb2143e29c6c20e6c06",
+    "data/clean/p3/20260907T005629664263Z/feature_inputs.csv": "600f19b02a5da6f1f5b9c004e5f94898ccf7fca1c45d89a2af5a94af85d1ddae",
+    "data/clean/p3/20260907T005629664263Z/feature_metadata.json": "ae83c1200031ee58dc52eb9c44cfbdd5568557dcdbe4bebea8cdd28d5486dcbc",
+    "data/clean/p3/20260907T005629664263Z/feature_observations.csv": "bd3c72e2135c03625e4f6d5137af3dff8f77b8cf595186b20c8e82b46328521f",
+    "data/clean/p3/20260907T005629664263Z/missing_reasons.csv": "f8ed1654a40128ad477bb53721bcef199995a558edc24fe03a63c93af3f46db3",
+    "data/clean/p3/20260907T005629664263Z/real_roll_check.json": "026fb5db895f28eba1048fa7b19598b6eb421c83ac4bedecbd329a5a48999afc",
+    "data/clean/p3/20260907T005629664263Z/state_cards.json": "04307914ed9ce2c7596bdce17a29192b9bd08aa4aae4d0191ac7eeff8a241ffe"
+  },
+  "report_sha256": "bfb6e852c62abc1b802458c50a710372e17ae2cb2578866f058215a353400e40",
+  "research_advantage_accepted": false,
+  "next_stage": "P4"
+}

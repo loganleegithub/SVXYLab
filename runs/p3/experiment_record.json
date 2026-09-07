@@ -1,0 +1,27 @@
+{
+  "stage": "P3",
+  "recorded_before_feature_calculation_at": "2026-09-07T00:40:39.503801+00:00",
+  "accepted_p2_checkpoint": "5912f3b701849ea80ac170ffc618f6941f7d1e5f",
+  "accepted_p2_run": "runs/p2/20260907T000150426421Z/baselines_run.json",
+  "scope": "按 FEATURES.json 计算 A–F 19 项核心与单列 G01/G02；公式、模型、成本和目标均不改。",
+  "history_start": "2019-01-01",
+  "frozen_last_session": "2026-09-04",
+  "session_lags": "按完整 XNYS 股票交易日索引回看；不先删除缺失行；不使用起点前记录预热。",
+  "rolling_windows": "D01 用5个对数回报；D02/D03/F04用21个对数回报，需22个TR水平。F02用含t在内21个TR水平。窗口不全为空。",
+  "A04": "front_at_t 的同一真实月度 VX 合约在 t 与 t−5 的结算价比；不拼接两个前月。",
+  "D03_zero_denominator": "置缺失，单独记录 ZERO_VARIANCE_DENOMINATOR。",
+  "E01": "VIX点数除100后平方减历史SPY年化方差；这是隐含与历史方差差，不是真实前瞻VRP。",
+  "availability": "仅用日期<=t；假设 t+1 股票收盘前60分钟可得，沿用已验收P2时钟。published_at未知，NO_FULL_HISTORICAL_PIT_CLAIM。",
+  "correlation": "只在2019–2023核心完整共同样本计算19列Pearson矩阵；SKEW扩展另用21列完整共同日期矩阵；报两套行数。仅描述重叠，不筛特征，不读未来收益标签。",
+  "state_card_dates": [
+    "2019-07-01",
+    "2020-02-21",
+    "2020-04-06"
+  ],
+  "state_card_selection": "计算前指定三个历史日期；措辞由当日特征事实决定，不用此后收益选择或说明预测成功。",
+  "full_output": "保存冻结范围全部交易日的原始未标准化特征、缺失与可用性，2024后不作模型评估。",
+  "fitting_performed": false,
+  "interactions_computed": false,
+  "new_data_downloads": false,
+  "preservation": "验证P1清洗/原始摘要与P2已验收产物；输出到新的时间戳目录，不覆盖以往运行及失败记录。"
+}

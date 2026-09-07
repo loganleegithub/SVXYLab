@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab features",
+  "started_at": "2026-09-07T00:50:24.211432+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 3.245,
+  "output": "P3 报告：/Users/logan/SVXYLab/reports/features.html\n普通 pytest：69 通过，0 失败\n核心完整 1909 日；核心加扩展共同完整 1905 日。\n"
+}

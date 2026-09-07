@@ -41,11 +41,17 @@ P2 总回报、时钟、标签与连续账本：
 ```
 2026-09-07 实际退出码 0，普通 pytest 38 项通过；六个对照各 1930 行，五日标签 1924 行完整、6 行尚未成熟。加 `--open` 生成后由 macOS 打开 `reports/baselines.html`。只读取 P1 冻结文件，不调用取数或模型；每次 CSV/图保存在 `data/clean/p2/<UTC时间>/`，运行 JSON 与测试结果在 `runs/p2/<UTC时间>/`，已有结果不覆盖。页面净值与汇总展示 2019–2023；2024 年后仅用于公司行动核账和时钟示例。
 
+P3 原始联合特征与信息重叠：
+```sh
+.venv/bin/python -m svxylab features --open
+```
+仅读取冻结 P1 文件、已验收 P2 总回报与时钟；不读标签进行特征计算，不取数或拟合。19 项核心 CSV 与两项 SKEW 扩展 CSV 分开保存，保留每个交易日及缺失。当前核心完整 1909 日，核心加扩展共同完整 1905 日，首个完整日均为 2019-02-01。2026-09-07 首次运行退出 0，普通 pytest 69 项通过；每次输出在 `data/clean/p3/<UTC时间>/`，命令/测试/审计在 `runs/p3/<UTC时间>/`。报告为 `reports/features.html`，相关性仅展示 2019–2023；公式、窗口与展示记录见 `runs/p3/experiment_record.json`。
+
 独立普通测试：
 ```sh
 .venv/bin/python -m pytest -q
 ```
-合成夹具只检查复利算术、日期/合约选择、字段与公司行动解析，不是真实回测；真实数据抽查另见数据报告。
+合成夹具只检查复利算术、日期/合约选择、字段/公司行动解析、账本、特征公式及时间边界，不是真实回测；真实数据核对另见各阶段报告。
 
 P0 已验证的环境报告入口：
 ```sh
@@ -59,4 +65,4 @@ P0 已验证的环境报告入口：
 ```
 原始安装、失败及成功结果在 `runs/p0/setup.json`、`runs/p1/dependency_install.json`、`runs/p1/yfinance_install_failure.json`、`runs/p1/yfinance_install_cached.json` 和 `runs/p1/editable_refresh.json`。
 
-正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异以及 P2 的 SPY 分红总回报与供应商复权参考差异。P2 已实现总回报、标签和连续账本，未实现 P3 特征或联合模型；阶段验收后再继续。P0 检查点 `f3cc00f`、P1 检查点 `dc3d4ff`，无 Git 远端，未改全局 Git 配置。
+正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异以及 P2 的 SPY 分红总回报与供应商复权参考差异。P3 已实现原始特征，未实现联合模型；停在 P3，验收后再继续。P0 检查点 `f3cc00f`、P1 检查点 `dc3d4ff`、P2 检查点 `5912f3b`，无 Git 远端，未改全局 Git 配置。P2 验收仅代表交付完整、真实与可复算，不代表模型有收益优势。

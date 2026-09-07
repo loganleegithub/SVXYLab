@@ -1,0 +1,154 @@
+{
+  "audited_at": "2026-09-07T00:52:57.698139+00:00",
+  "run_record": "runs/p3/20260907T005024644219Z/features_run.json",
+  "audit_source_sha256": "bae7006773d3bd8c41ae5d86a5c2a7554b8c14100349c8e764463997a22323b6",
+  "method": "标准库逐标量：从 P1 当时份额价格/公司行动独立构造 TR；从官方月度到期日历重选 F1/F2/F3；未调用生产特征或总回报函数。",
+  "sessions": 1930,
+  "feature_cells_checked": 40530,
+  "front_contract_selection_checks": 5790,
+  "per_feature": {
+    "A01": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "A02": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "A03": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "A04": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 0.0
+    },
+    "A05": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "B01": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "B02": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "B03": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "C01": {
+      "checked": 1930,
+      "finite_values": 1930,
+      "missing_values": 0,
+      "max_absolute_error": 0.0
+    },
+    "C02": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 0.0
+    },
+    "C03": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 0.0
+    },
+    "D01": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 3.58046925441613e-15
+    },
+    "D02": {
+      "checked": 1930,
+      "finite_values": 1909,
+      "missing_values": 21,
+      "max_absolute_error": 1.4432899320127035e-15
+    },
+    "D03": {
+      "checked": 1930,
+      "finite_values": 1909,
+      "missing_values": 21,
+      "max_absolute_error": 1.426636586643326e-14
+    },
+    "E01": {
+      "checked": 1930,
+      "finite_values": 1909,
+      "missing_values": 21,
+      "max_absolute_error": 7.494005416219807e-16
+    },
+    "F01": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 6.650496126026084e-16
+    },
+    "F02": {
+      "checked": 1930,
+      "finite_values": 1910,
+      "missing_values": 20,
+      "max_absolute_error": 9.992007221626409e-16
+    },
+    "F03": {
+      "checked": 1930,
+      "finite_values": 1925,
+      "missing_values": 5,
+      "max_absolute_error": 6.800116025829084e-16
+    },
+    "F04": {
+      "checked": 1930,
+      "finite_values": 1909,
+      "missing_values": 21,
+      "max_absolute_error": 1.4432899320127035e-15
+    },
+    "G01": {
+      "checked": 1930,
+      "finite_values": 1928,
+      "missing_values": 2,
+      "max_absolute_error": 0.0
+    },
+    "G02": {
+      "checked": 1930,
+      "finite_values": 1921,
+      "missing_values": 9,
+      "max_absolute_error": 0.0
+    }
+  },
+  "correlation_checks": {
+    "core": {
+      "common_rows": 1237,
+      "pairs": 171,
+      "max_absolute_error": 5.9396931817445875e-15,
+      "passed": true
+    },
+    "with_skew": {
+      "common_rows": 1235,
+      "pairs": 210,
+      "max_absolute_error": 1.2288781103819701e-14,
+      "passed": true
+    }
+  },
+  "mismatch_count": 0,
+  "mismatches": [],
+  "passed": true
+}

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-07T00:57:59.197365+00:00",
+  "run_record": "runs/p3/20260907T005629664263Z/features_run.json",
+  "source_sha256_match": true,
+  "artifact_sha256_match": true,
+  "local_html_links_checked": 25,
+  "missing_html_links": [],
+  "html_title": "SVXYLab · P3 联合信息表",
+  "browser_open_confirmed": {
+    "tool": "cua.getState",
+    "browser": "Chrome",
+    "tab_id": "542466153",
+    "url": "file:///Users/logan/SVXYLab/reports/features.html",
+    "title": "SVXYLab · P3 联合信息表",
+    "last_opened": "2026-09-07T00:57:07.141Z"
+  },
+  "plot_visually_inspected": true,
+  "unchanged_accepted_files": {
+    "experiment.toml": true,
+    "FEATURES.json": true,
+    "requirements-lock.txt": true,
+    "reports/baselines.html": true,
+    "reports/data.html": true,
+    "reports/environment.html": true
+  },
+  "git_remote_output": "",
+  "report_sha256": "bfb6e852c62abc1b802458c50a710372e17ae2cb2578866f058215a353400e40",
+  "passed": true
+}
