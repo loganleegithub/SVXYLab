@@ -1,0 +1,2397 @@
+{
+  "stage": "P5",
+  "checked_at": "2026-09-07T02:45:36.627224+00:00",
+  "first_run": "runs/p5/20260907T023705885208Z/economics_run.json",
+  "final_run": "runs/p5/20260907T024118182655Z/economics_run.json",
+  "independent_complete_economics_runs": 2,
+  "ledger_files_compared": 216,
+  "ledger_files_byte_identical": true,
+  "comparison_exclusions": [],
+  "account_metrics_byte_identical": true,
+  "non_ledger_csv_changes": {
+    "trades.csv": "Second run also includes transactions of 12 delay_aligned_base reference accounts; their individual ledgers and all computed values were already present and are unchanged.",
+    "pending_delayed_orders.csv": "Added known end-of-2023 targets scheduled for 2024-01-02, with no execution or economic outcomes."
+  },
+  "source_changes_between_runs": {
+    "src/svxylab/__main__.py": {
+      "first": "d2e6442992716207ff60dea783402726f517c528a5c5fed94759fdb3d3ec70d4",
+      "second": "f0e80a876cdefc235eb48426e1257dcf0c1ce046b592990ddf67c1ad810cd204"
+    },
+    "src/svxylab/economics.py": {
+      "first": "58c5c76788cb5f6454e30aed32474c70884334f6cbadc64a3f757c241526a1cf",
+      "second": "b013365d89f765db08be68e5e0775011b8677f266c421373b8d1e8af3832331c"
+    },
+    "src/svxylab/economics_audit.py": {
+      "first": "af1737c2d966ebabc72fa759b956acebd86d75386c88b4a3d2f24977a2b9a7d9",
+      "second": "721420e8cafc740442bc3175317d5cdf54ad7591d74af6fd9a926b6a4b9abaca"
+    },
+    "src/svxylab/economics_report.py": {
+      "first": "a415aaaae57dd5e9aa6680818407e3d84ba67b40b0f28815bf30b63c07a46c00",
+      "second": "da6737f0dd9e3db702f280b0bce754a46a139507dcd63e7066b51d380d4929a4"
+    }
+  },
+  "second_run_audit_added": "Independent five-close risk diagnostic reconstruction from prices.",
+  "comparisons": [
+    {
+      "file": "account_metrics.csv",
+      "first_sha256": "ae0e8ba188fe1219827f955ed4710e07b8059dbc1302f550417914ff9df1871a",
+      "second_sha256": "ae0e8ba188fe1219827f955ed4710e07b8059dbc1302f550417914ff9df1871a",
+      "equal": true
+    },
+    {
+      "file": "attribution.csv",
+      "first_sha256": "5e5c044d8faa941be12c933610ddb69f10f2017ea1c077c0a808bcc37d750cd0",
+      "second_sha256": "5e5c044d8faa941be12c933610ddb69f10f2017ea1c077c0a808bcc37d750cd0",
+      "equal": true
+    },
+    {
+      "file": "case_account_summary.csv",
+      "first_sha256": "d174b56ad1ae5f3d0df6520b65319d419d744aae6745b43cf85c4ac76233f576",
+      "second_sha256": "d174b56ad1ae5f3d0df6520b65319d419d744aae6745b43cf85c4ac76233f576",
+      "equal": true
+    },
+    {
+      "file": "case_daily_ledgers.csv",
+      "first_sha256": "d065153f26b26ab90f54a26bbbd34c2b1041a26816a2d92a61ef8785c9ac6e29",
+      "second_sha256": "d065153f26b26ab90f54a26bbbd34c2b1041a26816a2d92a61ef8785c9ac6e29",
+      "equal": true
+    },
+    {
+      "file": "case_information_predictions.csv",
+      "first_sha256": "cbc622438da33f2073cf3750e051f41d4ae5812e316ef92e9faf1f23b794efe9",
+      "second_sha256": "cbc622438da33f2073cf3750e051f41d4ae5812e316ef92e9faf1f23b794efe9",
+      "equal": true
+    },
+    {
+      "file": "cases.csv",
+      "first_sha256": "8b0f62da9e6efd10f1891d8c8f95797e851780620133f67288412d0059d2023e",
+      "second_sha256": "8b0f62da9e6efd10f1891d8c8f95797e851780620133f67288412d0059d2023e",
+      "equal": true
+    },
+    {
+      "file": "exposure_distribution.csv",
+      "first_sha256": "a8b8382a8875fe2b8fe3aff566d27805aaefcf7b6818598bd5e42ba55503c63a",
+      "second_sha256": "a8b8382a8875fe2b8fe3aff566d27805aaefcf7b6818598bd5e42ba55503c63a",
+      "equal": true
+    },
+    {
+      "file": "last_five_2023_execution_days.csv",
+      "first_sha256": "65cb835d00fe964f7331a70e734b52d4025221b891be0f8b9d846bb79c157523",
+      "second_sha256": "65cb835d00fe964f7331a70e734b52d4025221b891be0f8b9d846bb79c157523",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_main.csv",
+      "first_sha256": "145e6cc95f46946ff5b0b7ad0e1c564616e2d78287ece34d6797037896adcddd",
+      "second_sha256": "145e6cc95f46946ff5b0b7ad0e1c564616e2d78287ece34d6797037896adcddd",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv",
+      "first_sha256": "20c7886f08ea89f35ea07008e7d26c4c5217af6dc2d0154902509acf35c5e9ed",
+      "second_sha256": "20c7886f08ea89f35ea07008e7d26c4c5217af6dc2d0154902509acf35c5e9ed",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_main.csv",
+      "first_sha256": "db531f3933db9abd310d6a9bfd320e3814a1d1d9be8e39bd75de4ec437501a56",
+      "second_sha256": "db531f3933db9abd310d6a9bfd320e3814a1d1d9be8e39bd75de4ec437501a56",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv",
+      "first_sha256": "bdbc7a8fd2e0b81e7885148882aa977c08e6c728672aaad74396e162289aa4f4",
+      "second_sha256": "bdbc7a8fd2e0b81e7885148882aa977c08e6c728672aaad74396e162289aa4f4",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_main.csv",
+      "first_sha256": "b572757c679a164099360e766dbbcb6089bfd406f6310c7bf3c831ee0ea63cbe",
+      "second_sha256": "b572757c679a164099360e766dbbcb6089bfd406f6310c7bf3c831ee0ea63cbe",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv",
+      "first_sha256": "e25b8a14bb4246e17f924c2ecd4d458fc2d8ff7764002d953104f5c267e08826",
+      "second_sha256": "e25b8a14bb4246e17f924c2ecd4d458fc2d8ff7764002d953104f5c267e08826",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M0_main.csv",
+      "first_sha256": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075",
+      "second_sha256": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M0_risk_only.csv",
+      "first_sha256": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80",
+      "second_sha256": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M1_main.csv",
+      "first_sha256": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1",
+      "second_sha256": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M1_risk_only.csv",
+      "first_sha256": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680",
+      "second_sha256": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M2_main.csv",
+      "first_sha256": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4",
+      "second_sha256": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_M2_risk_only.csv",
+      "first_sha256": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20",
+      "second_sha256": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_curve.csv",
+      "first_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "second_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_fixed_100.csv",
+      "first_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "second_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_fixed_25.csv",
+      "first_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "second_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_fixed_50.csv",
+      "first_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "second_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_fixed_75.csv",
+      "first_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "second_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M0_main.csv",
+      "first_sha256": "9b54b5d4f07f0edf639050fa40fb6eebb9a8ab18e72203e8e7d9910129af88cc",
+      "second_sha256": "9b54b5d4f07f0edf639050fa40fb6eebb9a8ab18e72203e8e7d9910129af88cc",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M0_risk_only.csv",
+      "first_sha256": "6e395edca0dee72eb6d8929029913aecd58fd2a1eb93b9b302faec18e210c8ce",
+      "second_sha256": "6e395edca0dee72eb6d8929029913aecd58fd2a1eb93b9b302faec18e210c8ce",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M1_main.csv",
+      "first_sha256": "e4aa7f280718b80c5d50fe69ca1dd1d33159cdfa8a4b6c555509a5e6ed2f0897",
+      "second_sha256": "e4aa7f280718b80c5d50fe69ca1dd1d33159cdfa8a4b6c555509a5e6ed2f0897",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M1_risk_only.csv",
+      "first_sha256": "cab323595bfacb6d3f1a1a08b8ce163dde222cecee4f9d96e9cbc05d748a2f82",
+      "second_sha256": "cab323595bfacb6d3f1a1a08b8ce163dde222cecee4f9d96e9cbc05d748a2f82",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M2_main.csv",
+      "first_sha256": "a6d3013f33ac053382ea5b9bc445b7ff040407443ca588e2afeeaf581b9dd029",
+      "second_sha256": "a6d3013f33ac053382ea5b9bc445b7ff040407443ca588e2afeeaf581b9dd029",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_M2_risk_only.csv",
+      "first_sha256": "c69a84591fbd1b479e8adcda90bf85702e458507e06a900ac281372c8233e503",
+      "second_sha256": "c69a84591fbd1b479e8adcda90bf85702e458507e06a900ac281372c8233e503",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_curve.csv",
+      "first_sha256": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+      "second_sha256": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_fixed_100.csv",
+      "first_sha256": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+      "second_sha256": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_fixed_25.csv",
+      "first_sha256": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+      "second_sha256": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_fixed_50.csv",
+      "first_sha256": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+      "second_sha256": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_base_same_targets_gross_fixed_75.csv",
+      "first_sha256": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+      "second_sha256": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M0_main.csv",
+      "first_sha256": "2e9c83be71b0aef455f50f03e7385a7c4030c54503aa059c7b584b2d03dc5ea0",
+      "second_sha256": "2e9c83be71b0aef455f50f03e7385a7c4030c54503aa059c7b584b2d03dc5ea0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M0_risk_only.csv",
+      "first_sha256": "605ea2ead4bd9e92cba44db8510f874a66cb1f2ffc6377405a8aae8f737555ac",
+      "second_sha256": "605ea2ead4bd9e92cba44db8510f874a66cb1f2ffc6377405a8aae8f737555ac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M1_main.csv",
+      "first_sha256": "77397f57ab42590a6592038833d187a67f2e29aa82f67767c0b37c38b3cb64f4",
+      "second_sha256": "77397f57ab42590a6592038833d187a67f2e29aa82f67767c0b37c38b3cb64f4",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M1_risk_only.csv",
+      "first_sha256": "c1b576366562b41b0a1301082dd5f4a548e349532c28886a1bd17704ec98ba04",
+      "second_sha256": "c1b576366562b41b0a1301082dd5f4a548e349532c28886a1bd17704ec98ba04",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M2_main.csv",
+      "first_sha256": "c962ea0ca1cd0823cd17a3c0460c01c9f9ecd03d8b76d604c11ec394958ac1de",
+      "second_sha256": "c962ea0ca1cd0823cd17a3c0460c01c9f9ecd03d8b76d604c11ec394958ac1de",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_M2_risk_only.csv",
+      "first_sha256": "97bc826c421e48fa3bd60cc323fa721236bcc1fbadc30523fc2dba29bed476ac",
+      "second_sha256": "97bc826c421e48fa3bd60cc323fa721236bcc1fbadc30523fc2dba29bed476ac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_curve.csv",
+      "first_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "second_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_fixed_100.csv",
+      "first_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "second_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_fixed_25.csv",
+      "first_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "second_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_fixed_50.csv",
+      "first_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "second_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_10pct_fixed_75.csv",
+      "first_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "second_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M0_main.csv",
+      "first_sha256": "0479bdb5e497fb77af6d23eff06156238d7c565695dd6a99b87f67437dbcae5c",
+      "second_sha256": "0479bdb5e497fb77af6d23eff06156238d7c565695dd6a99b87f67437dbcae5c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M0_risk_only.csv",
+      "first_sha256": "c0021ca0f3b471b627b5d8ee492e59fcb79df694015869684c8a066f011a5d3d",
+      "second_sha256": "c0021ca0f3b471b627b5d8ee492e59fcb79df694015869684c8a066f011a5d3d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M1_main.csv",
+      "first_sha256": "8677493d0c4d7588481183453d443f4dcf7ced0baaa07ddaa3c3c9203b26f27f",
+      "second_sha256": "8677493d0c4d7588481183453d443f4dcf7ced0baaa07ddaa3c3c9203b26f27f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M1_risk_only.csv",
+      "first_sha256": "6ca83f1f4d14b051075073ef49508bfaba945e0596f1028609f33c0a36d6bbb7",
+      "second_sha256": "6ca83f1f4d14b051075073ef49508bfaba945e0596f1028609f33c0a36d6bbb7",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M2_main.csv",
+      "first_sha256": "ae8ff2e9651ae71738c36656d66588a8a293bcf34fff7ace05fb86132672b6f0",
+      "second_sha256": "ae8ff2e9651ae71738c36656d66588a8a293bcf34fff7ace05fb86132672b6f0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_M2_risk_only.csv",
+      "first_sha256": "024b63eb5c6acb13241db81c8207f2ad71748deea987f5a8ff830ef297a58764",
+      "second_sha256": "024b63eb5c6acb13241db81c8207f2ad71748deea987f5a8ff830ef297a58764",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_curve.csv",
+      "first_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "second_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_fixed_100.csv",
+      "first_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "second_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_fixed_25.csv",
+      "first_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "second_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_fixed_50.csv",
+      "first_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "second_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_budget_2.5pct_fixed_75.csv",
+      "first_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "second_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M0_main.csv",
+      "first_sha256": "7459d64331aaa99aa30c212e470f4bea23cb294249ba0e9e521bd99f178bbebc",
+      "second_sha256": "7459d64331aaa99aa30c212e470f4bea23cb294249ba0e9e521bd99f178bbebc",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M0_risk_only.csv",
+      "first_sha256": "1a461bc0525858edfc69c6b492f60c01e75fe8e417a033f8a383f31c1d07b4f1",
+      "second_sha256": "1a461bc0525858edfc69c6b492f60c01e75fe8e417a033f8a383f31c1d07b4f1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M1_main.csv",
+      "first_sha256": "1a82f187b9a0b95fc508c53f657f964337ca418e15383bfc1454c2d8cc3accc0",
+      "second_sha256": "1a82f187b9a0b95fc508c53f657f964337ca418e15383bfc1454c2d8cc3accc0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M1_risk_only.csv",
+      "first_sha256": "da36811003b2a8e94acc255f5682f96f12c9dea6434f47e0cd030f2741cf3e3a",
+      "second_sha256": "da36811003b2a8e94acc255f5682f96f12c9dea6434f47e0cd030f2741cf3e3a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M2_main.csv",
+      "first_sha256": "85bcecc1c6a9463099380cd49514f7386876749bbead986109c49fdeef868ef5",
+      "second_sha256": "85bcecc1c6a9463099380cd49514f7386876749bbead986109c49fdeef868ef5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_M2_risk_only.csv",
+      "first_sha256": "ac1ad74fe5bf379b2ba181e86f84c45e91bdf30fd296de48b46ca0b5b531100c",
+      "second_sha256": "ac1ad74fe5bf379b2ba181e86f84c45e91bdf30fd296de48b46ca0b5b531100c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_curve.csv",
+      "first_sha256": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+      "second_sha256": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_fixed_100.csv",
+      "first_sha256": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+      "second_sha256": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_fixed_25.csv",
+      "first_sha256": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+      "second_sha256": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_fixed_50.csv",
+      "first_sha256": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+      "second_sha256": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_0bp_fixed_75.csv",
+      "first_sha256": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+      "second_sha256": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M0_main.csv",
+      "first_sha256": "80839f91c91892a80522a7b361dfa1b2f8b10f6be466f428d499e3391b7134f7",
+      "second_sha256": "80839f91c91892a80522a7b361dfa1b2f8b10f6be466f428d499e3391b7134f7",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M0_risk_only.csv",
+      "first_sha256": "1b2fb018dfc97a58331e5bd34b657d4ad2c599605c9f3115ef128564f36fd3fc",
+      "second_sha256": "1b2fb018dfc97a58331e5bd34b657d4ad2c599605c9f3115ef128564f36fd3fc",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M1_main.csv",
+      "first_sha256": "5ab872485897fe8ac9ad12822286bd0aafe0863e60cbb51d9fe3c610ef9f2f63",
+      "second_sha256": "5ab872485897fe8ac9ad12822286bd0aafe0863e60cbb51d9fe3c610ef9f2f63",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M1_risk_only.csv",
+      "first_sha256": "139fe30f26424f71ebd8f0d94f32aac25e185c24ac8dc2d599cdffccfc4b80c1",
+      "second_sha256": "139fe30f26424f71ebd8f0d94f32aac25e185c24ac8dc2d599cdffccfc4b80c1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M2_main.csv",
+      "first_sha256": "1954509a01149a75a15561f035385e6335bbf88916f1b1159669cce2638b0660",
+      "second_sha256": "1954509a01149a75a15561f035385e6335bbf88916f1b1159669cce2638b0660",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_M2_risk_only.csv",
+      "first_sha256": "95b9d8b2cd8a2466abe28445d9e5142276c116b6b9e5e2a6955c354a845fff12",
+      "second_sha256": "95b9d8b2cd8a2466abe28445d9e5142276c116b6b9e5e2a6955c354a845fff12",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_curve.csv",
+      "first_sha256": "488ee7c71a1a1b3bbcddddcd3e22dd24f0f20dc1688316851b15c288defdc8c5",
+      "second_sha256": "488ee7c71a1a1b3bbcddddcd3e22dd24f0f20dc1688316851b15c288defdc8c5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_fixed_100.csv",
+      "first_sha256": "48ef85402d1df3fb2e0fa09332952e9632ddce157d38ff6a5d9a6de51c8d676e",
+      "second_sha256": "48ef85402d1df3fb2e0fa09332952e9632ddce157d38ff6a5d9a6de51c8d676e",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_fixed_25.csv",
+      "first_sha256": "4552fbc7e6ebe3c21b1ba09d2d77b7bcd5cf1d84148d6b3f706b3a643c00ed21",
+      "second_sha256": "4552fbc7e6ebe3c21b1ba09d2d77b7bcd5cf1d84148d6b3f706b3a643c00ed21",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_fixed_50.csv",
+      "first_sha256": "26943a5b54398eabbb08ca772bd6cf612b7266a06faec3d7f3742de21aa7b5a0",
+      "second_sha256": "26943a5b54398eabbb08ca772bd6cf612b7266a06faec3d7f3742de21aa7b5a0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_15bp_fixed_75.csv",
+      "first_sha256": "d6d9e73168716721c9c495a14564a69b45d4335c759e50ff261d4efa58aa3421",
+      "second_sha256": "d6d9e73168716721c9c495a14564a69b45d4335c759e50ff261d4efa58aa3421",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M0_main.csv",
+      "first_sha256": "074e813297beb7a7b3749c3f93a4d043d7027e732ce47b0dd9a2def50216ebdd",
+      "second_sha256": "074e813297beb7a7b3749c3f93a4d043d7027e732ce47b0dd9a2def50216ebdd",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M0_risk_only.csv",
+      "first_sha256": "1e9d6362bf7cbe276917b94ec8120bb6ee9719fa27642846b1329b0ba11bb69e",
+      "second_sha256": "1e9d6362bf7cbe276917b94ec8120bb6ee9719fa27642846b1329b0ba11bb69e",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M1_main.csv",
+      "first_sha256": "6efe807752540a757b02a61ef778f8a8c6ec9be862958ef5e2473da1d7bad6fc",
+      "second_sha256": "6efe807752540a757b02a61ef778f8a8c6ec9be862958ef5e2473da1d7bad6fc",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M1_risk_only.csv",
+      "first_sha256": "c88ccfb93492f82950c8e128b7066ff2f80a3ff0083884ac4ff7fecc55fbae24",
+      "second_sha256": "c88ccfb93492f82950c8e128b7066ff2f80a3ff0083884ac4ff7fecc55fbae24",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M2_main.csv",
+      "first_sha256": "e8f6b90275fe12adabd98fc6b39150f3ad5dde582b52570d3e143328a3686995",
+      "second_sha256": "e8f6b90275fe12adabd98fc6b39150f3ad5dde582b52570d3e143328a3686995",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_M2_risk_only.csv",
+      "first_sha256": "01b99f4d5461f59d6fff0871440d90d62ae32ace968ee8d3818fdd57383242f2",
+      "second_sha256": "01b99f4d5461f59d6fff0871440d90d62ae32ace968ee8d3818fdd57383242f2",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_cash.csv",
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_curve.csv",
+      "first_sha256": "866d934ff071dbfa72dc55c09d73c9a262ee196230193dcf7ae80eab08a2ecbd",
+      "second_sha256": "866d934ff071dbfa72dc55c09d73c9a262ee196230193dcf7ae80eab08a2ecbd",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_fixed_100.csv",
+      "first_sha256": "ac1642a823dd4ef31c9279a3d0c2add1b9d19a785eacac5e4b9bbd4464141ee3",
+      "second_sha256": "ac1642a823dd4ef31c9279a3d0c2add1b9d19a785eacac5e4b9bbd4464141ee3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_fixed_25.csv",
+      "first_sha256": "bd1799efe6d61bd4ae9eb0bceaaee1c1649ab43d1ba381c1af7a8c2683189964",
+      "second_sha256": "bd1799efe6d61bd4ae9eb0bceaaee1c1649ab43d1ba381c1af7a8c2683189964",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_fixed_50.csv",
+      "first_sha256": "3d3b2e62a089ae3282f81f23de7f6bb01db256b6eaaf30872259ab43ab0b18b8",
+      "second_sha256": "3d3b2e62a089ae3282f81f23de7f6bb01db256b6eaaf30872259ab43ab0b18b8",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_cost_30bp_fixed_75.csv",
+      "first_sha256": "8c6fdc25002e4e6c3ae9786b775a8059a2f1247a80ef212c1d02805c166a280d",
+      "second_sha256": "8c6fdc25002e4e6c3ae9786b775a8059a2f1247a80ef212c1d02805c166a280d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M0_main.csv",
+      "first_sha256": "1fa62891777136ab432ef55bcc173659ed156bb1bfe2591c1f14fb2cfde6000b",
+      "second_sha256": "1fa62891777136ab432ef55bcc173659ed156bb1bfe2591c1f14fb2cfde6000b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M0_risk_only.csv",
+      "first_sha256": "0ddf46817e2131f7909a961c2da284a36e6bef4056f8592e5cec0708eaed4e87",
+      "second_sha256": "0ddf46817e2131f7909a961c2da284a36e6bef4056f8592e5cec0708eaed4e87",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M1_main.csv",
+      "first_sha256": "0565bc858c075462c3a1537f204d77a2c6a74ff3daf6db3b7ece501ec383ce1b",
+      "second_sha256": "0565bc858c075462c3a1537f204d77a2c6a74ff3daf6db3b7ece501ec383ce1b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M1_risk_only.csv",
+      "first_sha256": "6c2918308cc1d7be5c79f4934928621a30e365ac4668d3eab8f5f2ebd05a200b",
+      "second_sha256": "6c2918308cc1d7be5c79f4934928621a30e365ac4668d3eab8f5f2ebd05a200b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M2_main.csv",
+      "first_sha256": "3548a4f6294a60a93c040c8bd33b3fa31c8072a783b2e9e1821f1893a84e5d06",
+      "second_sha256": "3548a4f6294a60a93c040c8bd33b3fa31c8072a783b2e9e1821f1893a84e5d06",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_M2_risk_only.csv",
+      "first_sha256": "ad938e466960a5dcf18481913b8f0795ab95a9f7fbf070a260468b5b7ef949ce",
+      "second_sha256": "ad938e466960a5dcf18481913b8f0795ab95a9f7fbf070a260468b5b7ef949ce",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_cash.csv",
+      "first_sha256": "8402438b5cc534594f787f0ecedec70873209333819408610f39a3a464574833",
+      "second_sha256": "8402438b5cc534594f787f0ecedec70873209333819408610f39a3a464574833",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_curve.csv",
+      "first_sha256": "57d3278c47235d36a7992680566fa68816b872ff75d2915ebbb067c50237e1dd",
+      "second_sha256": "57d3278c47235d36a7992680566fa68816b872ff75d2915ebbb067c50237e1dd",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_fixed_100.csv",
+      "first_sha256": "2efa5f736f54c1e3351d16d2f0948247dc585678289d7487941b7c745cc57440",
+      "second_sha256": "2efa5f736f54c1e3351d16d2f0948247dc585678289d7487941b7c745cc57440",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_fixed_25.csv",
+      "first_sha256": "a9eb0b8d2cab511937ee105e2c997a0bcfa1b39516162ec6bae4e599948c2cd7",
+      "second_sha256": "a9eb0b8d2cab511937ee105e2c997a0bcfa1b39516162ec6bae4e599948c2cd7",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_fixed_50.csv",
+      "first_sha256": "1310f99218d4893904806bc24063e364d83887eb9b5543e08cfde4a2ce42ced2",
+      "second_sha256": "1310f99218d4893904806bc24063e364d83887eb9b5543e08cfde4a2ce42ced2",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_1session_fixed_75.csv",
+      "first_sha256": "de10a992daaf51aa265155846132fecb816aaf879bdfa5bfd0fabc76d0b2fe89",
+      "second_sha256": "de10a992daaf51aa265155846132fecb816aaf879bdfa5bfd0fabc76d0b2fe89",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M0_main.csv",
+      "first_sha256": "8ffce072c21f13e810bcb32697b7ad0af4c865c4eb6e895d3ffbbb1c7adab14b",
+      "second_sha256": "8ffce072c21f13e810bcb32697b7ad0af4c865c4eb6e895d3ffbbb1c7adab14b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M0_risk_only.csv",
+      "first_sha256": "2507a551e51cb38dac9ad050a7b32ba0144187fd87473f28e0f584eb05b4eb7f",
+      "second_sha256": "2507a551e51cb38dac9ad050a7b32ba0144187fd87473f28e0f584eb05b4eb7f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M1_main.csv",
+      "first_sha256": "e1f176e2e19e392ab459d966e54c1f75959d9c7f84e4535f4930d7fb23588c44",
+      "second_sha256": "e1f176e2e19e392ab459d966e54c1f75959d9c7f84e4535f4930d7fb23588c44",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M1_risk_only.csv",
+      "first_sha256": "062db2d8163d0a1d9790b200445a7f4c29e96936d63b182084799ccb0e83b6f7",
+      "second_sha256": "062db2d8163d0a1d9790b200445a7f4c29e96936d63b182084799ccb0e83b6f7",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M2_main.csv",
+      "first_sha256": "b95cdd5ba8ebde2bd7bfac86fb13694ea26d6edeb2b0bdbe29715d9b27b2301f",
+      "second_sha256": "b95cdd5ba8ebde2bd7bfac86fb13694ea26d6edeb2b0bdbe29715d9b27b2301f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_M2_risk_only.csv",
+      "first_sha256": "ec42d04e2bdee52893f587b0e37da836d576e2b557eae58cfcd437bd42a7c9b3",
+      "second_sha256": "ec42d04e2bdee52893f587b0e37da836d576e2b557eae58cfcd437bd42a7c9b3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_cash.csv",
+      "first_sha256": "ee3730a45337a061882b3b8ce6a5e1598c26a9540aac9770aef376dd29390e5a",
+      "second_sha256": "ee3730a45337a061882b3b8ce6a5e1598c26a9540aac9770aef376dd29390e5a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_curve.csv",
+      "first_sha256": "2b5465d244d072f14d5ad4cfb0c98d2c3ceca25a1df1517e1bb9d9afe62590f5",
+      "second_sha256": "2b5465d244d072f14d5ad4cfb0c98d2c3ceca25a1df1517e1bb9d9afe62590f5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_fixed_100.csv",
+      "first_sha256": "5d6519e9f77c9917da0a5051176dd6a443a85df8b668abeade880dbe0c9f1b78",
+      "second_sha256": "5d6519e9f77c9917da0a5051176dd6a443a85df8b668abeade880dbe0c9f1b78",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_fixed_25.csv",
+      "first_sha256": "32c48c9fafa65add2188f3190adb08086555a5e0afe89387ae8abfd8c48b98fc",
+      "second_sha256": "32c48c9fafa65add2188f3190adb08086555a5e0afe89387ae8abfd8c48b98fc",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_fixed_50.csv",
+      "first_sha256": "368df54bb0f58c99ee71fb0146e491e06efaf6cf459431976533db896640d6d5",
+      "second_sha256": "368df54bb0f58c99ee71fb0146e491e06efaf6cf459431976533db896640d6d5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/common_delay_aligned_base_fixed_75.csv",
+      "first_sha256": "6f6d75da07ea31c1787ea594523b4799fabca7d277cb5e426dbde5990d0c6c72",
+      "second_sha256": "6f6d75da07ea31c1787ea594523b4799fabca7d277cb5e426dbde5990d0c6c72",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_main.csv",
+      "first_sha256": "33aec1df57cdfea2c41684290fce9a4cfc46e5b2e7ae6b8775ec3607f20fd962",
+      "second_sha256": "33aec1df57cdfea2c41684290fce9a4cfc46e5b2e7ae6b8775ec3607f20fd962",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv",
+      "first_sha256": "879290237a9c89cc8eb92e4ee398db8ad9e8684e4b5315cab19116560a9f1398",
+      "second_sha256": "879290237a9c89cc8eb92e4ee398db8ad9e8684e4b5315cab19116560a9f1398",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_main.csv",
+      "first_sha256": "a85b48fba100a6f71ec040298d5051552f96f6de82ef97d13f6819c0b2c2292e",
+      "second_sha256": "a85b48fba100a6f71ec040298d5051552f96f6de82ef97d13f6819c0b2c2292e",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv",
+      "first_sha256": "a3f45b6ebbaed5bcb7f6ca3bc3ad12bffbe35f85fd2388b772c30c4a0542eacd",
+      "second_sha256": "a3f45b6ebbaed5bcb7f6ca3bc3ad12bffbe35f85fd2388b772c30c4a0542eacd",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_main.csv",
+      "first_sha256": "1156692a7679f295677ac6d6725b1806b7c05d7edd18a68481bb41c89ddff6bf",
+      "second_sha256": "1156692a7679f295677ac6d6725b1806b7c05d7edd18a68481bb41c89ddff6bf",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv",
+      "first_sha256": "448cad6880893bb52d67fe3331d47a40e6a06b52a40e3f15872fc2ac62a1e728",
+      "second_sha256": "448cad6880893bb52d67fe3331d47a40e6a06b52a40e3f15872fc2ac62a1e728",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M0_main.csv",
+      "first_sha256": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1",
+      "second_sha256": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M0_risk_only.csv",
+      "first_sha256": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792",
+      "second_sha256": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M1_main.csv",
+      "first_sha256": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4",
+      "second_sha256": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M1_risk_only.csv",
+      "first_sha256": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3",
+      "second_sha256": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M2_main.csv",
+      "first_sha256": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db",
+      "second_sha256": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_M2_risk_only.csv",
+      "first_sha256": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb",
+      "second_sha256": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_curve.csv",
+      "first_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "second_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_fixed_100.csv",
+      "first_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "second_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_fixed_25.csv",
+      "first_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "second_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_fixed_50.csv",
+      "first_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "second_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_fixed_75.csv",
+      "first_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "second_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M0_main.csv",
+      "first_sha256": "ce84d80ee45fce8bffcb1912e3bd205c21e31bb8a4fba6b84ac10dee05a4a7df",
+      "second_sha256": "ce84d80ee45fce8bffcb1912e3bd205c21e31bb8a4fba6b84ac10dee05a4a7df",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M0_risk_only.csv",
+      "first_sha256": "184ef72b6667d93ca04d0753f713de27db47ae584376e8dd410dddcb797c4b7b",
+      "second_sha256": "184ef72b6667d93ca04d0753f713de27db47ae584376e8dd410dddcb797c4b7b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M1_main.csv",
+      "first_sha256": "4917b5427cf70f7d2aa833fb5a10ee16dad964b9e6c9fe8d510267a8bf0dabda",
+      "second_sha256": "4917b5427cf70f7d2aa833fb5a10ee16dad964b9e6c9fe8d510267a8bf0dabda",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M1_risk_only.csv",
+      "first_sha256": "76926565ab72619434edf05ba13f12e89ce4463024be5c8daa96ba82c7a69428",
+      "second_sha256": "76926565ab72619434edf05ba13f12e89ce4463024be5c8daa96ba82c7a69428",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M2_main.csv",
+      "first_sha256": "7835b311d805861258ac96b79b438a3695843ef32c986a583b175e4fc8ea8394",
+      "second_sha256": "7835b311d805861258ac96b79b438a3695843ef32c986a583b175e4fc8ea8394",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_M2_risk_only.csv",
+      "first_sha256": "d0133a92a06a71b94e3179b5396db436a564218b8276a6e091f9fb264d70638c",
+      "second_sha256": "d0133a92a06a71b94e3179b5396db436a564218b8276a6e091f9fb264d70638c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_curve.csv",
+      "first_sha256": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+      "second_sha256": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_fixed_100.csv",
+      "first_sha256": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+      "second_sha256": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_fixed_25.csv",
+      "first_sha256": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+      "second_sha256": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_fixed_50.csv",
+      "first_sha256": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+      "second_sha256": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_base_same_targets_gross_fixed_75.csv",
+      "first_sha256": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+      "second_sha256": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M0_main.csv",
+      "first_sha256": "f001a5d1f64d226ae1b9d97a710fcfd9494c0f728f69ea84d129ee6d8326c690",
+      "second_sha256": "f001a5d1f64d226ae1b9d97a710fcfd9494c0f728f69ea84d129ee6d8326c690",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M0_risk_only.csv",
+      "first_sha256": "0bd68b1e4a2243698df0c70a7933d825e6fe62560dad057eba4582c28c6a5e5a",
+      "second_sha256": "0bd68b1e4a2243698df0c70a7933d825e6fe62560dad057eba4582c28c6a5e5a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M1_main.csv",
+      "first_sha256": "f7776d4cdcbe3fff9014bfed216d83035f7fabf875c7651dd441f6a8c5904f2d",
+      "second_sha256": "f7776d4cdcbe3fff9014bfed216d83035f7fabf875c7651dd441f6a8c5904f2d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M1_risk_only.csv",
+      "first_sha256": "75ef82a51d2d31adb9c80549835e6fbc7aad9fd14bae636617f777a1686bb134",
+      "second_sha256": "75ef82a51d2d31adb9c80549835e6fbc7aad9fd14bae636617f777a1686bb134",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M2_main.csv",
+      "first_sha256": "47af72437185767ac4bce33c50987327532ccf8cd3351b1e950892fdd02cc049",
+      "second_sha256": "47af72437185767ac4bce33c50987327532ccf8cd3351b1e950892fdd02cc049",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_M2_risk_only.csv",
+      "first_sha256": "72df88270769b13c26348f1d91f48ff357cb76eb2e1f64f573bcf8e38ef965ce",
+      "second_sha256": "72df88270769b13c26348f1d91f48ff357cb76eb2e1f64f573bcf8e38ef965ce",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_curve.csv",
+      "first_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "second_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_fixed_100.csv",
+      "first_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "second_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_fixed_25.csv",
+      "first_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "second_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_fixed_50.csv",
+      "first_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "second_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_10pct_fixed_75.csv",
+      "first_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "second_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M0_main.csv",
+      "first_sha256": "0d96a92043eb72d412c933ea1ffe7ad3f25ee9d2b2aab4e63cd8453d8acd5b74",
+      "second_sha256": "0d96a92043eb72d412c933ea1ffe7ad3f25ee9d2b2aab4e63cd8453d8acd5b74",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M0_risk_only.csv",
+      "first_sha256": "d937fe69cda4bf33f98093bf4d6982a48bb1c5483afa9875ae45cc9b135b158a",
+      "second_sha256": "d937fe69cda4bf33f98093bf4d6982a48bb1c5483afa9875ae45cc9b135b158a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M1_main.csv",
+      "first_sha256": "f4b2557756d35f898474003d0650b02340e2e21f5307c529578e64ca8944ff5c",
+      "second_sha256": "f4b2557756d35f898474003d0650b02340e2e21f5307c529578e64ca8944ff5c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M1_risk_only.csv",
+      "first_sha256": "cf23ef4fbf87862d91ccd4ec2b9af7ac1177f5a929b3987aadf86ff239eab7a1",
+      "second_sha256": "cf23ef4fbf87862d91ccd4ec2b9af7ac1177f5a929b3987aadf86ff239eab7a1",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M2_main.csv",
+      "first_sha256": "1aa79b2bc70c51be437024104271d740868fa12c61df679815e464e05fcb5749",
+      "second_sha256": "1aa79b2bc70c51be437024104271d740868fa12c61df679815e464e05fcb5749",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_M2_risk_only.csv",
+      "first_sha256": "c184cea1fab5df672a3835c04a7ed400568389950e1b2fc463b0e43927ed8fb0",
+      "second_sha256": "c184cea1fab5df672a3835c04a7ed400568389950e1b2fc463b0e43927ed8fb0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_curve.csv",
+      "first_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "second_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_fixed_100.csv",
+      "first_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "second_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_fixed_25.csv",
+      "first_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "second_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_fixed_50.csv",
+      "first_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "second_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_budget_2.5pct_fixed_75.csv",
+      "first_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "second_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M0_main.csv",
+      "first_sha256": "9fd7ad957b077a89a623ad11e8fc76e37a9805d2c39d34e45e432b385f207d50",
+      "second_sha256": "9fd7ad957b077a89a623ad11e8fc76e37a9805d2c39d34e45e432b385f207d50",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M0_risk_only.csv",
+      "first_sha256": "4d049170a4c391293f2ba98b2cafc88e8430a9563e2c26f73f922405a87c8c03",
+      "second_sha256": "4d049170a4c391293f2ba98b2cafc88e8430a9563e2c26f73f922405a87c8c03",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M1_main.csv",
+      "first_sha256": "65c7d82171f4b9251f6f0ec097a1dca71038cf245ef7dc0f5eef6e7a9baa8820",
+      "second_sha256": "65c7d82171f4b9251f6f0ec097a1dca71038cf245ef7dc0f5eef6e7a9baa8820",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M1_risk_only.csv",
+      "first_sha256": "1defda5b60fb1a658ae8b4aeeb031338c0f4f06133378c18597d77d071bddff0",
+      "second_sha256": "1defda5b60fb1a658ae8b4aeeb031338c0f4f06133378c18597d77d071bddff0",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M2_main.csv",
+      "first_sha256": "7e9f38233e7cbc5a858710c80de6cd80bac603dd944be0f1074325d3d506656a",
+      "second_sha256": "7e9f38233e7cbc5a858710c80de6cd80bac603dd944be0f1074325d3d506656a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_M2_risk_only.csv",
+      "first_sha256": "ae3b183cdceae4b236c9e683ca6d083aeff652fdfd041e39af3492d6899beaa8",
+      "second_sha256": "ae3b183cdceae4b236c9e683ca6d083aeff652fdfd041e39af3492d6899beaa8",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_curve.csv",
+      "first_sha256": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+      "second_sha256": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_fixed_100.csv",
+      "first_sha256": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+      "second_sha256": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_fixed_25.csv",
+      "first_sha256": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+      "second_sha256": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_fixed_50.csv",
+      "first_sha256": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+      "second_sha256": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_0bp_fixed_75.csv",
+      "first_sha256": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+      "second_sha256": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M0_main.csv",
+      "first_sha256": "846f43345c8cf7fbba1ca3b4e42489dcf313d696ba970fc490650f8c137530ad",
+      "second_sha256": "846f43345c8cf7fbba1ca3b4e42489dcf313d696ba970fc490650f8c137530ad",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M0_risk_only.csv",
+      "first_sha256": "0d243d8366ee3e55259bd9e53742c6af22d2ff466eb45d936e0ba1961b858b34",
+      "second_sha256": "0d243d8366ee3e55259bd9e53742c6af22d2ff466eb45d936e0ba1961b858b34",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M1_main.csv",
+      "first_sha256": "1b2b6ce0840715c37bc154aaffe89efe425965798358682e7af039953accfbf6",
+      "second_sha256": "1b2b6ce0840715c37bc154aaffe89efe425965798358682e7af039953accfbf6",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M1_risk_only.csv",
+      "first_sha256": "6dc8fa89765273dbe19f7c62929be96f12ae91723b0b9c7bddb191287f8b8edb",
+      "second_sha256": "6dc8fa89765273dbe19f7c62929be96f12ae91723b0b9c7bddb191287f8b8edb",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M2_main.csv",
+      "first_sha256": "66d567084bbbb20ce484378fb7cdba568288ecc0a2f88e3ebeae070305e7f121",
+      "second_sha256": "66d567084bbbb20ce484378fb7cdba568288ecc0a2f88e3ebeae070305e7f121",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_M2_risk_only.csv",
+      "first_sha256": "e1e9dce95d71e84cec22696c1790d43189fabb9b8cae5b28ce2b2441bf9cf02c",
+      "second_sha256": "e1e9dce95d71e84cec22696c1790d43189fabb9b8cae5b28ce2b2441bf9cf02c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_curve.csv",
+      "first_sha256": "c51d6e312344c7a8ab8599ccee997a06c3038d2e3c2779c5e1b0e55904555c7f",
+      "second_sha256": "c51d6e312344c7a8ab8599ccee997a06c3038d2e3c2779c5e1b0e55904555c7f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_fixed_100.csv",
+      "first_sha256": "72b22d80dc5958ff226077ca0628e5a003df6dc16472baad5a4d3f15dba3eac3",
+      "second_sha256": "72b22d80dc5958ff226077ca0628e5a003df6dc16472baad5a4d3f15dba3eac3",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_fixed_25.csv",
+      "first_sha256": "07065e6aa2468ac478a35e82c650ec64ef5eff34782a150207d0b11bcaf3214f",
+      "second_sha256": "07065e6aa2468ac478a35e82c650ec64ef5eff34782a150207d0b11bcaf3214f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_fixed_50.csv",
+      "first_sha256": "c9109aea3c0c512b640b1d9e18ab34153aee8d795ae51b123ecb9ba5d3ddf87c",
+      "second_sha256": "c9109aea3c0c512b640b1d9e18ab34153aee8d795ae51b123ecb9ba5d3ddf87c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_15bp_fixed_75.csv",
+      "first_sha256": "e709df1d97ee48be535a0f775f3c8c4df8c081e0e5f203ac52f2ec3574df08f6",
+      "second_sha256": "e709df1d97ee48be535a0f775f3c8c4df8c081e0e5f203ac52f2ec3574df08f6",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M0_main.csv",
+      "first_sha256": "b6cf913544e968c5ddac89d92b710e452eff18794e129d1d29666cd6e07d3990",
+      "second_sha256": "b6cf913544e968c5ddac89d92b710e452eff18794e129d1d29666cd6e07d3990",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M0_risk_only.csv",
+      "first_sha256": "5a4d08a7fe2f316bd5f2ed83f74244471f2ae61f0774d5b662b608a270231b0c",
+      "second_sha256": "5a4d08a7fe2f316bd5f2ed83f74244471f2ae61f0774d5b662b608a270231b0c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M1_main.csv",
+      "first_sha256": "60272071877e9b972fe33904e4e58b2431fac2bc0bc161d6ae914c94076637b5",
+      "second_sha256": "60272071877e9b972fe33904e4e58b2431fac2bc0bc161d6ae914c94076637b5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M1_risk_only.csv",
+      "first_sha256": "0c10d56ba98f7c0ec2f86fb741449c763d283651d82611b1e051cda678ef7453",
+      "second_sha256": "0c10d56ba98f7c0ec2f86fb741449c763d283651d82611b1e051cda678ef7453",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M2_main.csv",
+      "first_sha256": "1fb46c244a04be07b22fc3fc29d275fc39b6045e8fd218e26ebb952f7073b1a6",
+      "second_sha256": "1fb46c244a04be07b22fc3fc29d275fc39b6045e8fd218e26ebb952f7073b1a6",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_M2_risk_only.csv",
+      "first_sha256": "e94076ab056434f73277e6bf7bdd7ff5b073e89db8187b25c02312c77b6ba22b",
+      "second_sha256": "e94076ab056434f73277e6bf7bdd7ff5b073e89db8187b25c02312c77b6ba22b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_cash.csv",
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_curve.csv",
+      "first_sha256": "da736a00eb607bd8471fc9e64820f5ed51b3f0863d84d4049fcf1db912ccf633",
+      "second_sha256": "da736a00eb607bd8471fc9e64820f5ed51b3f0863d84d4049fcf1db912ccf633",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_fixed_100.csv",
+      "first_sha256": "7f5853851e16fcaeb794972e66cb471efe59d436ba4c3ac1465d8aa59dcd137f",
+      "second_sha256": "7f5853851e16fcaeb794972e66cb471efe59d436ba4c3ac1465d8aa59dcd137f",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_fixed_25.csv",
+      "first_sha256": "40d8b94c44a7a7ce2364b9a4503fba462bcb12db27d451ee9ada6473e340fbc8",
+      "second_sha256": "40d8b94c44a7a7ce2364b9a4503fba462bcb12db27d451ee9ada6473e340fbc8",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_fixed_50.csv",
+      "first_sha256": "8ff53e807cdb2063fe7384c2a3ea10a574746b89eb9b8c072091a389a54905b5",
+      "second_sha256": "8ff53e807cdb2063fe7384c2a3ea10a574746b89eb9b8c072091a389a54905b5",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_cost_30bp_fixed_75.csv",
+      "first_sha256": "2a9c4dcb6c8b97be37765486a89dcdde7111fd4af708a561aa6efd19bfbef7e9",
+      "second_sha256": "2a9c4dcb6c8b97be37765486a89dcdde7111fd4af708a561aa6efd19bfbef7e9",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M0_main.csv",
+      "first_sha256": "f5868ea2165822bb8d80ab3eae03637e59b4ce92e119d2f119ac83f64d606184",
+      "second_sha256": "f5868ea2165822bb8d80ab3eae03637e59b4ce92e119d2f119ac83f64d606184",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M0_risk_only.csv",
+      "first_sha256": "83649dd604a26009e33e7883f81f78443291324c30cb81fae06c4925e48eff89",
+      "second_sha256": "83649dd604a26009e33e7883f81f78443291324c30cb81fae06c4925e48eff89",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M1_main.csv",
+      "first_sha256": "2ddfc36b3699a88b6b27b617369a7926a462def6be13cd571f2c4a6726e5972a",
+      "second_sha256": "2ddfc36b3699a88b6b27b617369a7926a462def6be13cd571f2c4a6726e5972a",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M1_risk_only.csv",
+      "first_sha256": "7f9ad7801e0f966dc40b42ac551efd9c6e5d347a852a0b2868e918703d3bde0b",
+      "second_sha256": "7f9ad7801e0f966dc40b42ac551efd9c6e5d347a852a0b2868e918703d3bde0b",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M2_main.csv",
+      "first_sha256": "155882e27891edec8d4a43fa9df6a958dbfbfc33e0b95ce1fa9d7d2d298c78e6",
+      "second_sha256": "155882e27891edec8d4a43fa9df6a958dbfbfc33e0b95ce1fa9d7d2d298c78e6",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_M2_risk_only.csv",
+      "first_sha256": "1ee3338e102568391aeb55436c26ec5abd4481f8408d1487936c9c102f22edf8",
+      "second_sha256": "1ee3338e102568391aeb55436c26ec5abd4481f8408d1487936c9c102f22edf8",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_cash.csv",
+      "first_sha256": "db80934ba02585fdb7bbda23cf341582d00f4695505f1440a4e6b1b18399d6fa",
+      "second_sha256": "db80934ba02585fdb7bbda23cf341582d00f4695505f1440a4e6b1b18399d6fa",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_curve.csv",
+      "first_sha256": "91cc8ad7f8cd212fdfb75e3624fdb8d40f6156120123f094902aff8904ef7121",
+      "second_sha256": "91cc8ad7f8cd212fdfb75e3624fdb8d40f6156120123f094902aff8904ef7121",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_fixed_100.csv",
+      "first_sha256": "ec796895fe9a8d86d7c137224950bac757dab6d770e41247a712b815a28439be",
+      "second_sha256": "ec796895fe9a8d86d7c137224950bac757dab6d770e41247a712b815a28439be",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_fixed_25.csv",
+      "first_sha256": "d712bfd402a69daaad646a6d18db33741c7c9bbe2403405ac8954e5a1c53297c",
+      "second_sha256": "d712bfd402a69daaad646a6d18db33741c7c9bbe2403405ac8954e5a1c53297c",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_fixed_50.csv",
+      "first_sha256": "2bb3ac0f089986cebc9932fe6d107b8d84af8a10607ea66835be5eea55dd5223",
+      "second_sha256": "2bb3ac0f089986cebc9932fe6d107b8d84af8a10607ea66835be5eea55dd5223",
+      "equal": true
+    },
+    {
+      "file": "ledgers/full_delay_1session_fixed_75.csv",
+      "first_sha256": "aba4a44be66483c4c09ee6598ad574bda3ea44d09327651eaf0f59b6df4114b6",
+      "second_sha256": "aba4a44be66483c4c09ee6598ad574bda3ea44d09327651eaf0f59b6df4114b6",
+      "equal": true
+    },
+    {
+      "file": "missed_up_days.csv",
+      "first_sha256": "0a2285a414e3707301f76c1d16d4e486b9f9cb79f84f08bb3ddb582f92330241",
+      "second_sha256": "0a2285a414e3707301f76c1d16d4e486b9f9cb79f84f08bb3ddb582f92330241",
+      "equal": true
+    },
+    {
+      "file": "post_hoc_exposure_matches.csv",
+      "first_sha256": "ded110a5161141679d7c450555dd41382cc255402ae0f6d625e94a4ec53f38ed",
+      "second_sha256": "ded110a5161141679d7c450555dd41382cc255402ae0f6d625e94a4ec53f38ed",
+      "equal": true
+    },
+    {
+      "file": "rebound_windows.csv",
+      "first_sha256": "c64619b2b7a04bfac60709304fcea708e05e972788c18f34c74a516cf658a4ea",
+      "second_sha256": "c64619b2b7a04bfac60709304fcea708e05e972788c18f34c74a516cf658a4ea",
+      "equal": true
+    },
+    {
+      "file": "risk_capacity_diagnostics.csv",
+      "first_sha256": "fca7a0315586b6e29d7be01b469c8379e3ce651e1389eb25f222e5704221754f",
+      "second_sha256": "fca7a0315586b6e29d7be01b469c8379e3ce651e1389eb25f222e5704221754f",
+      "equal": true
+    },
+    {
+      "file": "same_target_gross_net.csv",
+      "first_sha256": "a7b117212fa68db8718489aee6c03677f0751be83c76a5d68868b5ebd669115c",
+      "second_sha256": "a7b117212fa68db8718489aee6c03677f0751be83c76a5d68868b5ebd669115c",
+      "equal": true
+    },
+    {
+      "file": "single_factor_sensitivities.csv",
+      "first_sha256": "c14ebb9b3eddd7c0834c7a1ba49b7e48069f01bae283a73773be833a5ae9b35a",
+      "second_sha256": "c14ebb9b3eddd7c0834c7a1ba49b7e48069f01bae283a73773be833a5ae9b35a",
+      "equal": true
+    },
+    {
+      "file": "trades.csv",
+      "first_sha256": "ce878546f5eeb066c22d542c863ae13de8b7149f93a1195ef0eef202868048c1",
+      "second_sha256": "08647e2937f4dd0fa42909803f8575549c29ca16768fb16c24037a02c0a3ebb8",
+      "equal": false
+    }
+  ],
+  "second_run_artifact_hashes_rechecked": [
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/account_metrics.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/attribution.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/case_account_summary.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/case_daily_ledgers.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/case_information_predictions.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/cases.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/common_main.png",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/common_main.svg",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/common_risk_only.png",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/common_risk_only.svg",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/exposure_distribution.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/full_main.png",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/full_main.svg",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/full_risk_only.png",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/full_risk_only.svg",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/independent_validation.json",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/input_verification.json",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/last_five_2023_execution_days.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledger_audit.json",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M0_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M0_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M1_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M1_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M2_main.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M2_risk_only.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_cash.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_curve.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_100.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_25.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_50.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_75.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/missed_up_days.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/pending_delayed_orders.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/post_hoc_exposure_matches.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/rebound_windows.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/risk_capacity_diagnostics.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/same_target_gross_net.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/single_factor_sensitivities.csv",
+      "equal": true
+    },
+    {
+      "file": "data/clean/p5/20260907T024118182655Z/trades.csv",
+      "equal": true
+    }
+  ],
+  "computed_result_correction_required": false
+}

@@ -1,0 +1,55 @@
+{
+  "stage": "P5",
+  "recorded_before_economic_calculation": "2026-09-07T02:27:54.112760+00:00",
+  "accepted_p4_checkpoint": "de8b43d44461891cc2f89f540223700bb93546ba",
+  "accepted_p4": "runs/p4/acceptance.json",
+  "model_fit_or_selection_performed": false,
+  "scope": "2020-2023 development only",
+  "mapping": {
+    "risk": "1 if q90==0 else min(1,B/q90)",
+    "main": "risk if mu5>2*c else 0",
+    "P10_used": false,
+    "score_observed_used": false,
+    "B": 0.05,
+    "c": 0.0005
+  },
+  "scenarios": [
+    "base",
+    "cost_0bp",
+    "cost_15bp",
+    "cost_30bp",
+    "budget_2.5pct",
+    "budget_10pct",
+    "delay_1session"
+  ],
+  "single_factor_rules": "cost changes both the fixed formula threshold 2*c and actual fee rate; B and delay fixed. Budget changes B alone. Delay shifts the entire saved prediction/target one equity session without refitting. No Cartesian grid.",
+  "gross_definition": "rerun identical BASE targets with zero execution fees, keeping mu filter at original c=.0005; distinct from cost_0bp scenario that also changes the filter to mu>0",
+  "account_scopes": {
+    "full": "cash anchor on previous equity session; first allowed execution 2020-01-02; all 12 accounts reset to 100000",
+    "common": "first execution at common forecast availability; reset all 12 accounts to 100000 with preceding information retained",
+    "delay_common_pair": "delayed common first execution is one session later; rerun BASE reference from exactly that later start for paired delay attribution; do not truncate an existing account"
+  },
+  "terminal": "mark at 2023 final close, no forced sale, no 2024 return, pending delayed orders reported",
+  "missing_signal": "no order; retain actual shares/cash, corporate actions and PnL continue",
+  "metrics": {
+    "exposure": "old close weight on return-bearing account days; initial execution day weight is zero; also show closing weights and distribution",
+    "drawdown": "includes initial capital anchor, so initial fee can create drawdown",
+    "five_day": "worst compounded 5 consecutive account-return sessions, no overlapping position trades",
+    "missed_upside": "sum((1-old_weight)*max(asset_return,0)); arithmetic opportunity diagnostic, not additive compounded performance",
+    "cash": "old_weight<=1e-12; no-service startup classified separately"
+  },
+  "exposure_match": "POST_HOC_ONLY; fixed target=observed mean old weight*n/(n-1), which exactly matches return-bearing mean exposure after common cash anchor; all accounts rerun independently, not executable ex ante",
+  "case_selection": "POST_HOC: primary M2 main vs fixed100 on base common scope; rank entry-close through next5-closes normalized actual continuous-account return difference, include entry rebalance fee; two largest and two smallest, greedily exclude overlapping entry/end intervals; report all selected rows, not label-trade sums",
+  "risk_underestimate_diagnostic": "compute entry-relative subsequent five-close asset loss only where entirely before2024; compare saved q90 and static risk capacity*loss to B; does not alter holdings or claim continuous-account guarantee",
+  "unperformed": [
+    "P6 ablations",
+    "M3",
+    "SKEW challenger",
+    "bootstrap",
+    "2024+ evaluation",
+    "P10 trading threshold",
+    "account connection",
+    "orders",
+    "model promotion"
+  ]
+}

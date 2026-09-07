@@ -7,8 +7,8 @@ from svxylab.environment import build_environment_report
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="SVXYLab 本地研究程序（P0 环境至 P4 联合预测）")
-    parser.add_argument("command", choices=["environment", "data", "baselines", "features", "predictions"], help="生成当前阶段的本地研究报告")
+    parser = argparse.ArgumentParser(description="SVXYLab 本地研究程序（P0 环境至 P5 连续净账本）")
+    parser.add_argument("command", choices=["environment", "data", "baselines", "features", "predictions", "economics"], help="生成当前阶段的本地研究报告")
     parser.add_argument("--open", action="store_true", help="生成后用 macOS 默认应用打开报告")
     parser.add_argument("--pilot", action="store_true", help="P4：只试运行首个符合条件的历史月")
     parser.add_argument("--review", action="store_true", help="P4：按原参数完整复算、追加审查诊断并导出本地离线包")
@@ -18,6 +18,9 @@ def main() -> int:
     if args.review and (args.command != "predictions" or args.pilot):
         parser.error("--review 仅用于完整 predictions，不能与 --pilot 同用")
     try:
+        if args.command == "economics":
+            from svxylab.economics_report import build_economics_report
+            return build_economics_report(Path.cwd(), open_report=args.open)
         if args.command == "predictions":
             if args.review:
                 from svxylab.prediction_review import build_review

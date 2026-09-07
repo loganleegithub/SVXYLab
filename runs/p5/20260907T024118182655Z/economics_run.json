@@ -1,0 +1,939 @@
+{
+  "stage": "P5",
+  "generated_at": "2026-09-07T02:41:18.182655+00:00",
+  "invocation": ".venv/bin/python -m svxylab economics --open",
+  "result": {
+    "output_dir": "data/clean/p5/20260907T024118182655Z",
+    "inputs": {
+      "files": {
+        "prices": "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv",
+        "clock": "data/clean/p2/20260907T000150426421Z/clock.csv",
+        "predictions": "data/clean/p4/20260907T021724579078Z/predictions.csv",
+        "curve": "data/clean/VX_front_three.csv",
+        "features": "data/clean/p3/20260907T005629664263Z/core_features.csv"
+      },
+      "sha256": {
+        "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+        "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+        "data/clean/p4/20260907T021724579078Z/predictions.csv": "057e0b29c171e7faee7a0b9e148a537bc256b0eaa3bfd7b4f4a6158a930fc227",
+        "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+        "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e"
+      },
+      "p4_acceptance_sha256": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+      "prediction_fields_read": [
+        "as_of_session",
+        "decision_session",
+        "simulation_decision_at",
+        "execution_at",
+        "model",
+        "fit_id",
+        "forecast_available",
+        "mu5",
+        "q90"
+      ],
+      "labels_or_score_observed_read": false,
+      "locked_returns_read": false,
+      "model_fit_or_selection_performed": false,
+      "first_information": "2019-01-02",
+      "last_information": "2023-12-29",
+      "information_rows": 1258
+    },
+    "base_common_first_execution": "2020-09-11",
+    "delayed_common_first_execution": "2020-09-14",
+    "requested_first_execution": "2020-01-02",
+    "last_account_close": "2023-12-29",
+    "accounts": 180,
+    "same_targets_gross_accounts": 24,
+    "post_hoc_matching_accounts": 12,
+    "scenarios": [
+      {
+        "scenario": "base",
+        "budget": 0.05,
+        "cost_rate": 0.0005,
+        "delay": 0,
+        "factor": "base"
+      },
+      {
+        "scenario": "cost_0bp",
+        "budget": 0.05,
+        "cost_rate": 0.0,
+        "delay": 0,
+        "factor": "cost"
+      },
+      {
+        "scenario": "cost_15bp",
+        "budget": 0.05,
+        "cost_rate": 0.0015,
+        "delay": 0,
+        "factor": "cost"
+      },
+      {
+        "scenario": "cost_30bp",
+        "budget": 0.05,
+        "cost_rate": 0.003,
+        "delay": 0,
+        "factor": "cost"
+      },
+      {
+        "scenario": "budget_2.5pct",
+        "budget": 0.025,
+        "cost_rate": 0.0005,
+        "delay": 0,
+        "factor": "budget"
+      },
+      {
+        "scenario": "budget_10pct",
+        "budget": 0.1,
+        "cost_rate": 0.0005,
+        "delay": 0,
+        "factor": "budget"
+      },
+      {
+        "scenario": "delay_1session",
+        "budget": 0.05,
+        "cost_rate": 0.0005,
+        "delay": 1,
+        "factor": "delay"
+      }
+    ],
+    "cases": [
+      {
+        "case_id": "favorable_1",
+        "kind": "favorable",
+        "entry_index": 92,
+        "entry": "2021-01-22",
+        "end": "2021-01-29",
+        "main_return": -0.0037538998527226752,
+        "fixed100_return": -0.1341669105694263,
+        "difference": 0.13041301071670364
+      },
+      {
+        "case_id": "favorable_2",
+        "kind": "favorable",
+        "entry_index": 301,
+        "entry": "2021-11-18",
+        "end": "2021-11-26",
+        "main_return": 0.0,
+        "fixed100_return": -0.1250801661436446,
+        "difference": 0.1250801661436446
+      },
+      {
+        "case_id": "unfavorable_1",
+        "kind": "unfavorable",
+        "entry_index": 36,
+        "entry": "2020-10-30",
+        "end": "2020-11-06",
+        "main_return": 0.0,
+        "fixed100_return": 0.13044771970332447,
+        "difference": -0.13044771970332447
+      },
+      {
+        "case_id": "unfavorable_2",
+        "kind": "unfavorable",
+        "entry_index": 379,
+        "entry": "2022-03-14",
+        "end": "2022-03-21",
+        "main_return": 0.0,
+        "fixed100_return": 0.1078019999318347,
+        "difference": -0.1078019999318347
+      }
+    ],
+    "p4_forecast_sessions": 831,
+    "p4_unserved_request_sessions": 175,
+    "all_account_checks_passed": true,
+    "p4_model_unchanged": true,
+    "p4_accepted_checkpoint": "de8b43d44461891cc2f89f540223700bb93546ba",
+    "locked_evaluation_performed": false,
+    "p6_performed": false,
+    "compute_and_audit_seconds": 25.140377875010017
+  },
+  "independent_audit": {
+    "method": "independent_from_accepted_predictions_and_prices_solve_trade_equations",
+    "accounts_checked": 216,
+    "ledger_rows_checked": 197538,
+    "max_cash_equity_trade_error_dollars": 9.807990863919258e-09,
+    "target_source_execution_and_missing_holding_checked": true,
+    "common_accounts_restarted": true,
+    "p4_predictions_and_model_hashes_unchanged": true,
+    "tail_forecasts_tradable_without_labels": true,
+    "risk_diagnostic_paths_rebuilt_from_prices": true,
+    "no_locked_economic_outcomes_used": true,
+    "passed": true
+  },
+  "engineering_complete": true,
+  "tests_passed": 97,
+  "tests_failed": 0,
+  "test_cases": [
+    {
+      "name": "test_synthetic_daily_minus_half_compounding",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels0]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels1]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels2]",
+      "passed": true
+    },
+    {
+      "name": "test_expiration_day_rolls_and_does_not_relabel_missing_front",
+      "passed": true
+    },
+    {
+      "name": "test_catalog_uses_only_monthly_and_rejects_gap",
+      "passed": true
+    },
+    {
+      "name": "test_vx_uses_settlement_and_checks_identity",
+      "passed": true
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,12\\n01/02/2019,13\\n]",
+      "passed": true
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,nan\\n]",
+      "passed": true
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,-1\\n]",
+      "passed": true
+    },
+    {
+      "name": "test_coverage_does_not_count_off_calendar_values",
+      "passed": true
+    },
+    {
+      "name": "test_local_import_checks_hash_and_preserves_original",
+      "passed": true
+    },
+    {
+      "name": "test_empty_content_type_http_failure_is_preserved",
+      "passed": true
+    },
+    {
+      "name": "test_yahoo_preserves_provider_values_and_restores_then_share_units",
+      "passed": true
+    },
+    {
+      "name": "test_absent_dividend_request_is_not_zero_dividends",
+      "passed": true
+    },
+    {
+      "name": "test_dividend_is_preserved_in_then_share_units",
+      "passed": true
+    },
+    {
+      "name": "test_yahoo_rejects_missing_bar_without_filling",
+      "passed": true
+    },
+    {
+      "name": "test_yahoo_rejects_wrong_symbol",
+      "passed": true
+    },
+    {
+      "name": "test_fixed_formula_strict_mu_boundary_q_zero_and_capacity_cap",
+      "passed": true
+    },
+    {
+      "name": "test_future_score_and_probability_cannot_gate_tail_trades",
+      "passed": true
+    },
+    {
+      "name": "test_missing_prediction_keeps_real_shares_and_cash_without_rebalancing",
+      "passed": true
+    },
+    {
+      "name": "test_common_start_is_cash_reset_with_first_executable_order",
+      "passed": true
+    },
+    {
+      "name": "test_one_more_session_delay_preserves_original_signal_and_no_early_profit",
+      "passed": true
+    },
+    {
+      "name": "test_gross_same_targets_does_not_change_mu_filter",
+      "passed": true
+    },
+    {
+      "name": "test_metrics_include_initial_fee_and_exclude_anchor_from_exposure",
+      "passed": true
+    },
+    {
+      "name": "test_bounded_input_never_converts_or_exposes_locked_outcome",
+      "passed": true
+    },
+    {
+      "name": "test_future_price_or_prediction_mutation_cannot_change_earlier_account",
+      "passed": true
+    },
+    {
+      "name": "test_sensitivity_is_only_original_single_factors",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A03]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A04]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A05]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B03]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C03]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D03]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[E01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F03]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F04]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G01]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G02]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_warmup_distinguishes_returns_from_levels",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_a04_roll_uses_current_contract_at_both_endpoints",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_skew_gap_does_not_shrink_core_or_shift_calendar",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_missing_core_window_never_skips_or_fills",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_zero_semivariance_denominator_is_missing",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_history_boundary_blocks_earlier_warmup",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_future_mutation_and_appending_leave_past_features_unchanged",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_feature_clock_enforces_next_close_minus_hour",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-03-08-15]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-11-27-12]",
+      "passed": true
+    },
+    {
+      "name": "test_split_creates_shares_not_return",
+      "passed": true
+    },
+    {
+      "name": "test_dividend_is_not_lost_or_double_counted",
+      "passed": true
+    },
+    {
+      "name": "test_split_and_dividend_use_same_current_share_units",
+      "passed": true
+    },
+    {
+      "name": "test_old_position_owns_execution_day_profit",
+      "passed": true
+    },
+    {
+      "name": "test_exact_buy_cost_and_post_fee_weight",
+      "passed": true
+    },
+    {
+      "name": "test_exact_sell_cost",
+      "passed": true
+    },
+    {
+      "name": "test_fixed_target_drift_still_has_real_turnover",
+      "passed": true
+    },
+    {
+      "name": "test_missing_signal_holds_shares_and_keeps_losses",
+      "passed": true
+    },
+    {
+      "name": "test_missing_front_signal_is_not_a_cash_exit",
+      "passed": true
+    },
+    {
+      "name": "test_future_prices_and_signals_do_not_change_prior_account",
+      "passed": true
+    },
+    {
+      "name": "test_label_uses_next_close_through_sixth_close_and_entry_relative_loss",
+      "passed": true
+    },
+    {
+      "name": "test_missing_future_path_does_not_become_zero_label",
+      "passed": true
+    },
+    {
+      "name": "test_label_maturity_and_assumed_availability_are_separate",
+      "passed": true
+    },
+    {
+      "name": "test_future_changes_do_not_change_already_matured_labels",
+      "passed": true
+    },
+    {
+      "name": "test_real_early_close_and_dst_clock",
+      "passed": true
+    },
+    {
+      "name": "test_continuous_account_has_no_five_day_overlapping_leverage",
+      "passed": true
+    },
+    {
+      "name": "test_ledger_reconciles_cash_shares_cost_and_equity",
+      "passed": true
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[nan]",
+      "passed": true
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[0]",
+      "passed": true
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[-1]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_maturity_cutoff_equality_and_future_labels",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_calendar_window_not_last_n_complete_rows",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_inner_blocks_purge_and_preserve_calendar_gaps",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_outer_and_inner_requirements_are_both_required",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_transform_fits_only_training_and_preserves_interactions[M1-19]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_transform_fits_only_training_and_preserves_interactions[M2-63]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_spline_extrapolation_is_linear_and_reported",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_m0_uses_same_mean_linear_quantile_and_jeffreys",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_single_class_logistic_fallback_is_marked[0]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_single_class_logistic_fallback_is_marked[1]",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_projection_and_inner_scoring_use_same_values",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_grid_ties_prefer_stronger_shrinkage",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_locked_outcome_is_never_parsed_or_exposed",
+      "passed": true
+    },
+    {
+      "name": "test_synthetic_future_perturbation_leaves_prior_rolling_predictions_unchanged",
+      "passed": true
+    },
+    {
+      "name": "test_equal_frequency_keeps_identical_probabilities_together",
+      "passed": true
+    },
+    {
+      "name": "test_constant_probability_is_one_frequency_group_and_five_width_groups",
+      "passed": true
+    },
+    {
+      "name": "test_positive_intervals_merge_transitive_overlaps_but_not_gaps",
+      "passed": true
+    },
+    {
+      "name": "test_refit_comparison_ignores_only_actual_timing_and_rejects_value_change",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip check",
+      "started_at": "2026-09-07T02:41:44.659268+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.236,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p5/20260907T024118182655Z/pytest.xml",
+      "started_at": "2026-09-07T02:41:44.895561+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 3.493,
+      "output": "........................................................................ [ 74%]\n.........................                                                [100%]\n- generated xml file: /Users/logan/SVXYLab/runs/p5/20260907T024118182655Z/pytest.xml -\n97 passed in 3.21s\n"
+    },
+    {
+      "command": "git diff --check",
+      "started_at": "2026-09-07T02:41:48.388335+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "output": ""
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "started_at": "2026-09-07T02:41:48.401308+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": "de8b43d44461891cc2f89f540223700bb93546ba\n"
+    },
+    {
+      "command": "git remote",
+      "started_at": "2026-09-07T02:41:48.412431+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": "origin\n"
+    },
+    {
+      "command": "/usr/bin/open /Users/logan/SVXYLab/reports/economics.html",
+      "started_at": "2026-09-07T02:41:48.585191+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.089,
+      "output": ""
+    }
+  ],
+  "source_sha256": {
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "f0e80a876cdefc235eb48426e1257dcf0c1ce046b592990ddf67c1ad810cd204",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/baselines.py": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+    "src/svxylab/baselines_report.py": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+    "src/svxylab/data.py": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+    "src/svxylab/data_report.py": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+    "src/svxylab/downloads.py": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+    "src/svxylab/economics.py": "b013365d89f765db08be68e5e0775011b8677f266c421373b8d1e8af3832331c",
+    "src/svxylab/economics_audit.py": "721420e8cafc740442bc3175317d5cdf54ad7591d74af6fd9a926b6a4b9abaca",
+    "src/svxylab/economics_report.py": "da6737f0dd9e3db702f280b0bce754a46a139507dcd63e7066b51d380d4929a4",
+    "src/svxylab/environment.py": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+    "src/svxylab/etf.py": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+    "src/svxylab/features.py": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+    "src/svxylab/features_report.py": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/models.py": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+    "src/svxylab/prediction_data.py": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+    "src/svxylab/prediction_review.py": "f8cbac97e5a975aebf141d52099a5cf6235c3e8a1ffd57293ae585c63edeaded",
+    "src/svxylab/predictions.py": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+    "src/svxylab/predictions_report.py": "81c7572eb2b4d5a2715cb8df2f9abb6ab4717a88729c7e63512d590fe19867ef",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+    "tests/conftest.py": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+    "tests/test_arithmetic.py": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+    "tests/test_data.py": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+    "tests/test_economics.py": "659452230eb646a4a1dba24ba16696c777df5ec1a0dadc9c82bf8f661e4375cb",
+    "tests/test_features.py": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+    "tests/test_ledger.py": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+    "tests/test_models.py": "9591ed43c33098a81002424b437100149c5ab673c04547e9a6bda50f18dd7858",
+    "tests/test_prediction_review.py": "7d5428d41fa7ff65503a29aeb4326e648c0665478c3591e3639a83836c708ff1",
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+    "RESEARCH_SPEC.md": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+    "pyproject.toml": "af5735e4c43eabb2d4876ca63e1f68df7bae28625af03952baa7580001a61823",
+    "requirements-lock.txt": "0715740e1b70e97b64e47b4af64043e5fcbfcc48f0f75e8ec536f455cf483701",
+    "runs/p4/acceptance.json": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+    "runs/p5/experiment_record.json": "c4988a570457e54b06631e06da80e582f300a57fb5f6a311f00bbe7c03225815"
+  },
+  "artifact_sha256": {
+    "data/clean/p5/20260907T024118182655Z/account_metrics.csv": "ae0e8ba188fe1219827f955ed4710e07b8059dbc1302f550417914ff9df1871a",
+    "data/clean/p5/20260907T024118182655Z/attribution.csv": "5e5c044d8faa941be12c933610ddb69f10f2017ea1c077c0a808bcc37d750cd0",
+    "data/clean/p5/20260907T024118182655Z/case_account_summary.csv": "d174b56ad1ae5f3d0df6520b65319d419d744aae6745b43cf85c4ac76233f576",
+    "data/clean/p5/20260907T024118182655Z/case_daily_ledgers.csv": "d065153f26b26ab90f54a26bbbd34c2b1041a26816a2d92a61ef8785c9ac6e29",
+    "data/clean/p5/20260907T024118182655Z/case_information_predictions.csv": "cbc622438da33f2073cf3750e051f41d4ae5812e316ef92e9faf1f23b794efe9",
+    "data/clean/p5/20260907T024118182655Z/cases.csv": "8b0f62da9e6efd10f1891d8c8f95797e851780620133f67288412d0059d2023e",
+    "data/clean/p5/20260907T024118182655Z/common_main.png": "638cb7f90eb762bd944e8361bc7a877fb21d6ef274a6b7f3c2bc496d06a8dfa1",
+    "data/clean/p5/20260907T024118182655Z/common_main.svg": "7522cd050eb69385d9729fc5fbf8b9baee4f2077f3051bbcdbc400575375736c",
+    "data/clean/p5/20260907T024118182655Z/common_risk_only.png": "bd6e63b290361f4ea08d41ee61aebae455d6867ffe268074708815f7d600dacf",
+    "data/clean/p5/20260907T024118182655Z/common_risk_only.svg": "7c420076f2408a64d0006bc4a9c583987669899b7bab676091dad666e9cdc8ad",
+    "data/clean/p5/20260907T024118182655Z/exposure_distribution.csv": "a8b8382a8875fe2b8fe3aff566d27805aaefcf7b6818598bd5e42ba55503c63a",
+    "data/clean/p5/20260907T024118182655Z/full_main.png": "f520dd97e4d33f6aa3911f5eebc22f9aa771fbb1d6b65e9af7974cbfd8336577",
+    "data/clean/p5/20260907T024118182655Z/full_main.svg": "a97f5267219f71c097b2ccc082282b604fabd551527aae145fe71474cb15f157",
+    "data/clean/p5/20260907T024118182655Z/full_risk_only.png": "bd8c91a8f9f805ed1de8f0c6fb2ea5d8320a494666845661e009c6e1d3fb96ea",
+    "data/clean/p5/20260907T024118182655Z/full_risk_only.svg": "79485495cf00ac4b6217270a15539a459d5d164001136725bb3eabb5a6193f46",
+    "data/clean/p5/20260907T024118182655Z/independent_validation.json": "7acfec22c15b2ba5bda86abbd65b62757815c418f6b0418bd5cbc20907433466",
+    "data/clean/p5/20260907T024118182655Z/input_verification.json": "734c79d4d09390436551adede13b7697b5d0ce6fead6f371b33eb2c8cc0c1552",
+    "data/clean/p5/20260907T024118182655Z/last_five_2023_execution_days.csv": "65cb835d00fe964f7331a70e734b52d4025221b891be0f8b9d846bb79c157523",
+    "data/clean/p5/20260907T024118182655Z/ledger_audit.json": "6a48f8a6be8ff6b8850b295e5d43e8630b752f32e793a6777875157ddd3803f8",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_main.csv": "145e6cc95f46946ff5b0b7ad0e1c564616e2d78287ece34d6797037896adcddd",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv": "20c7886f08ea89f35ea07008e7d26c4c5217af6dc2d0154902509acf35c5e9ed",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_main.csv": "db531f3933db9abd310d6a9bfd320e3814a1d1d9be8e39bd75de4ec437501a56",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv": "bdbc7a8fd2e0b81e7885148882aa977c08e6c728672aaad74396e162289aa4f4",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_main.csv": "b572757c679a164099360e766dbbcb6089bfd406f6310c7bf3c831ee0ea63cbe",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv": "e25b8a14bb4246e17f924c2ecd4d458fc2d8ff7764002d953104f5c267e08826",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_main.csv": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_risk_only.csv": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_main.csv": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_risk_only.csv": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_main.csv": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_risk_only.csv": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_curve.csv": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_100.csv": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_25.csv": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_50.csv": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_75.csv": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M0_main.csv": "9b54b5d4f07f0edf639050fa40fb6eebb9a8ab18e72203e8e7d9910129af88cc",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M0_risk_only.csv": "6e395edca0dee72eb6d8929029913aecd58fd2a1eb93b9b302faec18e210c8ce",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M1_main.csv": "e4aa7f280718b80c5d50fe69ca1dd1d33159cdfa8a4b6c555509a5e6ed2f0897",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M1_risk_only.csv": "cab323595bfacb6d3f1a1a08b8ce163dde222cecee4f9d96e9cbc05d748a2f82",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M2_main.csv": "a6d3013f33ac053382ea5b9bc445b7ff040407443ca588e2afeeaf581b9dd029",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_M2_risk_only.csv": "c69a84591fbd1b479e8adcda90bf85702e458507e06a900ac281372c8233e503",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_curve.csv": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_100.csv": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_25.csv": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_50.csv": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_base_same_targets_gross_fixed_75.csv": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M0_main.csv": "2e9c83be71b0aef455f50f03e7385a7c4030c54503aa059c7b584b2d03dc5ea0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M0_risk_only.csv": "605ea2ead4bd9e92cba44db8510f874a66cb1f2ffc6377405a8aae8f737555ac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M1_main.csv": "77397f57ab42590a6592038833d187a67f2e29aa82f67767c0b37c38b3cb64f4",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M1_risk_only.csv": "c1b576366562b41b0a1301082dd5f4a548e349532c28886a1bd17704ec98ba04",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M2_main.csv": "c962ea0ca1cd0823cd17a3c0460c01c9f9ecd03d8b76d604c11ec394958ac1de",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_M2_risk_only.csv": "97bc826c421e48fa3bd60cc323fa721236bcc1fbadc30523fc2dba29bed476ac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_curve.csv": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_100.csv": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_25.csv": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_50.csv": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_10pct_fixed_75.csv": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M0_main.csv": "0479bdb5e497fb77af6d23eff06156238d7c565695dd6a99b87f67437dbcae5c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M0_risk_only.csv": "c0021ca0f3b471b627b5d8ee492e59fcb79df694015869684c8a066f011a5d3d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M1_main.csv": "8677493d0c4d7588481183453d443f4dcf7ced0baaa07ddaa3c3c9203b26f27f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M1_risk_only.csv": "6ca83f1f4d14b051075073ef49508bfaba945e0596f1028609f33c0a36d6bbb7",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M2_main.csv": "ae8ff2e9651ae71738c36656d66588a8a293bcf34fff7ace05fb86132672b6f0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_M2_risk_only.csv": "024b63eb5c6acb13241db81c8207f2ad71748deea987f5a8ff830ef297a58764",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_curve.csv": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_100.csv": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_25.csv": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_50.csv": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_budget_2.5pct_fixed_75.csv": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M0_main.csv": "7459d64331aaa99aa30c212e470f4bea23cb294249ba0e9e521bd99f178bbebc",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M0_risk_only.csv": "1a461bc0525858edfc69c6b492f60c01e75fe8e417a033f8a383f31c1d07b4f1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M1_main.csv": "1a82f187b9a0b95fc508c53f657f964337ca418e15383bfc1454c2d8cc3accc0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M1_risk_only.csv": "da36811003b2a8e94acc255f5682f96f12c9dea6434f47e0cd030f2741cf3e3a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M2_main.csv": "85bcecc1c6a9463099380cd49514f7386876749bbead986109c49fdeef868ef5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_M2_risk_only.csv": "ac1ad74fe5bf379b2ba181e86f84c45e91bdf30fd296de48b46ca0b5b531100c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_curve.csv": "5ec6deb006bc62fc7637492f46c43498fb364e3759653f0ba2025bfd8167b86e",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_100.csv": "0d3bed1ab891860a8e77d33ac7460e4e407d7808d11139c68c580de81899fa31",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_25.csv": "5f4ea3102c17579b65ecf0d3ef0fd5c526fa96b9851ec7cc86deba2c4e2ff297",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_50.csv": "5ffd4de1068b5e54290d00d0d908f5484e6278eac0357ef35e02a50b1611ee7f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_0bp_fixed_75.csv": "720ef95eebda50278234771763643a7e9802782407fdee24d26ce3453308c64a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M0_main.csv": "80839f91c91892a80522a7b361dfa1b2f8b10f6be466f428d499e3391b7134f7",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M0_risk_only.csv": "1b2fb018dfc97a58331e5bd34b657d4ad2c599605c9f3115ef128564f36fd3fc",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M1_main.csv": "5ab872485897fe8ac9ad12822286bd0aafe0863e60cbb51d9fe3c610ef9f2f63",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M1_risk_only.csv": "139fe30f26424f71ebd8f0d94f32aac25e185c24ac8dc2d599cdffccfc4b80c1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M2_main.csv": "1954509a01149a75a15561f035385e6335bbf88916f1b1159669cce2638b0660",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_M2_risk_only.csv": "95b9d8b2cd8a2466abe28445d9e5142276c116b6b9e5e2a6955c354a845fff12",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_curve.csv": "488ee7c71a1a1b3bbcddddcd3e22dd24f0f20dc1688316851b15c288defdc8c5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_100.csv": "48ef85402d1df3fb2e0fa09332952e9632ddce157d38ff6a5d9a6de51c8d676e",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_25.csv": "4552fbc7e6ebe3c21b1ba09d2d77b7bcd5cf1d84148d6b3f706b3a643c00ed21",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_50.csv": "26943a5b54398eabbb08ca772bd6cf612b7266a06faec3d7f3742de21aa7b5a0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_15bp_fixed_75.csv": "d6d9e73168716721c9c495a14564a69b45d4335c759e50ff261d4efa58aa3421",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M0_main.csv": "074e813297beb7a7b3749c3f93a4d043d7027e732ce47b0dd9a2def50216ebdd",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M0_risk_only.csv": "1e9d6362bf7cbe276917b94ec8120bb6ee9719fa27642846b1329b0ba11bb69e",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M1_main.csv": "6efe807752540a757b02a61ef778f8a8c6ec9be862958ef5e2473da1d7bad6fc",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M1_risk_only.csv": "c88ccfb93492f82950c8e128b7066ff2f80a3ff0083884ac4ff7fecc55fbae24",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M2_main.csv": "e8f6b90275fe12adabd98fc6b39150f3ad5dde582b52570d3e143328a3686995",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_M2_risk_only.csv": "01b99f4d5461f59d6fff0871440d90d62ae32ace968ee8d3818fdd57383242f2",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_cash.csv": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_curve.csv": "866d934ff071dbfa72dc55c09d73c9a262ee196230193dcf7ae80eab08a2ecbd",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_100.csv": "ac1642a823dd4ef31c9279a3d0c2add1b9d19a785eacac5e4b9bbd4464141ee3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_25.csv": "bd1799efe6d61bd4ae9eb0bceaaee1c1649ab43d1ba381c1af7a8c2683189964",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_50.csv": "3d3b2e62a089ae3282f81f23de7f6bb01db256b6eaaf30872259ab43ab0b18b8",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_cost_30bp_fixed_75.csv": "8c6fdc25002e4e6c3ae9786b775a8059a2f1247a80ef212c1d02805c166a280d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M0_main.csv": "1fa62891777136ab432ef55bcc173659ed156bb1bfe2591c1f14fb2cfde6000b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M0_risk_only.csv": "0ddf46817e2131f7909a961c2da284a36e6bef4056f8592e5cec0708eaed4e87",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M1_main.csv": "0565bc858c075462c3a1537f204d77a2c6a74ff3daf6db3b7ece501ec383ce1b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M1_risk_only.csv": "6c2918308cc1d7be5c79f4934928621a30e365ac4668d3eab8f5f2ebd05a200b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M2_main.csv": "3548a4f6294a60a93c040c8bd33b3fa31c8072a783b2e9e1821f1893a84e5d06",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_M2_risk_only.csv": "ad938e466960a5dcf18481913b8f0795ab95a9f7fbf070a260468b5b7ef949ce",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_cash.csv": "8402438b5cc534594f787f0ecedec70873209333819408610f39a3a464574833",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_curve.csv": "57d3278c47235d36a7992680566fa68816b872ff75d2915ebbb067c50237e1dd",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_100.csv": "2efa5f736f54c1e3351d16d2f0948247dc585678289d7487941b7c745cc57440",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_25.csv": "a9eb0b8d2cab511937ee105e2c997a0bcfa1b39516162ec6bae4e599948c2cd7",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_50.csv": "1310f99218d4893904806bc24063e364d83887eb9b5543e08cfde4a2ce42ced2",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_1session_fixed_75.csv": "de10a992daaf51aa265155846132fecb816aaf879bdfa5bfd0fabc76d0b2fe89",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M0_main.csv": "8ffce072c21f13e810bcb32697b7ad0af4c865c4eb6e895d3ffbbb1c7adab14b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M0_risk_only.csv": "2507a551e51cb38dac9ad050a7b32ba0144187fd87473f28e0f584eb05b4eb7f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M1_main.csv": "e1f176e2e19e392ab459d966e54c1f75959d9c7f84e4535f4930d7fb23588c44",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M1_risk_only.csv": "062db2d8163d0a1d9790b200445a7f4c29e96936d63b182084799ccb0e83b6f7",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M2_main.csv": "b95cdd5ba8ebde2bd7bfac86fb13694ea26d6edeb2b0bdbe29715d9b27b2301f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_M2_risk_only.csv": "ec42d04e2bdee52893f587b0e37da836d576e2b557eae58cfcd437bd42a7c9b3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_cash.csv": "ee3730a45337a061882b3b8ce6a5e1598c26a9540aac9770aef376dd29390e5a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_curve.csv": "2b5465d244d072f14d5ad4cfb0c98d2c3ceca25a1df1517e1bb9d9afe62590f5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_100.csv": "5d6519e9f77c9917da0a5051176dd6a443a85df8b668abeade880dbe0c9f1b78",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_25.csv": "32c48c9fafa65add2188f3190adb08086555a5e0afe89387ae8abfd8c48b98fc",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_50.csv": "368df54bb0f58c99ee71fb0146e491e06efaf6cf459431976533db896640d6d5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/common_delay_aligned_base_fixed_75.csv": "6f6d75da07ea31c1787ea594523b4799fabca7d277cb5e426dbde5990d0c6c72",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_main.csv": "33aec1df57cdfea2c41684290fce9a4cfc46e5b2e7ae6b8775ec3607f20fd962",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M0_risk_only.csv": "879290237a9c89cc8eb92e4ee398db8ad9e8684e4b5315cab19116560a9f1398",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_main.csv": "a85b48fba100a6f71ec040298d5051552f96f6de82ef97d13f6819c0b2c2292e",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M1_risk_only.csv": "a3f45b6ebbaed5bcb7f6ca3bc3ad12bffbe35f85fd2388b772c30c4a0542eacd",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_main.csv": "1156692a7679f295677ac6d6725b1806b7c05d7edd18a68481bb41c89ddff6bf",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_POST_HOC_EXPOSURE_MATCH_M2_risk_only.csv": "448cad6880893bb52d67fe3331d47a40e6a06b52a40e3f15872fc2ac62a1e728",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_main.csv": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_risk_only.csv": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_main.csv": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_risk_only.csv": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_main.csv": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_risk_only.csv": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_curve.csv": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_100.csv": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_25.csv": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_50.csv": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_75.csv": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M0_main.csv": "ce84d80ee45fce8bffcb1912e3bd205c21e31bb8a4fba6b84ac10dee05a4a7df",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M0_risk_only.csv": "184ef72b6667d93ca04d0753f713de27db47ae584376e8dd410dddcb797c4b7b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M1_main.csv": "4917b5427cf70f7d2aa833fb5a10ee16dad964b9e6c9fe8d510267a8bf0dabda",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M1_risk_only.csv": "76926565ab72619434edf05ba13f12e89ce4463024be5c8daa96ba82c7a69428",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M2_main.csv": "7835b311d805861258ac96b79b438a3695843ef32c986a583b175e4fc8ea8394",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_M2_risk_only.csv": "d0133a92a06a71b94e3179b5396db436a564218b8276a6e091f9fb264d70638c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_curve.csv": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_100.csv": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_25.csv": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_50.csv": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_base_same_targets_gross_fixed_75.csv": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M0_main.csv": "f001a5d1f64d226ae1b9d97a710fcfd9494c0f728f69ea84d129ee6d8326c690",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M0_risk_only.csv": "0bd68b1e4a2243698df0c70a7933d825e6fe62560dad057eba4582c28c6a5e5a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M1_main.csv": "f7776d4cdcbe3fff9014bfed216d83035f7fabf875c7651dd441f6a8c5904f2d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M1_risk_only.csv": "75ef82a51d2d31adb9c80549835e6fbc7aad9fd14bae636617f777a1686bb134",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M2_main.csv": "47af72437185767ac4bce33c50987327532ccf8cd3351b1e950892fdd02cc049",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_M2_risk_only.csv": "72df88270769b13c26348f1d91f48ff357cb76eb2e1f64f573bcf8e38ef965ce",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_curve.csv": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_100.csv": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_25.csv": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_50.csv": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_10pct_fixed_75.csv": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M0_main.csv": "0d96a92043eb72d412c933ea1ffe7ad3f25ee9d2b2aab4e63cd8453d8acd5b74",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M0_risk_only.csv": "d937fe69cda4bf33f98093bf4d6982a48bb1c5483afa9875ae45cc9b135b158a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M1_main.csv": "f4b2557756d35f898474003d0650b02340e2e21f5307c529578e64ca8944ff5c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M1_risk_only.csv": "cf23ef4fbf87862d91ccd4ec2b9af7ac1177f5a929b3987aadf86ff239eab7a1",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M2_main.csv": "1aa79b2bc70c51be437024104271d740868fa12c61df679815e464e05fcb5749",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_M2_risk_only.csv": "c184cea1fab5df672a3835c04a7ed400568389950e1b2fc463b0e43927ed8fb0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_curve.csv": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_100.csv": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_25.csv": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_50.csv": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_budget_2.5pct_fixed_75.csv": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M0_main.csv": "9fd7ad957b077a89a623ad11e8fc76e37a9805d2c39d34e45e432b385f207d50",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M0_risk_only.csv": "4d049170a4c391293f2ba98b2cafc88e8430a9563e2c26f73f922405a87c8c03",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M1_main.csv": "65c7d82171f4b9251f6f0ec097a1dca71038cf245ef7dc0f5eef6e7a9baa8820",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M1_risk_only.csv": "1defda5b60fb1a658ae8b4aeeb031338c0f4f06133378c18597d77d071bddff0",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M2_main.csv": "7e9f38233e7cbc5a858710c80de6cd80bac603dd944be0f1074325d3d506656a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_M2_risk_only.csv": "ae3b183cdceae4b236c9e683ca6d083aeff652fdfd041e39af3492d6899beaa8",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_curve.csv": "d0010c3a1b5f50770dc5466cb8e85b52725bab26e8afd464db3544a7e2432cac",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_100.csv": "7e6c95ac17b6f0e3a0df89f4df0ddfc86744c6afc5e47111a7ab6cf051f204d9",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_25.csv": "819c9d92ec268ea891748491ceea129f3d0dadc451b717b4efab599c030d60eb",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_50.csv": "9d60045977a7ff1bc0cb169e478bdfb10670ad4a47e72fa67520e2f3df2f0fb3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_0bp_fixed_75.csv": "59edb3ef95539b51b931675239f6f2afd80b9e3473263e6c868b856bd8f40cb2",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M0_main.csv": "846f43345c8cf7fbba1ca3b4e42489dcf313d696ba970fc490650f8c137530ad",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M0_risk_only.csv": "0d243d8366ee3e55259bd9e53742c6af22d2ff466eb45d936e0ba1961b858b34",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M1_main.csv": "1b2b6ce0840715c37bc154aaffe89efe425965798358682e7af039953accfbf6",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M1_risk_only.csv": "6dc8fa89765273dbe19f7c62929be96f12ae91723b0b9c7bddb191287f8b8edb",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M2_main.csv": "66d567084bbbb20ce484378fb7cdba568288ecc0a2f88e3ebeae070305e7f121",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_M2_risk_only.csv": "e1e9dce95d71e84cec22696c1790d43189fabb9b8cae5b28ce2b2441bf9cf02c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_curve.csv": "c51d6e312344c7a8ab8599ccee997a06c3038d2e3c2779c5e1b0e55904555c7f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_100.csv": "72b22d80dc5958ff226077ca0628e5a003df6dc16472baad5a4d3f15dba3eac3",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_25.csv": "07065e6aa2468ac478a35e82c650ec64ef5eff34782a150207d0b11bcaf3214f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_50.csv": "c9109aea3c0c512b640b1d9e18ab34153aee8d795ae51b123ecb9ba5d3ddf87c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_15bp_fixed_75.csv": "e709df1d97ee48be535a0f775f3c8c4df8c081e0e5f203ac52f2ec3574df08f6",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M0_main.csv": "b6cf913544e968c5ddac89d92b710e452eff18794e129d1d29666cd6e07d3990",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M0_risk_only.csv": "5a4d08a7fe2f316bd5f2ed83f74244471f2ae61f0774d5b662b608a270231b0c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M1_main.csv": "60272071877e9b972fe33904e4e58b2431fac2bc0bc161d6ae914c94076637b5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M1_risk_only.csv": "0c10d56ba98f7c0ec2f86fb741449c763d283651d82611b1e051cda678ef7453",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M2_main.csv": "1fb46c244a04be07b22fc3fc29d275fc39b6045e8fd218e26ebb952f7073b1a6",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_M2_risk_only.csv": "e94076ab056434f73277e6bf7bdd7ff5b073e89db8187b25c02312c77b6ba22b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_cash.csv": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_curve.csv": "da736a00eb607bd8471fc9e64820f5ed51b3f0863d84d4049fcf1db912ccf633",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_100.csv": "7f5853851e16fcaeb794972e66cb471efe59d436ba4c3ac1465d8aa59dcd137f",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_25.csv": "40d8b94c44a7a7ce2364b9a4503fba462bcb12db27d451ee9ada6473e340fbc8",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_50.csv": "8ff53e807cdb2063fe7384c2a3ea10a574746b89eb9b8c072091a389a54905b5",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_cost_30bp_fixed_75.csv": "2a9c4dcb6c8b97be37765486a89dcdde7111fd4af708a561aa6efd19bfbef7e9",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M0_main.csv": "f5868ea2165822bb8d80ab3eae03637e59b4ce92e119d2f119ac83f64d606184",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M0_risk_only.csv": "83649dd604a26009e33e7883f81f78443291324c30cb81fae06c4925e48eff89",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M1_main.csv": "2ddfc36b3699a88b6b27b617369a7926a462def6be13cd571f2c4a6726e5972a",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M1_risk_only.csv": "7f9ad7801e0f966dc40b42ac551efd9c6e5d347a852a0b2868e918703d3bde0b",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M2_main.csv": "155882e27891edec8d4a43fa9df6a958dbfbfc33e0b95ce1fa9d7d2d298c78e6",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_M2_risk_only.csv": "1ee3338e102568391aeb55436c26ec5abd4481f8408d1487936c9c102f22edf8",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_cash.csv": "db80934ba02585fdb7bbda23cf341582d00f4695505f1440a4e6b1b18399d6fa",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_curve.csv": "91cc8ad7f8cd212fdfb75e3624fdb8d40f6156120123f094902aff8904ef7121",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_100.csv": "ec796895fe9a8d86d7c137224950bac757dab6d770e41247a712b815a28439be",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_25.csv": "d712bfd402a69daaad646a6d18db33741c7c9bbe2403405ac8954e5a1c53297c",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_50.csv": "2bb3ac0f089986cebc9932fe6d107b8d84af8a10607ea66835be5eea55dd5223",
+    "data/clean/p5/20260907T024118182655Z/ledgers/full_delay_1session_fixed_75.csv": "aba4a44be66483c4c09ee6598ad574bda3ea44d09327651eaf0f59b6df4114b6",
+    "data/clean/p5/20260907T024118182655Z/missed_up_days.csv": "0a2285a414e3707301f76c1d16d4e486b9f9cb79f84f08bb3ddb582f92330241",
+    "data/clean/p5/20260907T024118182655Z/pending_delayed_orders.csv": "2f64c76ffa0db5b2e8c868f4c76573fb05c48225e49b86aa423369c03162df51",
+    "data/clean/p5/20260907T024118182655Z/post_hoc_exposure_matches.csv": "ded110a5161141679d7c450555dd41382cc255402ae0f6d625e94a4ec53f38ed",
+    "data/clean/p5/20260907T024118182655Z/rebound_windows.csv": "c64619b2b7a04bfac60709304fcea708e05e972788c18f34c74a516cf658a4ea",
+    "data/clean/p5/20260907T024118182655Z/risk_capacity_diagnostics.csv": "fca7a0315586b6e29d7be01b469c8379e3ce651e1389eb25f222e5704221754f",
+    "data/clean/p5/20260907T024118182655Z/same_target_gross_net.csv": "a7b117212fa68db8718489aee6c03677f0751be83c76a5d68868b5ebd669115c",
+    "data/clean/p5/20260907T024118182655Z/single_factor_sensitivities.csv": "c14ebb9b3eddd7c0834c7a1ba49b7e48069f01bae283a73773be833a5ae9b35a",
+    "data/clean/p5/20260907T024118182655Z/trades.csv": "08647e2937f4dd0fa42909803f8575549c29ca16768fb16c24037a02c0a3ebb8"
+  },
+  "python": "3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "threadpoolctl": "3.6.0",
+    "svxylab": "0.0.1",
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "toolz": "1.1.0",
+    "lxml": "6.1.3",
+    "exchange_calendars": "4.13.2",
+    "joblib": "1.6.0",
+    "iniconfig": "2.3.0",
+    "pandas": "3.0.3",
+    "charset-normalizer": "3.5.1",
+    "requests": "2.34.2",
+    "pyluach": "2.3.0",
+    "pytz": "2026.3.post1",
+    "scikit-learn": "1.9.0",
+    "contourpy": "1.3.3",
+    "yfinance": "1.7.0",
+    "tzdata": "2026.3",
+    "curl_cffi": "0.16.3",
+    "matplotlib": "3.11.1",
+    "narwhals": "2.25.0",
+    "multitasking": "0.0.13",
+    "pip": "25.0.1",
+    "setuptools": "84.0.0",
+    "soupsieve": "2.9.2",
+    "pycparser": "3.0",
+    "python-dateutil": "2.9.0.post0",
+    "pytest": "8.4.2",
+    "fonttools": "4.64.0",
+    "idna": "3.19",
+    "cffi": "2.1.1",
+    "certifi": "2026.7.22",
+    "platformdirs": "4.11.7",
+    "cycler": "0.12.1",
+    "pyparsing": "3.3.2",
+    "numpy": "2.4.3",
+    "pluggy": "1.6.0",
+    "Pygments": "2.19.2",
+    "websockets": "17.1",
+    "packaging": "26.0",
+    "urllib3": "2.7.0",
+    "typing_extensions": "4.16.0",
+    "beautifulsoup4": "4.15.0",
+    "korean_lunar_calendar": "0.4.0",
+    "pillow": "12.3.0",
+    "protobuf": "7.36.1",
+    "peewee": "4.5.0",
+    "six": "1.17.0",
+    "scipy": "1.18.1"
+  },
+  "run_record": "runs/p5/20260907T024118182655Z/economics_run.json"
+}

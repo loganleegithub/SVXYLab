@@ -1,0 +1,243 @@
+{
+  "stage": "P5",
+  "rendered_at": "2026-09-07T02:45:36.671171+00:00",
+  "method": "svxylab.economics_report.render(root, saved economics_run.json); no recomputation, refit, or data download",
+  "saved_run": "runs/p5/20260907T024118182655Z/economics_run.json",
+  "display_changes": [
+    "Add actual worst-day date and worst-five-day interval to metric tables.",
+    "Label return differences in percentage points."
+  ],
+  "report_sha256_before": "9af938598edbb476762721ac9b907b6177e9b72f16959e1e3c9ab1c6911c707d",
+  "report_sha256_after": "dd93aa8b9d2adc5e27bb1fa1740b8eaf1d6c69c83d5ee6d162c51e9a37ba8130",
+  "source_after_run": [
+    {
+      "file": "src/svxylab/__init__.py",
+      "run_sha256": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+      "current_sha256": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/__main__.py",
+      "run_sha256": "f0e80a876cdefc235eb48426e1257dcf0c1ce046b592990ddf67c1ad810cd204",
+      "current_sha256": "f0e80a876cdefc235eb48426e1257dcf0c1ce046b592990ddf67c1ad810cd204",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/arithmetic.py",
+      "run_sha256": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+      "current_sha256": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/baselines.py",
+      "run_sha256": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+      "current_sha256": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/baselines_report.py",
+      "run_sha256": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+      "current_sha256": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/data.py",
+      "run_sha256": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+      "current_sha256": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/data_report.py",
+      "run_sha256": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+      "current_sha256": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/downloads.py",
+      "run_sha256": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+      "current_sha256": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/economics.py",
+      "run_sha256": "b013365d89f765db08be68e5e0775011b8677f266c421373b8d1e8af3832331c",
+      "current_sha256": "b013365d89f765db08be68e5e0775011b8677f266c421373b8d1e8af3832331c",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/economics_audit.py",
+      "run_sha256": "721420e8cafc740442bc3175317d5cdf54ad7591d74af6fd9a926b6a4b9abaca",
+      "current_sha256": "721420e8cafc740442bc3175317d5cdf54ad7591d74af6fd9a926b6a4b9abaca",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/economics_report.py",
+      "run_sha256": "da6737f0dd9e3db702f280b0bce754a46a139507dcd63e7066b51d380d4929a4",
+      "current_sha256": "4fd43b29e3cd663d71f2e6edb3bea77bdf96efdb663dcbae1e7483add907b844",
+      "equal": false
+    },
+    {
+      "file": "src/svxylab/environment.py",
+      "run_sha256": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+      "current_sha256": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/etf.py",
+      "run_sha256": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+      "current_sha256": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/features.py",
+      "run_sha256": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+      "current_sha256": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/features_report.py",
+      "run_sha256": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+      "current_sha256": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/ledger.py",
+      "run_sha256": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+      "current_sha256": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/models.py",
+      "run_sha256": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+      "current_sha256": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/prediction_data.py",
+      "run_sha256": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+      "current_sha256": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/prediction_review.py",
+      "run_sha256": "f8cbac97e5a975aebf141d52099a5cf6235c3e8a1ffd57293ae585c63edeaded",
+      "current_sha256": "f8cbac97e5a975aebf141d52099a5cf6235c3e8a1ffd57293ae585c63edeaded",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/predictions.py",
+      "run_sha256": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+      "current_sha256": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/predictions_report.py",
+      "run_sha256": "81c7572eb2b4d5a2715cb8df2f9abb6ab4717a88729c7e63512d590fe19867ef",
+      "current_sha256": "81c7572eb2b4d5a2715cb8df2f9abb6ab4717a88729c7e63512d590fe19867ef",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/returns.py",
+      "run_sha256": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+      "current_sha256": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+      "equal": true
+    },
+    {
+      "file": "src/svxylab/timing.py",
+      "run_sha256": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+      "current_sha256": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+      "equal": true
+    },
+    {
+      "file": "tests/conftest.py",
+      "run_sha256": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+      "current_sha256": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+      "equal": true
+    },
+    {
+      "file": "tests/test_arithmetic.py",
+      "run_sha256": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+      "current_sha256": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+      "equal": true
+    },
+    {
+      "file": "tests/test_data.py",
+      "run_sha256": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+      "current_sha256": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+      "equal": true
+    },
+    {
+      "file": "tests/test_economics.py",
+      "run_sha256": "659452230eb646a4a1dba24ba16696c777df5ec1a0dadc9c82bf8f661e4375cb",
+      "current_sha256": "659452230eb646a4a1dba24ba16696c777df5ec1a0dadc9c82bf8f661e4375cb",
+      "equal": true
+    },
+    {
+      "file": "tests/test_features.py",
+      "run_sha256": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+      "current_sha256": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+      "equal": true
+    },
+    {
+      "file": "tests/test_ledger.py",
+      "run_sha256": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+      "current_sha256": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+      "equal": true
+    },
+    {
+      "file": "tests/test_models.py",
+      "run_sha256": "9591ed43c33098a81002424b437100149c5ab673c04547e9a6bda50f18dd7858",
+      "current_sha256": "9591ed43c33098a81002424b437100149c5ab673c04547e9a6bda50f18dd7858",
+      "equal": true
+    },
+    {
+      "file": "tests/test_prediction_review.py",
+      "run_sha256": "7d5428d41fa7ff65503a29aeb4326e648c0665478c3591e3639a83836c708ff1",
+      "current_sha256": "7d5428d41fa7ff65503a29aeb4326e648c0665478c3591e3639a83836c708ff1",
+      "equal": true
+    },
+    {
+      "file": "experiment.toml",
+      "run_sha256": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+      "current_sha256": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+      "equal": true
+    },
+    {
+      "file": "FEATURES.json",
+      "run_sha256": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+      "current_sha256": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+      "equal": true
+    },
+    {
+      "file": "RESEARCH_SPEC.md",
+      "run_sha256": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+      "current_sha256": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+      "equal": true
+    },
+    {
+      "file": "pyproject.toml",
+      "run_sha256": "af5735e4c43eabb2d4876ca63e1f68df7bae28625af03952baa7580001a61823",
+      "current_sha256": "af5735e4c43eabb2d4876ca63e1f68df7bae28625af03952baa7580001a61823",
+      "equal": true
+    },
+    {
+      "file": "requirements-lock.txt",
+      "run_sha256": "0715740e1b70e97b64e47b4af64043e5fcbfcc48f0f75e8ec536f455cf483701",
+      "current_sha256": "0715740e1b70e97b64e47b4af64043e5fcbfcc48f0f75e8ec536f455cf483701",
+      "equal": true
+    },
+    {
+      "file": "runs/p4/acceptance.json",
+      "run_sha256": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+      "current_sha256": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+      "equal": true
+    },
+    {
+      "file": "runs/p5/experiment_record.json",
+      "run_sha256": "c4988a570457e54b06631e06da80e582f300a57fb5f6a311f00bbe7c03225815",
+      "current_sha256": "c4988a570457e54b06631e06da80e582f300a57fb5f6a311f00bbe7c03225815",
+      "equal": true
+    }
+  ],
+  "computation_sources_unchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "svxylab",
+    "economics",
+    "--open"
+  ],
+  "started_at": "2026-09-07T02:41:17.914866+00:00",
+  "exit_code": 0,
+  "output": "P5 full / base：2020-01-02起12条独立账户完成。\nP5 common / base：2020-09-11起12条独立账户完成。\nP5 full / cost_0bp：2020-01-02起12条独立账户完成。\nP5 common / cost_0bp：2020-09-11起12条独立账户完成。\nP5 full / cost_15bp：2020-01-02起12条独立账户完成。\nP5 common / cost_15bp：2020-09-11起12条独立账户完成。\nP5 full / cost_30bp：2020-01-02起12条独立账户完成。\nP5 common / cost_30bp：2020-09-11起12条独立账户完成。\nP5 full / budget_2.5pct：2020-01-02起12条独立账户完成。\nP5 common / budget_2.5pct：2020-09-11起12条独立账户完成。\nP5 full / budget_10pct：2020-01-02起12条独立账户完成。\nP5 common / budget_10pct：2020-09-11起12条独立账户完成。\nP5 full / delay_1session：2020-01-02起12条独立账户完成。\nP5 common / delay_1session：2020-09-14起12条独立账户完成。\nP5：/Users/logan/SVXYLab/reports/economics.html；普通pytest 97通过；独立账本216条。\n"
+}

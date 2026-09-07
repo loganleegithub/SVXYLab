@@ -1,0 +1,6 @@
+{
+  "checkpoint": "de8b43d44461891cc2f89f540223700bb93546ba",
+  "acceptance_record": "runs/p4/acceptance.json",
+  "scope": "P4交付完整、计算可复算、负结果忠实保留；不认可模型优势",
+  "next_stage": "P5_ONLY"
+}

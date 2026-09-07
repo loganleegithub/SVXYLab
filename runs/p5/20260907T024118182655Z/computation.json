@@ -1,0 +1,145 @@
+{
+  "output_dir": "data/clean/p5/20260907T024118182655Z",
+  "inputs": {
+    "files": {
+      "prices": "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv",
+      "clock": "data/clean/p2/20260907T000150426421Z/clock.csv",
+      "predictions": "data/clean/p4/20260907T021724579078Z/predictions.csv",
+      "curve": "data/clean/VX_front_three.csv",
+      "features": "data/clean/p3/20260907T005629664263Z/core_features.csv"
+    },
+    "sha256": {
+      "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+      "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+      "data/clean/p4/20260907T021724579078Z/predictions.csv": "057e0b29c171e7faee7a0b9e148a537bc256b0eaa3bfd7b4f4a6158a930fc227",
+      "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+      "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e"
+    },
+    "p4_acceptance_sha256": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+    "prediction_fields_read": [
+      "as_of_session",
+      "decision_session",
+      "simulation_decision_at",
+      "execution_at",
+      "model",
+      "fit_id",
+      "forecast_available",
+      "mu5",
+      "q90"
+    ],
+    "labels_or_score_observed_read": false,
+    "locked_returns_read": false,
+    "model_fit_or_selection_performed": false,
+    "first_information": "2019-01-02",
+    "last_information": "2023-12-29",
+    "information_rows": 1258
+  },
+  "base_common_first_execution": "2020-09-11",
+  "delayed_common_first_execution": "2020-09-14",
+  "requested_first_execution": "2020-01-02",
+  "last_account_close": "2023-12-29",
+  "accounts": 180,
+  "same_targets_gross_accounts": 24,
+  "post_hoc_matching_accounts": 12,
+  "scenarios": [
+    {
+      "scenario": "base",
+      "budget": 0.05,
+      "cost_rate": 0.0005,
+      "delay": 0,
+      "factor": "base"
+    },
+    {
+      "scenario": "cost_0bp",
+      "budget": 0.05,
+      "cost_rate": 0.0,
+      "delay": 0,
+      "factor": "cost"
+    },
+    {
+      "scenario": "cost_15bp",
+      "budget": 0.05,
+      "cost_rate": 0.0015,
+      "delay": 0,
+      "factor": "cost"
+    },
+    {
+      "scenario": "cost_30bp",
+      "budget": 0.05,
+      "cost_rate": 0.003,
+      "delay": 0,
+      "factor": "cost"
+    },
+    {
+      "scenario": "budget_2.5pct",
+      "budget": 0.025,
+      "cost_rate": 0.0005,
+      "delay": 0,
+      "factor": "budget"
+    },
+    {
+      "scenario": "budget_10pct",
+      "budget": 0.1,
+      "cost_rate": 0.0005,
+      "delay": 0,
+      "factor": "budget"
+    },
+    {
+      "scenario": "delay_1session",
+      "budget": 0.05,
+      "cost_rate": 0.0005,
+      "delay": 1,
+      "factor": "delay"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "favorable_1",
+      "kind": "favorable",
+      "entry_index": 92,
+      "entry": "2021-01-22",
+      "end": "2021-01-29",
+      "main_return": -0.0037538998527226752,
+      "fixed100_return": -0.1341669105694263,
+      "difference": 0.13041301071670364
+    },
+    {
+      "case_id": "favorable_2",
+      "kind": "favorable",
+      "entry_index": 301,
+      "entry": "2021-11-18",
+      "end": "2021-11-26",
+      "main_return": 0.0,
+      "fixed100_return": -0.1250801661436446,
+      "difference": 0.1250801661436446
+    },
+    {
+      "case_id": "unfavorable_1",
+      "kind": "unfavorable",
+      "entry_index": 36,
+      "entry": "2020-10-30",
+      "end": "2020-11-06",
+      "main_return": 0.0,
+      "fixed100_return": 0.13044771970332447,
+      "difference": -0.13044771970332447
+    },
+    {
+      "case_id": "unfavorable_2",
+      "kind": "unfavorable",
+      "entry_index": 379,
+      "entry": "2022-03-14",
+      "end": "2022-03-21",
+      "main_return": 0.0,
+      "fixed100_return": 0.1078019999318347,
+      "difference": -0.1078019999318347
+    }
+  ],
+  "p4_forecast_sessions": 831,
+  "p4_unserved_request_sessions": 175,
+  "all_account_checks_passed": true,
+  "p4_model_unchanged": true,
+  "p4_accepted_checkpoint": "de8b43d44461891cc2f89f540223700bb93546ba",
+  "locked_evaluation_performed": false,
+  "p6_performed": false,
+  "compute_and_audit_seconds": 25.140377875010017
+}
