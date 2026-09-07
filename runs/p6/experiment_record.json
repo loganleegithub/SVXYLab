@@ -1,0 +1,54 @@
+{
+  "stage": "P6",
+  "recorded_before_p6_fit_or_evaluation": "2026-09-07T03:01:19.725200+00:00",
+  "accepted_p5_checkpoint": "a10575c0462531ef0f427bd16b612fc970aa7fa4",
+  "prescribed_variants": [
+    "M2_DROP_A",
+    "M2_DROP_B",
+    "M2_DROP_C",
+    "M2_DROP_D",
+    "M2_DROP_E",
+    "M2_DROP_F",
+    "M2_DROP_BDE",
+    "M3_RECENCY",
+    "M2_SKEW"
+  ],
+  "reference_runs": [
+    "M2_REPLAY: same full core inputs and specification; verify numerical parity with accepted P4",
+    "M2_SKEW_REFERENCE: core M2 fitted on the identical train/validation/current availability cohort as SKEW; sample-coverage control, not third challenger"
+  ],
+  "ablations": "Delete specified feature-family columns and every interaction referencing a deleted column; preserve original complete-core cohort even if a deleted feature is missing. All are column deletions, including B+D+E; remaining VIX/SPY-derived columns mean these do not remove entire raw sources.",
+  "m3": "Only the three head training objectives receive 2**(-age_in_full_equity_sessions/504), normalized to sum to training-row count, separately for every inner/outer training set. Keep original unweighted training-only scalers and spline quantile knots to isolate objective reweighting. Inner validation losses remain equally weighted; original grids/tie rule. Single-class probability fallback uses weighted positives and Jeffreys (sum(w*y)+.5)/(sum(w)+1). Record individual weights and effective sample size.",
+  "skew": "Official Cboe frozen SKEW original and accepted P3 G01/G02; only under existing ASSUMED_NEXT_SESSION with published_at unknown. No interpolation. Add two spline main effects, no new interactions or recency weights. Reference and challenger use identical core+G complete training/validation rows and prediction dates.",
+  "predictions": "Monthly refits/annual three-block inner selection; same maturity, 2019 boundary, 400/200 minima, grids, projections and targets as P4. Store every candidate/snapshot/member/service row. Retain accepted P4 M0/M1/M2 predictions unchanged.",
+  "account_scopes": {
+    "full": "2020-01-02 through2023-12-29, preceding cash anchor, all controllers/baselines independently funded",
+    "core_common": "Same capital and first executable close of all core variants; preceding signal retained",
+    "skew_common": "Same capital and shared executable start of M2, SKEW cohort reference and SKEW; preceding signal retained"
+  },
+  "economics": "Reuse P5 base mapping B=.05 c=.0005, both main/risk-only, cash/fixed25/50/75/100/curve. Continuous holdings, no score-observed gate, no 2024 outcomes; no new sensitivity scan.",
+  "bootstrap": {
+    "method": "Paired non-circular moving blocks over complete consecutive equity calendar; draw uniform starts in0..n-L, concatenate blocks then truncate n; same indices for both compared series. Missing/unscorable forecasts remain NaN in calendar and use jointly valid pairs without compressing missing dates.",
+    "block_sessions": [
+      21,
+      63
+    ],
+    "draws": 1000,
+    "seed": "1707+block_length, identical for same calendar cohort",
+    "interval": "pointwise percentile 2.5/97.5%; unadjusted descriptive intervals, not posterior probability, not all research-choice uncertainty",
+    "economics": "Resample already-realized paired net daily returns/exposure/turnover/fee fractions; recompute compounded return/CAGR/drawdown. Conditional on fitted forecasts and observed execution, no retraining or synthetic executable ledger claim. Initial capital anchor restored to each resampled wealth path."
+  },
+  "period_diagnostics": "All calendar years and quarters; all merged positive overlap events from accepted M2 scored Y10 rows. Continuous-account slices with preceding-close equity, never pretend independent restarted accounts. Forecast-loss leave-one-calendar-year-out without refitting. No2025 window.",
+  "model_promotion": false,
+  "next_locked_primary": "M2 original prescribed core model",
+  "unperformed": [
+    "P7",
+    "2024+ model or economic evaluation",
+    "new thresholds",
+    "new grids",
+    "combined challengers",
+    "account connections",
+    "orders",
+    "remote upload"
+  ]
+}

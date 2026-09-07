@@ -1,0 +1,208 @@
+{
+  "output_dir": "data/clean/p6/20260907T031807809244Z",
+  "variant_runs": [
+    {
+      "variant": "M2_REPLAY",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 8.387158666970208,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_A",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.400361459003761,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_B",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.710614082985558,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_C",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.686990125046577,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_D",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.8884667080128565,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_E",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 8.28715229203226,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_F",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.6664250420290045,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_DROP_BDE",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 7.086614041007124,
+      "warning_count": 0
+    },
+    {
+      "variant": "M3_RECENCY",
+      "request_sessions": 1006,
+      "forecast_sessions": 831,
+      "first_forecast": "2020-09-11",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 8.517435666988604,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_SKEW_REFERENCE",
+      "request_sessions": 1006,
+      "forecast_sessions": 829,
+      "first_forecast": "2020-09-15",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 8.734563792007975,
+      "warning_count": 0
+    },
+    {
+      "variant": "M2_SKEW",
+      "request_sessions": 1006,
+      "forecast_sessions": 829,
+      "first_forecast": "2020-09-15",
+      "fits": 40,
+      "selections": 4,
+      "elapsed_seconds": 9.180286457994953,
+      "warning_count": 0
+    }
+  ],
+  "evaluation": {
+    "cohorts": {
+      "full": {
+        "first_execution": "2020-01-02",
+        "models": [
+          "M0",
+          "M1",
+          "M2",
+          "M2_DROP_A",
+          "M2_DROP_B",
+          "M2_DROP_C",
+          "M2_DROP_D",
+          "M2_DROP_E",
+          "M2_DROP_F",
+          "M2_DROP_BDE",
+          "M3_RECENCY",
+          "M2_SKEW_REFERENCE",
+          "M2_SKEW"
+        ]
+      },
+      "core_common": {
+        "first_execution": "2020-09-11",
+        "models": [
+          "M0",
+          "M1",
+          "M2",
+          "M2_DROP_A",
+          "M2_DROP_B",
+          "M2_DROP_C",
+          "M2_DROP_D",
+          "M2_DROP_E",
+          "M2_DROP_F",
+          "M2_DROP_BDE",
+          "M3_RECENCY"
+        ]
+      },
+      "skew_common": {
+        "first_execution": "2020-09-15",
+        "models": [
+          "M2",
+          "M2_SKEW_REFERENCE",
+          "M2_SKEW"
+        ]
+      }
+    },
+    "accounts": 72,
+    "prediction_comparisons": 14,
+    "economic_comparisons": 54,
+    "positive_rows": 33,
+    "overlap_events": 11,
+    "input_prices_clock": {
+      "files": {
+        "prices": "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv",
+        "clock": "data/clean/p2/20260907T000150426421Z/clock.csv",
+        "predictions": "data/clean/p4/20260907T021724579078Z/predictions.csv",
+        "curve": "data/clean/VX_front_three.csv",
+        "features": "data/clean/p3/20260907T005629664263Z/core_features.csv"
+      },
+      "sha256": {
+        "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+        "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+        "data/clean/p4/20260907T021724579078Z/predictions.csv": "057e0b29c171e7faee7a0b9e148a537bc256b0eaa3bfd7b4f4a6158a930fc227",
+        "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+        "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e"
+      },
+      "p4_acceptance_sha256": "90d019f8c6e9efcd117c11c3865922169d7357bef22f25bccf4a9b6c5a94f432",
+      "prediction_fields_read": [
+        "as_of_session",
+        "decision_session",
+        "simulation_decision_at",
+        "execution_at",
+        "model",
+        "fit_id",
+        "forecast_available",
+        "mu5",
+        "q90"
+      ],
+      "labels_or_score_observed_read": false,
+      "locked_returns_read": false,
+      "model_fit_or_selection_performed": false,
+      "first_information": "2019-01-02",
+      "last_information": "2023-12-29",
+      "information_rows": 1258
+    }
+  },
+  "m2_full_training_refit_max_prediction_difference": 1.7763568394002505e-15,
+  "accepted_p4_prediction_sha256": "057e0b29c171e7faee7a0b9e148a537bc256b0eaa3bfd7b4f4a6158a930fc227",
+  "accepted_p5_checkpoint": "a10575c0462531ef0f427bd16b612fc970aa7fa4",
+  "skew_status": "AVAILABLE_UNDER_ACCEPTED_ASSUMPTION",
+  "next_locked_primary": "M2",
+  "automatic_promotion": false,
+  "locked_outcomes_evaluated": false,
+  "p7_performed": false
+}

@@ -1,0 +1,6 @@
+{
+  "stage": "P5",
+  "implementation_checkpoint": "6138e42",
+  "accepted_checkpoint": "a10575c0462531ef0f427bd16b612fc970aa7fa4",
+  "acceptance": "runs/p5/acceptance.json"
+}

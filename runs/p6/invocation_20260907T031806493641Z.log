@@ -1,0 +1,33 @@
+P6 M2_REPLAY：831预测日、40月拟合、4年度选择，8.39秒。
+P6 M2_DROP_A：831预测日、40月拟合、4年度选择，7.40秒。
+P6 M2_DROP_B：831预测日、40月拟合、4年度选择，7.71秒。
+P6 M2_DROP_C：831预测日、40月拟合、4年度选择，7.69秒。
+P6 M2_DROP_D：831预测日、40月拟合、4年度选择，7.89秒。
+P6 M2_DROP_E：831预测日、40月拟合、4年度选择，8.29秒。
+P6 M2_DROP_F：831预测日、40月拟合、4年度选择，7.67秒。
+P6 M2_DROP_BDE：831预测日、40月拟合、4年度选择，7.09秒。
+P6 M3_RECENCY：831预测日、40月拟合、4年度选择，8.52秒。
+P6 M2_SKEW_REFERENCE：829预测日、40月拟合、4年度选择，8.73秒。
+P6 M2_SKEW：829预测日、40月拟合、4年度选择，9.18秒。
+P6配对时间块：1004个指标区间；21/63日各1000次，保留全部抽样。
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 48, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 23, in main
+    return build_diagnostics_report(Path.cwd(), open_report=args.open)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_report.py", line 191, in build_diagnostics_report
+    audit=validate(root,result);write_json(output/'independent_validation.json',audit)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_audit.py", line 248, in validate
+    return {**audit_models(frame,config,output),**audit_accounts(output,prices),**audit_bootstrap(output),
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_audit.py", line 224, in audit_bootstrap
+    years=(pd.Timestamp(dates[-1])-pd.Timestamp(dates[0])).days/365.25
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/tslibs/timestamps.pyx", line 2738, in pandas._libs.tslibs.timestamps.Timestamp.__new__
+  File "pandas/_libs/tslibs/conversion.pyx", line 367, in pandas._libs.tslibs.conversion.convert_to_tsobject
+TypeError: Expected str, got numpy.str_

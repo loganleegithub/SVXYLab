@@ -1,0 +1,16 @@
+{
+  "saved_state_prediction_rows": 9137,
+  "saved_candidate_losses_checked": 1188,
+  "max_saved_state_prediction_error": 3.552713678800501e-15,
+  "m3_independent_ridge_coef_max_error": 2.5831116759467143e-16,
+  "account_rows": 65480,
+  "accounts": 72,
+  "max_account_money_error": 7.712515071034431e-09,
+  "bootstrap_scalar_draws_recomputed": 1004000,
+  "bootstrap_max_difference": 0.0,
+  "intervals_checked": 1004,
+  "methods": "Saved coefficient/transform reconstruction (not independent optimizer refit); independent M3 Ridge solve; separate trade equations; all saved bootstrap draws recomputed.",
+  "passed": true,
+  "locked_outcomes_used": false,
+  "skew_training_validation_members_identical": true
+}

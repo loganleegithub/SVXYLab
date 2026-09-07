@@ -1,0 +1,346 @@
+{
+  "stage": "P6",
+  "validated_at": "2026-09-07T03:35:40.699325+00:00",
+  "stage_status": "P6_COMPLETE_AWAITING_ACCEPTANCE",
+  "passed": true,
+  "run_record": "runs/p6/20260907T032405398008Z/diagnostics_run.json",
+  "invocation_exit_code": 0,
+  "report_sha256": "60ae80046e5c0eef6982a9f68928b57dceb729f9f5ed6a2502fd8f354acf106b",
+  "local_links_checked": 127,
+  "local_link_paths": [
+    "data/clean/p6/20260907T032405398008Z/core_common_equity.png",
+    "data/clean/p6/20260907T032405398008Z/skew_common_equity.png",
+    "data/clean/p6/20260907T032405398008Z/prediction_uncertainty.png",
+    "runs/p6/date_conversion_fix.json",
+    "runs/p6/20260907T032405398008Z/diagnostics_run.json",
+    "data/clean/p6/20260907T032405398008Z/independent_validation.json",
+    "runs/p6/experiment_record.json",
+    "data/clean/p6/20260907T032405398008Z/variants.json",
+    "data/clean/p6/20260907T032405398008Z/skew_availability.json",
+    "STATUS.md",
+    "data/clean/p6/20260907T032405398008Z/accepted_reference_predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/account_metrics.csv",
+    "data/clean/p6/20260907T032405398008Z/account_periods.csv",
+    "data/clean/p6/20260907T032405398008Z/bootstrap_draws.csv",
+    "data/clean/p6/20260907T032405398008Z/bootstrap_intervals.csv",
+    "data/clean/p6/20260907T032405398008Z/calibration.csv",
+    "data/clean/p6/20260907T032405398008Z/daily_losses.csv",
+    "data/clean/p6/20260907T032405398008Z/paired_account_periods.csv",
+    "data/clean/p6/20260907T032405398008Z/paired_prediction_periods.csv",
+    "data/clean/p6/20260907T032405398008Z/positive_events.csv",
+    "data/clean/p6/20260907T032405398008Z/prediction_metrics.csv",
+    "data/clean/p6/20260907T032405398008Z/variant_runs.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M0_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M0_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M1_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M1_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_A_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_A_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_B_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_B_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_C_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_C_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_D_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_D_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_E_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_E_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_F_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_F_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_BDE_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_DROP_BDE_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M3_RECENCY_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M3_RECENCY_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_SKEW_REFERENCE_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_SKEW_REFERENCE_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_SKEW_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_SKEW_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_cash.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_25.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_50.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_75.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_100.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/full_curve.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M0_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M0_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M1_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M1_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_A_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_A_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_B_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_B_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_C_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_C_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_D_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_D_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_E_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_E_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_F_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_F_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_BDE_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_DROP_BDE_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M3_RECENCY_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M3_RECENCY_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_cash.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_25.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_50.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_75.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_100.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/core_common_curve.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_SKEW_REFERENCE_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_SKEW_REFERENCE_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_SKEW_main.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_M2_SKEW_risk_only.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_cash.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_fixed_25.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_fixed_50.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_fixed_75.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_fixed_100.csv",
+    "data/clean/p6/20260907T032405398008Z/ledgers/skew_common_curve.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_REPLAY/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_REPLAY/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_REPLAY/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_A/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_A/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_A/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_B/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_B/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_B/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_C/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_C/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_C/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_D/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_D/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_D/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_E/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_E/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_E/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_F/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_F/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_F/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_BDE/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_BDE/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_DROP_BDE/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M3_RECENCY/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M3_RECENCY/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M3_RECENCY/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW_REFERENCE/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW_REFERENCE/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW_REFERENCE/cv_scores.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW/predictions.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW/training_rows.csv",
+    "data/clean/p6/20260907T032405398008Z/variants/M2_SKEW/cv_scores.csv"
+  ],
+  "tables": 13,
+  "plots_checked": [
+    "prediction_uncertainty.png",
+    "skew_common_equity.png"
+  ],
+  "browser_screenshot_claimed": false,
+  "macos_open_exit_code": 0,
+  "artifacts_sha256_verified": 679,
+  "source_sha256_verified": 43,
+  "accepted_p4_p5_artifacts_unchanged": true,
+  "original_models_mapping_config_unchanged": [
+    "src/svxylab/models.py",
+    "src/svxylab/predictions.py",
+    "src/svxylab/prediction_data.py",
+    "src/svxylab/ledger.py",
+    "src/svxylab/economics.py",
+    "src/svxylab/economics_audit.py",
+    "src/svxylab/economics_report.py",
+    "experiment.toml",
+    "FEATURES.json",
+    "RESEARCH_SPEC.md",
+    "requirements-lock.txt",
+    "pyproject.toml"
+  ],
+  "variants": {
+    "column_ablations": 7,
+    "challengers": 2,
+    "references": 2
+  },
+  "fits": 440,
+  "annual_selections": 44,
+  "candidate_losses_audited": 1188,
+  "accounts": 72,
+  "accounts_rows_audited": 65480,
+  "two_calculations_identical": "runs/p6/reproducibility.json",
+  "bootstrap_intervals": 1004,
+  "bootstrap_scalar_draws_recomputed": 1004000,
+  "tests_passed": 109,
+  "cross2024_prediction_tails": [
+    {
+      "variant": "M2_REPLAY",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_A",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_B",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_C",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_D",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_E",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_F",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_DROP_BDE",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M3_RECENCY",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_SKEW_REFERENCE",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    },
+    {
+      "variant": "M2_SKEW",
+      "dates": [
+        "2023-12-22",
+        "2023-12-26",
+        "2023-12-27",
+        "2023-12-28",
+        "2023-12-29"
+      ],
+      "label_values_blank": true
+    }
+  ],
+  "locked_outcomes_used": false,
+  "next_locked_primary": "M2",
+  "automatic_promotion": false,
+  "p7_performed": false,
+  "documentation_sha256": {
+    "AGENTS.md": "59b7f96fd9f9f4ae3f9d4a7b1b398acdcb6f03b717a9d28736dc4635fab15180",
+    "STATUS.md": "76917550cf104ce5a2bd229f00c21f4ee6437686647fbb92d5fb3f80cfe13657"
+  },
+  "commands": [
+    {
+      "command": "git diff --exit-code a10575c -- src/svxylab/models.py src/svxylab/predictions.py src/svxylab/prediction_data.py src/svxylab/ledger.py src/svxylab/economics.py src/svxylab/economics_audit.py src/svxylab/economics_report.py experiment.toml FEATURES.json RESEARCH_SPEC.md requirements-lock.txt pyproject.toml",
+      "started_at": "2026-09-07T03:35:40.636254+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.012,
+      "output": ""
+    },
+    {
+      "command": "git diff --check",
+      "started_at": "2026-09-07T03:35:40.648557+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.017,
+      "output": ""
+    },
+    {
+      "command": "git check-ignore /Users/logan/SVXYLab/data/clean/p6/20260907T032405398008Z/variants/M2_SKEW/predictions.csv /Users/logan/SVXYLab/data/clean/p6/20260907T032405398008Z/bootstrap_draws.csv",
+      "started_at": "2026-09-07T03:35:40.665272+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.012,
+      "output": "/Users/logan/SVXYLab/data/clean/p6/20260907T032405398008Z/variants/M2_SKEW/predictions.csv\n/Users/logan/SVXYLab/data/clean/p6/20260907T032405398008Z/bootstrap_draws.csv\n"
+    },
+    {
+      "command": "git status --short",
+      "started_at": "2026-09-07T03:35:40.676891+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.012,
+      "output": " M AGENTS.md\n M STATUS.md\n M src/svxylab/__main__.py\n?? reports/diagnostics.html\n?? runs/p5/accepted_checkpoint.json\n?? runs/p6/\n?? src/svxylab/diagnostic_models.py\n?? src/svxylab/diagnostics.py\n?? src/svxylab/diagnostics_audit.py\n?? src/svxylab/diagnostics_report.py\n?? tests/test_diagnostics.py\n"
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "started_at": "2026-09-07T03:35:40.689047+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.01,
+      "output": "a10575c0462531ef0f427bd16b612fc970aa7fa4\n"
+    }
+  ],
+  "p6_checkpoint_created": false
+}

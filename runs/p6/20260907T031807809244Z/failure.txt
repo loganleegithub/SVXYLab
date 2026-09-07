@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_report.py", line 191, in build_diagnostics_report
+    audit=validate(root,result);write_json(output/'independent_validation.json',audit)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_audit.py", line 248, in validate
+    return {**audit_models(frame,config,output),**audit_accounts(output,prices),**audit_bootstrap(output),
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics_audit.py", line 224, in audit_bootstrap
+    years=(pd.Timestamp(dates[-1])-pd.Timestamp(dates[0])).days/365.25
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/tslibs/timestamps.pyx", line 2738, in pandas._libs.tslibs.timestamps.Timestamp.__new__
+  File "pandas/_libs/tslibs/conversion.pyx", line 367, in pandas._libs.tslibs.conversion.convert_to_tsobject
+TypeError: Expected str, got numpy.str_

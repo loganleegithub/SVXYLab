@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "svxylab",
+    "diagnostics",
+    "--open"
+  ],
+  "started_at": "2026-09-07T03:18:06.493641+00:00",
+  "exit_code": 1,
+  "elapsed_seconds": 119.21938845800469,
+  "output_log": "runs/p6/invocation_20260907T031806493641Z.log"
+}

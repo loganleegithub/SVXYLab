@@ -1,0 +1,3692 @@
+{
+  "stage": "P6",
+  "checked_at": "2026-09-07T03:28:17.033358+00:00",
+  "first_computation": "runs/p6/20260907T031807809244Z/computation.json",
+  "first_command_status": "Fitting, accounts and bootstrap completed; independent audit stopped at date deserialization, retained.",
+  "final_successful_run": "runs/p6/20260907T032405398008Z/diagnostics_run.json",
+  "computational_csv_count": 161,
+  "csv_comparison": "Exact equality after excluding only actual computed_at_utc/elapsed_seconds columns; no numeric tolerance needed.",
+  "csvs": [
+    {
+      "file": "accepted_reference_predictions.csv",
+      "rows": 3018,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": true,
+      "first_sha256": "fbfd773dbc6cb63ab0f47f3c241cfe6f7df64ad7921032b06705a6af292d9887",
+      "second_sha256": "fbfd773dbc6cb63ab0f47f3c241cfe6f7df64ad7921032b06705a6af292d9887"
+    },
+    {
+      "file": "account_metrics.csv",
+      "rows": 72,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "35e24cbfc57f06cb02f120bc777f27b94d7ce19e7a0f55dafad823f73ab2b0cb",
+      "second_sha256": "35e24cbfc57f06cb02f120bc777f27b94d7ce19e7a0f55dafad823f73ab2b0cb"
+    },
+    {
+      "file": "account_periods.csv",
+      "rows": 2224,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c554a062c291139410ab0d658f9ca093b4e4835b85791ac6a86911ec5163e3cf",
+      "second_sha256": "c554a062c291139410ab0d658f9ca093b4e4835b85791ac6a86911ec5163e3cf"
+    },
+    {
+      "file": "bootstrap_draws.csv",
+      "rows": 136000,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "78ed609d0f821460508ecaa92bbe2aac7648ea9fed47082fe25df2ffefeb4050",
+      "second_sha256": "78ed609d0f821460508ecaa92bbe2aac7648ea9fed47082fe25df2ffefeb4050"
+    },
+    {
+      "file": "bootstrap_intervals.csv",
+      "rows": 1004,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "3684fd80801e5623a7633efbefc87967139535ca88666b273dba4be0f6a14f30",
+      "second_sha256": "3684fd80801e5623a7633efbefc87967139535ca88666b273dba4be0f6a14f30"
+    },
+    {
+      "file": "calibration.csv",
+      "rows": 65,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c938f76874c9e42c83f74bce8e86ac48902a86a38ca628bbebce82a52635acaf",
+      "second_sha256": "c938f76874c9e42c83f74bce8e86ac48902a86a38ca628bbebce82a52635acaf"
+    },
+    {
+      "file": "daily_losses.csv",
+      "rows": 13078,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "40e25fa683c22d3140695312a17d64097cf534f65c6cbbb674285431de869df4",
+      "second_sha256": "40e25fa683c22d3140695312a17d64097cf534f65c6cbbb674285431de869df4"
+    },
+    {
+      "file": "ledgers/core_common_M0_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075",
+      "second_sha256": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075"
+    },
+    {
+      "file": "ledgers/core_common_M0_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80",
+      "second_sha256": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80"
+    },
+    {
+      "file": "ledgers/core_common_M1_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1",
+      "second_sha256": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1"
+    },
+    {
+      "file": "ledgers/core_common_M1_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680",
+      "second_sha256": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_A_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "b6fed8fe0fd38f6b0f11e12a2ad2a3d2714d66cd5a276322e70a7a3c28d051ac",
+      "second_sha256": "b6fed8fe0fd38f6b0f11e12a2ad2a3d2714d66cd5a276322e70a7a3c28d051ac"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_A_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "961a2af9c61effbd77762794cd6db62fa01bb12f626ceb63b880d01d84e2b6e0",
+      "second_sha256": "961a2af9c61effbd77762794cd6db62fa01bb12f626ceb63b880d01d84e2b6e0"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_BDE_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "03cfd9ac4c3289e524a3f00050a57aff24e1d8df4e5ccf11d0ea316f1816377c",
+      "second_sha256": "03cfd9ac4c3289e524a3f00050a57aff24e1d8df4e5ccf11d0ea316f1816377c"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_BDE_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "880521ccfea974eb095f75ce560c72b92b07b4e3f57a69f31ca8a39843793fa4",
+      "second_sha256": "880521ccfea974eb095f75ce560c72b92b07b4e3f57a69f31ca8a39843793fa4"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_B_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c2abb5d0151221f3cadfc2df8f3de4905c77230640c418c1713f9ecd6941735a",
+      "second_sha256": "c2abb5d0151221f3cadfc2df8f3de4905c77230640c418c1713f9ecd6941735a"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_B_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "d477b7fe357b0b2d835154e2ca1b716560408ac3d484a036fa94b4fc12da972b",
+      "second_sha256": "d477b7fe357b0b2d835154e2ca1b716560408ac3d484a036fa94b4fc12da972b"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_C_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "b2847c10a8773b34c4dd872e481904da0057b7bb02b68e664b9fde3fa08107c4",
+      "second_sha256": "b2847c10a8773b34c4dd872e481904da0057b7bb02b68e664b9fde3fa08107c4"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_C_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ed6399b1c6c415331bb68389fa73c34b6910350cc1a6b3d14c88bc7889428dbd",
+      "second_sha256": "ed6399b1c6c415331bb68389fa73c34b6910350cc1a6b3d14c88bc7889428dbd"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_D_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e81ea457728b1f9976b4a3e89d2b4b861f46fb49d5369faf246096ba1c6a2f67",
+      "second_sha256": "e81ea457728b1f9976b4a3e89d2b4b861f46fb49d5369faf246096ba1c6a2f67"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_D_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0a8a8ac0af7b0b4b9fcd8b5997ae0ec18d03393baeb53ed6ea64c3b1a6b6a685",
+      "second_sha256": "0a8a8ac0af7b0b4b9fcd8b5997ae0ec18d03393baeb53ed6ea64c3b1a6b6a685"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_E_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0dbc1b4b68e00c5a967fdad341f5a977bd0b74870d905525002fed41dd3ad5ee",
+      "second_sha256": "0dbc1b4b68e00c5a967fdad341f5a977bd0b74870d905525002fed41dd3ad5ee"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_E_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "2f99c8f123608699f69498ff80bf8bf670ec9632dbd63a1d4d0b355a064b7c08",
+      "second_sha256": "2f99c8f123608699f69498ff80bf8bf670ec9632dbd63a1d4d0b355a064b7c08"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_F_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7fe217d5ec026cdd89543ea002c026eccd187ffb544772430fd3783bf7911bea",
+      "second_sha256": "7fe217d5ec026cdd89543ea002c026eccd187ffb544772430fd3783bf7911bea"
+    },
+    {
+      "file": "ledgers/core_common_M2_DROP_F_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e87cff910dc40b6f7c624971e6ea6dc0a919d4896f9e9b2979608376fc9c397b",
+      "second_sha256": "e87cff910dc40b6f7c624971e6ea6dc0a919d4896f9e9b2979608376fc9c397b"
+    },
+    {
+      "file": "ledgers/core_common_M2_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4",
+      "second_sha256": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4"
+    },
+    {
+      "file": "ledgers/core_common_M2_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20",
+      "second_sha256": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20"
+    },
+    {
+      "file": "ledgers/core_common_M3_RECENCY_main.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9d35ffabdb734db9b8539a94c99a36f5f2894565af2d17c77964cbc86a389109",
+      "second_sha256": "9d35ffabdb734db9b8539a94c99a36f5f2894565af2d17c77964cbc86a389109"
+    },
+    {
+      "file": "ledgers/core_common_M3_RECENCY_risk_only.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "547e5bc4866e0b4086dd8a8cec088e500e0b1450b2cec35b8968bedb89a5b8c3",
+      "second_sha256": "547e5bc4866e0b4086dd8a8cec088e500e0b1450b2cec35b8968bedb89a5b8c3"
+    },
+    {
+      "file": "ledgers/core_common_cash.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633",
+      "second_sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633"
+    },
+    {
+      "file": "ledgers/core_common_curve.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07",
+      "second_sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07"
+    },
+    {
+      "file": "ledgers/core_common_fixed_100.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac",
+      "second_sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac"
+    },
+    {
+      "file": "ledgers/core_common_fixed_25.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1",
+      "second_sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1"
+    },
+    {
+      "file": "ledgers/core_common_fixed_50.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0",
+      "second_sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0"
+    },
+    {
+      "file": "ledgers/core_common_fixed_75.csv",
+      "rows": 832,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355",
+      "second_sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355"
+    },
+    {
+      "file": "ledgers/full_M0_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1",
+      "second_sha256": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1"
+    },
+    {
+      "file": "ledgers/full_M0_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792",
+      "second_sha256": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792"
+    },
+    {
+      "file": "ledgers/full_M1_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4",
+      "second_sha256": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4"
+    },
+    {
+      "file": "ledgers/full_M1_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3",
+      "second_sha256": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_A_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ec2c48eca1af34b27b169c29afbf554158764a38e202fb971709423fa2edb832",
+      "second_sha256": "ec2c48eca1af34b27b169c29afbf554158764a38e202fb971709423fa2edb832"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_A_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "69045939cfaa36d22288150ef13e926dfba255ce1865f7dff810db5257036586",
+      "second_sha256": "69045939cfaa36d22288150ef13e926dfba255ce1865f7dff810db5257036586"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_BDE_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1ec41f302da343b1f1f778d6d63b87624b2389cf23b8fe4c1aa8ea1bd47b3a73",
+      "second_sha256": "1ec41f302da343b1f1f778d6d63b87624b2389cf23b8fe4c1aa8ea1bd47b3a73"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_BDE_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "b02d623352ddb4b7e56817bf4a8cac5ea62090c3a7f8f9b61ad3f37832508a7b",
+      "second_sha256": "b02d623352ddb4b7e56817bf4a8cac5ea62090c3a7f8f9b61ad3f37832508a7b"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_B_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "fe849d1068b770aee19884796d2000f6c7628f95393070cb6c9ebefdbda38ef1",
+      "second_sha256": "fe849d1068b770aee19884796d2000f6c7628f95393070cb6c9ebefdbda38ef1"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_B_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "adf567a29b3c34e7d1ad1d7a21803eb766bc9ef40da52bc80c959974d8c063a5",
+      "second_sha256": "adf567a29b3c34e7d1ad1d7a21803eb766bc9ef40da52bc80c959974d8c063a5"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_C_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "567c383e45607551c27759fbc29bfc9fef804cad0463f07dd73a7beda6cd25b9",
+      "second_sha256": "567c383e45607551c27759fbc29bfc9fef804cad0463f07dd73a7beda6cd25b9"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_C_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "2ebb8376e684611066542d1624fb9eb8f8410ba8ff313c177f188fb1e6f67117",
+      "second_sha256": "2ebb8376e684611066542d1624fb9eb8f8410ba8ff313c177f188fb1e6f67117"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_D_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "b623122bb4475de0ced18ad89042a2c6c4cbc9f7757d09311db505da9542e058",
+      "second_sha256": "b623122bb4475de0ced18ad89042a2c6c4cbc9f7757d09311db505da9542e058"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_D_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0560de0eb6f2520a15c8035b8d03cc0bae354328cdb85272ffddfa8a1951801a",
+      "second_sha256": "0560de0eb6f2520a15c8035b8d03cc0bae354328cdb85272ffddfa8a1951801a"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_E_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7d0fe93dd15561e4bcff0ba43b069ed28daeb10f38ac3303ee0a480aeead0357",
+      "second_sha256": "7d0fe93dd15561e4bcff0ba43b069ed28daeb10f38ac3303ee0a480aeead0357"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_E_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "46bc535e98dc78c6f46806314bef4ee950b2c4aecdef749362933aa5a99ff1dd",
+      "second_sha256": "46bc535e98dc78c6f46806314bef4ee950b2c4aecdef749362933aa5a99ff1dd"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_F_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ae56d998951c4e74ac4160efa0a55bf06ac17a4b612d4dad6e09d195dbc6a894",
+      "second_sha256": "ae56d998951c4e74ac4160efa0a55bf06ac17a4b612d4dad6e09d195dbc6a894"
+    },
+    {
+      "file": "ledgers/full_M2_DROP_F_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "486e58e1cbea48ed4441ec49c61cd62c16d852fc91cd331c2882d9211890b75e",
+      "second_sha256": "486e58e1cbea48ed4441ec49c61cd62c16d852fc91cd331c2882d9211890b75e"
+    },
+    {
+      "file": "ledgers/full_M2_SKEW_REFERENCE_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9bb9cd1d97b4c47897054be2e134b43e8dba6f38feff3687fb2a2ba88b3f19bb",
+      "second_sha256": "9bb9cd1d97b4c47897054be2e134b43e8dba6f38feff3687fb2a2ba88b3f19bb"
+    },
+    {
+      "file": "ledgers/full_M2_SKEW_REFERENCE_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a524622b8c14155c99a08d032899b00ebf28872f0ec769063230c3001e9aaf77",
+      "second_sha256": "a524622b8c14155c99a08d032899b00ebf28872f0ec769063230c3001e9aaf77"
+    },
+    {
+      "file": "ledgers/full_M2_SKEW_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "89fc368ef1a9214265ca1fb11e77022db7deb06d8a00d9fd211bfcc271448003",
+      "second_sha256": "89fc368ef1a9214265ca1fb11e77022db7deb06d8a00d9fd211bfcc271448003"
+    },
+    {
+      "file": "ledgers/full_M2_SKEW_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0ae979b6d18b9dd178c137cc3b384633c91a3cef83bc22eebf9756180eea8aea",
+      "second_sha256": "0ae979b6d18b9dd178c137cc3b384633c91a3cef83bc22eebf9756180eea8aea"
+    },
+    {
+      "file": "ledgers/full_M2_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db",
+      "second_sha256": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db"
+    },
+    {
+      "file": "ledgers/full_M2_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb",
+      "second_sha256": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb"
+    },
+    {
+      "file": "ledgers/full_M3_RECENCY_main.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "6173b6ba60be69807017b1c8810dacc15e9a4a28a6c91044f4129c6fd3d5ed52",
+      "second_sha256": "6173b6ba60be69807017b1c8810dacc15e9a4a28a6c91044f4129c6fd3d5ed52"
+    },
+    {
+      "file": "ledgers/full_M3_RECENCY_risk_only.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c96383ef338269ad4b8a509700ae747af9508cb924eda7582e538287e65f8e27",
+      "second_sha256": "c96383ef338269ad4b8a509700ae747af9508cb924eda7582e538287e65f8e27"
+    },
+    {
+      "file": "ledgers/full_cash.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834",
+      "second_sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834"
+    },
+    {
+      "file": "ledgers/full_curve.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b",
+      "second_sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b"
+    },
+    {
+      "file": "ledgers/full_fixed_100.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773",
+      "second_sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773"
+    },
+    {
+      "file": "ledgers/full_fixed_25.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db",
+      "second_sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db"
+    },
+    {
+      "file": "ledgers/full_fixed_50.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d",
+      "second_sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d"
+    },
+    {
+      "file": "ledgers/full_fixed_75.csv",
+      "rows": 1007,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c",
+      "second_sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c"
+    },
+    {
+      "file": "ledgers/skew_common_M2_SKEW_REFERENCE_main.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "5a287c5c46f7e9b89b1c4b015223adabdf4f67d419da863bf62e9aa5912b9627",
+      "second_sha256": "5a287c5c46f7e9b89b1c4b015223adabdf4f67d419da863bf62e9aa5912b9627"
+    },
+    {
+      "file": "ledgers/skew_common_M2_SKEW_REFERENCE_risk_only.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a3d6f3f6635f580175f6c3aee319607998a343ee99365da616df97faf773e746",
+      "second_sha256": "a3d6f3f6635f580175f6c3aee319607998a343ee99365da616df97faf773e746"
+    },
+    {
+      "file": "ledgers/skew_common_M2_SKEW_main.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "3bb216b5370ac50ff614b33bd3dd1c5ac8e17a9e283d02e2a052c445beffabb0",
+      "second_sha256": "3bb216b5370ac50ff614b33bd3dd1c5ac8e17a9e283d02e2a052c445beffabb0"
+    },
+    {
+      "file": "ledgers/skew_common_M2_SKEW_risk_only.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "72a2cd878a6c19350084cf9c31f30e4d172944ede469bd0b7687dd628e9b2b9a",
+      "second_sha256": "72a2cd878a6c19350084cf9c31f30e4d172944ede469bd0b7687dd628e9b2b9a"
+    },
+    {
+      "file": "ledgers/skew_common_M2_main.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "5d94372b592bcb43a4e3cad04ea86dfb8fa6d266b45967b32dcf1afafbb8b5ca",
+      "second_sha256": "5d94372b592bcb43a4e3cad04ea86dfb8fa6d266b45967b32dcf1afafbb8b5ca"
+    },
+    {
+      "file": "ledgers/skew_common_M2_risk_only.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7e22103cc27176709f0eed979a74b085ad4e08aad522531ced36979e58e8d854",
+      "second_sha256": "7e22103cc27176709f0eed979a74b085ad4e08aad522531ced36979e58e8d854"
+    },
+    {
+      "file": "ledgers/skew_common_cash.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0a816ae8e3d4986bbfc406aaa320fb757a845cfc2d3e614a76b92d07fcd84df5",
+      "second_sha256": "0a816ae8e3d4986bbfc406aaa320fb757a845cfc2d3e614a76b92d07fcd84df5"
+    },
+    {
+      "file": "ledgers/skew_common_curve.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a9c8e2055b87cffc69e4c745def005aefb7eec6d4108cf26dc912640dc49e059",
+      "second_sha256": "a9c8e2055b87cffc69e4c745def005aefb7eec6d4108cf26dc912640dc49e059"
+    },
+    {
+      "file": "ledgers/skew_common_fixed_100.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c8235726cc315e032b4d411ba005f9ec0294c1e9507e7d9b0dbf286fa09a47ab",
+      "second_sha256": "c8235726cc315e032b4d411ba005f9ec0294c1e9507e7d9b0dbf286fa09a47ab"
+    },
+    {
+      "file": "ledgers/skew_common_fixed_25.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "8bc060103664a12b253c326ea8f87bc60c060419eb95c375c9d7c3605675ee9c",
+      "second_sha256": "8bc060103664a12b253c326ea8f87bc60c060419eb95c375c9d7c3605675ee9c"
+    },
+    {
+      "file": "ledgers/skew_common_fixed_50.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "8097b451b6c840dda79fa821ca67a94bc352dcc72060976f9601b606a792ed40",
+      "second_sha256": "8097b451b6c840dda79fa821ca67a94bc352dcc72060976f9601b606a792ed40"
+    },
+    {
+      "file": "ledgers/skew_common_fixed_75.csv",
+      "rows": 830,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ab2356923d8a7e625e41c56570f9d0536196ade7ed50209673e7dd527334c23e",
+      "second_sha256": "ab2356923d8a7e625e41c56570f9d0536196ade7ed50209673e7dd527334c23e"
+    },
+    {
+      "file": "paired_account_periods.csv",
+      "rows": 6480,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1909dfd85f2290c96c147f3fbbc72da681fb590235dc35dcd2b54030f18d1b67",
+      "second_sha256": "1909dfd85f2290c96c147f3fbbc72da681fb590235dc35dcd2b54030f18d1b67"
+    },
+    {
+      "file": "paired_prediction_periods.csv",
+      "rows": 2520,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "128d1c342a3c9cc0b511c48146f434ca6b21937f2428036fa2ccd44d47120636",
+      "second_sha256": "128d1c342a3c9cc0b511c48146f434ca6b21937f2428036fa2ccd44d47120636"
+    },
+    {
+      "file": "positive_events.csv",
+      "rows": 11,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "517b118c2d11e3a3a484ec99d968cb20ed6a4fd396ee8f295890aaff064b4130",
+      "second_sha256": "517b118c2d11e3a3a484ec99d968cb20ed6a4fd396ee8f295890aaff064b4130"
+    },
+    {
+      "file": "prediction_metrics.csv",
+      "rows": 416,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7dfc09fbd843537878cff932f44889d95fe90fac2570697aa15021d78af247c7",
+      "second_sha256": "7dfc09fbd843537878cff932f44889d95fe90fac2570697aa15021d78af247c7"
+    },
+    {
+      "file": "variant_runs.csv",
+      "rows": 11,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "9bcaaf32a7396897699682f67a7236e4d6929ce8047c370e444074989c570489",
+      "second_sha256": "b0873ad9bbe39ab2463f28444994c2152fa8f97948b77252e7eb6f13c89021b1"
+    },
+    {
+      "file": "variants/M2_DROP_A/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c43a548eae66abd6ab7dfd7fafc4bad19ef7411c5c84bcc95d724bfac3ae5888",
+      "second_sha256": "c43a548eae66abd6ab7dfd7fafc4bad19ef7411c5c84bcc95d724bfac3ae5888"
+    },
+    {
+      "file": "variants/M2_DROP_A/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "c485073cb8402cc9810ee856012e772b95a11e40b874b2c9321b8e155838d03e",
+      "second_sha256": "c485073cb8402cc9810ee856012e772b95a11e40b874b2c9321b8e155838d03e"
+    },
+    {
+      "file": "variants/M2_DROP_A/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "5e0d37ca2e31e289995ca96e6aa5d195491ccbb95d88d283afe9ea805dc799bb",
+      "second_sha256": "aa3fffbd168e5a0e5195e94caa4e73ce301f339c56530f01199dd8238ad2d5b8"
+    },
+    {
+      "file": "variants/M2_DROP_A/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_A/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "1bd69a365a2560ac436a6a1e3c2baf051dd96a9ca1009d0e3daa54beed6dc16b",
+      "second_sha256": "754918f314a399ea1157c527ebfb107a144446388768feefe9977ff289f64b0b"
+    },
+    {
+      "file": "variants/M2_DROP_A/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "d32db2ba54bdb850594859650363e40ff315b7c64c0c6aa80839cbda23cfc921",
+      "second_sha256": "d32db2ba54bdb850594859650363e40ff315b7c64c0c6aa80839cbda23cfc921"
+    },
+    {
+      "file": "variants/M2_DROP_A/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1288c2359e868ca2e007d9affaeccb3a56fb4bd6cd4caa68600d8ece0366ef7b",
+      "second_sha256": "1288c2359e868ca2e007d9affaeccb3a56fb4bd6cd4caa68600d8ece0366ef7b"
+    },
+    {
+      "file": "variants/M2_DROP_B/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9977526e958c45676754adaf4521a0e6e757dc06ebb07b898d8763237e64664c",
+      "second_sha256": "9977526e958c45676754adaf4521a0e6e757dc06ebb07b898d8763237e64664c"
+    },
+    {
+      "file": "variants/M2_DROP_B/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "14b626a73ada8cbeca3655270e0b1b61905174b170040b486f4e01307c1033bb",
+      "second_sha256": "14b626a73ada8cbeca3655270e0b1b61905174b170040b486f4e01307c1033bb"
+    },
+    {
+      "file": "variants/M2_DROP_B/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "3b0b43f65b28edf434ee5d7745d8dfe55835054919394b2040e716d28e08e981",
+      "second_sha256": "5d73b0db95f14eda8785d99b6640d435dd6536bff9845c10f5d4915d4b068539"
+    },
+    {
+      "file": "variants/M2_DROP_B/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_B/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "108338018d91883f2d367685ce57f463dd53e22f309fb4242e8d59e6c115b7a8",
+      "second_sha256": "c44ce54583cc905d52938e976413f9149dabd8e6d1ed77cfb5d13c51fbf32b9b"
+    },
+    {
+      "file": "variants/M2_DROP_B/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e94c4059b7eeda75eea29b4be7d61a650337f4b9c8a4f6b406b56897d26f6295",
+      "second_sha256": "e94c4059b7eeda75eea29b4be7d61a650337f4b9c8a4f6b406b56897d26f6295"
+    },
+    {
+      "file": "variants/M2_DROP_B/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "49bc7b1f16647dfa7587106084c77e920920d8d9d9f204f8a417ee1a634ac960",
+      "second_sha256": "49bc7b1f16647dfa7587106084c77e920920d8d9d9f204f8a417ee1a634ac960"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "cd025b7fe6c32dc61fce796be60e31cade765d577312bbdff8e634426c7c2dcd",
+      "second_sha256": "cd025b7fe6c32dc61fce796be60e31cade765d577312bbdff8e634426c7c2dcd"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "5d0128e800438cbe63731c24a2f79c1758c60ee75bcf6cb5a339d2e077e3f632",
+      "second_sha256": "5d0128e800438cbe63731c24a2f79c1758c60ee75bcf6cb5a339d2e077e3f632"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "12647c33a7aa594dbdda6e26faa7721e838471151856be38aa57e02e4edfadbf",
+      "second_sha256": "c311ca9a6e886377a4d28cc168f335992858cc635d6067ff40bf4910a3bb1913"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "115e5ebae1c88a05699ce7c7f4defb6c636eaedf6b65d827167825f3107b6fc1",
+      "second_sha256": "b33d90d53acc281d68f7da3e5e7d6b3425e18ce8e0652aad143b5ed7ccee69c3"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "45fd78d5eca20e110594a814f90946aabaa320a9f4713d5b0b4f0134b7b9de3a",
+      "second_sha256": "45fd78d5eca20e110594a814f90946aabaa320a9f4713d5b0b4f0134b7b9de3a"
+    },
+    {
+      "file": "variants/M2_DROP_BDE/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "4cd88110a577a5684c08ed61a3b0f769b1f900cf72bada37850aa29f71f5683c",
+      "second_sha256": "4cd88110a577a5684c08ed61a3b0f769b1f900cf72bada37850aa29f71f5683c"
+    },
+    {
+      "file": "variants/M2_DROP_C/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1c18294070d2abb4fa36f15aa28695178d8c256ef7c297cc86f1e2ba0fd5366e",
+      "second_sha256": "1c18294070d2abb4fa36f15aa28695178d8c256ef7c297cc86f1e2ba0fd5366e"
+    },
+    {
+      "file": "variants/M2_DROP_C/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e6754b66a7724ced665df9769884b250e1ccc8f72d1fe829687a076d8b3a831f",
+      "second_sha256": "e6754b66a7724ced665df9769884b250e1ccc8f72d1fe829687a076d8b3a831f"
+    },
+    {
+      "file": "variants/M2_DROP_C/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "e53ba713a0621b575ebfe9813597f0d81a8b45a1dc5fd28604131c248029afc2",
+      "second_sha256": "e648f5823a40c532789930e0d5e25387f8d9b973ee98924cfc36c8ec35ed3826"
+    },
+    {
+      "file": "variants/M2_DROP_C/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_C/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "8da6238aa9e8ff67e0748f20f68a9a066392903a8685d73ee1269daa501e5153",
+      "second_sha256": "cfded21ad58b6ff12b6fb6c07e0ac42d7518623e878e2ff3dbf6b4fe8f867ae7"
+    },
+    {
+      "file": "variants/M2_DROP_C/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7fcb021f3c01f93e440ec3dd486e3ab6449ed4efb701498fb9fc83080c53dd44",
+      "second_sha256": "7fcb021f3c01f93e440ec3dd486e3ab6449ed4efb701498fb9fc83080c53dd44"
+    },
+    {
+      "file": "variants/M2_DROP_C/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ad7ed7140dd2b3e48a7d125966f09c268b6962c3e10448ae3f063d1af79f33e1",
+      "second_sha256": "ad7ed7140dd2b3e48a7d125966f09c268b6962c3e10448ae3f063d1af79f33e1"
+    },
+    {
+      "file": "variants/M2_DROP_D/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "3036649fb4594b346182e301a9238f1658da3214a5ead70b4c0bc782b3d2e350",
+      "second_sha256": "3036649fb4594b346182e301a9238f1658da3214a5ead70b4c0bc782b3d2e350"
+    },
+    {
+      "file": "variants/M2_DROP_D/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "012245f705c2399f086398a027b896a37f3690a31abcd48176e3fedeb777954a",
+      "second_sha256": "012245f705c2399f086398a027b896a37f3690a31abcd48176e3fedeb777954a"
+    },
+    {
+      "file": "variants/M2_DROP_D/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "4b52c2a765ce80518cca3f3b4834b455cccb18b6fd58df60e07d8959bed7fa31",
+      "second_sha256": "249bfb289df66b24bb04198094c7162b7840a704786f450670b3949631bd00c6"
+    },
+    {
+      "file": "variants/M2_DROP_D/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_D/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "b82f07100117814f6c16aa4764eb47b406546074858472efb3bf569991b6268f",
+      "second_sha256": "a2015f3c0754642bfce4a7944851fdee6c462d9f1ecfdb486a41a7973b183208"
+    },
+    {
+      "file": "variants/M2_DROP_D/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "76f4ca80a0528c92a4cc8c71d9cdebcb0c81085ce57d002ecf2754b9c95fc075",
+      "second_sha256": "76f4ca80a0528c92a4cc8c71d9cdebcb0c81085ce57d002ecf2754b9c95fc075"
+    },
+    {
+      "file": "variants/M2_DROP_D/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "306f506547dc8bd6d095b4a6dd230d16d3d072f8ff33ab61c64d3c75c5e462ff",
+      "second_sha256": "306f506547dc8bd6d095b4a6dd230d16d3d072f8ff33ab61c64d3c75c5e462ff"
+    },
+    {
+      "file": "variants/M2_DROP_E/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "95063d2a1ca213235e690137ba5deb4ed2d010159a637b80cce88e1795c1cf6c",
+      "second_sha256": "95063d2a1ca213235e690137ba5deb4ed2d010159a637b80cce88e1795c1cf6c"
+    },
+    {
+      "file": "variants/M2_DROP_E/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "8f83a415b8eece00bbf7eea137fe7dc6b6496f4109ddc62c8f562defbbacd586",
+      "second_sha256": "8f83a415b8eece00bbf7eea137fe7dc6b6496f4109ddc62c8f562defbbacd586"
+    },
+    {
+      "file": "variants/M2_DROP_E/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "bdaedef792059032ce7feb9c0c07aa3ab02e55afc01cfe7b9e9d8275fd67380f",
+      "second_sha256": "7209422457544415dfa38c29e6d794f276eadc24c1a40536484c568271a9cae7"
+    },
+    {
+      "file": "variants/M2_DROP_E/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_E/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "b937c8239fe9346676fd30ab258ec17c9a9f06794b16caa74134f588af98a8b3",
+      "second_sha256": "7ad00c1f0d77791690543823082a14ca8d10a1c697c6b24aff434fce044f56b6"
+    },
+    {
+      "file": "variants/M2_DROP_E/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9787393fc4d73330797d4f1c2754364d3034031c0eddc1fde9bf168f05496f10",
+      "second_sha256": "9787393fc4d73330797d4f1c2754364d3034031c0eddc1fde9bf168f05496f10"
+    },
+    {
+      "file": "variants/M2_DROP_E/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7523cab83c2a848c0e816e4de6802b6ae807aacb153a3c50190fe38584a0d8f8",
+      "second_sha256": "7523cab83c2a848c0e816e4de6802b6ae807aacb153a3c50190fe38584a0d8f8"
+    },
+    {
+      "file": "variants/M2_DROP_F/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7d3dbb5100d569ec5985328e3f4d5a214b189e2e844b3310974e23b808814376",
+      "second_sha256": "7d3dbb5100d569ec5985328e3f4d5a214b189e2e844b3310974e23b808814376"
+    },
+    {
+      "file": "variants/M2_DROP_F/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "a5971992bffe7e8f9bc1d535ee8b324dc291ee6cc5c09daa5cc1af93760de68d",
+      "second_sha256": "a5971992bffe7e8f9bc1d535ee8b324dc291ee6cc5c09daa5cc1af93760de68d"
+    },
+    {
+      "file": "variants/M2_DROP_F/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "2bfe5cdafcd07837c7b3d82db3b96a4318059a91ffefeee456d864f1557618db",
+      "second_sha256": "cbfb0e36703165cc67a4f43db00354a56ec05c8a5aa7796f35ca5625285271f6"
+    },
+    {
+      "file": "variants/M2_DROP_F/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_DROP_F/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "6b07edf42707b4f0744639b68df0edcf8f48a5556937c355c2cdbc6ef563ffb4",
+      "second_sha256": "647c72c1cd042c90b80bfb2b9ec42356dcb668c7b6f85271acbcefe01e741999"
+    },
+    {
+      "file": "variants/M2_DROP_F/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "21801feef4db5a7a9640539b5e108a0416d1e0ec397d870e636a71587fba7610",
+      "second_sha256": "21801feef4db5a7a9640539b5e108a0416d1e0ec397d870e636a71587fba7610"
+    },
+    {
+      "file": "variants/M2_DROP_F/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "9557d48b751616f7186b9c835c9eca100d679892530729031e035aa1deff41ad",
+      "second_sha256": "9557d48b751616f7186b9c835c9eca100d679892530729031e035aa1deff41ad"
+    },
+    {
+      "file": "variants/M2_REPLAY/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "955aaa6be9628d9a18b5be6b14f51cd6add648ca4a46f426783c8118800fba1c",
+      "second_sha256": "955aaa6be9628d9a18b5be6b14f51cd6add648ca4a46f426783c8118800fba1c"
+    },
+    {
+      "file": "variants/M2_REPLAY/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e3067130f934415553b58d173450815583d06dcc4be1c7cf2dea110dc363b0a4",
+      "second_sha256": "e3067130f934415553b58d173450815583d06dcc4be1c7cf2dea110dc363b0a4"
+    },
+    {
+      "file": "variants/M2_REPLAY/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "38364471b04612f80419973ff48f65ffe40c700b3a66ca71f19f027f30eedd3b",
+      "second_sha256": "9d217ca38b8711489b2d7200ce88a834f65a3c45b13ea4af1e0d810394d0012f"
+    },
+    {
+      "file": "variants/M2_REPLAY/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c",
+      "second_sha256": "ebfa763b87cdec4c0f5a086259b7d1ba0b5894f8165fe6911e58413a2f1bba7c"
+    },
+    {
+      "file": "variants/M2_REPLAY/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "b6baf6eb7dfceb5ffb01c36e0d0e4ea409935aadf50f197434e969a970eb867c",
+      "second_sha256": "a34333395fb08dba102cebdbe6d90c1b1c33ec00899a8ecbd1af6253ad0b6e4c"
+    },
+    {
+      "file": "variants/M2_REPLAY/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "0cbe9f90946d0567ae22e6e7ce1b4f20e2de6fac359896d2f0e2195762330285",
+      "second_sha256": "0cbe9f90946d0567ae22e6e7ce1b4f20e2de6fac359896d2f0e2195762330285"
+    },
+    {
+      "file": "variants/M2_REPLAY/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "04f3d976ae01433f87cab0fc7d8e409cba9dd5353ba17dde29d0c6f910b884e6",
+      "second_sha256": "04f3d976ae01433f87cab0fc7d8e409cba9dd5353ba17dde29d0c6f910b884e6"
+    },
+    {
+      "file": "variants/M2_SKEW/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "f688025b00628f45875df57f5e3ab9782bb8c31895a90d3ef9c28e7a8f091732",
+      "second_sha256": "f688025b00628f45875df57f5e3ab9782bb8c31895a90d3ef9c28e7a8f091732"
+    },
+    {
+      "file": "variants/M2_SKEW/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ff5f1d933ed76a400b673a6b54b4676d72af6be86dc59068a98ab6a81dfc86d6",
+      "second_sha256": "ff5f1d933ed76a400b673a6b54b4676d72af6be86dc59068a98ab6a81dfc86d6"
+    },
+    {
+      "file": "variants/M2_SKEW/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "21644fa2ee7d6d1b50d2b02e073a8284b6824f7b15dfa260fe0936c80303b454",
+      "second_sha256": "f5572b7bdacb1db74e98975d9cc76548abf675544cc494e89a2288b4b55e616c"
+    },
+    {
+      "file": "variants/M2_SKEW/inner_rows.csv",
+      "rows": 6933,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "64d74212c5f8fc42c20d8095679a0a6a4cb5717f53a4e53ca1130eb0f42c2099",
+      "second_sha256": "64d74212c5f8fc42c20d8095679a0a6a4cb5717f53a4e53ca1130eb0f42c2099"
+    },
+    {
+      "file": "variants/M2_SKEW/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "73892c6c44f4b94d188181fb501dfa4471e3b866891fd5ab864a8f982d6bd397",
+      "second_sha256": "3fe242e5dbac3b62b5aee07a8e0e32c74e52cc78f17c79d462fa76540fa581b1"
+    },
+    {
+      "file": "variants/M2_SKEW/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "8a1b2e62d6f69004c01065eebdf47ca17087a9dbf2e3c770a1c9aab4fbf1de5b",
+      "second_sha256": "8a1b2e62d6f69004c01065eebdf47ca17087a9dbf2e3c770a1c9aab4fbf1de5b"
+    },
+    {
+      "file": "variants/M2_SKEW/training_rows.csv",
+      "rows": 31995,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "d799af391f5cce1f49bf682554581d026c9a28c446b1409abe77233bd8af767f",
+      "second_sha256": "d799af391f5cce1f49bf682554581d026c9a28c446b1409abe77233bd8af767f"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "b0e838f12d1c45f614f6bd74e40efc37a0d31f91e15d75245ed99d622dfe4992",
+      "second_sha256": "b0e838f12d1c45f614f6bd74e40efc37a0d31f91e15d75245ed99d622dfe4992"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "d6266754150ebc150e70bfffe01afff8cd9d472208d09344ce60ee7e3e06dc97",
+      "second_sha256": "d6266754150ebc150e70bfffe01afff8cd9d472208d09344ce60ee7e3e06dc97"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "bde443874e2e1467510f2f0bb5973cd117ebb73ef7268947b6ed7263d689231d",
+      "second_sha256": "6e7e258eb799b667e6531c692f01a10766c34799e00b86c047255e3481e2299e"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/inner_rows.csv",
+      "rows": 6933,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "64d74212c5f8fc42c20d8095679a0a6a4cb5717f53a4e53ca1130eb0f42c2099",
+      "second_sha256": "64d74212c5f8fc42c20d8095679a0a6a4cb5717f53a4e53ca1130eb0f42c2099"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "901bceb672cc7340d333bfd7c8cfc8d863d0f886abe75e00118450e1910b5b25",
+      "second_sha256": "bc96dc2a653dc9ac384f0c400b3c643a821c857d395b0eedf17f1a86105a2e72"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "e5318381a84296ad21eb3abc7469ec58e3b0cff830edcc037feaaab951821a47",
+      "second_sha256": "e5318381a84296ad21eb3abc7469ec58e3b0cff830edcc037feaaab951821a47"
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/training_rows.csv",
+      "rows": 31995,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "f7ad99157fb29568d6abdebd0672238c2179496fbcbe3042a4913a6d3e7cef61",
+      "second_sha256": "f7ad99157fb29568d6abdebd0672238c2179496fbcbe3042a4913a6d3e7cef61"
+    },
+    {
+      "file": "variants/M3_RECENCY/cv_scores.csv",
+      "rows": 108,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "fcd6f666ae56bddbf255dc2734ee267ab46caa7ce673fa7c12993d6797e1647a",
+      "second_sha256": "fcd6f666ae56bddbf255dc2734ee267ab46caa7ce673fa7c12993d6797e1647a"
+    },
+    {
+      "file": "variants/M3_RECENCY/cv_totals.csv",
+      "rows": 36,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "1d45cceeeaabdd7d0cb5d8ad2d94fec4af169571886b30571cce5d4e45bf0b23",
+      "second_sha256": "1d45cceeeaabdd7d0cb5d8ad2d94fec4af169571886b30571cce5d4e45bf0b23"
+    },
+    {
+      "file": "variants/M3_RECENCY/fits.csv",
+      "rows": 40,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc",
+        "elapsed_seconds"
+      ],
+      "byte_identical": false,
+      "first_sha256": "082dbffbe315804e3b62b167bac568aace7c7f84c9a1726095b0b80d1faa72b5",
+      "second_sha256": "58b0bcc3947aabfb1a2ac18b3ad27f741f7325b7cc4f508d29100ea4b9f8c9bd"
+    },
+    {
+      "file": "variants/M3_RECENCY/inner_rows.csv",
+      "rows": 6951,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "7a4a072651a997ed0b8af88f55fdfb603dd2229d8a7763aabdafead860889db6",
+      "second_sha256": "7a4a072651a997ed0b8af88f55fdfb603dd2229d8a7763aabdafead860889db6"
+    },
+    {
+      "file": "variants/M3_RECENCY/predictions.csv",
+      "rows": 1006,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [
+        "computed_at_utc"
+      ],
+      "byte_identical": false,
+      "first_sha256": "0a02025316d6c3972c63100c831cfd43d123eebff2430f1d839df5fd16f1f8af",
+      "second_sha256": "e8601cf9e73963647f1248d2d7b1977c5dec1c1d063ad8f44fe5938b1b4f69a8"
+    },
+    {
+      "file": "variants/M3_RECENCY/selected_parameters.csv",
+      "rows": 4,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "ac163f59aebb7d0ab0ede0666b8a56e922989ca8dcd62f3e583aa4dd6414c759",
+      "second_sha256": "ac163f59aebb7d0ab0ede0666b8a56e922989ca8dcd62f3e583aa4dd6414c759"
+    },
+    {
+      "file": "variants/M3_RECENCY/training_rows.csv",
+      "rows": 32073,
+      "equal_after_excluded_fields": true,
+      "excluded_fields": [],
+      "byte_identical": true,
+      "first_sha256": "cbd2f1be76b9acbbba76559ede7f6fd3df2faf6338fc5c35cdc9f1f32d829425",
+      "second_sha256": "cbd2f1be76b9acbbba76559ede7f6fd3df2faf6338fc5c35cdc9f1f32d829425"
+    }
+  ],
+  "model_selection_jsons": [
+    {
+      "file": "variants/M2_DROP_A/models/2020-09-11_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2020-10-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2020-11-02_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2020-12-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-01-04_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-02-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-03-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-04-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-05-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-06-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-07-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-08-02_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-09-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-10-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-11-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2021-12-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-01-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-02-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-03-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-04-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-05-02_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-06-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-07-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-08-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-09-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-10-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-11-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2022-12-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-01-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-02-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-03-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-04-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-05-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-06-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-07-03_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-08-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-09-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-10-02_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-11-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/models/2023-12-01_M2_DROP_A.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_A/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2020-09-11_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2020-10-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2020-11-02_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2020-12-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-01-04_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-02-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-03-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-04-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-05-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-06-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-07-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-08-02_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-09-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-10-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-11-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2021-12-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-01-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-02-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-03-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-04-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-05-02_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-06-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-07-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-08-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-09-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-10-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-11-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2022-12-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-01-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-02-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-03-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-04-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-05-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-06-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-07-03_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-08-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-09-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-10-02_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-11-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/models/2023-12-01_M2_DROP_B.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_B/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2020-09-11_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2020-10-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2020-11-02_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2020-12-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-01-04_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-02-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-03-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-04-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-05-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-06-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-07-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-08-02_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-09-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-10-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-11-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2021-12-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-01-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-02-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-03-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-04-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-05-02_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-06-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-07-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-08-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-09-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-10-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-11-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2022-12-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-01-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-02-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-03-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-04-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-05-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-06-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-07-03_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-08-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-09-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-10-02_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-11-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/models/2023-12-01_M2_DROP_BDE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_BDE/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2020-09-11_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2020-10-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2020-11-02_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2020-12-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-01-04_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-02-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-03-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-04-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-05-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-06-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-07-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-08-02_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-09-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-10-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-11-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2021-12-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-01-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-02-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-03-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-04-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-05-02_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-06-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-07-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-08-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-09-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-10-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-11-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2022-12-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-01-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-02-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-03-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-04-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-05-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-06-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-07-03_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-08-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-09-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-10-02_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-11-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/models/2023-12-01_M2_DROP_C.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_C/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2020-09-11_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2020-10-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2020-11-02_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2020-12-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-01-04_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-02-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-03-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-04-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-05-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-06-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-07-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-08-02_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-09-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-10-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-11-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2021-12-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-01-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-02-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-03-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-04-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-05-02_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-06-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-07-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-08-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-09-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-10-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-11-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2022-12-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-01-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-02-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-03-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-04-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-05-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-06-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-07-03_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-08-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-09-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-10-02_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-11-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/models/2023-12-01_M2_DROP_D.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_D/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2020-09-11_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2020-10-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2020-11-02_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2020-12-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-01-04_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-02-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-03-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-04-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-05-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-06-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-07-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-08-02_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-09-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-10-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-11-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2021-12-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-01-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-02-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-03-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-04-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-05-02_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-06-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-07-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-08-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-09-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-10-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-11-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2022-12-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-01-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-02-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-03-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-04-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-05-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-06-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-07-03_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-08-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-09-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-10-02_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-11-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/models/2023-12-01_M2_DROP_E.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_E/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2020-09-11_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2020-10-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2020-11-02_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2020-12-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-01-04_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-02-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-03-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-04-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-05-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-06-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-07-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-08-02_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-09-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-10-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-11-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2021-12-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-01-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-02-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-03-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-04-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-05-02_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-06-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-07-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-08-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-09-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-10-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-11-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2022-12-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-01-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-02-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-03-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-04-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-05-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-06-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-07-03_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-08-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-09-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-10-02_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-11-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/models/2023-12-01_M2_DROP_F.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_DROP_F/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2020-09-11_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2020-10-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2020-11-02_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2020-12-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-01-04_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-02-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-03-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-04-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-05-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-06-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-07-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-08-02_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-09-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-10-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-11-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2021-12-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-01-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-02-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-03-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-04-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-05-02_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-06-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-07-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-08-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-09-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-10-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-11-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2022-12-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-01-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-02-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-03-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-04-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-05-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-06-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-07-03_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-08-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-09-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-10-02_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-11-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/models/2023-12-01_M2_REPLAY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_REPLAY/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2020-09-15_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2020-10-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2020-11-02_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2020-12-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-01-04_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-02-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-03-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-04-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-05-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-06-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-07-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-08-02_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-09-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-10-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-11-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2021-12-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-01-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-02-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-03-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-04-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-05-02_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-06-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-07-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-08-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-09-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-10-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-11-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2022-12-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-01-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-02-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-03-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-04-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-05-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-06-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-07-03_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-08-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-09-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-10-02_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-11-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/models/2023-12-01_M2_SKEW.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/selections/2020-09-15.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2020-09-15_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2020-10-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2020-11-02_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2020-12-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-01-04_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-02-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-03-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-04-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-05-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-06-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-07-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-08-02_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-09-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-10-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-11-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2021-12-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-01-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-02-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-03-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-04-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-05-02_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-06-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-07-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-08-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-09-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-10-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-11-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2022-12-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-01-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-02-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-03-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-04-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-05-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-06-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-07-03_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-08-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-09-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-10-02_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-11-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/models/2023-12-01_M2_SKEW_REFERENCE.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/selections/2020-09-15.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M2_SKEW_REFERENCE/variant.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2020-09-11_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2020-10-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2020-11-02_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2020-12-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-01-04_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-02-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-03-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-04-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-05-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-06-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-07-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-08-02_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-09-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-10-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-11-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2021-12-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-01-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-02-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-03-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-04-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-05-02_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-06-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-07-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-08-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-09-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-10-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-11-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2022-12-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-01-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-02-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-03-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-04-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-05-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-06-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-07-03_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-08-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-09-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-10-02_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-11-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/models/2023-12-01_M3_RECENCY.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/result.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/selections/2020-09-11.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/selections/2021-01-04.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/selections/2022-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/selections/2023-01-03.json",
+      "equal_excluding_actual_computation_time": true
+    },
+    {
+      "file": "variants/M3_RECENCY/variant.json",
+      "equal_excluding_actual_computation_time": true
+    }
+  ],
+  "bootstrap_indices": [
+    {
+      "file": "bootstrap_indices/2020-09-11_2023-12-29_21.npz",
+      "arrays_equal": true,
+      "byte_identical": true
+    },
+    {
+      "file": "bootstrap_indices/2020-09-11_2023-12-29_63.npz",
+      "arrays_equal": true,
+      "byte_identical": true
+    },
+    {
+      "file": "bootstrap_indices/2020-09-15_2023-12-29_21.npz",
+      "arrays_equal": true,
+      "byte_identical": true
+    },
+    {
+      "file": "bootstrap_indices/2020-09-15_2023-12-29_63.npz",
+      "arrays_equal": true,
+      "byte_identical": true
+    }
+  ],
+  "all_72_account_ledgers_byte_identical": true,
+  "p5_reference_ledgers_byte_identical": [
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M0_main.csv",
+      "sha256": "516986c006993eb56684a4c021b7a6ba6466b0c643db2ecefe74a00a001a7075"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M0_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M0_risk_only.csv",
+      "sha256": "35fb26eb8dc9a6bb2fd356a53a5e936f99128831529bf6e6d87514274d6def80"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M1_main.csv",
+      "sha256": "4114b94e276d281505a69cf295f3d6c77529405b30c39b5d99bc93c86d74bfb1"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M1_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M1_risk_only.csv",
+      "sha256": "63fd75a80caffc90647c07dd698112a12fa54b193f7df864f1e15af982f59680"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_main.csv",
+      "sha256": "ac7c4919b70c13126cb54d5dcdcfb42cadad49287a38fc794137d9d95a872dc4"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_M2_risk_only.csv",
+      "sha256": "00043182db4909c062b61339f8340d797621b81100b5627b2235016a649f3e20"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_cash.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_cash.csv",
+      "sha256": "bbc5e0a78c90d3367c08f650fd067f7ed631687cd15db49766eefa0cbcb4e633"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_curve.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_curve.csv",
+      "sha256": "c0e625b8a3907c8b1288e15c4ec18c1555ef012d85950960bc8fe06879353a07"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_100.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_100.csv",
+      "sha256": "99976a5455c59222eeff11bf15413e1a0e73694908e333ee0a76f573069420ac"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_25.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_25.csv",
+      "sha256": "1202ead71a5929122a9d6e871f307f24f872fee46315b3a9fd6cfdd092858ed1"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_50.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_50.csv",
+      "sha256": "a7fe930988595bf27d980274b5119b740f72133df8f1fd1486280d7ffe47ead0"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/common_base_fixed_75.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/core_common_fixed_75.csv",
+      "sha256": "c0dd5270a1917053aaae25ec3b623a4273bf4dad952f1be69295b6e1a837e355"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M0_main.csv",
+      "sha256": "a7f7c8770a90aba3bdf8a157bd5235a52656a86eeb06410a39e4fa5c9ecfe8a1"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M0_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M0_risk_only.csv",
+      "sha256": "c2b9a66e3d7bf33b41b378a08dae1bc716ef2315e21928d7189bab44fef1c792"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M1_main.csv",
+      "sha256": "1f2d07d31be9b11871217a988e507457f0613f8adbcb020b6b49647ac2b82ec4"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M1_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M1_risk_only.csv",
+      "sha256": "9da423c32a8cf458e8d5cd9d85cfc5b2272236b460b924092aeedf69481e17e3"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_main.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_main.csv",
+      "sha256": "ea7e606162a335602a8c7ea66c2794ddbc4b3af2ce826a13991db7b190a7d4db"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_M2_risk_only.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_M2_risk_only.csv",
+      "sha256": "da874f0b1b43309a08eab73d79cf8652475bc747e3251cb419ea61bed2ced3fb"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_cash.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_cash.csv",
+      "sha256": "cb2b4f49442950859ee301901a0a08c77f9a3b80bba487f223c42881a2246834"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_curve.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_curve.csv",
+      "sha256": "ea2af016f56654e845973eace8c7365cf344c3951db952ba0475622a8f8db23b"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_100.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_100.csv",
+      "sha256": "c5f5e54158f57d20323380dde0291fd6f988828bcb3942ab307686077c87e773"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_25.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_25.csv",
+      "sha256": "e9f1a6c910c289a55b3275ac71b5dc6f1ccd039a01bf463c902655e1a32922db"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_50.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_50.csv",
+      "sha256": "7fa644d93b479f298b5b0a2a0a6a458fd07b621fef8b2c7e81ac40b7b4fdf00d"
+    },
+    {
+      "p5": "data/clean/p5/20260907T024118182655Z/ledgers/full_base_fixed_75.csv",
+      "p6": "data/clean/p6/20260907T032405398008Z/ledgers/full_fixed_75.csv",
+      "sha256": "c284da27b9ce976b4094f5660aa2c7a521ef1ff58ce7711add93549f684a323c"
+    }
+  ],
+  "p4_model_and_p5_mapping_changed": false,
+  "model_promotion": false
+}

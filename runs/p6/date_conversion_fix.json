@@ -1,0 +1,14 @@
+{
+  "stage": "P6",
+  "recorded_at": "2026-09-07T03:21:23.711626+00:00",
+  "failed_run": "runs/p6/20260907T031807809244Z",
+  "error_scope": "Independent audit date deserialization only; no fitting, prediction, account or bootstrap calculation error.",
+  "minimal_counterexample": "pd.Timestamp(np.str_('2023-12-29'))",
+  "before": {
+    "exception": "TypeError",
+    "message": "Expected str, got numpy.str_"
+  },
+  "fix": "Convert NumPy unicode scalar with str before constructing pandas.Timestamp.",
+  "affected_economic_or_prediction_dates": [],
+  "production_computation_changed": false
+}
