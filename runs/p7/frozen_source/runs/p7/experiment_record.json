@@ -1,0 +1,24 @@
+{
+  "stage": "P7",
+  "recorded_before_locked_outcomes": "2026-09-07T03:54:06.676271+00:00",
+  "accepted_p6_checkpoint": "5cf576e0f45078d3c35a8a444106d000f5642f4d",
+  "evaluation_name": "本轮未参与选择的历史评估",
+  "not_absolute_unseen": true,
+  "requested_execution_start": "2024-01-01",
+  "last_execution": "2026-09-04",
+  "runtime_bound_adapter": "Use original P4/P6 runners with a copied config: outer_test_requested_start=2024-01-01, exclusive locked_historical_start=day after P1 freeze. This changes only evaluation bounds, not training/targets/grids. Keep all 2019+ prehistory and preceding signal. experiment.toml remains unchanged.",
+  "primary": "M2",
+  "original_models": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "variants": "All seven P6 column ablations, M3_RECENCY, M2_SKEW plus matched-cohort M2_SKEW_REFERENCE and M2_REPLAY numerical reference. No new variants or automatic promotion.",
+  "comparisons": "All P6 paired prediction/economic comparisons, annual/quarter/event/leave-year-out descriptions, paired21/63session1000draw bootstrap. All controllers main+risk-only with cash/fixed25/50/75/100/curve; fresh100000 cash at first executable close in full/core/skew cohorts.",
+  "sensitivities": "Original M0/M1/M2 and baselines: base plus cost0/15/30bp, budget.025/.10, delay1 single factors. No Cartesian product; same-target gross and post-hoc exposure matching only labeled diagnostics.",
+  "case_selection": "Reuse P5 M2main-minus-fixed100 five-session account-path ranking: two favorable and two unfavorable non-overlapping complete windows; retrospective illustration, no policy change.",
+  "historical_maturity": "Use only full paths ending by freeze for evaluation; monthly/annual fitting consumes only then-mature labels. Last5 unscored executable forecasts still contribute ledger through freeze, no returns beyond freeze.",
+  "forward": "Record actual generation/received timestamps. Only latest fully closed equity session and all required core inputs, produced before next decision deadline. Reuse fixed monthly core model; first eligible monthly manual run refits with labels already available at actual run time and annual original grid selection only when due. No full backtest or LLM daily. Missing/stale/late inputs yield no new target. Preserve original records and later outcomes separately.",
+  "daily_data": "Keep P1 freeze immutable. If no newer completed session, verify/reuse accepted originals. Otherwise bounded retrieval of same official Cboe/Yahoo public sources in a separate local ignored directory; append post-freeze rows, preserve historical original values and record received timestamps. No source substitution or orders.",
+  "source_freeze": "Before any locked numerical read, store exact source/config/dependency/launcher copy and hashes. All subsequent changes must be recorded; never alter research rule in response to results."
+}

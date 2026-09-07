@@ -1,0 +1,275 @@
+{
+  "stage": "P7",
+  "recorded_at_utc": "2026-09-07T05:19:48Z",
+  "purpose": "Record the completed read-only review at the user's request, then commit and push the current P7 checkpoint.",
+  "user_authorization": "这些结果先记录，记录后提交推送",
+  "checkpoint_kind": "REVIEW_RECORDED_WITH_DAILY_DEADLINE_FIX_PENDING_NOT_FINAL_ACCEPTANCE",
+  "reviewed_git_head_before_uncommitted_p7": "5cf576e0f45078d3c35a8a444106d000f5642f4d",
+  "frozen_source_manifest": "runs/p7/freeze.json",
+  "frozen_source_manifest_sha256": "4e86b7908819e22788335b26ffc447415bc979f59c65ce97bcdfe408d39bc8ca",
+  "reviewed_run": "runs/p7/20260907T041828788697Z/research_run.json",
+  "reviewed_output_dir": "data/clean/p7/20260907T041828788697Z",
+  "human_readable_record": "runs/p7/read_only_review_20260907.md",
+  "historical_blocking_calculation_errors_found": 0,
+  "daily_acceptance_item_pending": "Late forecasts must not be issued; current time is captured and checked before prediction computation.",
+  "findings": [
+    {
+      "id": "R1",
+      "classification": "ENGINEERING_ERROR_DAILY_DEADLINE_ITEM_PENDING",
+      "locations": [
+        {
+          "file": "src/svxylab/daily.py",
+          "start": 201,
+          "end": 202
+        },
+        {
+          "file": "src/svxylab/daily.py",
+          "start": 205,
+          "end": 214
+        }
+      ],
+      "source_unmodified": true,
+      "existing_first_forward_record_affected": false,
+      "historical_results_affected": false,
+      "fixture": "SYNTHETIC_CLOCK_REAL_INPUTS_ALL_IO_IN_MEMORY",
+      "recorded_creation_time": "2026-09-08T18:59:59.900000+00:00",
+      "simulated_actual_inference_completion": "2026-09-08T19:00:00.100000+00:00",
+      "decision_deadline": "2026-09-08T19:00:00+00:00",
+      "observed_status": "FORWARD_FORECAST_AVAILABLE",
+      "observed_exit_code": 0,
+      "required_fix": "Take and validate the actual time after all predictions have been computed; record that time. No fix made in this checkpoint."
+    },
+    {
+      "id": "R2",
+      "classification": "DEFERRED_RESEARCH_IMPROVEMENT",
+      "locations": [
+        {
+          "file": "src/svxylab/models.py",
+          "start": 160,
+          "end": 169
+        },
+        {
+          "file": "data/clean/p7/20260907T041828788697Z/core/predictions.csv",
+          "start": 451,
+          "end": 451
+        }
+      ],
+      "inconsistent_rows": {
+        "M0": 0,
+        "M1": 20,
+        "M2": 43
+      },
+      "scored_rows_per_model": 667,
+      "boundary_tolerance": 1e-8,
+      "example": {
+        "decision_session": "2024-08-06",
+        "model": "M2",
+        "q90": 0.06596673181958766,
+        "p10": 0.9999999998178788,
+        "mu5": -0.08224673960409676,
+        "risk_only_target": 0.7579578163239152,
+        "main_target": 0
+      },
+      "interpretation": "Independently fitted heads do not always describe one coherent loss distribution. The prescribed account mapping is calculated correctly and never uses P10; no model change required for this stage."
+    }
+  ],
+  "checks": {
+    "pytest": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B -m pytest -q -p no:cacheprovider",
+      "passed": 121,
+      "failed": 0,
+      "seconds": 3.95
+    },
+    "source_files_hash_verified": 49,
+    "p7_artifact_files_hash_verified": 910,
+    "raw_equity_sessions_each": 1930,
+    "price_field_max_error": 0,
+    "total_return_index_max_error": 1.4779288903810084e-12,
+    "raw_rebuilt_feature_positions": 40530,
+    "feature_max_error": 1.2934098236883074e-14,
+    "core_complete_rows": 1909,
+    "with_skew_complete_rows": 1905,
+    "mature_labels": 1924,
+    "pending_labels": 6,
+    "label_max_error": 9.71445146547012e-16,
+    "core_saved_state_rows": 2016,
+    "core_saved_candidate_losses": 162,
+    "core_saved_state_max_error": 7.105427357601002e-15,
+    "variant_saved_state_rows": 7388,
+    "variant_candidate_losses": 891,
+    "variant_saved_state_max_error": 1.0658141036401503e-14,
+    "m3_independent_ridge_coefficient_max_error": 9.027500968983304e-14,
+    "independent_refit_monthly_models": 66,
+    "independent_refit_heads": 198,
+    "independent_refit_prediction_rows": 1344,
+    "independent_refit_max_error": 7.105427357601002e-15,
+    "additional_core_inner_transform_member_checks": 18,
+    "accounts": 264,
+    "account_rows": 177672,
+    "max_account_money_error": 4.598405212163925e-9,
+    "bootstrap_scalar_draws": 1004000,
+    "bootstrap_intervals": 1004,
+    "bootstrap_max_difference": 0,
+    "prior_run_comparison": {
+      "csvs_exact_after_timing_exclusion": 378,
+      "jsons_exact_after_timing_exclusion": 523,
+      "byte_identical_ledgers": 264,
+      "identical_index_archives": 2
+    },
+    "forward_heads_checked": 9,
+    "forward_prediction_max_error": 0,
+    "forward_received_generation_deadline_execution_order": true,
+    "forward_future_labels_null": true,
+    "historical_arrival_replay": {
+      "fixture": "MEMORY_ONLY_FREEZE_SEPTEMBER_3_REAL_SEPTEMBER_4_ORIGINALS",
+      "network_requests_actually_made": 0,
+      "new_core_features": 19,
+      "max_error": 7.771561172376096e-16,
+      "prior_core_rows_unchanged": 1929,
+      "actual_new_trading_day_download_verified": false
+    },
+    "read_only_project_files_verified": 7202,
+    "read_only_changed_groups": [],
+    "read_only_snapshot_exclusions": [
+      ".git",
+      ".venv",
+      ".pytest_cache",
+      "__pycache__",
+      ".cache"
+    ],
+    "read_only_end_group_snapshot": {
+      ".DS_Store": {
+        "bytes": 6148,
+        "count": 1,
+        "digest": "34fcf6754953007a7ebd1fe5a222c366d9bf05555575c0bb646dc6c47931cda1"
+      },
+      ".gitignore": {
+        "bytes": 312,
+        "count": 1,
+        "digest": "8630d4defc00d67bda1c53925ff5158180c3c9553245f479c82441d94570431a"
+      },
+      ".python-version": {
+        "bytes": 8,
+        "count": 1,
+        "digest": "6bd5f07f10c12f5db1c746ce2af60c2c70d82f1eed4d35103aeb961a1ebeb208"
+      },
+      "AGENTS.md": {
+        "bytes": 15265,
+        "count": 1,
+        "digest": "bf06ead14fd86d2152bd5fddb2f152f9c8e7d67389a6339f060516ef871bbcb1"
+      },
+      "FEATURES.json": {
+        "bytes": 16598,
+        "count": 1,
+        "digest": "73756c7dd09aca4a650595cde2c6f868260bad8347eac49c64d1a4e0bd7dd071"
+      },
+      "README.md": {
+        "bytes": 3780,
+        "count": 1,
+        "digest": "b946fea8aa1875c66fb097f0a88f3a1b0f218f5b22ec537e3d669f2ef89f0f8f"
+      },
+      "RESEARCH_SPEC.md": {
+        "bytes": 25579,
+        "count": 1,
+        "digest": "684dc5982e3e224c04cbef01bab79a390a6f05d5f480d4ccf5a33796438599f5"
+      },
+      "SOURCES.md": {
+        "bytes": 12356,
+        "count": 1,
+        "digest": "63081921be722fa190d021c3df5a63ed27acb61e0715baaaa3be31bbdb77b874"
+      },
+      "STATUS.md": {
+        "bytes": 12699,
+        "count": 1,
+        "digest": "b0fc9a938e66942c83bde3b3b00d610853012cbce1d5370c3938465681eebdbe"
+      },
+      "TASKS.md": {
+        "bytes": 14026,
+        "count": 1,
+        "digest": "f4623a399a4933df6cd214ceb7dc802fc13a83093f08ceb9086e73d38da9fb72"
+      },
+      "data": {
+        "bytes": 1460743796,
+        "count": 6248,
+        "digest": "e61debcd73e73054dff949ad149f1cf101dfa97d62b41f39c8f393b684ac80d4"
+      },
+      "experiment.toml": {
+        "bytes": 2864,
+        "count": 1,
+        "digest": "c05984874eba3935023325e8a64b46d819d0883a20412a1c76ad14123786cc37"
+      },
+      "pyproject.toml": {
+        "bytes": 681,
+        "count": 1,
+        "digest": "008b352c6c1946f4ba5cfd61589cbbd0b01fd90c277d71d395b41270666c229a"
+      },
+      "reports": {
+        "bytes": 1220166,
+        "count": 8,
+        "digest": "6c72ed557ebae0ab8b513e4be415396d44deee0e37ce27a871079c344cd66679"
+      },
+      "requirements-dev.txt": {
+        "bytes": 162,
+        "count": 1,
+        "digest": "16016de2c4db501c640767455c392f24f3b731c970e9ede9258d5ece9b62aa1b"
+      },
+      "requirements-lock.txt": {
+        "bytes": 959,
+        "count": 1,
+        "digest": "c02104185ffe7bdeeb76c35c97e75230f04d210fee99f04a27156b2f92182666"
+      },
+      "runs": {
+        "bytes": 37833165,
+        "count": 889,
+        "digest": "e130b16fb55ed710ab3bfb02c7a4c81f5c36db731e11b89a588094050cb509e4"
+      },
+      "src": {
+        "bytes": 461153,
+        "count": 31,
+        "digest": "55f31ec19a2a91d94846c99c34507fc2fd87cfd62fe6da6932a4c63be712a991"
+      },
+      "tests": {
+        "bytes": 60529,
+        "count": 10,
+        "digest": "408621505a6f9643085dbc683b8d5bc78e561c6b252d700deddaaf4f13de6b80"
+      },
+      "更新日报.command": {
+        "bytes": 226,
+        "count": 1,
+        "digest": "2c61b58e817479bef16cea880baf5e7e00bab0d4a6766b741e7b82cfe26ac64b"
+      },
+      "重新运行研究.command": {
+        "bytes": 229,
+        "count": 1,
+        "digest": "21dc0bb885c7cac355719bd33d0962febc0a6eb12cc61b514b69f65792efee97"
+      }
+    }
+  },
+  "research_results": {
+    "core_forecast_days": 672,
+    "core_scored_days": 667,
+    "skew_forecast_days": 670,
+    "skew_scored_days": 665,
+    "positive_rows": 24,
+    "overlap_intervals": 6,
+    "M2_relative_to_M0": {
+      "mse": 0.4721324023934135,
+      "log_loss": 1.0302731127024765,
+      "pinball": 0.12398293494673407
+    },
+    "M2_main_net_return": -0.158751,
+    "M2_main_max_drawdown_magnitude": 0.540289,
+    "negative_results_retained": true,
+    "profitability_certified": false
+  },
+  "reproducibility_commands": [
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B runs/p7/review_counterexamples.py",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B runs/p7/review_independent_refit.py"
+  ],
+  "publication_scope": {
+    "target": "origin/main",
+    "raw_and_clean_market_data_included": false,
+    "local_offline_bundle_included": false,
+    "source_or_model_fix_in_this_recording_turn": false
+  }
+}

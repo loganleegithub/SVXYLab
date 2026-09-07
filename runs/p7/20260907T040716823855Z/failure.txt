@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/logan/SVXYLab/src/svxylab/release_report.py", line 152, in build_release
+    result=run_release(root,output);write_json(directory/'computation.json',result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/release.py", line 151, in run_release
+    evaluation=evaluate(root,frame,config,predictions,output,account_inputs=account_inputs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/diagnostics.py", line 165, in evaluate
+    ledger=run_account(prices,clock,targets[name],start,100000.,.0005,metadata=metas.get(name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/economics.py", line 131, in run_account
+    first = dates.index(start)
+            ^^^^^^^^^^^^^^^^^^
+ValueError: '2024-01-01' is not in list

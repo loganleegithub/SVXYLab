@@ -1,0 +1,9 @@
+{
+  "failure_log": "runs/p7/invocation_20260907T040613765810Z.log",
+  "minimal_counterexample": "p4_acceptance['accepted_report'] raises KeyError; its saved report SHA exists",
+  "fix": "Use known original P4 report path while preserving mandatory SHA verification",
+  "previous_freeze": "runs/p7/freeze_001.json",
+  "locked_values_read_before_fix": false,
+  "prediction_or_economic_values_affected": 0,
+  "model_or_parameter_changes": []
+}

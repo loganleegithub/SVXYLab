@@ -1,0 +1,113 @@
+{
+  "stage": "P7",
+  "validated_at": "2026-09-07T04:31:22.777285+00:00",
+  "stage_status": "P7_COMPLETE_AWAITING_FINAL_ACCEPTANCE",
+  "passed": true,
+  "run_record": "runs/p7/20260907T041828788697Z/research_run.json",
+  "run_sha256": "e24d4ffd735db5370e5d58e058c081f7b337811527246bb06d9d114bdec5951d",
+  "report_sha256": "7df769ad278653f067a36a0a8f946d48305183e2cc20b86622d0f74dd1f68a11",
+  "local_links_checked": 945,
+  "tables": 24,
+  "source_versions": [
+    {
+      "record": "runs/p7/freeze_001.json",
+      "record_sha256": "27d6a7b85c277534dc4ce285a7edaeb117cc3b210a7823b9d0f9fc5aa0be4858",
+      "resolvable_source_copy": "runs/p7/frozen_source_001",
+      "files_verified": 49
+    },
+    {
+      "record": "runs/p7/freeze_002.json",
+      "record_sha256": "82e40ba22d070c80d0e93d1111ffe667335b3956ba9a40f4f80a0c86247a3df4",
+      "resolvable_source_copy": "runs/p7/frozen_source_002",
+      "files_verified": 49
+    },
+    {
+      "record": "runs/p7/freeze_003.json",
+      "record_sha256": "996ca6e590f417cc459eebb06da41fb225ca3b779514240608bd01f35a8a3477",
+      "resolvable_source_copy": "runs/p7/frozen_source_003",
+      "files_verified": 49
+    },
+    {
+      "record": "runs/p7/freeze.json",
+      "record_sha256": "4e86b7908819e22788335b26ffc447415bc979f59c65ce97bcdfe408d39bc8ca",
+      "resolvable_source_copy": "runs/p7/frozen_source",
+      "files_verified": 49
+    }
+  ],
+  "current_source_files_verified": 49,
+  "artifact_files_verified": 910,
+  "protected_models_mapping_configuration_unchanged": [
+    "src/svxylab/models.py",
+    "src/svxylab/predictions.py",
+    "src/svxylab/prediction_data.py",
+    "src/svxylab/ledger.py",
+    "src/svxylab/economics.py",
+    "src/svxylab/diagnostic_models.py",
+    "experiment.toml",
+    "FEATURES.json",
+    "RESEARCH_SPEC.md",
+    "requirements-lock.txt",
+    "pyproject.toml"
+  ],
+  "accepted_p4_p5_p6_artifacts_unchanged": true,
+  "original_p1_raw_and_clean_verified_by_release_loader": true,
+  "python_tests_passed": 121,
+  "macos_open_exit_code": 0,
+  "codex_browser_and_ledger_panel_status": "queued by open_in_codex; macOS open succeeded separately",
+  "browser_screenshot_claimed": false,
+  "plot_visually_inspected": "data/clean/p7/20260907T041828788697Z/core_common_equity.png",
+  "research_launcher_actual_exit_code": 0,
+  "daily_launcher_actual_exit_code": 0,
+  "first_forward_record_preserved_on_repeat": true,
+  "forward_prediction_sha256": "445203c6a9c209dc41f46da3ce89946e64e14f8450b5aabfc530ddc87824e56a",
+  "forward_results_all_null": true,
+  "forward_independent_check": "runs/p7/forward_independent_validation.json",
+  "reproducibility": "runs/p7/reproducibility.json",
+  "secret_signature_scan_files": 529,
+  "secret_signature_matches": [],
+  "tracked_raw_or_clean_market_files": [],
+  "scope_of_secret_check": "Recognizable private-key/token signatures and tracked-file inventory; no secret values printed, no credentials or raw files added. Not a universal proof about every possible credential format.",
+  "daily_network_requests_this_run": 0,
+  "live_post_freeze_download_branch_exercised": false,
+  "remote_actions": [],
+  "account_connections": false,
+  "orders": false,
+  "automatic_model_promotion": false,
+  "p6_accepted_git_checkpoint": "5cf576e0f45078d3c35a8a444106d000f5642f4d",
+  "p7_git_checkpoint_pending_final_acceptance": true,
+  "documentation_sha256": {
+    "AGENTS.md": "b24dfe9099f4f19e9acaf67afa41ac29a1ce36f769d458e7617d2ae15d920086",
+    "STATUS.md": "cf05f6a825947734cd286e16aa0df61997a276f1b83b870cce221b6d79191a06"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "5cf576e",
+        "--",
+        "src/svxylab/models.py",
+        "src/svxylab/predictions.py",
+        "src/svxylab/prediction_data.py",
+        "src/svxylab/ledger.py",
+        "src/svxylab/economics.py",
+        "src/svxylab/diagnostic_models.py",
+        "experiment.toml",
+        "FEATURES.json",
+        "RESEARCH_SPEC.md",
+        "requirements-lock.txt",
+        "pyproject.toml"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

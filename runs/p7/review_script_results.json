@@ -1,0 +1,56 @@
+{
+  "scope": "Execution of newly saved read-only review scripts; assertions reproduce existing findings and validate the audit calculation, not a bug fix.",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B runs/p7/review_counterexamples.py",
+      "exit_code": 0,
+      "result": {
+        "deadline": {
+          "fixture": "SYNTHETIC_DEADLINE_CROSSING_NO_WRITES",
+          "exit_code": 0,
+          "status": "FORWARD_FORECAST_AVAILABLE",
+          "recorded_creation_time": "2026-09-08T18:59:59.900000+00:00",
+          "actual_inference_completion": "2026-09-08T19:00:00.100000+00:00",
+          "deadline": "2026-09-08T19:00:00+00:00",
+          "accepted_after_deadline": true,
+          "project_writes": 0,
+          "network_requests_actually_made": 0
+        },
+        "coherence": {
+          "source": "data/clean/p7/20260907T041828788697Z/core/predictions.csv",
+          "source_csv_line": 451,
+          "scored_rows_per_model": {
+            "M0": 667,
+            "M1": 667,
+            "M2": 667
+          },
+          "inconsistent_rows": {
+            "M0": 0,
+            "M1": 20,
+            "M2": 43
+          },
+          "example": {
+            "decision_session": "2024-08-06",
+            "mu5": -0.08224673960409676,
+            "q90": 0.06596673181958766,
+            "p10": 0.9999999998178788
+          },
+          "example_risk_only_target": 0.7579578163239152,
+          "example_main_target": 0
+        }
+      }
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B runs/p7/review_independent_refit.py",
+      "exit_code": 0,
+      "result": {
+        "independent_outer_refits": 66,
+        "refitted_heads": 198,
+        "forecast_rows": 1344,
+        "max_raw_or_published_prediction_error": 7.105427357601002e-15,
+        "additional_core_inner_transforms_and_time_members_verified": 18,
+        "writes": 0
+      }
+    }
+  ]
+}

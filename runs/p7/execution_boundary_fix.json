@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-09-07T04:12:59.166449+00:00",
+  "prior_run": "runs/p7/20260907T040716823855Z",
+  "prior_output": "data/clean/p7/20260907T040716823855Z",
+  "failures": [
+    {
+      "error": "2024-01-01 not in equity session list",
+      "minimal_counterexample": "run_account start=2024-01-01 on XNYS date list fails before first account is built",
+      "fix": "Use calendar first session on/after requested locked start: 2024-01-02"
+    },
+    {
+      "error": "Discarding the accepted pre-2024 forecast would manufacture missing signal on first delayed execution",
+      "minimal_counterexample": "For execution Jan2 with extra1session delay, signal belongs to Dec28, whose accepted forecast decision is Dec29. Keeping only new Jan2 forecasts yields NaN; a synthetic Q90=.20 produces valid .25 risk capacity when the accepted prior row is retained.",
+      "fix": "Copy exactly the last accepted P4 forecast per model for the one-session execution bridge; excluded from P7 scores; raw prior artifact remains unchanged."
+    }
+  ],
+  "daily_core_availability_correction": "Forward primary uses only 19 core columns; optional SKEW refresh cannot gate them. Historical SKEW comparison unchanged.",
+  "prior_accounts_completed": 0,
+  "prior_predictions_preserved": true,
+  "research_formula_changes": [],
+  "regression_tests": "runs/p7/boundary_fix_tests.xml",
+  "comparison_pending": false,
+  "reproducibility": "runs/p7/reproducibility.json",
+  "final_run": "runs/p7/20260907T041828788697Z/research_run.json"
+}

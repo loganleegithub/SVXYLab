@@ -1,0 +1,17 @@
+{
+  "core_saved_state_rows": 2016,
+  "core_saved_candidate_losses": 162,
+  "core_saved_state_max_error": 7.105427357601002e-15,
+  "saved_state_prediction_rows": 7388,
+  "saved_candidate_losses_checked": 891,
+  "max_saved_state_prediction_error": 1.0658141036401503e-14,
+  "m3_independent_ridge_coef_max_error": 9.027500968983304e-14,
+  "account_rows": 177672,
+  "accounts": 264,
+  "max_account_money_error": 4.598405212163925e-09,
+  "bootstrap_scalar_draws_recomputed": 1004000,
+  "bootstrap_max_difference": 0.0,
+  "intervals_checked": 1004,
+  "passed": true,
+  "description": "保存系数/变换重建；M3均值头独立加权方程；逐笔自融资方程；保存bootstrap复算。不是独立重新优化全部模型。"
+}

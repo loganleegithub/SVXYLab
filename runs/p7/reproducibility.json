@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-09-07T04:24:37.798801+00:00",
+  "passed": true,
+  "excluded_fields": [
+    "computed_at_utc",
+    "elapsed_seconds"
+  ],
+  "comparisons": [
+    {
+      "original": "data/clean/p7/20260907T040716823855Z",
+      "final": "data/clean/p7/20260907T041828788697Z",
+      "csvs": 99,
+      "exact_csvs_after_only_timing_exclusion": 99,
+      "max_numeric_difference": 0.0,
+      "identical_jsons_excluding_only_timing": 522,
+      "identical_bootstrap_arrays": 0,
+      "byte_identical_ledgers": 0
+    },
+    {
+      "original": "data/clean/p7/20260907T041300923825Z",
+      "final": "data/clean/p7/20260907T041828788697Z",
+      "csvs": 378,
+      "exact_csvs_after_only_timing_exclusion": 378,
+      "max_numeric_difference": 0.0,
+      "identical_jsons_excluding_only_timing": 523,
+      "identical_bootstrap_arrays": 2,
+      "byte_identical_ledgers": 264
+    }
+  ],
+  "interpretation": "Two input refits/rollouts, not merely coefficient reconstruction. First was stopped before accounts due to holiday boundary; second completed all numerical work but failed JSON summary serialization. Original data and outputs retained.",
+  "final_run": "runs/p7/20260907T041828788697Z/research_run.json"
+}

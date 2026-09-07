@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "prediction_file": "data/clean/forward/predictions/2026-09-08.json",
+  "prediction_sha256": "445203c6a9c209dc41f46da3ce89946e64e14f8450b5aabfc530ddc87824e56a",
+  "actual_received_before_generated_before_cutoff_before_execution": true,
+  "unmatured_outcomes_all_null": true,
+  "validation": "Re-fit original monthly training inputs using the already selected original parameters, then original JointModel.predict; does not replace forward record or select parameters.",
+  "models": [
+    {
+      "model": "M0",
+      "training_rows": 1254,
+      "simulation_fit_cutoff": "2026-09-01T19:00:00+00:00",
+      "refit_original_training_input_prediction_max_error": 0.0
+    },
+    {
+      "model": "M1",
+      "training_rows": 1254,
+      "simulation_fit_cutoff": "2026-09-01T19:00:00+00:00",
+      "refit_original_training_input_prediction_max_error": 0.0
+    },
+    {
+      "model": "M2",
+      "training_rows": 1254,
+      "simulation_fit_cutoff": "2026-09-01T19:00:00+00:00",
+      "refit_original_training_input_prediction_max_error": 0.0
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+# 研究默认值；不是资金授权，不是最佳参数，也不是收益承诺。
+schema_version = 1
+project = "SVXYLab"
+status = "DESIGN_ONLY"
+
+[data]
+# 用户于 2026-09-07 确认：因 2018 年 SVXY 目标倍数变更，数据、预热与研究统一从 2019 年起。
+feature_history_requested_start = "2019-01-01"
+# 基金制度生效的历史事实，不是本轮取数或训练起点。
+actual_svxy_mandate_start = "2018-02-28"
+# 最早候选训练截止；2019 年不足 400 行成熟样本，实际首次拟合须继续等待样本积累。
+initial_train_end = "2019-12-31"
+# 请求评估起点；实际首次预测还须满足全部训练、回看与标签成熟条件。
+outer_test_requested_start = "2020-01-02"
+locked_historical_start = "2024-01-01"
+cutoff_policy = "last_completed_common_session_at_P1_freeze"
+assumed_historical_availability = "next_equity_session_60min_before_close"
+source_vintage_claim = "NO_FULL_HISTORICAL_PIT_CLAIM"
+
+[clock]
+signal_information = "session_t_or_earlier"
+decision_deadline = "session_t_plus_1_equity_close_minus_60_minutes"
+execution = "session_t_plus_1_equity_close_plus_cost_proxy"
+calendar = "US_equity_sessions_with_actual_early_closes"
+extra_delay_sensitivity_sessions = 1
+
+[targets]
+horizon_sessions = 5
+loss_event_threshold = 0.10
+loss_definition = "maximum_entry_relative_loss_at_future_daily_closes"
+loss_quantile = 0.90
+
+[training]
+max_window_sessions = 1260
+min_outer_training_rows = 400
+min_inner_training_rows = 200
+coefficient_refit = "monthly_first_eligible_decision"
+hyperparameter_selection = "first_fit_then_annually"
+inner_validation_blocks = 3
+inner_validation_block_sessions = 63
+purge_rule = "label_end_before_each_validation_or_prediction_cutoff"
+class_weighting = "none"
+seed = 1707
+
+[models]
+primary = "M2_SPLINE_INTERACTIONS"
+initial_candidates = ["M0_UNCONDITIONAL", "M1_LINEAR", "M2_SPLINE_INTERACTIONS"]
+spline_knots = 3
+spline_degree = 2
+spline_knot_placement = "quantile"
+spline_include_bias = false
+spline_extrapolation = "linear"
+interaction_ids = ["I01", "I02", "I03", "I04", "I05", "I06"]
+ridge_alpha_grid = [1.0, 10.0, 100.0]
+logistic_C_grid = [0.1, 1.0, 10.0]
+quantile_alpha_grid = [0.0001, 0.001, 0.01]
+challenger_recency_half_life_sessions = 504
+
+[portfolio]
+assets = ["SVXY", "CASH"]
+research_capital = 100000.0
+cash_annual_return_base = 0.0
+position_min = 0.0
+position_max = 1.0
+loss_budget_base = 0.05
+loss_budget_sensitivities = [0.025, 0.10]
+cost_one_way_bps_base = 5.0
+cost_one_way_bps_sensitivities = [0.0, 15.0, 30.0]
+policy = "positive_mean_after_roundtrip_cost_then_path_loss_quantile_budget"
+rebalance = "daily_scheduled_close_not_intraday"
+mode = "RESEARCH_ONLY"
+
+[evaluation]
+bootstrap_block_sessions = 21
+bootstrap_block_sensitivity_sessions = 63
+bootstrap_draws = 1000
+fixed_weight_baselines = [0.25, 0.50, 0.75, 1.0]
+no_automatic_model_promotion = true

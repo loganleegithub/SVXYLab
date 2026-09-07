@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 54, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 23, in main
+    return build_release(Path.cwd(), open_report=args.open)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/release_report.py", line 147, in build_release
+    freeze=verify_release(root);now=datetime.now(timezone.utc);stamp=now.strftime('%Y%m%dT%H%M%S%fZ')
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/release.py", line 54, in verify_release
+    verify_hashes(root,{a['accepted_run']:a['accepted_run_sha256'],a['accepted_report']:a['accepted_report_sha256']})
+                                                                   ~^^^^^^^^^^^^^^^^^^^
+KeyError: 'accepted_report'

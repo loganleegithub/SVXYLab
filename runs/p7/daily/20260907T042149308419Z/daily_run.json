@@ -1,0 +1,44 @@
+{
+  "stage": "P7_DAILY",
+  "started_at": "2026-09-07T04:21:49.308419+00:00",
+  "full_historical_backtest_run": false,
+  "llm_called": false,
+  "orders": false,
+  "output_dir": "data/clean/daily/20260907T042149308419Z",
+  "status": "FORWARD_FORECAST_AVAILABLE",
+  "run_record": "runs/p7/daily/20260907T042149308419Z/daily_run.json",
+  "inputs": {
+    "mode": "VERIFIED_FROZEN_CACHE",
+    "latest_information": "2026-09-04",
+    "last_completed_equity_session": "2026-09-04",
+    "actual_received_at_max": "2026-09-06T18:30:59.199140+00:00",
+    "historical_pit": "NO_FULL_HISTORICAL_PIT_CLAIM",
+    "network_requests": 0,
+    "files": {
+      "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+      "data/clean/p2/20260907T000150426421Z/labels.csv": "6af6fa44000e648f533dae6cb525bfd30a7fee3aa51a6698c5ac476937e09127",
+      "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e",
+      "data/clean/p3/20260907T005629664263Z/feature_availability.csv": "6d24a035e028804cadd0c4de4d842a9fa288eb59e4a68cb2143e29c6c20e6c06"
+    }
+  },
+  "timing": {
+    "as_of_session": "2026-09-04",
+    "information_close_at": "2026-09-04T20:00:00+00:00",
+    "decision_session": "2026-09-08",
+    "decision_at": "2026-09-08T19:00:00+00:00",
+    "decision_at_new_york": "2026-09-08T15:00:00-04:00",
+    "execution_session": "2026-09-08",
+    "execution_at": "2026-09-08T20:00:00+00:00",
+    "label_end_session": "2026-09-15",
+    "label_matures_at": "2026-09-15T20:00:00+00:00",
+    "label_available_at": "2026-09-16T19:00:00+00:00",
+    "availability_policy": "ASSUMED_NEXT_SESSION_60MIN_BEFORE_CLOSE"
+  },
+  "new_prediction_created": true,
+  "newly_matured_outcomes": 0,
+  "forecast_file": "data/clean/forward/predictions/2026-09-08.json",
+  "forecast_sha256": "445203c6a9c209dc41f46da3ce89946e64e14f8450b5aabfc530ddc87824e56a",
+  "forecast_created_at": "2026-09-07T04:21:49.997392+00:00",
+  "monthly_refit": false,
+  "finished_at": "2026-09-07T04:21:50.002464+00:00"
+}

@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/Users/logan/SVXYLab/src/svxylab/release_report.py", line 152, in build_release
+    result=run_release(root,output);write_json(directory/'computation.json',result)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/features_report.py", line 26, in write_json
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable

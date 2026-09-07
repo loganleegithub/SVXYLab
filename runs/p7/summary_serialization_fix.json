@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-09-07T04:18:27.128078+00:00",
+  "prior_run": "runs/p7/20260907T041300923825Z",
+  "prior_output": "data/clean/p7/20260907T041300923825Z",
+  "minimal_counterexample": "run_variant returns (pandas.DataFrame, dict); json.dumps of that tuple raises TypeError: DataFrame is not JSON serializable.",
+  "fix": "Unpack the prediction frame and JSON summary; append only summary to variant_runs.",
+  "numeric_or_model_changes": [],
+  "prior_computation_independently_passed": "runs/p7/first_complete_computation_audit.json",
+  "refit_comparison_pending": false,
+  "reproducibility": "runs/p7/reproducibility.json",
+  "final_run": "runs/p7/20260907T041828788697Z/research_run.json"
+}

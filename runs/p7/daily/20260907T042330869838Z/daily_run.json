@@ -1,0 +1,35 @@
+{
+  "stage": "P7_DAILY",
+  "started_at": "2026-09-07T04:23:30.869838+00:00",
+  "full_historical_backtest_run": false,
+  "llm_called": false,
+  "orders": false,
+  "output_dir": "data/clean/daily/20260907T042330869838Z",
+  "status": "EXISTING_FORWARD_RECORD_PRESERVED",
+  "run_record": "runs/p7/daily/20260907T042330869838Z/daily_run.json",
+  "forecast_file": "data/clean/forward/predictions/2026-09-08.json",
+  "forecast_created_at": "2026-09-07T04:21:49.997392+00:00",
+  "forecast_sha256": "445203c6a9c209dc41f46da3ce89946e64e14f8450b5aabfc530ddc87824e56a",
+  "timing": {
+    "as_of_session": "2026-09-04",
+    "information_close_at": "2026-09-04T20:00:00+00:00",
+    "decision_session": "2026-09-08",
+    "decision_at": "2026-09-08T19:00:00+00:00",
+    "decision_at_new_york": "2026-09-08T15:00:00-04:00",
+    "execution_session": "2026-09-08",
+    "execution_at": "2026-09-08T20:00:00+00:00",
+    "label_end_session": "2026-09-15",
+    "label_matures_at": "2026-09-15T20:00:00+00:00",
+    "label_available_at": "2026-09-16T19:00:00+00:00",
+    "availability_policy": "ASSUMED_NEXT_SESSION_60MIN_BEFORE_CLOSE"
+  },
+  "new_prediction_created": false,
+  "finished_at": "2026-09-07T04:23:30.994980+00:00",
+  "open_command": {
+    "command": "/usr/bin/open /Users/logan/SVXYLab/reports/latest.html",
+    "started_at": "2026-09-07T04:23:31.160641+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 0.054,
+    "output": ""
+  }
+}

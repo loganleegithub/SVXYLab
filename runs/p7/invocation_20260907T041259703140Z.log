@@ -1,0 +1,80 @@
+拟合 2024-01-02：成熟训练 1231 行、阳性 68、重叠事件簇 18；年度选参 + M0/M1/M2 完成，2.49 秒。
+拟合 2024-02-01：成熟训练 1252 行、阳性 68、重叠事件簇 18；M0/M1/M2 完成，0.31 秒。
+拟合 2024-03-01：成熟训练 1254 行、阳性 68、重叠事件簇 18；M0/M1/M2 完成，0.32 秒。
+拟合 2024-04-01：成熟训练 1254 行、阳性 68、重叠事件簇 18；M0/M1/M2 完成，0.31 秒。
+拟合 2024-05-01：成熟训练 1254 行、阳性 67、重叠事件簇 18；M0/M1/M2 完成，0.31 秒。
+拟合 2024-06-03：成熟训练 1254 行、阳性 65、重叠事件簇 17；M0/M1/M2 完成，0.31 秒。
+拟合 2024-07-01：成熟训练 1254 行、阳性 65、重叠事件簇 17；M0/M1/M2 完成，0.31 秒。
+拟合 2024-08-01：成熟训练 1254 行、阳性 63、重叠事件簇 17；M0/M1/M2 完成，0.32 秒。
+拟合 2024-09-03：成熟训练 1254 行、阳性 68、重叠事件簇 17；M0/M1/M2 完成，0.32 秒。
+拟合 2024-10-01：成熟训练 1254 行、阳性 71、重叠事件簇 18；M0/M1/M2 完成，0.32 秒。
+拟合 2024-11-01：成熟训练 1254 行、阳性 71、重叠事件簇 18；M0/M1/M2 完成，0.32 秒。
+拟合 2024-12-02：成熟训练 1254 行、阳性 71、重叠事件簇 18；M0/M1/M2 完成，0.32 秒。
+拟合 2025-01-02：成熟训练 1254 行、阳性 76、重叠事件簇 19；年度选参 + M0/M1/M2 完成，2.13 秒。
+拟合 2025-02-03：成熟训练 1254 行、阳性 76、重叠事件簇 19；M0/M1/M2 完成，0.20 秒。
+拟合 2025-03-03：成熟训练 1254 行、阳性 68、重叠事件簇 19；M0/M1/M2 完成，0.20 秒。
+拟合 2025-04-01：成熟训练 1254 行、阳性 56、重叠事件簇 18；M0/M1/M2 完成，0.19 秒。
+拟合 2025-05-01：成熟训练 1254 行、阳性 61、重叠事件簇 18；M0/M1/M2 完成，0.19 秒。
+拟合 2025-06-02：成熟训练 1254 行、阳性 60、重叠事件簇 17；M0/M1/M2 完成，0.20 秒。
+拟合 2025-07-01：成熟训练 1254 行、阳性 55、重叠事件簇 16；M0/M1/M2 完成，0.20 秒。
+拟合 2025-08-01：成熟训练 1254 行、阳性 55、重叠事件簇 16；M0/M1/M2 完成，0.20 秒。
+拟合 2025-09-02：成熟训练 1254 行、阳性 55、重叠事件簇 16；M0/M1/M2 完成，0.20 秒。
+拟合 2025-10-01：成熟训练 1254 行、阳性 53、重叠事件簇 15；M0/M1/M2 完成，0.20 秒。
+拟合 2025-11-03：成熟训练 1254 行、阳性 51、重叠事件簇 15；M0/M1/M2 完成，0.19 秒。
+拟合 2025-12-01：成熟训练 1254 行、阳性 51、重叠事件簇 15；M0/M1/M2 完成，0.19 秒。
+拟合 2026-01-02：成熟训练 1254 行、阳性 51、重叠事件簇 15；年度选参 + M0/M1/M2 完成，2.18 秒。
+拟合 2026-02-02：成熟训练 1254 行、阳性 46、重叠事件簇 14；M0/M1/M2 完成，0.19 秒。
+拟合 2026-03-02：成熟训练 1254 行、阳性 46、重叠事件簇 14；M0/M1/M2 完成，0.19 秒。
+拟合 2026-04-01：成熟训练 1254 行、阳性 49、重叠事件簇 15；M0/M1/M2 完成，0.20 秒。
+拟合 2026-05-01：成熟训练 1254 行、阳性 49、重叠事件簇 15；M0/M1/M2 完成，0.20 秒。
+拟合 2026-06-01：成熟训练 1254 行、阳性 45、重叠事件簇 14；M0/M1/M2 完成，0.21 秒。
+拟合 2026-07-01：成熟训练 1254 行、阳性 45、重叠事件簇 14；M0/M1/M2 完成，0.19 秒。
+拟合 2026-08-03：成熟训练 1254 行、阳性 45、重叠事件簇 14；M0/M1/M2 完成，0.19 秒。
+拟合 2026-09-01：成熟训练 1254 行、阳性 45、重叠事件簇 14；M0/M1/M2 完成，0.20 秒。
+P6 M2_REPLAY：672预测日、33月拟合、3年度选择，12.24秒。
+P6 M2_DROP_A：672预测日、33月拟合、3年度选择，10.29秒。
+P6 M2_DROP_B：672预测日、33月拟合、3年度选择，11.11秒。
+P6 M2_DROP_C：672预测日、33月拟合、3年度选择，10.75秒。
+P6 M2_DROP_D：672预测日、33月拟合、3年度选择，11.45秒。
+P6 M2_DROP_E：672预测日、33月拟合、3年度选择，12.18秒。
+P6 M2_DROP_F：672预测日、33月拟合、3年度选择，10.92秒。
+P6 M2_DROP_BDE：672预测日、33月拟合、3年度选择，9.70秒。
+P6 M3_RECENCY：672预测日、33月拟合、3年度选择，12.41秒。
+P6 M2_SKEW_REFERENCE：670预测日、33月拟合、3年度选择，12.61秒。
+P6 M2_SKEW：670预测日、33月拟合、3年度选择，13.26秒。
+P6配对时间块：1004个指标区间；21/63日各1000次，保留全部抽样。
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 54, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/__main__.py", line 23, in main
+    return build_release(Path.cwd(), open_report=args.open)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/release_report.py", line 152, in build_release
+    result=run_release(root,output);write_json(directory/'computation.json',result)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/SVXYLab/src/svxylab/features_report.py", line 26, in write_json
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/Users/logan/.pyenv/versions/3.12.13/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type DataFrame is not JSON serializable

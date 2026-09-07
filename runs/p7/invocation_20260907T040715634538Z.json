@@ -1,0 +1,7 @@
+{
+  "command": "./重新运行研究.command",
+  "started_at": "2026-09-07T04:07:15.634538+00:00",
+  "finished_at": "2026-09-07T04:09:42.330065+00:00",
+  "exit_code": 1,
+  "log": "runs/p7/invocation_20260907T040715634538Z.log"
+}
