@@ -1,0 +1,19 @@
+{
+  "p7_freeze_sha256": "4e86b7908819e22788335b26ffc447415bc979f59c65ce97bcdfe408d39bc8ca",
+  "n1_amendment_sha256": "3fe1a78697ae9d45a604d55d7f425d83f0924b6b11e1e7e4dbac0c95e5f849be",
+  "purpose": "Add mechanism CLI, explicit compatibility reading, and current specification section15. Original daily/model/clock/mapping functions unchanged; no refreeze.",
+  "changed_frozen_files": {
+    "src/svxylab/__main__.py": {
+      "before": "32f3b0319f5e4c2cef40ea55116d04342ed721d26f53d10596b1e52361253449",
+      "after": "f47158ade425f768c01e15163cdf82d18831a8bd243f8e33df4a207e69e87b46"
+    },
+    "src/svxylab/release.py": {
+      "before": "804410dbf28c381646231ea1bd1ede5d4f2e9e6d74fb922f8aebc742e9d63aa8",
+      "after": "1a4971eaf10eb8d1ab92371f31a2889e449943bcc1a6c1e9112978a0c6a7e30f"
+    },
+    "RESEARCH_SPEC.md": {
+      "before": "959943977862e4953807c45dca6283b9c77dd2c691f96d60cd079af42caf219d",
+      "after": "107e5ffbf6c4a038c5b74613c11e056500630a2c87d9449c0a0c0ee5668dfddd"
+    }
+  }
+}

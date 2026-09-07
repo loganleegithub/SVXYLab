@@ -1,0 +1,14 @@
+{
+  "first_run": "data/clean/m2_mechanism/20260907T103642020015Z",
+  "changes": [
+    {"item":"D2 terminal holding flag","reason":"Inspection found the first summary marked a new final-close entry as a complete holding block. Correct to incomplete and report observed remainder sessions; actual account trades/equity are unchanged."},
+    {"item":"M0 uncertainty label","reason":"Matched state/support join also copied M2 conditional SE onto M0 rows. M0 SE fields are now empty and reference explicit; original M2 SE and summary values unchanged."},
+    {"item":"D3 gate-change count","reason":"Use the published maximum(raw,-1) of the perturbed forecast rather than adding raw delta to a potentially projected forecast. Numerical existing original forecasts were not projected; make identity correct at boundary."},
+    {"item":"D2 yearly account summaries","reason":"Complete requested period/cost/exposure breakdown from the already specified accounts; no new trading rule or selected period."},
+    {"item":"D4 original-state paired score intervals","reason":"Complete requested conditional increment comparison for existing R5/L5/Y10 using pre-recorded stress states and block lengths; no state optimization."},
+    {"item":"Monthly same-input bridge","reason":"Complete requested distinction of monthly update versus incoming feature change using old/new saved fits; no refitting or counterfactual trading."}
+  ],
+  "no_parameter_search": true,
+  "D5_executed": false,
+  "prior_outputs_retained": true
+}

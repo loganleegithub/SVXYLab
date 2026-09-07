@@ -1,0 +1,85 @@
+{
+  "status": "D1_D4_DELIVERED_AWAITING_ACCEPTANCE_D5_NOT_EXECUTED",
+  "recorded_at_utc": "2026-09-07T11:05:59.327653+00:00",
+  "baseline_commit": "983c0da5659425e02812c73731f15e38072e89e6",
+  "head": "983c0da5659425e02812c73731f15e38072e89e6",
+  "engineering": {
+    "calculation_complete": true,
+    "ordinary_tests": {
+      "tests": 136,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "account_count": 132,
+    "account_rows": 99090,
+    "account_max_error": 8.119968697428703e-09,
+    "independent_reconstruction": {
+      "output_dir": "data/clean/m2_mechanism/20260907T105615827007Z",
+      "path_rows": 1930,
+      "failure_chain_rows": 3006,
+      "five_day_hold_rows": 45030,
+      "variance_fits_reconstructed": 146,
+      "variance_prediction_max_error": 2.6020852139652106e-18,
+      "independent_QLIKE_gradient_max": 1.1713195077756033e-07,
+      "influence_predictions_reconstructed": 77844,
+      "influence_prediction_max_error": 1.5265566588595902e-16,
+      "bootstrap_scalar_means": 39818,
+      "bootstrap_interval_max_error": 1.1102230246251565e-16,
+      "preserved_files": 7589,
+      "D5_executed": false,
+      "validation_scope": "Independent path arithmetic, decision identities, five-day share holding, QLIKE score/gradient, saved perturbation reconstruction, all D4 state block intervals; exact refits independently checked inside original computation."
+    },
+    "P7_runtime_frozen_files_verified": 49,
+    "changed_existing_source_files": [
+      "src/svxylab/__main__.py",
+      "src/svxylab/release.py"
+    ],
+    "git_diff_check_returncode": 0,
+    "derived_daily_data_gitignored": true
+  },
+  "research": {
+    "attribute": "POST_REVEAL_DIAGNOSTICS",
+    "unique_causal_root_fraction_claim": false,
+    "new_strategy_promoted": false,
+    "D5_executed": false,
+    "D5_proposal": "runs/m2_mechanism/D5_proposal.md"
+  },
+  "real_data": {
+    "market_downloads": 0,
+    "first": "2019-01-02",
+    "last": "2026-09-04",
+    "sessions": 1930,
+    "core_complete": 1909,
+    "model_decision_days": [
+      831,
+      672
+    ],
+    "model_score_days": [
+      826,
+      667
+    ],
+    "historical_PIT_claim": false,
+    "preserved_files": 7589
+  },
+  "delivery": {
+    "report": "reports/mechanism.html",
+    "report_sha256": "df627e79cdc2a0501151eefb9615416768d1abbe46a3704ba30c25b0da28bc26",
+    "output_dir": "data/clean/m2_mechanism/20260907T105615827007Z",
+    "run": "runs/m2_mechanism/20260907T105615827007Z/mechanism_run.json",
+    "launcher": "M2机制归因.command",
+    "package_command": ".venv/bin/python -m svxylab mechanism --open",
+    "visual_limit": "Local HTML browser screenshot blocked by browser URL policy; HTML links and scripts checked, generated plot visually inspected.",
+    "report_packaging_revision": {
+      "at_utc": "2026-09-07T11:02:25.066411+00:00",
+      "change": "Full daily derived data moved to ignored local JS sidecar; report presentation and all numerical results unchanged; prior output HTML retained in report_embedded_initial.html; clarified unchanged D5 predictions versus inherited continuous account state",
+      "source_before": "b2c72e4cf0e84b011c5c0c4fe5a8c8f996f621bf93ca4eec00bfe8123a03f1d4",
+      "source_after": "e9dfde5e0f7f4d8472720faa154b1d3de46881637de4887ddddfddc27dcf8357"
+    }
+  },
+  "reproducibility": "runs/m2_mechanism/reproducibility.json",
+  "presentation_validation": "runs/m2_mechanism/presentation_validation.json",
+  "source_compatibility": "runs/m2_mechanism/runtime_compatibility.json",
+  "user_acceptance_recorded": false,
+  "git_commit_or_push_performed": false
+}

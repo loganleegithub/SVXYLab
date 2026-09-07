@@ -1,0 +1,88 @@
+{
+  "stage": "M2_MECHANISM_D1_D4",
+  "attribute": "POST_REVEAL_DIAGNOSTIC_AND_NEW_HYPOTHESIS_EXPLORATION",
+  "baseline_commit": "983c0da5659425e02812c73731f15e38072e89e6",
+  "task_source": "inputs/reference/SVXYLab_M2根因研究任务.md",
+  "execution_scope": "D1-D4 and one-page D5 proposal only; D5 execution requires separate user decision",
+  "data_policy": "Only accepted local P1-P7/N1 numerical artifacts; no acquisition, original artifacts read-only; all history/warmup >=2019-01-01; frozen cutoff 2026-09-04",
+  "periods": [
+    {
+      "name": "development",
+      "start": "2020-09-11",
+      "end": "2023-12-29"
+    },
+    {
+      "name": "revealed",
+      "start": "2024-01-02",
+      "end": "2026-09-04"
+    }
+  ],
+  "reporting_periods": "Separate original development and revealed segments; calendar years and calendar quarters; existing accepted P4 cross-2024 scoring omissions retained",
+  "D1": {
+    "question": "Separate head error, hard gate, risk capacity, old holding drift and nonlinear interaction without unique causal allocation",
+    "controls": "Original forecasts, alpha, transformations, clock, targets, capital 100000, cash return 0, B=0.05, c=0.0005, common execution starts",
+    "changed": "Four fixed component combinations (mu0,q0),(mu2,q0),(mu0,q2),(mu2,q2); original risk-only M0/M2 retained",
+    "gate_margin_bin_edges_decimal": [
+      -1e+30,
+      -0.01,
+      -0.005,
+      -0.0025,
+      -0.001,
+      0,
+      0.001,
+      0.0025,
+      0.005,
+      0.01,
+      1e+30
+    ],
+    "near_gate_absolute_distances_decimal": [
+      0.001,
+      0.0025,
+      0.005
+    ],
+    "switch_identity": "delta_target = old_risk*delta_gate + old_gate*delta_risk + delta_gate*delta_risk. Target minus pretrade = delta_target + prior_target minus old_actual + old_actual minus pretrade. Startup separate. Terms are signed weight changes, not unique PnL shares.",
+    "holding_spells": "Consecutive positive posttrade stock exposure, sessions between entry and first zero close; final open spell right censored",
+    "monthly_update_neighborhood_sessions": 2,
+    "logical_conflicts": "q90<.10 and p10>.10, or q90>.10 and p10<.10 (continuous-distribution interpretation; equality not classified); mu threshold vs probability describes disagreement only because positive mean and tail risk can coexist",
+    "mean_uncertainty": "Fixed-transform, fixed-alpha Ridge Newey-West sandwich SE with calendar lags21 and63; intercept unpenalized, no IID RMSE-as-SE. Approximate conditional sampling variability, excludes bias, model selection and transform uncertainty. Exact cluster refit sensitivity separately."
+  },
+  "D2": {
+    "question": "Does usable information occur before execution, after day1, or later; does holding cadence explain failure?",
+    "controls": "Original information dates and original five-day forecasts; no same-close or open-price executable rescue",
+    "path_segments": "past5=log(TR[t]/TR[t-5]); pre=log(TR[t+1]/TR[t]); day1=log(TR[t+2]/TR[t+1]); rest4=log(TR[t+6]/TR[t+2]); full5=day1+rest4. Matched finite rows for path comparisons; partial tails preserved explicitly",
+    "sorting": "Spearman correlation of original mu5/q90 with each path segment; mu gate above/below, fixed margin bins, and original-fit training predicted-mu quartiles; no ex-post optimized cutpoints",
+    "holding_accounts": "Offsets0..4 on full exchange session calendar relative to each original common start; hold actual shares/cash unchanged between every fifth scheduled decision. Same offset start/end for M0/M2 main/risk-only and fixed50/fixed100, plus daily versions reset at identical offset starts. Do not sum accounts. Terminal residual holding marked to market, no forced liquidation; mark incomplete final block.",
+    "stress_states": "High VIX defined by B01>=75th percentile of that monthly model's matured training inputs; VIX1 log change and C03 five-day sign; F04 21d window one-day change. No future peak dates. SVXY own log changes1/5/21 and rolling squared-return incoming/outgoing contributions saved.",
+    "uncertainty": "Paired moving circular calendar block bootstrap, lengths21/63,1000 draws, seed1707; no compression of missing rows; descriptive intervals conditional on research choices"
+  },
+  "D3": {
+    "question": "Tail concentration vs genuine leverage/parameter sensitivity, unsupported joint states, and effective regularization",
+    "controls": "All original monthly M2 fits and training membership; exact selected alpha and original clock; later evaluation prices including crises unchanged",
+    "training_events": "For each monthly matured training set only, mark Y10=1 OR abs(R5)>=0.10; merge overlapping execution..label_end windows. Enumerate all such historical clusters, not only damaging clusters. No event can include an unmatured target.",
+    "influence_variants": [
+      "Fixed transform: original y, exact Ridge normal equations",
+      "Fixed transform: replace only event y by original training mean (target sensitivity, not a new estimator)",
+      "Fixed transform: delete event rows, same alpha, exact Ridge refit",
+      "Complete transform refit on retained rows: raw scaler, spline knots, output scaler/products, same alpha and loss"
+    ],
+    "influence_outputs": "Per-row residual, SSE share, ridge leverage, gradient norm, derivative to upweight; per-cluster exact later-month predictions and gate changes. Interaction and spline contributions separately reconstructed; full-minus-fixed deletion effect is transform contribution plus interaction with refitting, not unique causal share.",
+    "support": "Raw19 and design63 full Pearson/Spearman correlations per monthly training set, singular values/numerical rank, ridge df=1+sum(s^2/(s^2+alpha)), alpha/n, shrink factors, q90 L1 nonzero counts. Raw and interaction out-of-range per actual prediction. Raw-standardized/design-standardized RMS 5th nearest-neighbor distance; training reference excludes +/-5 full exchange sessions, compare to training95th percentile, not a theorem of support.",
+    "candidates": "Copy all original P4/P7 cv_scores, cv_totals, selected_parameters and selection snapshots to local diagnostic output; reuse P4 review. Numeric tie <=1e-12; tiny strict gap <=1% relative to winner is descriptive; no new grid."
+  },
+  "D4": {
+    "question": "Current-state description vs future daily risk intensity vs future net return",
+    "controls": "Reuse all P6 and P7 ablations and interactions; E derived from B/D is not independent raw information. Original R5/L5/Y10 kept",
+    "new_target": "V5 = mean of five squared SVXY daily-close log total returns after original execution (t+2..t+6). Daily squared-return mean, not high-frequency realized variance or demeaned variance.",
+    "models": [
+      "V_SELF21: one log(max(F04^2/252,1e-12)) predictor, training standardization",
+      "V_JOINT63: original M2 saved63-column design, no added input, fixed L2 constraint"
+    ],
+    "fitting": "Monthly original M2 training membership and maturity; log-link minimizes mean[eta + (V5/mean_train_V5)*exp(-eta)] + 0.5*alpha*||beta||^2, intercept unpenalized, alpha=1 for both, fixed before new results, no grid; prediction=mean_train_V5*exp(eta), floor1e-12, preserve raw and floor count. Objective targets mean of squared daily returns under model restrictions, not log-variance mean. Both admit V5=0 without target replacement.",
+    "evaluation": "QLIKE=log(vhat)+V5/vhat and MSE on same observed rows, by original segments/year/quarter and pre-defined high/rising/falling stress; paired21/63 calendar block intervals; no trading promotion",
+    "net_return_diagnostic": "Original R5 and full-exposure five-day buy/sell net proxy (1+R5)*(1-c)/(1+c)-1; not daily-account PnL, not summed overlapping trades; D2 holds supply actual continuous cost accounts"
+  },
+  "D5": "Select at most one mechanism and minimal intervention only after D1-D4 evidence; produce reviewable proposal, not run it",
+  "methods": "Primary source links and retrieval outcomes in methods_sources.json; papers guide diagnostic design, do not establish SVXY-specific mechanisms",
+  "engineering": "One bounded research module with HTML renderer and ordinary arithmetic tests; extend package CLI and explicitly record frozen-entrypoint compatibility if needed. Daily prediction/trading logic, original experiment config and accepted model code remain unchanged. New outputs in timestamped directory.",
+  "recorded_before_new_calculations_at_utc": "2026-09-07T10:26:26.632755+00:00"
+}

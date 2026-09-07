@@ -1,0 +1,18 @@
+{
+  "reports/mechanism.html": {
+    "reference_count": 46,
+    "missing_links": [],
+    "HTMLParser": "completed",
+    "controller_script_syntax_returncode": 0
+  },
+  "data/clean/m2_mechanism/20260907T105615827007Z/report.html": {
+    "reference_count": 46,
+    "missing_links": [],
+    "HTMLParser": "completed",
+    "controller_script_syntax_returncode": 0
+  },
+  "local_data_sidecar_syntax_returncode": 0,
+  "plot_visual_inspection": "completed via local image file; axes/labels/legends visible",
+  "browser_page_screenshot": "NOT_COMPLETED: in-app browser URL security policy blocks file:// local HTML; no screenshot evidence claimed",
+  "recorded_at_utc": "2026-09-07T11:01:01.955192+00:00"
+}

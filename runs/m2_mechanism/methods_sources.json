@@ -1,0 +1,55 @@
+{
+  "retrieved_on": "2026-09-07",
+  "recorded_at_utc": "2026-09-07T10:37:57.950479+00:00",
+  "sources": [
+    {
+      "name": "Gneiting",
+      "url": "https://arxiv.org/abs/0912.0902",
+      "retrieval": "retrieved abstract",
+      "use": "Scoring rule must match declared mean/quantile target; not evidence of SVXY profitability"
+    },
+    {
+      "name": "Lugosi and Mendelson",
+      "url": "https://arxiv.org/abs/1906.04280",
+      "retrieval": "retrieved abstract",
+      "use": "Heavy-tail mean estimation has assumptions; no assertion of infinite variance from finite sample"
+    },
+    {
+      "name": "scikit-learn Ridge",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html",
+      "retrieval": "retrieved documentation 1.9.0",
+      "use": "Objective SSE+alpha L2; verified installed implementation also"
+    },
+    {
+      "name": "scikit-learn HuberRegressor",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html",
+      "retrieval": "retrieved documentation 1.9.0",
+      "use": "Huber limits influence; not run in D1-D4"
+    },
+    {
+      "name": "Garleanu and Pedersen",
+      "url": "https://www.nber.org/papers/w15205",
+      "retrieval": "search metadata; direct fetch 403",
+      "use": "Bibliographic reference only; no claim of full text verification; dynamic costs and existing positions question follows task"
+    },
+    {
+      "name": "Corsi",
+      "url": "https://academic.oup.com/jfec/article-abstract/7/2/174/856522",
+      "retrieval": "publisher fetch failed; author bibliography search found publication; author page timeout",
+      "use": "Bibliographic reference only; no HAR model or intraday RV claim"
+    },
+    {
+      "name": "ProShares SVXY",
+      "url": "https://www.proshares.com/our-etfs/strategic/svxy",
+      "retrieval": "retrieved issuer document",
+      "use": "Daily -0.5x inverse short-term VIX futures index exposure"
+    },
+    {
+      "name": "Patton",
+      "url": "https://scholars.duke.edu/publication/792433",
+      "retrieval": "retrieved author university abstract; publisher fetch failed",
+      "use": "Proxy noise may affect forecast rankings, suitability conditional on proxy assumptions; target here explicitly observed daily squared returns"
+    }
+  ],
+  "quotations": "No full text copied; only narrow paraphrases. References are methods, not SVXY-specific empirical proof."
+}

@@ -1,0 +1,1050 @@
+{
+  "account_count": 132,
+  "account_rows": 99090,
+  "account_max_error": 8.119968697428703e-09,
+  "accounts": [
+    {
+      "scope": "development",
+      "account": "mu0_q0",
+      "rows": 832,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "mu2_q0",
+      "rows": 832,
+      "max_amount_error": 3.7834979593753815e-10
+    },
+    {
+      "scope": "development",
+      "account": "mu0_q2",
+      "rows": 832,
+      "max_amount_error": 7.566995918750763e-10
+    },
+    {
+      "scope": "development",
+      "account": "mu2_q2",
+      "rows": 832,
+      "max_amount_error": 2.066371962428093e-09
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "rows": 832,
+      "max_amount_error": 3.7834979593753815e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "rows": 832,
+      "max_amount_error": 1.949956640601158e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "mu0_q0",
+      "rows": 673,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "mu2_q0",
+      "rows": 673,
+      "max_amount_error": 5.093170329928398e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "mu0_q2",
+      "rows": 673,
+      "max_amount_error": 6.548361852765083e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "mu2_q2",
+      "rows": 673,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "rows": 673,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "rows": 673,
+      "max_amount_error": 6.548361852765083e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 2.473825588822365e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 5.529727786779404e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 2.066371962428093e-09
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 4.656612873077393e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 3.7834979593753815e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 1.0186340659856796e-09
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 1.949956640601158e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 1.5425030142068863e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 7.479684427380562e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 832,
+      "max_amount_error": 2.3283064365386963e-10
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 832,
+      "max_amount_error": 5.820766091346741e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 1.4551915228366852e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 2.066371962428093e-09
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 2.6193447411060333e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 7.275957614183426e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 1.7462298274040222e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 7.712515071034431e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 831,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 831,
+      "max_amount_error": 4.0745362639427185e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 2.3283064365386963e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 5.820766091346741e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 1.7462298274040222e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 7.275957614183426e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 1.1641532182693481e-09
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 1.280568540096283e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 1.6298145055770874e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 7.712515071034431e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 830,
+      "max_amount_error": 5.820766091346741e-11
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 830,
+      "max_amount_error": 4.0745362639427185e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 3.7834979593753815e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 1.7462298274040222e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 5.529727786779404e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 6.693881005048752e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 4.0745362639427185e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 1.6589183360338211e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 1.775333657860756e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 6.461050361394882e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 829,
+      "max_amount_error": 2.3283064365386963e-10
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 829,
+      "max_amount_error": 5.238689482212067e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 1.4551915228366852e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_main",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 9.604264050722122e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 6.693881005048752e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_main",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 6.984919309616089e-10
+    },
+    {
+      "scope": "development",
+      "account": "M0_risk",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 8.149072527885437e-10
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 1.0477378964424133e-09
+    },
+    {
+      "scope": "development",
+      "account": "M2_risk",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 2.939486876130104e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 1.4842953532934189e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed50",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 8.119968697428703e-09
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 828,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "development",
+      "account": "fixed100",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 828,
+      "max_amount_error": 1.7462298274040222e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 1.7462298274040222e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 2.0372681319713593e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 1.7462298274040222e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 4.656612873077393e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 6.548361852765083e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 3.5070115700364113e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 0,
+      "cadence": "hold5",
+      "rows": 673,
+      "max_amount_error": 2.9103830456733704e-11
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 0,
+      "cadence": "daily",
+      "rows": 673,
+      "max_amount_error": 1.8917489796876907e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 1.0477378964424133e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 1.0913936421275139e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 3.4924596548080444e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 1.0477378964424133e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 1.0186340659856796e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 3.055902197957039e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 5.529727786779404e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 3.7107383832335472e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 1,
+      "cadence": "hold5",
+      "rows": 672,
+      "max_amount_error": 4.3655745685100555e-11
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 1,
+      "cadence": "daily",
+      "rows": 672,
+      "max_amount_error": 3.2014213502407074e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 2.473825588822365e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 1.0913936421275139e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 1.0186340659856796e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 2.473825588822365e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 1.0913936421275139e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 4.0745362639427185e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 6.984919309616089e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 7.130438461899757e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 3.7107383832335472e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 2,
+      "cadence": "hold5",
+      "rows": 671,
+      "max_amount_error": 8.731149137020111e-11
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 2,
+      "cadence": "daily",
+      "rows": 671,
+      "max_amount_error": 3.2014213502407074e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 3.346940502524376e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 1.2951204553246498e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 1.4551915228366852e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 2.9103830456733704e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 3.346940502524376e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 1.2951204553246498e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 2.473825588822365e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 3.2014213502407074e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 8.731149137020111e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 3.943569026887417e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 3,
+      "cadence": "hold5",
+      "rows": 670,
+      "max_amount_error": 8.731149137020111e-11
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 3,
+      "cadence": "daily",
+      "rows": 670,
+      "max_amount_error": 2.0372681319713593e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 2.0372681319713593e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_main",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 1.0913936421275139e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 1.6007106751203537e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_main",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 3.346940502524376e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 2.0372681319713593e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M0_risk",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 1.0913936421275139e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 3.055902197957039e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "M2_risk",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 3.346940502524376e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 6.693881005048752e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed50",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 4.059984348714352e-09
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 4,
+      "cadence": "hold5",
+      "rows": 669,
+      "max_amount_error": 1.3096723705530167e-10
+    },
+    {
+      "scope": "revealed",
+      "account": "fixed100",
+      "offset": 4,
+      "cadence": "daily",
+      "rows": 669,
+      "max_amount_error": 2.9103830456733704e-10
+    }
+  ],
+  "original_prediction_max_error": 9.661715871800425e-14,
+  "ridge_coefficient_max_error": 3.75324771262342e-13,
+  "training_identity_fits": 73,
+  "cluster_fixed_refits": 1260,
+  "cluster_full_refits": 1260,
+  "variance_fits": 146,
+  "preserved_files_verified": 7589,
+  "new_market_downloads": 0,
+  "D5_executed": false,
+  "original_daily_logic_modified": false,
+  "elapsed_seconds": 55.60696658404777
+}

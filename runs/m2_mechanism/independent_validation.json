@@ -1,0 +1,16 @@
+{
+  "output_dir": "data/clean/m2_mechanism/20260907T105615827007Z",
+  "path_rows": 1930,
+  "failure_chain_rows": 3006,
+  "five_day_hold_rows": 45030,
+  "variance_fits_reconstructed": 146,
+  "variance_prediction_max_error": 2.6020852139652106e-18,
+  "independent_QLIKE_gradient_max": 1.1713195077756033e-07,
+  "influence_predictions_reconstructed": 77844,
+  "influence_prediction_max_error": 1.5265566588595902e-16,
+  "bootstrap_scalar_means": 39818,
+  "bootstrap_interval_max_error": 1.1102230246251565e-16,
+  "preserved_files": 7589,
+  "D5_executed": false,
+  "validation_scope": "Independent path arithmetic, decision identities, five-day share holding, QLIKE score/gradient, saved perturbation reconstruction, all D4 state block intervals; exact refits independently checked inside original computation."
+}

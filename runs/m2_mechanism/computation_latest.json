@@ -1,0 +1,6 @@
+{
+  "output_dir": "data/clean/m2_mechanism/20260907T103642020015Z",
+  "run_dir": "runs/m2_mechanism/20260907T103642020015Z",
+  "command": "development invocation of mechanism.compute; final package CLI will be validated separately",
+  "started_at_utc": "2026-09-07T10:36:42.020200+00:00"
+}
