@@ -1,0 +1,10 @@
+{
+  "method": "REFIT_FROM_EXPORTED_DEVELOPMENT_INPUTS",
+  "forecast_sessions": 831,
+  "refit_comparison_passed": true,
+  "saved_coefficient_audit_exit_code": 0,
+  "pytest_exit_code": 0,
+  "raw_market_data_rebuilt": false,
+  "manifest_files_verified": 368,
+  "output": "replay_results/20260907T021822900896Z"
+}

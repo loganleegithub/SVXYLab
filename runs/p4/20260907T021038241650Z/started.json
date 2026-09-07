@@ -1,0 +1,153 @@
+{
+  "stage": "P4",
+  "pilot": false,
+  "started_at": "2026-09-07T02:10:38.241650+00:00",
+  "source_sha256": {
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "f1be0604e7989bc58d14d59c1834e825a4558ab8a723863d39d9f6c7f1b48038",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/baselines.py": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+    "src/svxylab/baselines_report.py": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+    "src/svxylab/data.py": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+    "src/svxylab/data_report.py": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+    "src/svxylab/downloads.py": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+    "src/svxylab/environment.py": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+    "src/svxylab/etf.py": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+    "src/svxylab/features.py": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+    "src/svxylab/features_report.py": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/models.py": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+    "src/svxylab/prediction_data.py": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+    "src/svxylab/predictions.py": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+    "src/svxylab/predictions_report.py": "8427220ab43ee9ff7de908b69a5c3decabd96657381a0c0dd5ba3b7e6f2b3599",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+    "tests/conftest.py": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+    "tests/test_arithmetic.py": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+    "tests/test_data.py": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+    "tests/test_features.py": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+    "tests/test_ledger.py": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+    "tests/test_models.py": "9591ed43c33098a81002424b437100149c5ab673c04547e9a6bda50f18dd7858",
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+    "RESEARCH_SPEC.md": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+    "pyproject.toml": "af5735e4c43eabb2d4876ca63e1f68df7bae28625af03952baa7580001a61823",
+    "requirements-lock.txt": "0715740e1b70e97b64e47b4af64043e5fcbfcc48f0f75e8ec536f455cf483701",
+    "runs/p4/experiment_record.json": "9993a47a185628e0859fa35385262be2bbfa3502f23361615c63573959446634",
+    "runs/p4/independent_validation.py": "514c00d1bd8b9b35a8bb2d1b1d714e4b96d89a00c3834e649911d7b69996589d",
+    "runs/p4/test_real_causality.py": "34bac4fc8a367fc25cf47719bc94bd7f8a2f3400f43a431552532d00e3a14c0a"
+  },
+  "config": {
+    "schema_version": 1,
+    "project": "SVXYLab",
+    "status": "DESIGN_ONLY",
+    "data": {
+      "feature_history_requested_start": "2019-01-01",
+      "actual_svxy_mandate_start": "2018-02-28",
+      "initial_train_end": "2019-12-31",
+      "outer_test_requested_start": "2020-01-02",
+      "locked_historical_start": "2024-01-01",
+      "cutoff_policy": "last_completed_common_session_at_P1_freeze",
+      "assumed_historical_availability": "next_equity_session_60min_before_close",
+      "source_vintage_claim": "NO_FULL_HISTORICAL_PIT_CLAIM"
+    },
+    "clock": {
+      "signal_information": "session_t_or_earlier",
+      "decision_deadline": "session_t_plus_1_equity_close_minus_60_minutes",
+      "execution": "session_t_plus_1_equity_close_plus_cost_proxy",
+      "calendar": "US_equity_sessions_with_actual_early_closes",
+      "extra_delay_sensitivity_sessions": 1
+    },
+    "targets": {
+      "horizon_sessions": 5,
+      "loss_event_threshold": 0.1,
+      "loss_definition": "maximum_entry_relative_loss_at_future_daily_closes",
+      "loss_quantile": 0.9
+    },
+    "training": {
+      "max_window_sessions": 1260,
+      "min_outer_training_rows": 400,
+      "min_inner_training_rows": 200,
+      "coefficient_refit": "monthly_first_eligible_decision",
+      "hyperparameter_selection": "first_fit_then_annually",
+      "inner_validation_blocks": 3,
+      "inner_validation_block_sessions": 63,
+      "purge_rule": "label_end_before_each_validation_or_prediction_cutoff",
+      "class_weighting": "none",
+      "seed": 1707
+    },
+    "models": {
+      "primary": "M2_SPLINE_INTERACTIONS",
+      "initial_candidates": [
+        "M0_UNCONDITIONAL",
+        "M1_LINEAR",
+        "M2_SPLINE_INTERACTIONS"
+      ],
+      "spline_knots": 3,
+      "spline_degree": 2,
+      "spline_knot_placement": "quantile",
+      "spline_include_bias": false,
+      "spline_extrapolation": "linear",
+      "interaction_ids": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06"
+      ],
+      "ridge_alpha_grid": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "logistic_C_grid": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "quantile_alpha_grid": [
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "challenger_recency_half_life_sessions": 504
+    },
+    "portfolio": {
+      "assets": [
+        "SVXY",
+        "CASH"
+      ],
+      "research_capital": 100000.0,
+      "cash_annual_return_base": 0.0,
+      "position_min": 0.0,
+      "position_max": 1.0,
+      "loss_budget_base": 0.05,
+      "loss_budget_sensitivities": [
+        0.025,
+        0.1
+      ],
+      "cost_one_way_bps_base": 5.0,
+      "cost_one_way_bps_sensitivities": [
+        0.0,
+        15.0,
+        30.0
+      ],
+      "policy": "positive_mean_after_roundtrip_cost_then_path_loss_quantile_budget",
+      "rebalance": "daily_scheduled_close_not_intraday",
+      "mode": "RESEARCH_ONLY"
+    },
+    "evaluation": {
+      "bootstrap_block_sessions": 21,
+      "bootstrap_block_sensitivity_sessions": 63,
+      "bootstrap_draws": 1000,
+      "fixed_weight_baselines": [
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "no_automatic_model_promotion": true
+    }
+  }
+}

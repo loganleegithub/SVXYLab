@@ -1,6 +1,7 @@
 """真实 P4 审计：不用生产模型/评分/训练选择函数，从保存的数值独立复算。"""
 
 import csv
+import argparse
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
@@ -12,9 +13,14 @@ import numpy as np
 import pandas as pd
 from scipy.interpolate import BSpline
 
-ROOT = Path(__file__).resolve().parents[2]
-RUN = sorted(p for p in (ROOT / "runs/p4").glob("*/predictions_run.json")
-             if not json.loads(p.read_text())["result"]["pilot"])[-1]
+parser = argparse.ArgumentParser(description="保存系数的独立数值审计；不重新拟合")
+parser.add_argument("--bundle", type=Path, help="本地离线包根目录；仅使用包内已截断开发输入")
+args = parser.parse_args()
+ROOT = args.bundle.resolve() if args.bundle else Path(__file__).resolve().parents[2]
+BUNDLE = json.loads((ROOT / "bundle_manifest.json").read_text()) if args.bundle else None
+RUN = ROOT / BUNDLE["baseline_run"] if BUNDLE else sorted(
+    p for p in (ROOT / "runs/p4").glob("*/predictions_run.json")
+    if not json.loads(p.read_text())["result"]["pilot"])[-1]
 RECORD = json.loads(RUN.read_text())
 OUTPUT = ROOT / RECORD["result"]["output_dir"]
 CONFIG = tomllib.loads((ROOT / "experiment.toml").read_text())
@@ -34,13 +40,19 @@ def bounded_rows(path):
     return result
 
 
-p3_accept = json.loads((ROOT / "runs/p3/acceptance.json").read_text())
-p3 = json.loads((ROOT / p3_accept["accepted_run"]).read_text())
-p2_accept = json.loads((ROOT / "runs/p2/acceptance.json").read_text())
-p2 = json.loads((ROOT / p2_accept["accepted_run"]).read_text())
-raw = bounded_rows(ROOT / p3["result"]["output_dir"] / "core_features.csv")
-availability = bounded_rows(ROOT / p3["result"]["output_dir"] / "feature_availability.csv")
-labels = bounded_rows(ROOT / p2["result"]["output_dir"] / "labels.csv")
+if BUNDLE:
+    input_paths = {k: ROOT / v for k, v in BUNDLE["development_inputs"].items()}
+else:
+    p3_accept = json.loads((ROOT / "runs/p3/acceptance.json").read_text())
+    p3 = json.loads((ROOT / p3_accept["accepted_run"]).read_text())
+    p2_accept = json.loads((ROOT / "runs/p2/acceptance.json").read_text())
+    p2 = json.loads((ROOT / p2_accept["accepted_run"]).read_text())
+    input_paths = {"features": ROOT / p3["result"]["output_dir"] / "core_features.csv",
+                   "availability": ROOT / p3["result"]["output_dir"] / "feature_availability.csv",
+                   "labels": ROOT / p2["result"]["output_dir"] / "labels.csv"}
+raw = bounded_rows(input_paths["features"])
+availability = bounded_rows(input_paths["availability"])
+labels = bounded_rows(input_paths["labels"])
 days = list(raw)
 positions = {d:i for i,d in enumerate(days)}
 
@@ -243,5 +255,7 @@ result={"checked_at":datetime.now(timezone.utc).isoformat(),"run_record":RUN.rel
         "monthly_models_checked":fit_count,"forecast_rows_replayed":forecast_rows,"prediction_values_checked":forecast_rows*6,
         "annual_selections_checked":selection_count,"inner_head_fits_checked":inner_fits,"metric_rows_checked":len(metrics),
         "training_cutoffs_and_membership_match":True,"no_locked_labels_used":True,"max_absolute_errors":errors,"passed":True}
-(RUN.parent / "independent_validation.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
+audit_output = ROOT / "audit_results" / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ") if BUNDLE else RUN.parent
+audit_output.mkdir(parents=True, exist_ok=True)
+(audit_output / "independent_validation.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
 print(json.dumps(result,ensure_ascii=False,indent=2))

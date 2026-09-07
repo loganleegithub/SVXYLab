@@ -1,0 +1,16 @@
+{
+  "current_remote_names": [
+    "origin"
+  ],
+  "first_rerun_remote_check": [
+    {
+      "command": "git remote",
+      "started_at": "2026-09-07T02:10:53.846586+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.012,
+      "output": "origin\n"
+    }
+  ],
+  "remote_created_or_modified_by_this_review": false,
+  "fetch_push_or_upload_performed": false
+}

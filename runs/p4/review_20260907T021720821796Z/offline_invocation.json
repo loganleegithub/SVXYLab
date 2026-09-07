@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/Users/logan/SVXYLab/.venv/bin/python",
+    "replay.py"
+  ],
+  "cwd": "/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/svxylab-p4-offline-f5j4w0sy/LOCAL_REVIEW_ONLY",
+  "started_at": "2026-09-07T02:18:22.017429+00:00",
+  "exit_code": 0,
+  "source_archive_sha256": "6eecb405aab6878a7f4efe8444bb7459b1b1a86e58c897efd276b3037caf96f6",
+  "log": "runs/p4/review_20260907T021720821796Z/offline_relocated.log",
+  "no_source_market_data_required": true,
+  "offline_validation": {
+    "method": "REFIT_FROM_EXPORTED_DEVELOPMENT_INPUTS",
+    "forecast_sessions": 831,
+    "refit_comparison_passed": true,
+    "saved_coefficient_audit_exit_code": 0,
+    "pytest_exit_code": 0,
+    "raw_market_data_rebuilt": false,
+    "manifest_files_verified": 368,
+    "output": "replay_results/20260907T021822900896Z"
+  }
+}

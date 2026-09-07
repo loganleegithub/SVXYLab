@@ -145,7 +145,7 @@ def render(root: Path, data: dict):
     if audit_file.exists():
         audit = json.loads(audit_file.read_text())
         audit_html = (f"<p>本次已保存模型与真实数据的独立核对：{'通过' if audit['passed'] else '未通过'}。"
-                      f"独立重现 {audit['forecast_rows_replayed']} 行模型预测、{audit['inner_head_fits_checked']} 个内层候选头及 {audit['metric_rows_checked']} 行时期指标；"
+                      f"按保存系数重建 {audit['forecast_rows_replayed']} 行模型预测，核对 {audit['inner_head_fits_checked']} 个内层候选头的已保存预测损失及 {audit['metric_rows_checked']} 行时期指标；没有重新拟合系数；"
                       f"预测最大绝对误差 {audit['max_absolute_errors']['predictions']:.3g}。"
                       f"<a href='../{audit_file.relative_to(root).as_posix()}'>数值与时钟核对结果</a>。</p>")
     future_html = ""
@@ -175,6 +175,8 @@ def render(root: Path, data: dict):
         ("Ridge","https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.Ridge.html"),
         ("LogisticRegression","https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LogisticRegression.html"),
         ("QuantileRegressor","https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.QuantileRegressor.html")])
+    from svxylab.prediction_review import review_html
+    review_appendix = review_html(root, data)
     doc = f"""<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>SVXYLab · P4 联合预测</title><style>
 body{{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:#22313d;background:#fff}}
@@ -186,6 +188,7 @@ img{{max-width:100%;height:auto}}pre,code{{font:13px/1.6 ui-monospace,monospace}
 <div class='status'><p><strong>工程：</strong>{headline}。普通 pytest {data['tests_passed']} 项通过、{data['tests_failed']} 项失败/错误；本次重放耗时 {result['elapsed_seconds']:.2f} 秒。</p>
 <p><strong>预测研究结果：</strong>{' '.join(comparison)} 负数表示损失较低。结果按预定规则保留，没有按好坏改目标、删模型或扩大网格；本阶段没有经济仓位或收益优势结论。</p>
 <p><strong>实际覆盖：</strong>本次处理 {result['requested_decision_first']} 至 {result['processed_decision_last']} 的 {result['request_sessions']} 个决策日，{result['forecast_sessions']} 日有三模型预测，{result['no_forecast_sessions']} 日没有预测。封存段未参与拟合或评分。</p></div>
+{review_appendix}
 <h2>从何时真的能够预测</h2><p>首个可预测信息日 <strong>{result['first_prediction_information_session']}</strong>，决策日 <strong>{result['first_prediction_decision_session']}</strong>；截止 {first['simulation_fit_at']}。
 训练来自 {first['training_first']} 至 {first['training_last']}，{first['training_rows']} 行、{first['positive_count']} 行阳性、{first['event_clusters']} 个合并的重叠事件簇。
 2019 年起累积数据，须等到 400 行完整成熟样本和全部内层条件满足；此前无预测日期与原因保存在 prediction_service.csv，没有为疫情初期补入旧制度数据或降低门槛。</p>

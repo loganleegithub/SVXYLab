@@ -62,6 +62,12 @@ P4 受约束联合预测：
 
 报告为 `reports/predictions.html`；每次 CSV、模型/变换 JSON 和图保存在新的 `data/clean/p4/<UTC时间>/`，实际命令、测试、代码及输入摘要保存在 `runs/p4/<UTC时间>/`。计算前口径记录在 `runs/p4/experiment_record.json`。独立数值审计脚本为 `runs/p4/independent_validation.py`；真实输入上的合成未来扰动 pytest 为 `runs/p4/test_real_causality.py`，实际结果和复算对照见 `runs/p4/reproducibility.json`。后者的合成行情只存在明确标记的测试夹具目录中，原始数据保持不变。日常使用唯一项目入口即可。
 
+P4 审查收尾（仍未进入 P5）：
+```sh
+.venv/bin/python -m svxylab predictions --review
+```
+审查参考及当前 HEAD 为 `0810f1a5ae371b4a703b8c1d2e098ffb0c13eae6`。2026-09-07 按原参数完整重新拟合，与原逐日原始/发布预测最大差0；保存系数独立重建误差约1.29e-14，二者不能混称。普通测试87项及另行真实输入合成未来扰动1项通过。原24次选择都严格落在最强收缩边界；M2 Q90的六个交互40个月均为精确零。追加等频分组、33阳性行合并11区间、最高概率日期和2022Q1/Q2逐日覆盖只作审查后诊断。当前记录入口为 `runs/p4/review_latest.json`，新目录不覆盖原产物。本地离线包位于 `data/clean/p4_review/`，只含开发段输入且跨2024标签为空；没有再分发授权，不公开上传。包内 `replay.py` 是离线复算脚本，常规项目入口仍如上。完整说明见 STATUS.md；审查修改待P4验收后再保存本地检查点。当前实际已配置origin（首次审查重跑即已存在），本次没有新增/修改或使用该远端；此前“无远端”只保留为历史阶段记录。
+
 P0 已验证的环境报告入口：
 ```sh
 .venv/bin/python -m svxylab environment --open

@@ -1,0 +1,59 @@
+{
+  "review_dir": "runs/p4/review_20260907T021720821796Z",
+  "baseline_run": "runs/p4/20260907T013333116356Z/predictions_run.json",
+  "reference_commit": "0810f1a5ae371b4a703b8c1d2e098ffb0c13eae6",
+  "head": "0810f1a5ae371b4a703b8c1d2e098ffb0c13eae6",
+  "initial_git_status": " M reports/predictions.html\n M runs/p4/independent_validation.py\n M src/svxylab/__main__.py\n M src/svxylab/predictions_report.py\n?? runs/p4/20260907T021038241650Z/\n?? runs/p4/offline_replay.py\n?? runs/p4/review_20260907T021033792169Z/\n?? runs/p4/review_20260907T021720821796Z/\n?? runs/p4/review_latest.json\n?? src/svxylab/prediction_review.py\n?? tests/test_prediction_review.py\n",
+  "commands": [
+    {
+      "name": "pytest_before",
+      "command": [
+        "/Users/logan/SVXYLab/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=/Users/logan/SVXYLab/runs/p4/review_20260907T021720821796Z/pytest_before.xml"
+      ],
+      "started_at": "2026-09-07T02:17:20.847008+00:00",
+      "exit_code": 0,
+      "log": "runs/p4/review_20260907T021720821796Z/pytest_before.log"
+    },
+    {
+      "name": "full_p4",
+      "command": [
+        "/Users/logan/SVXYLab/.venv/bin/python",
+        "-m",
+        "svxylab",
+        "predictions"
+      ],
+      "started_at": "2026-09-07T02:17:23.788946+00:00",
+      "exit_code": 0,
+      "log": "runs/p4/review_20260907T021720821796Z/full_p4.log"
+    },
+    {
+      "name": "independent_audit",
+      "command": [
+        "/Users/logan/SVXYLab/.venv/bin/python",
+        "runs/p4/independent_validation.py"
+      ],
+      "started_at": "2026-09-07T02:17:40.051461+00:00",
+      "exit_code": 0,
+      "log": "runs/p4/review_20260907T021720821796Z/independent_audit.log"
+    },
+    {
+      "name": "real_causality",
+      "command": [
+        "/Users/logan/SVXYLab/.venv/bin/python",
+        "-m",
+        "pytest",
+        "runs/p4/test_real_causality.py",
+        "-q",
+        "--junitxml=/Users/logan/SVXYLab/runs/p4/review_20260907T021720821796Z/real_causality.xml"
+      ],
+      "started_at": "2026-09-07T02:17:41.667421+00:00",
+      "exit_code": 0,
+      "log": "runs/p4/review_20260907T021720821796Z/real_causality.log"
+    }
+  ],
+  "rerun_record": "runs/p4/20260907T021724579078Z/predictions_run.json"
+}

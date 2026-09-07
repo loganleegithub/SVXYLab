@@ -1,0 +1,37 @@
+{
+  "selection_count": 24,
+  "strongest_boundary_count": 24,
+  "strictly_better_count": 24,
+  "tied_alternatives": 0,
+  "smallest_candidate_gap": 3.374052898234771e-05,
+  "m2_q90_interaction_nonzero_months": 0,
+  "scored_dates": 826,
+  "positive_rows": 33,
+  "overlap_intervals": 11,
+  "quarter_coverage": [
+    {
+      "quarter": "2022Q1",
+      "rows": 62,
+      "covered": 46,
+      "coverage": 0.7419354838709677,
+      "positive_rows": 3.0
+    },
+    {
+      "quarter": "2022Q2",
+      "rows": 62,
+      "covered": 47,
+      "coverage": 0.7580645161290323,
+      "positive_rows": 7.0
+    }
+  ],
+  "post_review_diagnostics": true,
+  "calibrator_fitted": false,
+  "trading_threshold_selected": false,
+  "baseline_run": "runs/p4/20260907T013333116356Z/predictions_run.json",
+  "rerun_record": "runs/p4/20260907T021724579078Z/predictions_run.json",
+  "calculation_error_found": false,
+  "model_or_target_changed": false,
+  "loss_comparison_changed": false,
+  "input_verification_identical": true,
+  "original_artifact_hashes_verified": true
+}

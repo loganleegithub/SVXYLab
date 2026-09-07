@@ -1,0 +1,8 @@
+{
+  "command": ".venv/bin/python -m svxylab predictions --review",
+  "cwd": "/Users/logan/SVXYLab",
+  "exit_code": 0,
+  "subcommand_records": "review_context.json",
+  "scope": "P4_ONLY_REVIEW_NO_MODEL_CHANGE",
+  "browser_visual_check": "NOT_PERFORMED_FILE_URL_BLOCKED_BY_BROWSER_POLICY"
+}

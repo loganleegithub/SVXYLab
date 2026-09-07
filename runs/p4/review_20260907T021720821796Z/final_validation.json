@@ -1,0 +1,36 @@
+{
+  "engineering_execution_complete": true,
+  "calculation_error_found": false,
+  "refit_predictions_max_absolute_difference": 0.0,
+  "independent_saved_coefficient_max_error": 1.2878587085651816e-14,
+  "pytest_passed": 87,
+  "separate_real_causality_pytest_passed": 1,
+  "archive": "data/clean/p4_review/review_20260907T021720821796Z/LOCAL_REVIEW_ONLY.zip",
+  "archive_sha256": "71bafa0fc4d5108596c78c99cd89e7825b432d0b8d6463bb8daa11d00b6757e0",
+  "manifest_sha256": "276a776b22578a46d68599aaa526e07ec84c6a12eab0dc8b9ed8f6fff2bc2974",
+  "exported_files": 387,
+  "source_and_export_hashes_match": true,
+  "local_links": [
+    {
+      "root": "/Users/logan/SVXYLab",
+      "resolved_local_links": 44
+    },
+    {
+      "root": "/Users/logan/SVXYLab/data/clean/p4_review/review_20260907T021720821796Z/LOCAL_REVIEW_ONLY",
+      "resolved_local_links": 40
+    }
+  ],
+  "actual_relocated_offline_execution": "offline_verified_payload_validation.json",
+  "actual_tested_archive": "verified_payload_archive.json",
+  "numerical_inputs_outputs_and_runtime_files_byte_identical_to_tested_payload": 323,
+  "offline_comparison_function_ast_identical": true,
+  "post_execution_changes": "仅更正已存在origin的说明、最终路径/摘要与展示；无数值代码或模型变化",
+  "no_locked_outcomes_exported": true,
+  "git_head": "0810f1a5ae371b4a703b8c1d2e098ffb0c13eae6",
+  "git_remotes": [
+    "origin"
+  ],
+  "git_diff_check_exit": 0,
+  "browser_visual_check": "NOT_PERFORMED_FILE_URL_BLOCKED_BY_BROWSER_POLICY",
+  "codex_file_panel_open": "queued"
+}

@@ -1,0 +1,1287 @@
+{
+  "stage": "P4",
+  "generated_at": "2026-09-07T10:10:38.241650+08:00",
+  "result": {
+    "pilot": false,
+    "elapsed_seconds": 11.163241959002335,
+    "requested_decision_first": "2020-01-02",
+    "processed_decision_last": "2023-12-29",
+    "request_sessions": 1006,
+    "forecast_sessions": 831,
+    "no_forecast_sessions": 175,
+    "first_prediction_information_session": "2020-09-10",
+    "first_prediction_decision_session": "2020-09-11",
+    "last_prediction_information_session": "2023-12-28",
+    "model_fits": 120,
+    "monthly_fit_cycles": 40,
+    "selection_cycles": 4,
+    "first_fit": {
+      "fit_id": "2020-09-11_M0",
+      "model": "M0",
+      "fit_session": "2020-09-11",
+      "fit_information_session": "2020-09-10",
+      "selection_id": "",
+      "training_first": "2019-02-01",
+      "training_last": "2020-09-01",
+      "training_rows": 400,
+      "positive_count": 35,
+      "event_clusters": 7,
+      "calendar_window_first": "2019-01-02",
+      "calendar_window_last": "2020-09-10",
+      "simulation_fit_at": "2020-09-11T19:00:00+00:00",
+      "latest_label_matures_at": "2020-09-10T20:00:00+00:00",
+      "latest_label_available_at": "2020-09-11T19:00:00+00:00",
+      "latest_feature_available_at": "2020-09-02T19:00:00+00:00",
+      "training_values_sha256": "4c3f5b49f421fabd4e41f7effdc712049673336011cb6c38248ec28a697f9384",
+      "computed_at_utc": "2026-09-07T02:10:39.139130+00:00",
+      "elapsed_seconds": 0.00025874999118968844,
+      "design_columns": 0,
+      "mu5_parameter": null,
+      "q90_parameter": null,
+      "p10_parameter": null,
+      "p10_fallback": null,
+      "warning_count": 0
+    },
+    "last_fit": {
+      "fit_id": "2023-12-01_M2",
+      "model": "M2",
+      "fit_session": "2023-12-01",
+      "fit_information_session": "2023-11-30",
+      "selection_id": "2023-01-03",
+      "training_first": "2019-02-01",
+      "training_last": "2023-11-21",
+      "training_rows": 1211,
+      "positive_count": 68,
+      "event_clusters": 18,
+      "calendar_window_first": "2019-01-02",
+      "calendar_window_last": "2023-11-30",
+      "simulation_fit_at": "2023-12-01T20:00:00+00:00",
+      "latest_label_matures_at": "2023-11-30T21:00:00+00:00",
+      "latest_label_available_at": "2023-12-01T20:00:00+00:00",
+      "latest_feature_available_at": "2023-11-22T20:00:00+00:00",
+      "training_values_sha256": "28565f1a322a7a4fc540051a2bc5cf44e570eaa119199a3150e359312b2aa308",
+      "computed_at_utc": "2026-09-07T02:10:49.003635+00:00",
+      "elapsed_seconds": 0.09334437502548099,
+      "design_columns": 63,
+      "mu5_parameter": 100.0,
+      "q90_parameter": 0.01,
+      "p10_parameter": 0.1,
+      "p10_fallback": null,
+      "warning_count": 0
+    },
+    "evaluation": {
+      "overall": [
+        {
+          "model": "M0",
+          "period_type": "all",
+          "period": "all",
+          "rows": 826,
+          "events": 33,
+          "first_decision": "2020-09-11",
+          "last_decision": "2023-12-21",
+          "mse": 0.0018819208258712902,
+          "log_loss": 0.17592183200928685,
+          "brier": 0.039301529204775254,
+          "pinball": 0.00758255866782131,
+          "q90_coverage": 0.937046004842615,
+          "mean_probability": 0.07158013193504842,
+          "event_rate": 0.039951573849878935,
+          "mean_q90": 0.07689502231268291,
+          "mse_delta_M0": 0.0,
+          "mse_relative_change_M0": 0.0,
+          "log_loss_delta_M0": 0.0,
+          "log_loss_relative_change_M0": 0.0,
+          "brier_delta_M0": 0.0,
+          "brier_relative_change_M0": 0.0,
+          "pinball_delta_M0": 0.0,
+          "pinball_relative_change_M0": 0.0
+        },
+        {
+          "model": "M1",
+          "period_type": "all",
+          "period": "all",
+          "rows": 826,
+          "events": 33,
+          "first_decision": "2020-09-11",
+          "last_decision": "2023-12-21",
+          "mse": 0.0020210348125360524,
+          "log_loss": 0.1856732470118424,
+          "brier": 0.041104604117366265,
+          "pinball": 0.008033672395914175,
+          "q90_coverage": 0.910411622276029,
+          "mean_probability": 0.05609076184149507,
+          "event_rate": 0.039951573849878935,
+          "mean_q90": 0.07289511009488998,
+          "mse_delta_M0": 0.00013911398666476222,
+          "mse_relative_change_M0": 0.07392127487635158,
+          "log_loss_delta_M0": 0.009751415002555552,
+          "log_loss_relative_change_M0": 0.05543038570699266,
+          "brier_delta_M0": 0.0018030749125910114,
+          "brier_relative_change_M0": 0.045877983607109485,
+          "pinball_delta_M0": 0.000451113728092865,
+          "pinball_relative_change_M0": 0.05949360207488952
+        },
+        {
+          "model": "M2",
+          "period_type": "all",
+          "period": "all",
+          "rows": 826,
+          "events": 33,
+          "first_decision": "2020-09-11",
+          "last_decision": "2023-12-21",
+          "mse": 0.0021300812916225428,
+          "log_loss": 0.20134910873054215,
+          "brier": 0.04146973395933182,
+          "pinball": 0.007608849345748848,
+          "q90_coverage": 0.8789346246973365,
+          "mean_probability": 0.04696963670916327,
+          "event_rate": 0.039951573849878935,
+          "mean_q90": 0.05934152257021264,
+          "mse_delta_M0": 0.00024816046575125254,
+          "mse_relative_change_M0": 0.13186551864441975,
+          "log_loss_delta_M0": 0.025427276721255304,
+          "log_loss_relative_change_M0": 0.1445373574776836,
+          "brier_delta_M0": 0.002168204754556563,
+          "brier_relative_change_M0": 0.05516845777830759,
+          "pinball_delta_M0": 2.6290677927537885e-05,
+          "pinball_relative_change_M0": 0.0034672567769384877
+        }
+      ],
+      "projections": [
+        {
+          "model": "M0",
+          "forecast_rows": 831,
+          "scored_rows": 826,
+          "unscored_rows": 5,
+          "mu_projected": 0,
+          "q_projected": 0,
+          "min_raw_mu5": -0.002693269176028602,
+          "min_raw_q90": 0.0708269648556419,
+          "max_raw_q90": 0.08639928837805676
+        },
+        {
+          "model": "M1",
+          "forecast_rows": 831,
+          "scored_rows": 826,
+          "unscored_rows": 5,
+          "mu_projected": 0,
+          "q_projected": 1,
+          "min_raw_mu5": -0.037644625484912944,
+          "min_raw_q90": -0.0036265350611686953,
+          "max_raw_q90": 0.17262758551119778
+        },
+        {
+          "model": "M2",
+          "forecast_rows": 831,
+          "scored_rows": 826,
+          "unscored_rows": 5,
+          "mu_projected": 0,
+          "q_projected": 0,
+          "min_raw_mu5": -0.04283312458421038,
+          "min_raw_q90": 0.0054047699091089585,
+          "max_raw_q90": 0.11302624199103958
+        }
+      ],
+      "support": [
+        {
+          "model": "M1",
+          "year": "2020",
+          "rows": 78,
+          "outside_rows": 5,
+          "max_outside_features": 2,
+          "max_outside_distance_training_sd": 0.45057635331205487
+        },
+        {
+          "model": "M1",
+          "year": "2021",
+          "rows": 252,
+          "outside_rows": 10,
+          "max_outside_features": 2,
+          "max_outside_distance_training_sd": 1.1024210584588723
+        },
+        {
+          "model": "M1",
+          "year": "2022",
+          "rows": 251,
+          "outside_rows": 3,
+          "max_outside_features": 1,
+          "max_outside_distance_training_sd": 0.16561419431218657
+        },
+        {
+          "model": "M1",
+          "year": "2023",
+          "rows": 250,
+          "outside_rows": 12,
+          "max_outside_features": 1,
+          "max_outside_distance_training_sd": 0.8863600001378987
+        },
+        {
+          "model": "M2",
+          "year": "2020",
+          "rows": 78,
+          "outside_rows": 5,
+          "max_outside_features": 2,
+          "max_outside_distance_training_sd": 0.45057635331205487
+        },
+        {
+          "model": "M2",
+          "year": "2021",
+          "rows": 252,
+          "outside_rows": 10,
+          "max_outside_features": 2,
+          "max_outside_distance_training_sd": 1.1024210584588723
+        },
+        {
+          "model": "M2",
+          "year": "2022",
+          "rows": 251,
+          "outside_rows": 3,
+          "max_outside_features": 1,
+          "max_outside_distance_training_sd": 0.16561419431218657
+        },
+        {
+          "model": "M2",
+          "year": "2023",
+          "rows": 250,
+          "outside_rows": 12,
+          "max_outside_features": 1,
+          "max_outside_distance_training_sd": 0.8863600001378987
+        }
+      ],
+      "model_disagreement": [
+        {
+          "output": "mu5",
+          "rows": 826,
+          "mean_M2_minus_M1": 0.004650988331887939,
+          "mean_absolute_difference": 0.012027065263219757,
+          "max_absolute_difference": 0.05069165221088458
+        },
+        {
+          "output": "q90",
+          "rows": 826,
+          "mean_M2_minus_M1": -0.013553587524677347,
+          "mean_absolute_difference": 0.017937345993574477,
+          "max_absolute_difference": 0.08564305458621876
+        },
+        {
+          "output": "p10",
+          "rows": 826,
+          "mean_M2_minus_M1": -0.009121125132331806,
+          "mean_absolute_difference": 0.028525683903688565,
+          "max_absolute_difference": 0.25679979163091293
+        }
+      ],
+      "calibration": [
+        {
+          "model": "M0",
+          "bin": 1,
+          "lower": 0.0,
+          "upper": 0.2,
+          "rows": 826,
+          "events": 33,
+          "mean_probability": 0.07158013193504842,
+          "event_rate": 0.039951573849878935
+        },
+        {
+          "model": "M0",
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.4,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M0",
+          "bin": 3,
+          "lower": 0.4,
+          "upper": 0.6,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M0",
+          "bin": 4,
+          "lower": 0.6,
+          "upper": 0.8,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M0",
+          "bin": 5,
+          "lower": 0.8,
+          "upper": 1.0,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M1",
+          "bin": 1,
+          "lower": 0.0,
+          "upper": 0.2,
+          "rows": 817,
+          "events": 33,
+          "mean_probability": 0.05333737805219868,
+          "event_rate": 0.04039167686658507
+        },
+        {
+          "model": "M1",
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.4,
+          "rows": 8,
+          "events": 0,
+          "mean_probability": 0.28590193027565236,
+          "event_rate": 0.0
+        },
+        {
+          "model": "M1",
+          "bin": 3,
+          "lower": 0.4,
+          "upper": 0.6,
+          "rows": 1,
+          "events": 0,
+          "mean_probability": 0.4671159702233827,
+          "event_rate": 0.0
+        },
+        {
+          "model": "M1",
+          "bin": 4,
+          "lower": 0.6,
+          "upper": 0.8,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M1",
+          "bin": 5,
+          "lower": 0.8,
+          "upper": 1.0,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M2",
+          "bin": 1,
+          "lower": 0.0,
+          "upper": 0.2,
+          "rows": 811,
+          "events": 33,
+          "mean_probability": 0.04292841778822183,
+          "event_rate": 0.040690505548705305
+        },
+        {
+          "model": "M2",
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.4,
+          "rows": 14,
+          "events": 0,
+          "mean_probability": 0.2541742245887485,
+          "event_rate": 0.0
+        },
+        {
+          "model": "M2",
+          "bin": 3,
+          "lower": 0.4,
+          "upper": 0.6,
+          "rows": 1,
+          "events": 0,
+          "mean_probability": 0.4235339512784688,
+          "event_rate": 0.0
+        },
+        {
+          "model": "M2",
+          "bin": 4,
+          "lower": 0.6,
+          "upper": 0.8,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        },
+        {
+          "model": "M2",
+          "bin": 5,
+          "lower": 0.8,
+          "upper": 1.0,
+          "rows": 0,
+          "events": 0,
+          "mean_probability": null,
+          "event_rate": null
+        }
+      ],
+      "risk_groups": [
+        {
+          "model": "M0",
+          "group": 1,
+          "q90_range": "(0.0698, 0.073]",
+          "rows": 187,
+          "events": 5,
+          "mean_predicted_q90": 0.07171965730601956,
+          "observed_loss_quantile90": 0.05612341676822529,
+          "observed_mean_loss": 0.01865968335919028,
+          "observed_event_rate": 0.026737967914438502,
+          "coverage": 0.9518716577540107
+        },
+        {
+          "model": "M0",
+          "group": 2,
+          "q90_range": "(0.073, 0.0744]",
+          "rows": 162,
+          "events": 12,
+          "mean_predicted_q90": 0.07408172883865158,
+          "observed_loss_quantile90": 0.07351906819540333,
+          "observed_mean_loss": 0.025743732948201675,
+          "observed_event_rate": 0.07407407407407407,
+          "coverage": 0.9012345679012346
+        },
+        {
+          "model": "M0",
+          "group": 3,
+          "q90_range": "(0.0744, 0.0794]",
+          "rows": 147,
+          "events": 0,
+          "mean_predicted_q90": 0.07612442922514787,
+          "observed_loss_quantile90": 0.05589600233856523,
+          "observed_mean_loss": 0.019262177003260203,
+          "observed_event_rate": 0.0,
+          "coverage": 0.9591836734693877
+        },
+        {
+          "model": "M0",
+          "group": 4,
+          "q90_range": "(0.0794, 0.0807]",
+          "rows": 165,
+          "events": 12,
+          "mean_predicted_q90": 0.07988395263009761,
+          "observed_loss_quantile90": 0.07994190902082676,
+          "observed_mean_loss": 0.03029117888810269,
+          "observed_event_rate": 0.07272727272727272,
+          "coverage": 0.896969696969697
+        },
+        {
+          "model": "M0",
+          "group": 5,
+          "q90_range": "(0.0807, 0.0864]",
+          "rows": 165,
+          "events": 4,
+          "mean_predicted_q90": 0.08322017674015776,
+          "observed_loss_quantile90": 0.04587958667512228,
+          "observed_mean_loss": 0.017108659332825113,
+          "observed_event_rate": 0.024242424242424242,
+          "coverage": 0.9757575757575757
+        },
+        {
+          "model": "M1",
+          "group": 1,
+          "q90_range": "(-0.001, 0.0556]",
+          "rows": 166,
+          "events": 6,
+          "mean_predicted_q90": 0.04307492039204455,
+          "observed_loss_quantile90": 0.0657795074809189,
+          "observed_mean_loss": 0.01982870512410514,
+          "observed_event_rate": 0.03614457831325301,
+          "coverage": 0.8012048192771084
+        },
+        {
+          "model": "M1",
+          "group": 2,
+          "q90_range": "(0.0556, 0.0653]",
+          "rows": 165,
+          "events": 5,
+          "mean_predicted_q90": 0.06043868567514717,
+          "observed_loss_quantile90": 0.059622305311789664,
+          "observed_mean_loss": 0.021168565708925485,
+          "observed_event_rate": 0.030303030303030304,
+          "coverage": 0.896969696969697
+        },
+        {
+          "model": "M1",
+          "group": 3,
+          "q90_range": "(0.0653, 0.0758]",
+          "rows": 165,
+          "events": 9,
+          "mean_predicted_q90": 0.0702944817390541,
+          "observed_loss_quantile90": 0.06213932450608495,
+          "observed_mean_loss": 0.023797207852197685,
+          "observed_event_rate": 0.05454545454545454,
+          "coverage": 0.9212121212121213
+        },
+        {
+          "model": "M1",
+          "group": 4,
+          "q90_range": "(0.0758, 0.0891]",
+          "rows": 165,
+          "events": 7,
+          "mean_predicted_q90": 0.08237699328086694,
+          "observed_loss_quantile90": 0.05607604025300231,
+          "observed_mean_loss": 0.019946482361916314,
+          "observed_event_rate": 0.04242424242424243,
+          "coverage": 0.9454545454545454
+        },
+        {
+          "model": "M1",
+          "group": 5,
+          "q90_range": "(0.0891, 0.173]",
+          "rows": 165,
+          "events": 6,
+          "mean_predicted_q90": 0.10847119780977862,
+          "observed_loss_quantile90": 0.07189771921997552,
+          "observed_mean_loss": 0.02612285802307044,
+          "observed_event_rate": 0.03636363636363636,
+          "coverage": 0.9878787878787879
+        },
+        {
+          "model": "M2",
+          "group": 1,
+          "q90_range": "(0.0044, 0.0463]",
+          "rows": 166,
+          "events": 8,
+          "mean_predicted_q90": 0.03499480899809713,
+          "observed_loss_quantile90": 0.046175113757624245,
+          "observed_mean_loss": 0.01727706021077763,
+          "observed_event_rate": 0.04819277108433735,
+          "coverage": 0.8313253012048193
+        },
+        {
+          "model": "M2",
+          "group": 2,
+          "q90_range": "(0.0463, 0.0559]",
+          "rows": 165,
+          "events": 8,
+          "mean_predicted_q90": 0.05160834735120808,
+          "observed_loss_quantile90": 0.0646160347351821,
+          "observed_mean_loss": 0.020235197329828772,
+          "observed_event_rate": 0.048484848484848485,
+          "coverage": 0.8606060606060606
+        },
+        {
+          "model": "M2",
+          "group": 3,
+          "q90_range": "(0.0559, 0.0634]",
+          "rows": 165,
+          "events": 5,
+          "mean_predicted_q90": 0.059710129737922925,
+          "observed_loss_quantile90": 0.07160455751068286,
+          "observed_mean_loss": 0.024918082834124985,
+          "observed_event_rate": 0.030303030303030304,
+          "coverage": 0.8181818181818182
+        },
+        {
+          "model": "M2",
+          "group": 4,
+          "q90_range": "(0.0634, 0.0716]",
+          "rows": 165,
+          "events": 5,
+          "mean_predicted_q90": 0.06682163756035739,
+          "observed_loss_quantile90": 0.05490565052614036,
+          "observed_mean_loss": 0.022204694433089322,
+          "observed_event_rate": 0.030303030303030304,
+          "coverage": 0.9454545454545454
+        },
+        {
+          "model": "M2",
+          "group": 5,
+          "q90_range": "(0.0716, 0.113]",
+          "rows": 165,
+          "events": 7,
+          "mean_predicted_q90": 0.08372024504330867,
+          "observed_loss_quantile90": 0.06634187500045743,
+          "observed_mean_loss": 0.02624424877702059,
+          "observed_event_rate": 0.04242424242424243,
+          "coverage": 0.9393939393939394
+        }
+      ]
+    },
+    "fitting_warning_count": 0,
+    "outer_single_class_fallbacks": 0,
+    "inner_single_class_fallbacks": 0,
+    "output_dir": "data/clean/p4/20260907T021038241650Z"
+  },
+  "input_verification": {
+    "p3_accepted_run": "runs/p3/20260907T005629664263Z/features_run.json",
+    "p2_accepted_run": "runs/p2/20260907T000150426421Z/baselines_run.json",
+    "p3_artifact_sha256": {
+      "data/clean/p3/20260907T005629664263Z/core_features.csv": "9613c80f2b0dbd64b3d412b897c124b4431a2c4fbbef1959f951f3c8c1111d0e",
+      "data/clean/p3/20260907T005629664263Z/correlation.png": "17426a65bbca50e4e6c753475fa0fda4cd57036c5e6bb90acb15a885340dbb4f",
+      "data/clean/p3/20260907T005629664263Z/correlation.svg": "2b64c73c37f21cfc9bc6d2ed905093ea764bef5e58bfc0279283927c9dbccc1c",
+      "data/clean/p3/20260907T005629664263Z/correlation_core_2019_2023.csv": "1cfe81407d746021d03e112c3e0458349fc760daa967a14757aa769740c09677",
+      "data/clean/p3/20260907T005629664263Z/correlation_pairs_core_2019_2023.csv": "cff45a23c02e7be61527eefb76df6da882f6d75cf5dba8f3afa18b862b486f3a",
+      "data/clean/p3/20260907T005629664263Z/correlation_pairs_with_skew_2019_2023.csv": "74788b210e91eeb72832a8df46cd1b633381ee1bbc1c12028a84b5c4da7e0727",
+      "data/clean/p3/20260907T005629664263Z/correlation_with_skew_2019_2023.csv": "16bd925f10b6bb839b18d6703b0762231204bbba2a41e06350a3365d75883e81",
+      "data/clean/p3/20260907T005629664263Z/coverage.csv": "04011e14527f0c5381147dabc08ef1255f748eea16e68e6c6c164063338eddb0",
+      "data/clean/p3/20260907T005629664263Z/extension_features.csv": "71ced819b7196577065afde036eefab8220e46bd10263f53d843576b02b81425",
+      "data/clean/p3/20260907T005629664263Z/feature_availability.csv": "6d24a035e028804cadd0c4de4d842a9fa288eb59e4a68cb2143e29c6c20e6c06",
+      "data/clean/p3/20260907T005629664263Z/feature_inputs.csv": "600f19b02a5da6f1f5b9c004e5f94898ccf7fca1c45d89a2af5a94af85d1ddae",
+      "data/clean/p3/20260907T005629664263Z/feature_metadata.json": "ae83c1200031ee58dc52eb9c44cfbdd5568557dcdbe4bebea8cdd28d5486dcbc",
+      "data/clean/p3/20260907T005629664263Z/feature_observations.csv": "bd3c72e2135c03625e4f6d5137af3dff8f77b8cf595186b20c8e82b46328521f",
+      "data/clean/p3/20260907T005629664263Z/missing_reasons.csv": "f8ed1654a40128ad477bb53721bcef199995a558edc24fe03a63c93af3f46db3",
+      "data/clean/p3/20260907T005629664263Z/real_roll_check.json": "026fb5db895f28eba1048fa7b19598b6eb421c83ac4bedecbd329a5a48999afc",
+      "data/clean/p3/20260907T005629664263Z/state_cards.json": "04307914ed9ce2c7596bdce17a29192b9bd08aa4aae4d0191ac7eeff8a241ffe"
+    },
+    "p2_artifact_sha256": {
+      "data/clean/p2/20260907T000150426421Z/SPY_returns.csv": "8ffa1e1a2a853fda646d440557aca9b17ad56dc43c7483686f418696eaf6fdf0",
+      "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+      "data/clean/p2/20260907T000150426421Z/baselines.png": "a29863d28b4877e1897665f68d0d973bb32e4880e39f7e313863ed4805cfbdce",
+      "data/clean/p2/20260907T000150426421Z/baselines.svg": "57a1b88275a3079f3675e682ef13534bfaebb82bc5d77005cdf4483ff8089c9e",
+      "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+      "data/clean/p2/20260907T000150426421Z/labels.csv": "6af6fa44000e648f533dae6cb525bfd30a7fee3aa51a6698c5ac476937e09127",
+      "data/clean/p2/20260907T000150426421Z/ledger_cash.csv": "e4ca4a31d04758d4c08861eeb5d32d36f5cbbbb5ea2e946e3c65cbe95bd7287f",
+      "data/clean/p2/20260907T000150426421Z/ledger_curve.csv": "a19ad28dd59fe8fe0fa6f4095c9507c9cea7cd3b8f3f34d1d7989591060b0c01",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_100.csv": "7c501db3d4ed639aa8413fc61ac3b5e4fe0b8796bd4cb197be0075b9f757306f",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_25.csv": "41068514333e88edcf89f8cde5ae4a8f77ba754c384dcbdc3a7695114b1d6d67",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_50.csv": "da6dadc9990e2f34708dfbfffb91f9f6bc8cc0f2c7d18bd36aeb376ca2ea9b01",
+      "data/clean/p2/20260907T000150426421Z/ledger_fixed_75.csv": "017811dd5118634b54dbc60a3f51ad2556b42d11e4bdf74d051a9973c9456a26",
+      "data/clean/p2/20260907T000150426421Z/metrics_2019_2023.csv": "fb197e89b7acfeae6c808481db513a086366a27f0f0ff89d8d0e46cec427b8cd"
+    },
+    "p1_clean_sha256": {
+      "data/clean/ETF_source_comparison.csv": "7db582d7ff844519006c7197d286f4654b3fc318ef873457cd2d23d2a0296a6c",
+      "data/clean/SKEW_daily.csv": "d204fa3e3be3980843eb1672a520a46876078d8c62cae930f194d6ef8d8c91be",
+      "data/clean/SPY_corporate_actions.csv": "476c42ec682ba9f75812d7250083e1da9c5287da46745581c4d42dbcbc71b676",
+      "data/clean/SPY_daily.csv": "6cfb6a68c1e93f31fa4281e09f031219e7b28672c6b3774d734f81049d400376",
+      "data/clean/SVXY_corporate_actions.csv": "2732e6c03641da89fa1efe1cfe192d2f8baefad6827de2297043d2fa2e5799ea",
+      "data/clean/SVXY_daily.csv": "4ab4692e58a4121df10afd7d00b606e4a452e4055097623cc7f5d64fe079dd43",
+      "data/clean/VIX3M_daily.csv": "c62f68d290fb9f5df9d83a60190ada149c1bb18bac31c29269d56de93cefbc2a",
+      "data/clean/VIX9D_daily.csv": "1678f7b6eb8b0f4123dea6adc9fc91aa37b706fa1c3b62ca7e1c9bcd80d20667",
+      "data/clean/VIX_daily.csv": "d5baeb7173c9c190acd8adaa39b227fcb27097964c70c76febd1786c2421b166",
+      "data/clean/VVIX_daily.csv": "6b2028dfc0737f9b60f38b0b9170a4bab30228c1cc17da17f5e0c674aaf2861e",
+      "data/clean/VX_contract_calendar.csv": "cf9772d8dab041a53640727e09502a698155a2f956a7c88d3d7058b538be1d3d",
+      "data/clean/VX_contract_daily.csv": "8c1959bf1433645ce06723f149a8e2990fd86830d8b91c1e21db06632da28329",
+      "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+      "data/clean/equity_sessions.csv": "ffd5ab0cdf15f3348e141c523464a9d807909a3357ad15be7be58cf02f11ce6d"
+    },
+    "raw_records_verified": 141,
+    "raw_manifest_sha256": "2314fb8bfdd9defc99d5ad8e2db633ee677a084691a483aa51d11365c65b70ec",
+    "development_information_first": "2019-01-02",
+    "development_information_last": "2023-12-29",
+    "development_information_rows": 1258,
+    "locked_start": "2024-01-01",
+    "label_values_from_locked_period_used": false
+  },
+  "invocation": ".venv/bin/python -m svxylab predictions",
+  "engineering_complete": true,
+  "pilot_complete": null,
+  "tests_passed": 83,
+  "tests_failed": 0,
+  "test_cases": [
+    {
+      "name": "test_synthetic_daily_minus_half_compounding",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels0]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels1]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_invalid_index_is_rejected[levels2]",
+      "result": "通过"
+    },
+    {
+      "name": "test_expiration_day_rolls_and_does_not_relabel_missing_front",
+      "result": "通过"
+    },
+    {
+      "name": "test_catalog_uses_only_monthly_and_rejects_gap",
+      "result": "通过"
+    },
+    {
+      "name": "test_vx_uses_settlement_and_checks_identity",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,12\\n01/02/2019,13\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,nan\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_reject_duplicate_or_invalid_index[01/02/2019,-1\\n]",
+      "result": "通过"
+    },
+    {
+      "name": "test_coverage_does_not_count_off_calendar_values",
+      "result": "通过"
+    },
+    {
+      "name": "test_local_import_checks_hash_and_preserves_original",
+      "result": "通过"
+    },
+    {
+      "name": "test_empty_content_type_http_failure_is_preserved",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_preserves_provider_values_and_restores_then_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_absent_dividend_request_is_not_zero_dividends",
+      "result": "通过"
+    },
+    {
+      "name": "test_dividend_is_preserved_in_then_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_rejects_missing_bar_without_filling",
+      "result": "通过"
+    },
+    {
+      "name": "test_yahoo_rejects_wrong_symbol",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A04]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[A05]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[B03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[C03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[D03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[E01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F03]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[F04]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G01]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_every_dictionary_formula[G02]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_warmup_distinguishes_returns_from_levels",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_a04_roll_uses_current_contract_at_both_endpoints",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_skew_gap_does_not_shrink_core_or_shift_calendar",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_missing_core_window_never_skips_or_fills",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_zero_semivariance_denominator_is_missing",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_history_boundary_blocks_earlier_warmup",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_future_mutation_and_appending_leave_past_features_unchanged",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_enforces_next_close_minus_hour",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-03-08-15]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_feature_clock_dst_and_half_day[2024-11-27-12]",
+      "result": "通过"
+    },
+    {
+      "name": "test_split_creates_shares_not_return",
+      "result": "通过"
+    },
+    {
+      "name": "test_dividend_is_not_lost_or_double_counted",
+      "result": "通过"
+    },
+    {
+      "name": "test_split_and_dividend_use_same_current_share_units",
+      "result": "通过"
+    },
+    {
+      "name": "test_old_position_owns_execution_day_profit",
+      "result": "通过"
+    },
+    {
+      "name": "test_exact_buy_cost_and_post_fee_weight",
+      "result": "通过"
+    },
+    {
+      "name": "test_exact_sell_cost",
+      "result": "通过"
+    },
+    {
+      "name": "test_fixed_target_drift_still_has_real_turnover",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_signal_holds_shares_and_keeps_losses",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_front_signal_is_not_a_cash_exit",
+      "result": "通过"
+    },
+    {
+      "name": "test_future_prices_and_signals_do_not_change_prior_account",
+      "result": "通过"
+    },
+    {
+      "name": "test_label_uses_next_close_through_sixth_close_and_entry_relative_loss",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_future_path_does_not_become_zero_label",
+      "result": "通过"
+    },
+    {
+      "name": "test_label_maturity_and_assumed_availability_are_separate",
+      "result": "通过"
+    },
+    {
+      "name": "test_future_changes_do_not_change_already_matured_labels",
+      "result": "通过"
+    },
+    {
+      "name": "test_real_early_close_and_dst_clock",
+      "result": "通过"
+    },
+    {
+      "name": "test_continuous_account_has_no_five_day_overlapping_leverage",
+      "result": "通过"
+    },
+    {
+      "name": "test_ledger_reconciles_cash_shares_cost_and_equity",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[nan]",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[0]",
+      "result": "通过"
+    },
+    {
+      "name": "test_missing_or_invalid_held_price_is_rejected[-1]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_maturity_cutoff_equality_and_future_labels",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_calendar_window_not_last_n_complete_rows",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_inner_blocks_purge_and_preserve_calendar_gaps",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_outer_and_inner_requirements_are_both_required",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_transform_fits_only_training_and_preserves_interactions[M1-19]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_transform_fits_only_training_and_preserves_interactions[M2-63]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_spline_extrapolation_is_linear_and_reported",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_m0_uses_same_mean_linear_quantile_and_jeffreys",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_single_class_logistic_fallback_is_marked[0]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_single_class_logistic_fallback_is_marked[1]",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_projection_and_inner_scoring_use_same_values",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_grid_ties_prefer_stronger_shrinkage",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_locked_outcome_is_never_parsed_or_exposed",
+      "result": "通过"
+    },
+    {
+      "name": "test_synthetic_future_perturbation_leaves_prior_rolling_predictions_unchanged",
+      "result": "通过"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check",
+      "started_at": "2026-09-07T02:10:50.299898+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.221,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p4/20260907T021038241650Z/pytest.xml",
+      "started_at": "2026-09-07T02:10:50.520814+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 3.299,
+      "output": "........................................................................ [ 86%]\n...........                                                              [100%]\n- generated xml file: /Users/logan/SVXYLab/runs/p4/20260907T021038241650Z/pytest.xml -\n83 passed in 3.02s\n"
+    },
+    {
+      "command": "git diff --check",
+      "started_at": "2026-09-07T02:10:53.820185+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.014,
+      "output": ""
+    },
+    {
+      "command": "git rev-parse HEAD",
+      "started_at": "2026-09-07T02:10:53.833888+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "output": "0810f1a5ae371b4a703b8c1d2e098ffb0c13eae6\n"
+    },
+    {
+      "command": "git remote",
+      "started_at": "2026-09-07T02:10:53.846586+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.012,
+      "output": "origin\n"
+    }
+  ],
+  "source_sha256": {
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "f1be0604e7989bc58d14d59c1834e825a4558ab8a723863d39d9f6c7f1b48038",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/baselines.py": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+    "src/svxylab/baselines_report.py": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+    "src/svxylab/data.py": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+    "src/svxylab/data_report.py": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+    "src/svxylab/downloads.py": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+    "src/svxylab/environment.py": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+    "src/svxylab/etf.py": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+    "src/svxylab/features.py": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+    "src/svxylab/features_report.py": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/models.py": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+    "src/svxylab/prediction_data.py": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+    "src/svxylab/predictions.py": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+    "src/svxylab/predictions_report.py": "8427220ab43ee9ff7de908b69a5c3decabd96657381a0c0dd5ba3b7e6f2b3599",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc",
+    "tests/conftest.py": "ca9974048012d225cdc06df6b6168a6a452659b598c82a9f96e6b9b805af4bc1",
+    "tests/test_arithmetic.py": "ecea3b3ce7e49dffc9020c8d1f5ee37a4c654c4f7a928b077a41ccf84ff56b09",
+    "tests/test_data.py": "3c9dd0824d40e4dd98c2376e3710d249dbc5fa9b15122acf7c0f449ee1ce35e6",
+    "tests/test_features.py": "b19994a6aa0f8adb8b0b9056ca6a25c5a0a279912a2254b6ff53ee8081bfc89d",
+    "tests/test_ledger.py": "decd3425dc640706b563fd29880a8a66952c9cc4b3960d8f18f070bef16918c7",
+    "tests/test_models.py": "9591ed43c33098a81002424b437100149c5ab673c04547e9a6bda50f18dd7858",
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+    "RESEARCH_SPEC.md": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+    "pyproject.toml": "af5735e4c43eabb2d4876ca63e1f68df7bae28625af03952baa7580001a61823",
+    "requirements-lock.txt": "0715740e1b70e97b64e47b4af64043e5fcbfcc48f0f75e8ec536f455cf483701",
+    "runs/p4/experiment_record.json": "9993a47a185628e0859fa35385262be2bbfa3502f23361615c63573959446634",
+    "runs/p4/independent_validation.py": "514c00d1bd8b9b35a8bb2d1b1d714e4b96d89a00c3834e649911d7b69996589d",
+    "runs/p4/test_real_causality.py": "34bac4fc8a367fc25cf47719bc94bd7f8a2f3400f43a431552532d00e3a14c0a"
+  },
+  "artifact_sha256": {
+    "data/clean/p4/20260907T021038241650Z/calibration.csv": "36edacb38862eeb109940ab0dec49b4a739af0fe776fc1b186b244352eef0186",
+    "data/clean/p4/20260907T021038241650Z/calibration.png": "919ee38756270f3e64bd6b6f974c87e3d53c003525cebc6fd0eed5ce335fb58f",
+    "data/clean/p4/20260907T021038241650Z/cv_scores.csv": "d75d51ef167021fdae7df0eda6c0075027a93f661f083a96190966c6467194c6",
+    "data/clean/p4/20260907T021038241650Z/cv_totals.csv": "3b0fab04628bbef304dcc752cd8d1c3f54104b1ebbf708bb8fdb0282ac16885a",
+    "data/clean/p4/20260907T021038241650Z/daily_losses.csv": "804d473eb5cf6a02cd595f2dd36b88cfd09c5d104814292271da37d7364912e2",
+    "data/clean/p4/20260907T021038241650Z/fits.csv": "16a780defa052247c6036c0540ad21d91eb248a4f2fa493e549df826dde2e720",
+    "data/clean/p4/20260907T021038241650Z/inner_rows.csv": "7d8ff030961450e85bb2e396fc9bb7035743ef85a4fc0b60913f99435796363e",
+    "data/clean/p4/20260907T021038241650Z/interaction_conditions.csv": "0555187700fff58e22cbc6e453f459b41514af8a2c15b410f8e9d7774d7d6c37",
+    "data/clean/p4/20260907T021038241650Z/local_effects.csv": "0f380b09b0d40d55f1132c288bd331613b40fe987aa6e01e1577cef3f0105644",
+    "data/clean/p4/20260907T021038241650Z/metrics.csv": "00ef3b718f78c997ae50a68f4cca95223e6bd8d42ff56c77d19af551e245e915",
+    "data/clean/p4/20260907T021038241650Z/model_disagreement.csv": "7794ee8a40f46c7cbc17b362602d57962e65423fd18a5dcde0305d1e0711cf93",
+    "data/clean/p4/20260907T021038241650Z/models/2020-09-11_M0.json": "6629a886cdfd12fcf3a3faf6aa709dee5bfa50e843a7ed5e578e3551649e788f",
+    "data/clean/p4/20260907T021038241650Z/models/2020-09-11_M1.json": "4eca2e827c82e91800cc7935bb95aaf81e597261eebd322a17621d68e0460563",
+    "data/clean/p4/20260907T021038241650Z/models/2020-09-11_M2.json": "e9dc2699f2e358d0c6b1454a7c69eecf7d8634531f36c15bef5b368a1863663b",
+    "data/clean/p4/20260907T021038241650Z/models/2020-10-01_M0.json": "9a5d631535efe91ce1e55e03c509f8f2711d9fdbcc468fef332ce621db1aba5b",
+    "data/clean/p4/20260907T021038241650Z/models/2020-10-01_M1.json": "34a847c7913364ae813bc87f28d4306f2c069e7474fd65fffada7cd7d9dd498e",
+    "data/clean/p4/20260907T021038241650Z/models/2020-10-01_M2.json": "2496df4282143aa15765d5eb5bbcc8ba6be835d80e10240136721313437b9576",
+    "data/clean/p4/20260907T021038241650Z/models/2020-11-02_M0.json": "941684fb25934369d2bd14db66eddd62786ed1fed6c3b80ecff8e9e0161e3e00",
+    "data/clean/p4/20260907T021038241650Z/models/2020-11-02_M1.json": "dac26df3726570302afabbcc310ae37996de1b50450463dceeadea2b02cc7304",
+    "data/clean/p4/20260907T021038241650Z/models/2020-11-02_M2.json": "c638724bbbaddadf879923e19f3748f4a24def0b7169aeff8c187ac3bf207fce",
+    "data/clean/p4/20260907T021038241650Z/models/2020-12-01_M0.json": "10e5240cf4b9281e11cfeb5241d33659263bf5ee048d391d522af723f36ec2a4",
+    "data/clean/p4/20260907T021038241650Z/models/2020-12-01_M1.json": "20d1f2b15e0eb7edebf27d4d251ec9d850ddc47644f605fe739dd862f65cefee",
+    "data/clean/p4/20260907T021038241650Z/models/2020-12-01_M2.json": "b21889be2d2520050ee5beccbb273e169cd79cd4efba0b3c8714c6820db6b431",
+    "data/clean/p4/20260907T021038241650Z/models/2021-01-04_M0.json": "8bdd4ff4fd18bff800b6f736d8cc80bfccdaff2833b9c48c593a2e7afccc17ea",
+    "data/clean/p4/20260907T021038241650Z/models/2021-01-04_M1.json": "3258493ff33fffdf49c9815e048e02916ff1b8217b339b45858f2331ee46fb32",
+    "data/clean/p4/20260907T021038241650Z/models/2021-01-04_M2.json": "f4cb5f6ce2bc3defcad1613b8cd720941e08bb8ac5f34089daa28c92abf3a959",
+    "data/clean/p4/20260907T021038241650Z/models/2021-02-01_M0.json": "2487d03002454b80660d4272ab5f8354f4b258e8a10838c3305f9aabec448700",
+    "data/clean/p4/20260907T021038241650Z/models/2021-02-01_M1.json": "a1a0fb9c7c444523c6cdbc2dfb0aaa1484c342fbd12ea551ff793a6ee220e616",
+    "data/clean/p4/20260907T021038241650Z/models/2021-02-01_M2.json": "0bd50506b63f9b71689bf604ea3d1b2f75cdbe989022a0f6dccea99e1c3f2468",
+    "data/clean/p4/20260907T021038241650Z/models/2021-03-01_M0.json": "5d145ba826797a91f328312a4273c1513379ca7e15b38d5b610436d69896a248",
+    "data/clean/p4/20260907T021038241650Z/models/2021-03-01_M1.json": "1aa6af89d02992d11a5e6a0f5107b9e5c170a263d406d18ea531971734ba2cdc",
+    "data/clean/p4/20260907T021038241650Z/models/2021-03-01_M2.json": "1aee6a103564873553a919264bf1670aa63862c66f3324ef9b23e6e0a2083c5c",
+    "data/clean/p4/20260907T021038241650Z/models/2021-04-01_M0.json": "e332230774c8025bc1fa2a7766f7e1064be7c864a7fe7ff8a03c5e2e8a75bfda",
+    "data/clean/p4/20260907T021038241650Z/models/2021-04-01_M1.json": "c642c34cdbd51d932456427d10f0c2159f2be891853cc6f7cf9e1485ca5d374c",
+    "data/clean/p4/20260907T021038241650Z/models/2021-04-01_M2.json": "cb7f4fdd0345ab933b3d90dfdb4d4e21091125b3e844a4b7c5f9864aab01c812",
+    "data/clean/p4/20260907T021038241650Z/models/2021-05-03_M0.json": "b297ed859536a044d55f222b7682dc4278936cb2f8fcd56bdaf5c61313691462",
+    "data/clean/p4/20260907T021038241650Z/models/2021-05-03_M1.json": "62bb5556eae57b67e56bca83bd9a6ee6b67e57a409ccb56686f5a5d2cc0e75e4",
+    "data/clean/p4/20260907T021038241650Z/models/2021-05-03_M2.json": "5e568c70a4dbb2f671388e7a47ff1fa1ec736dc2d9220a474a4ca8f9b9be41f7",
+    "data/clean/p4/20260907T021038241650Z/models/2021-06-01_M0.json": "0d23ce035448d026b4ce3b060694b666f06dcb82ac3f4e6ca23a61fd7af1b63d",
+    "data/clean/p4/20260907T021038241650Z/models/2021-06-01_M1.json": "efff50d3b031074924a01611101bcbc39806c34deb1b0bb2ae22245808661cc4",
+    "data/clean/p4/20260907T021038241650Z/models/2021-06-01_M2.json": "2265428a9900dc15efeae5d3a8d975a553c0557bf419a344cf179f95b3dd291d",
+    "data/clean/p4/20260907T021038241650Z/models/2021-07-01_M0.json": "077bd5e496a3e15fbfff0c3881c825bdb77b10680c1f449e6aad5c2a9bfe964b",
+    "data/clean/p4/20260907T021038241650Z/models/2021-07-01_M1.json": "000ba9438064eb4b35de2c8939cd0d4e413b8bd09188c6690d6e3ed45fa7754c",
+    "data/clean/p4/20260907T021038241650Z/models/2021-07-01_M2.json": "8b7c647f436223065c01e79995d8fe64b0c9ab99e6fd066a564a7d041d0f140a",
+    "data/clean/p4/20260907T021038241650Z/models/2021-08-02_M0.json": "899617e717d0c47c5e90780df507baefcce16b0f88eb128df81009d4d7e751d1",
+    "data/clean/p4/20260907T021038241650Z/models/2021-08-02_M1.json": "c21e03b41ffca449fafdb8813f93b4ed3ef8fa99773556c27df3d1beb89530c0",
+    "data/clean/p4/20260907T021038241650Z/models/2021-08-02_M2.json": "553f48b920f049939926c9bee3957c8623ddd7a0653a1863713011b976b46762",
+    "data/clean/p4/20260907T021038241650Z/models/2021-09-01_M0.json": "03bce66d8e4d2be3f6061a5af29bb71791ca78ae1746517d7edda0b69e11ba6f",
+    "data/clean/p4/20260907T021038241650Z/models/2021-09-01_M1.json": "8c46a61dc24d35eae54c1146cce57a611d988bb66f393b51353a9cf0d4f7905b",
+    "data/clean/p4/20260907T021038241650Z/models/2021-09-01_M2.json": "627aca32eba006f6fbbb5c388a122ce1064462b544f9f79bb6c5ca54e43f5784",
+    "data/clean/p4/20260907T021038241650Z/models/2021-10-01_M0.json": "862dba625e3811fc56789ac80bcf2e561f3494042503556e635d6f12a431a098",
+    "data/clean/p4/20260907T021038241650Z/models/2021-10-01_M1.json": "ae27011fef4efc325389f8440aa49c7ac72b4bb496014ea88c2bd2f5eaf59f3d",
+    "data/clean/p4/20260907T021038241650Z/models/2021-10-01_M2.json": "5bf12104aefa642b7ba20c66d9beaafec8454893b7c9af22b2f08cad69e07f9d",
+    "data/clean/p4/20260907T021038241650Z/models/2021-11-01_M0.json": "51ec7d3c63cc4bfdad2572dc7f7c96f9ca8b4f3d5bb6937055af7e0b38ea00f9",
+    "data/clean/p4/20260907T021038241650Z/models/2021-11-01_M1.json": "ea14fb123f38d0d007a3c313d5792a97b30b9bf80f5ed3fa658c5b94557391fb",
+    "data/clean/p4/20260907T021038241650Z/models/2021-11-01_M2.json": "5ff99719340a51034ca406dbd09cf41377d5f04c6447c8899c7e28b26c44649a",
+    "data/clean/p4/20260907T021038241650Z/models/2021-12-01_M0.json": "e5331351b64069f4e55318c70d0657ce70ef6bc08f14b5524298057922e95cb7",
+    "data/clean/p4/20260907T021038241650Z/models/2021-12-01_M1.json": "fb98c55517cafde776d0574bed4704b4441c8cb1bb38f5592ee521d54cdb672a",
+    "data/clean/p4/20260907T021038241650Z/models/2021-12-01_M2.json": "7e856ab7df10b131909da2e2c2eade7bce66e4a7119894722d058e472be38340",
+    "data/clean/p4/20260907T021038241650Z/models/2022-01-03_M0.json": "6cb89e92251054915ad3f2328e35f24ff22529919c8b1935c43faa91329edc1e",
+    "data/clean/p4/20260907T021038241650Z/models/2022-01-03_M1.json": "9fa757a00b1329688f16998ee7d803cfddaf8ee6beeed0843b1453568c1e0abd",
+    "data/clean/p4/20260907T021038241650Z/models/2022-01-03_M2.json": "c553c4eb381ae0cc2bad7d6f9996e49c855cc14814c3fe8e129fb8749382a246",
+    "data/clean/p4/20260907T021038241650Z/models/2022-02-01_M0.json": "443e44e07fdc07397182a4442dd16bd20a875cfa2d0535fec653b1b7cc798caa",
+    "data/clean/p4/20260907T021038241650Z/models/2022-02-01_M1.json": "5c35cd2925114048e923bba2c144375e795efd55d73ff86f4cbd07a3fe840eba",
+    "data/clean/p4/20260907T021038241650Z/models/2022-02-01_M2.json": "563d8e12ff3a5f14cda48e0ddf8240d886df242b6a47dcea4bb707eba2a0f52d",
+    "data/clean/p4/20260907T021038241650Z/models/2022-03-01_M0.json": "5673942de9e793a092f853fb2713f9e8d25e146dc26f6d747dcc77acfa3e607d",
+    "data/clean/p4/20260907T021038241650Z/models/2022-03-01_M1.json": "4130b46ed0222e7c0ec5971a5ab6b23095139f6d8f64c61658e03b86b25224df",
+    "data/clean/p4/20260907T021038241650Z/models/2022-03-01_M2.json": "5919e11819ce3042981c91d0d1a9ade699e280583b26a675942836c42b67bea5",
+    "data/clean/p4/20260907T021038241650Z/models/2022-04-01_M0.json": "6b10b36212a1554dc93f886d87a0a252eb30aac68046a764b5d8c209ed03d81f",
+    "data/clean/p4/20260907T021038241650Z/models/2022-04-01_M1.json": "1e02ba80c592c01cff912dde9177be612bf4b1e1e597d675a5007b7be883ca3f",
+    "data/clean/p4/20260907T021038241650Z/models/2022-04-01_M2.json": "f972e42f50bbff481d89c5e94acc2b65c6b59195835b24f6fb7967549b6a16ea",
+    "data/clean/p4/20260907T021038241650Z/models/2022-05-02_M0.json": "50ad5aef82986c2a5a7ae6b8075ea12d2137df67293048b8d0e7816a3b7bd980",
+    "data/clean/p4/20260907T021038241650Z/models/2022-05-02_M1.json": "471e2f56131956495774805e0a98bec9917927d27f71e2d66533dc2e3a63456e",
+    "data/clean/p4/20260907T021038241650Z/models/2022-05-02_M2.json": "f014870220bf0725710c13d27f6f8e278af3380ecfe42260fb5e92d5cc3b1436",
+    "data/clean/p4/20260907T021038241650Z/models/2022-06-01_M0.json": "87831ea34619a6d181ff09da2f9020f5c6c88450f06b33ddfe8ce2b2809b3d49",
+    "data/clean/p4/20260907T021038241650Z/models/2022-06-01_M1.json": "8e1272516a54877b7d0da64ba7f492ebcb08a3ee3acbb18dc87a09420cbf9648",
+    "data/clean/p4/20260907T021038241650Z/models/2022-06-01_M2.json": "0a0a3a6d8fb6f4b0b6414bcd7ecf151fe498463159a869b648a51e09ee26e85d",
+    "data/clean/p4/20260907T021038241650Z/models/2022-07-01_M0.json": "5f5710c6fffa06ecdbb6f6e201a2df543755c936b84ef6d07d1a273b90d931eb",
+    "data/clean/p4/20260907T021038241650Z/models/2022-07-01_M1.json": "12f35b77b49edee91524420a94f93084bc97e62763eeae0f074799c34312de3b",
+    "data/clean/p4/20260907T021038241650Z/models/2022-07-01_M2.json": "0fba61826943aacc1adcc8fe29d71dee7009235d3c8c5745cc54207b885ccf30",
+    "data/clean/p4/20260907T021038241650Z/models/2022-08-01_M0.json": "5fa8a50825e0ce6058b6bf29391fe5cf027ee420ccfece29d29c5b8199ee848e",
+    "data/clean/p4/20260907T021038241650Z/models/2022-08-01_M1.json": "75ad4c59a908792d011739be5f76641219cdcb8a7e9f317b4de891c3fba604ee",
+    "data/clean/p4/20260907T021038241650Z/models/2022-08-01_M2.json": "791e5adef9442d3488bc2d6db17e2bb320cd6b362ae11c3dc3c50aef4cf01f11",
+    "data/clean/p4/20260907T021038241650Z/models/2022-09-01_M0.json": "c1662018fd41c587a579b22164db7d7a0232376ceaa08c5718526b26db9bfcb1",
+    "data/clean/p4/20260907T021038241650Z/models/2022-09-01_M1.json": "3cba24ef60db686c5c807c74f45bfe0ed97cf1c4952930cd4b7f87ee689b7d53",
+    "data/clean/p4/20260907T021038241650Z/models/2022-09-01_M2.json": "5c3621abbaa5a1e3a1b59bfc9249f9c25961774624bbcb604ec2eaac272af0ee",
+    "data/clean/p4/20260907T021038241650Z/models/2022-10-03_M0.json": "786505eebea4e3f12c5e6cb131259805a2e153ccf316880e63173cb066ff00e1",
+    "data/clean/p4/20260907T021038241650Z/models/2022-10-03_M1.json": "548bc32ada2d2c996c155766fe574e46bffc8e2307365e8c25ba0a2f31b64c26",
+    "data/clean/p4/20260907T021038241650Z/models/2022-10-03_M2.json": "f1cfa5d3b8d42ccb8c68ee88f488eb4cacd89dc42b080e1e547379c430824aed",
+    "data/clean/p4/20260907T021038241650Z/models/2022-11-01_M0.json": "6655dde05e476851d1551872ebb5a7ca8e3a439816c713fa536b2217fe7b8a4a",
+    "data/clean/p4/20260907T021038241650Z/models/2022-11-01_M1.json": "29d40ca1da38f25c5e466f1838c1fa0c3de0a7160650659fa7efd8645e9723a0",
+    "data/clean/p4/20260907T021038241650Z/models/2022-11-01_M2.json": "d458937642b1f232106476f52827279a88cb7a7520c35a62edcae0a41f3bbd4a",
+    "data/clean/p4/20260907T021038241650Z/models/2022-12-01_M0.json": "78b10ab699b2131a072d44c07d4a2b78a2858c5ffe60ae7861ed9ecf85cebc74",
+    "data/clean/p4/20260907T021038241650Z/models/2022-12-01_M1.json": "3b90f2e93e88b0576d3dabe8df3485ed7b582461f33b371559c61f115acd67b2",
+    "data/clean/p4/20260907T021038241650Z/models/2022-12-01_M2.json": "4661b60c75aa1538eca5f8c7e97860dd0e24ee0a4b825940b7dd23fa9c87185a",
+    "data/clean/p4/20260907T021038241650Z/models/2023-01-03_M0.json": "175d7bdca2935a91f9003ef0059d12200fe617a38e31ccdf6000f5dbb3d4fde4",
+    "data/clean/p4/20260907T021038241650Z/models/2023-01-03_M1.json": "699f0ce427b93a57b2e6b4311dbc7eedc951ce3068f6143cc349acf4d9ca6df9",
+    "data/clean/p4/20260907T021038241650Z/models/2023-01-03_M2.json": "8fd98c448f842949b824460f5bd91bb8a981091ec73953aaa9c887503a5d8626",
+    "data/clean/p4/20260907T021038241650Z/models/2023-02-01_M0.json": "2cae14d0f99a90fc7d3714861790127ec11297721966246054c886aa63a3da77",
+    "data/clean/p4/20260907T021038241650Z/models/2023-02-01_M1.json": "c3ae5b75347cc2cfa671e2a3d67c66c9ccbb6b93ea540368cebaa65fefa76a39",
+    "data/clean/p4/20260907T021038241650Z/models/2023-02-01_M2.json": "b926d43f7e4433f9bb1492f47434e7aacf93455007f9e2b4e796f12e6dd17a6d",
+    "data/clean/p4/20260907T021038241650Z/models/2023-03-01_M0.json": "21b3f4535c27336081cc4f0adf6287ebccf775d97c06ac86d69b010dcc3588b5",
+    "data/clean/p4/20260907T021038241650Z/models/2023-03-01_M1.json": "dee156722aae7f9380bc974dd4ce0cc580ddeda10daad64eb22ec8ff1db18455",
+    "data/clean/p4/20260907T021038241650Z/models/2023-03-01_M2.json": "7f77ba631fef75aa4046d0cded978f481caee820d39624bc5df12d8a60d75d72",
+    "data/clean/p4/20260907T021038241650Z/models/2023-04-03_M0.json": "42c149ac28f9c019b0be52f86845b46bdf4ffd9b972218d402f408d9204c031a",
+    "data/clean/p4/20260907T021038241650Z/models/2023-04-03_M1.json": "a7848e6e8892185498e3dd0d8ca7891dc8eedeb610f2fed7457432c17f78c7f4",
+    "data/clean/p4/20260907T021038241650Z/models/2023-04-03_M2.json": "52e0b73ead340e95b75b0d459996ff4c18543053dcb44d6a61a76ae33e977b1c",
+    "data/clean/p4/20260907T021038241650Z/models/2023-05-01_M0.json": "59471b09f3590ba710bff523082658223d54ee6be04b724dcc3a4a803bc9243a",
+    "data/clean/p4/20260907T021038241650Z/models/2023-05-01_M1.json": "a1f623a81c210472b85c01e7fb99a0e5e8cb3c5c161e2baf038e110945502195",
+    "data/clean/p4/20260907T021038241650Z/models/2023-05-01_M2.json": "9cbe7be24939215adad5329999d28c9a5e53e8bff8b0278b9953c00fa16fc217",
+    "data/clean/p4/20260907T021038241650Z/models/2023-06-01_M0.json": "750c63e7256f9e8304042732c8cdce68b350e1d460ac0ddf0d3e9c35d88dc6fe",
+    "data/clean/p4/20260907T021038241650Z/models/2023-06-01_M1.json": "96d0c99a01b8e4900632434607f9104ea11e049d374f8b3f993bbf072e86d140",
+    "data/clean/p4/20260907T021038241650Z/models/2023-06-01_M2.json": "2327420bc41352e239859a5d2e352fbcda1c7de4af8899468a7bd009cfa484c9",
+    "data/clean/p4/20260907T021038241650Z/models/2023-07-03_M0.json": "376641aea5f0a2a511778ad24d49ae5e76de74c53efefe51f6c21af8fe5c6a28",
+    "data/clean/p4/20260907T021038241650Z/models/2023-07-03_M1.json": "3b7164835338a21e5246b60c767059b09d84b3708f4b9c0f37924784efe695be",
+    "data/clean/p4/20260907T021038241650Z/models/2023-07-03_M2.json": "8f03d4b7e2356c09e92c0eecc1dc9ecd2abb80fa06d4aad48095e4eff72c6298",
+    "data/clean/p4/20260907T021038241650Z/models/2023-08-01_M0.json": "029c607a3ea08f946f35c6804e070d32139a6d7a2315969297254bf7af0b5876",
+    "data/clean/p4/20260907T021038241650Z/models/2023-08-01_M1.json": "6038f4d70e8a9eea9cb58058e3a16e566afa022eacdd97456d5c0f50e3ccb983",
+    "data/clean/p4/20260907T021038241650Z/models/2023-08-01_M2.json": "aa3cef163f05c2b6359c94a29f29b97fa974a207f8fc719ed5fdc763f148c72b",
+    "data/clean/p4/20260907T021038241650Z/models/2023-09-01_M0.json": "96c523985126af141fde18fdf73d2744869955eddcb5cb1bc39e4c3c6bb544eb",
+    "data/clean/p4/20260907T021038241650Z/models/2023-09-01_M1.json": "5e6d336beb03785b2c4e26e0a8c81290ac2777530e849406ace43aa43dcde248",
+    "data/clean/p4/20260907T021038241650Z/models/2023-09-01_M2.json": "10dad214276558b353499337ae2d0e452f47720456de1b31862e430c4ea3f420",
+    "data/clean/p4/20260907T021038241650Z/models/2023-10-02_M0.json": "d3ebc99c3a70aba91815646266a7b71c7e3285cfe05e3f42d1ec356215a1e396",
+    "data/clean/p4/20260907T021038241650Z/models/2023-10-02_M1.json": "403ecb8f5c2f3e194975a659573770d590ffcf7d65c1486206777d448945047c",
+    "data/clean/p4/20260907T021038241650Z/models/2023-10-02_M2.json": "fcaec099c1fd06613b08aa913ef1bd75da5bb9917afd28cbfaf3b3a885731587",
+    "data/clean/p4/20260907T021038241650Z/models/2023-11-01_M0.json": "103edfcdf13a424d9e4fc1ed855cffd8634bb7b6ce441b4a62703aa9536da083",
+    "data/clean/p4/20260907T021038241650Z/models/2023-11-01_M1.json": "76fb230066304299c72821a846bd430069d9e0e6b904f67a8d2b6c99af291f82",
+    "data/clean/p4/20260907T021038241650Z/models/2023-11-01_M2.json": "b2e4b6291ed3c3e2b01f3737f0ec335c7349eb8c5c4fb48814eba1e4d8c37d3f",
+    "data/clean/p4/20260907T021038241650Z/models/2023-12-01_M0.json": "9a6a32fd3361c0730e1b7b94f6c80c5f2d1e16c663285694174d4b3a6b43df43",
+    "data/clean/p4/20260907T021038241650Z/models/2023-12-01_M1.json": "fab1d9b7eeffc126fc7da11d1294e6fcfc8245521a6aa60d9a7848efeab5235c",
+    "data/clean/p4/20260907T021038241650Z/models/2023-12-01_M2.json": "010089938e5021ec8146e590a59add589654c611d3643574b4c08b6e8be88c90",
+    "data/clean/p4/20260907T021038241650Z/prediction_service.csv": "6e72f8aebacaf30c5e2c6b843c02cc48c7ea871ace50982c81d016d9dfc5bb95",
+    "data/clean/p4/20260907T021038241650Z/predictions.csv": "db61a1cf2c1453421bc2fc45c19d4422c9afb3c0f356bf580625139439bcdac3",
+    "data/clean/p4/20260907T021038241650Z/predictions.png": "491d176931e67e56b54208a6d15673b1c6686e4916528d84ec049b7244bf42eb",
+    "data/clean/p4/20260907T021038241650Z/predictions.svg": "ede8d85572be806ddd7b6513bc1825d9b4f86b414062d1b4ad194eb949d75464",
+    "data/clean/p4/20260907T021038241650Z/projections.csv": "0767d418589979cbeeff29d30ad6ef7a1a5cb5819f18857bf74b1e25c4294981",
+    "data/clean/p4/20260907T021038241650Z/risk_groups.csv": "f281052c3b1fee6ed66cd8cf27388e43bd09ddfa0feb72f688afe0a364109fae",
+    "data/clean/p4/20260907T021038241650Z/selected_parameters.csv": "4d471e15ca5ac70c21a4b604f4228a8ee44221230355408fb0b8e1169f1295a3",
+    "data/clean/p4/20260907T021038241650Z/selections/2020-09-11.json": "6e61df38fdd27c5166af60ee1e35be4a15132ae57a5ac830d043feb24c35bf6d",
+    "data/clean/p4/20260907T021038241650Z/selections/2021-01-04.json": "6fa1cb12c5be1928bdd4d581f7afa00c0636384e4d74004bb89ff48415e5e888",
+    "data/clean/p4/20260907T021038241650Z/selections/2022-01-03.json": "f7bedf6acce577cfc3da3cf43d5271a280c816a75bfa97832fd89a254f511e7a",
+    "data/clean/p4/20260907T021038241650Z/selections/2023-01-03.json": "d55232b8a4a21a44afe47dfabda7470ca28a066b404db89d33f4d0c94e7020d3",
+    "data/clean/p4/20260907T021038241650Z/support.csv": "27edfc9cb13c48ac0a51a291637d5decaab753d9e9b32af0b25f0d750062481f",
+    "data/clean/p4/20260907T021038241650Z/training_rows.csv": "fb9d2167dcaad6812c04c282afcc3fed798c8c632458a12f81e3b5ebc1164f79"
+  },
+  "python": "3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "packages": {
+    "beautifulsoup4": "4.15.0",
+    "certifi": "2026.7.22",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.1",
+    "cloudpickle": "3.1.2",
+    "contourpy": "1.3.3",
+    "curl_cffi": "0.16.3",
+    "cycler": "0.12.1",
+    "exchange_calendars": "4.13.2",
+    "fonttools": "4.64.0",
+    "idna": "3.19",
+    "iniconfig": "2.3.0",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "korean_lunar_calendar": "0.4.0",
+    "lxml": "6.1.3",
+    "matplotlib": "3.11.1",
+    "multitasking": "0.0.13",
+    "narwhals": "2.25.0",
+    "numpy": "2.4.3",
+    "packaging": "26.0",
+    "pandas": "3.0.3",
+    "peewee": "4.5.0",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "platformdirs": "4.11.7",
+    "pluggy": "1.6.0",
+    "protobuf": "7.36.1",
+    "pycparser": "3.0",
+    "Pygments": "2.19.2",
+    "pyluach": "2.3.0",
+    "pyparsing": "3.3.2",
+    "pytest": "8.4.2",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.3.post1",
+    "requests": "2.34.2",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "setuptools": "84.0.0",
+    "six": "1.17.0",
+    "soupsieve": "2.9.2",
+    "svxylab": "0.0.1",
+    "threadpoolctl": "3.6.0",
+    "toolz": "1.1.0",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.3",
+    "urllib3": "2.7.0",
+    "websockets": "17.1",
+    "yfinance": "1.7.0"
+  },
+  "run_record": "runs/p4/20260907T021038241650Z/predictions_run.json",
+  "locked_period_evaluated": false,
+  "portfolio_mapping_performed": false
+}

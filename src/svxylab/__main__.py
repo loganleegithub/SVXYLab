@@ -11,11 +11,17 @@ def main() -> int:
     parser.add_argument("command", choices=["environment", "data", "baselines", "features", "predictions"], help="生成当前阶段的本地研究报告")
     parser.add_argument("--open", action="store_true", help="生成后用 macOS 默认应用打开报告")
     parser.add_argument("--pilot", action="store_true", help="P4：只试运行首个符合条件的历史月")
+    parser.add_argument("--review", action="store_true", help="P4：按原参数完整复算、追加审查诊断并导出本地离线包")
     args = parser.parse_args()
     if args.pilot and args.command != "predictions":
         parser.error("--pilot 仅用于 predictions")
+    if args.review and (args.command != "predictions" or args.pilot):
+        parser.error("--review 仅用于完整 predictions，不能与 --pilot 同用")
     try:
         if args.command == "predictions":
+            if args.review:
+                from svxylab.prediction_review import build_review
+                return build_review(Path.cwd(), open_report=args.open)
             from svxylab.predictions_report import build_predictions_report
             return build_predictions_report(Path.cwd(), open_report=args.open, pilot=args.pilot)
         if args.command == "features":

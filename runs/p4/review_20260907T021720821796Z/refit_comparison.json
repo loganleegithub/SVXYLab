@@ -1,0 +1,216 @@
+{
+  "method": "FROM_ORIGINAL_TRAINING_INPUTS_REFIT_AND_RESELECT",
+  "atol": 2e-11,
+  "rtol": 2e-10,
+  "excluded_fields": [
+    "computed_at_utc",
+    "elapsed_seconds"
+  ],
+  "csv_checks": [
+    {
+      "file": "calibration.csv",
+      "rows": 15,
+      "max_absolute_errors": {
+        "bin": 0.0,
+        "lower": 0.0,
+        "upper": 0.0,
+        "rows": 0.0,
+        "events": 0.0,
+        "mean_probability": 0.0,
+        "event_rate": 0.0
+      }
+    },
+    {
+      "file": "cv_scores.csv",
+      "rows": 216,
+      "max_absolute_errors": {
+        "parameter": 0.0,
+        "block": 0.0,
+        "train_rows": 0.0,
+        "validation_rows": 0.0,
+        "train_positive_count": 0.0,
+        "train_event_clusters": 0.0,
+        "validation_positive_count": 0.0,
+        "loss": 0.0,
+        "projected_count": 0.0,
+        "single_class_fallback": 0.0
+      }
+    },
+    {
+      "file": "cv_totals.csv",
+      "rows": 72,
+      "max_absolute_errors": {
+        "parameter": 0.0,
+        "loss": 0.0,
+        "validation_rows": 0.0
+      }
+    },
+    {
+      "file": "daily_losses.csv",
+      "rows": 2478,
+      "max_absolute_errors": {
+        "squared_error": 0.0,
+        "log_loss": 0.0,
+        "brier": 0.0,
+        "pinball": 0.0
+      }
+    },
+    {
+      "file": "fits.csv",
+      "rows": 120,
+      "max_absolute_errors": {
+        "training_rows": 0.0,
+        "positive_count": 0.0,
+        "event_clusters": 0.0,
+        "design_columns": 0.0,
+        "mu5_parameter": 0.0,
+        "q90_parameter": 0.0,
+        "p10_parameter": 0.0,
+        "p10_fallback": 0.0,
+        "warning_count": 0.0
+      }
+    },
+    {
+      "file": "inner_rows.csv",
+      "rows": 6951,
+      "max_absolute_errors": {
+        "block": 0.0
+      }
+    },
+    {
+      "file": "interaction_conditions.csv",
+      "rows": 2160,
+      "max_absolute_errors": {
+        "partner_training_quantile": 0.0,
+        "partner_z": 0.0,
+        "interaction_slope_per_training_sd": 0.0
+      }
+    },
+    {
+      "file": "local_effects.csv",
+      "rows": 6840,
+      "max_absolute_errors": {
+        "raw_feature_value": 0.0,
+        "training_z": 0.0,
+        "local_total_slope_per_training_sd": 0.0,
+        "interaction_component": 0.0,
+        "spline_component": 0.0
+      }
+    },
+    {
+      "file": "metrics.csv",
+      "rows": 57,
+      "max_absolute_errors": {
+        "rows": 0.0,
+        "events": 0.0,
+        "mse": 0.0,
+        "log_loss": 0.0,
+        "brier": 0.0,
+        "pinball": 0.0,
+        "q90_coverage": 0.0,
+        "mean_probability": 0.0,
+        "event_rate": 0.0,
+        "mean_q90": 0.0,
+        "mse_delta_M0": 0.0,
+        "mse_relative_change_M0": 0.0,
+        "log_loss_delta_M0": 0.0,
+        "log_loss_relative_change_M0": 0.0,
+        "brier_delta_M0": 0.0,
+        "brier_relative_change_M0": 0.0,
+        "pinball_delta_M0": 0.0,
+        "pinball_relative_change_M0": 0.0
+      }
+    },
+    {
+      "file": "model_disagreement.csv",
+      "rows": 3,
+      "max_absolute_errors": {
+        "rows": 0.0,
+        "mean_M2_minus_M1": 0.0,
+        "mean_absolute_difference": 0.0,
+        "max_absolute_difference": 0.0
+      }
+    },
+    {
+      "file": "prediction_service.csv",
+      "rows": 1006,
+      "max_absolute_errors": {
+        "eligible_training_rows": 0.0
+      }
+    },
+    {
+      "file": "predictions.csv",
+      "rows": 3018,
+      "max_absolute_errors": {
+        "mu5_raw": 0.0,
+        "mu5": 0.0,
+        "q90_raw": 0.0,
+        "q90": 0.0,
+        "p10_logit": 0.0,
+        "p10": 0.0,
+        "outside_feature_count": 0.0,
+        "max_outside_distance_training_sd": 0.0,
+        "R5": 0.0,
+        "L5": 0.0,
+        "Y10": 0.0
+      }
+    },
+    {
+      "file": "projections.csv",
+      "rows": 3,
+      "max_absolute_errors": {
+        "forecast_rows": 0.0,
+        "scored_rows": 0.0,
+        "unscored_rows": 0.0,
+        "mu_projected": 0.0,
+        "q_projected": 0.0,
+        "min_raw_mu5": 0.0,
+        "min_raw_q90": 0.0,
+        "max_raw_q90": 0.0
+      }
+    },
+    {
+      "file": "risk_groups.csv",
+      "rows": 15,
+      "max_absolute_errors": {
+        "group": 0.0,
+        "rows": 0.0,
+        "events": 0.0,
+        "mean_predicted_q90": 0.0,
+        "observed_loss_quantile90": 0.0,
+        "observed_mean_loss": 0.0,
+        "observed_event_rate": 0.0,
+        "coverage": 0.0
+      }
+    },
+    {
+      "file": "selected_parameters.csv",
+      "rows": 8,
+      "max_absolute_errors": {
+        "mu5": 0.0,
+        "q90": 0.0,
+        "p10": 0.0
+      }
+    },
+    {
+      "file": "support.csv",
+      "rows": 8,
+      "max_absolute_errors": {
+        "year": 0.0,
+        "rows": 0.0,
+        "outside_rows": 0.0,
+        "max_outside_features": 0.0,
+        "max_outside_distance_training_sd": 0.0
+      }
+    },
+    {
+      "file": "training_rows.csv",
+      "rows": 32073,
+      "max_absolute_errors": {
+        "Y10": 0.0
+      }
+    }
+  ],
+  "model_and_selection_states": 124,
+  "passed": true
+}

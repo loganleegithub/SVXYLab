@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-09-07T02:21:45.000273+00:00",
+  "archive_sha256": "c38898a9c584370c9d7b60da4a51108292053979356954f4746d1ab6ebb49163",
+  "manifest_sha256": "5883928108e252ce216abebfbda97e0d61d7510d365cb7aed8389b65002a977a",
+  "export_files_checked": 377,
+  "source_export_hashes_match": true,
+  "local_links": [
+    {
+      "report": "reports/predictions.html",
+      "root": "/Users/logan/SVXYLab",
+      "resolved_local_links": 44
+    },
+    {
+      "report": "reports/predictions.html",
+      "root": "/Users/logan/SVXYLab/data/clean/p4_review/review_20260907T021720821796Z/LOCAL_REVIEW_ONLY",
+      "resolved_local_links": 40
+    }
+  ],
+  "development_information_rows": 1258,
+  "cross_boundary_empty_label_rows": 6,
+  "command": [
+    "/Users/logan/SVXYLab/.venv/bin/python",
+    "replay.py"
+  ],
+  "relocated_cwd": "/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/svxylab-p4-final-offline-yhdq2l9r/LOCAL_REVIEW_ONLY",
+  "exit_code": 0,
+  "log": "final_offline.log",
+  "browser_visual_validation": "NOT_PERFORMED_FILE_URL_BLOCKED_BY_BROWSER_POLICY",
+  "offline_validation": {
+    "method": "REFIT_FROM_EXPORTED_DEVELOPMENT_INPUTS",
+    "forecast_sessions": 831,
+    "refit_comparison_passed": true,
+    "saved_coefficient_audit_exit_code": 0,
+    "pytest_exit_code": 0,
+    "raw_market_data_rebuilt": false,
+    "manifest_files_verified": 377,
+    "output": "replay_results/20260907T022145969715Z"
+  }
+}

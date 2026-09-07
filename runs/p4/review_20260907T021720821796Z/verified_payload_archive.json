@@ -1,0 +1,12 @@
+{
+  "bundle_dir": "data/clean/p4_review/review_20260907T021720821796Z/LOCAL_REVIEW_ONLY_verified_payload",
+  "archive": "data/clean/p4_review/review_20260907T021720821796Z/LOCAL_REVIEW_ONLY_verified_payload.zip",
+  "archive_sha256": "c38898a9c584370c9d7b60da4a51108292053979356954f4746d1ab6ebb49163",
+  "archive_bytes": 5689396,
+  "manifest_sha256": "5883928108e252ce216abebfbda97e0d61d7510d365cb7aed8389b65002a977a",
+  "exported_files": 377,
+  "source_references": 384,
+  "paths_and_export_hashes_verified": true,
+  "distribution": "LOCAL_ONLY_NOT_PUBLIC_OR_REMOTE",
+  "locked_outcomes_exported": false
+}
