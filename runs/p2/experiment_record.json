@@ -1,0 +1,43 @@
+{
+  "stage": "P2",
+  "recorded_at": "2026-09-06T23:45:31.861533+00:00",
+  "accepted_p1_checkpoint": "dc3d4ffc75397fac3702c7882e56ad3a98f4a27d",
+  "scope": "P2 only: total return, session clock, five-session labels, six predetermined continuous ledgers; no features/model fitting/optimization",
+  "data_scope": "P1 frozen 2019-01-02 through 2026-09-04; no new market downloads",
+  "report_scope": "全部输入与逐日账本按冻结范围计算；基准净值和绩效汇总展示 2019–2023 的账本工程核验。2024 年后只展示公司行动与标签时钟核对，全段 CSV 保留；模型封存评估仍属于 P7。此展示范围在计算绩效前确定。",
+  "unchanged_parameters": [
+    "horizon_sessions=5",
+    "loss_event_threshold=0.10",
+    "research_capital=100000",
+    "cash_annual_return_base=0",
+    "cost_one_way_bps_base=5",
+    "fixed_weights=0.25,0.50,0.75,1.0"
+  ],
+  "implementation_conventions": {
+    "total_return": "r_t=(close_t+cash_dividend_t+capital_gain_distribution_t)/(split_factor_t*close_t_minus_1)-1；TR 初始 100，首日回报未知保持空",
+    "distribution_timing": "总回报采用除息日确认分配并在该日收盘再投资的代理；不声称现金实际已支付。本段 SVXY 没有分配，持仓账本不受分红支付时差影响。",
+    "portfolio": "从首个信息日收盘现金 100000 开始；最早在下一交易日收盘执行；扣费后目标权重使用规格 9.1 精确自融资公式；最后一日按市值计价，不假设强制清仓",
+    "missing_signal": "无新目标时保留已有份额（遇拆分调整）和现金，继续承担损益；不把昨日目标重新平衡",
+    "label_timing": "信息 t，入场 t+1 收盘，五日终点 t+6 收盘；另存结果发生/成熟时间及保守的次一交易日截止可用时间；缺少完整未来路径时标签保持空",
+    "report_metrics": "描述固定对照，不能推断联合模型有优势；CAGR 按实际日历跨度，最差五日按连续账户收盘滚动计算，不作为每天新增仓位"
+  },
+  "prior_inputs_sha256": {
+    "data/clean/ETF_source_comparison.csv": "7db582d7ff844519006c7197d286f4654b3fc318ef873457cd2d23d2a0296a6c",
+    "data/clean/SKEW_daily.csv": "d204fa3e3be3980843eb1672a520a46876078d8c62cae930f194d6ef8d8c91be",
+    "data/clean/SPY_corporate_actions.csv": "476c42ec682ba9f75812d7250083e1da9c5287da46745581c4d42dbcbc71b676",
+    "data/clean/SPY_daily.csv": "6cfb6a68c1e93f31fa4281e09f031219e7b28672c6b3774d734f81049d400376",
+    "data/clean/SVXY_corporate_actions.csv": "2732e6c03641da89fa1efe1cfe192d2f8baefad6827de2297043d2fa2e5799ea",
+    "data/clean/SVXY_daily.csv": "4ab4692e58a4121df10afd7d00b606e4a452e4055097623cc7f5d64fe079dd43",
+    "data/clean/VIX3M_daily.csv": "c62f68d290fb9f5df9d83a60190ada149c1bb18bac31c29269d56de93cefbc2a",
+    "data/clean/VIX9D_daily.csv": "1678f7b6eb8b0f4123dea6adc9fc91aa37b706fa1c3b62ca7e1c9bcd80d20667",
+    "data/clean/VIX_daily.csv": "d5baeb7173c9c190acd8adaa39b227fcb27097964c70c76febd1786c2421b166",
+    "data/clean/VVIX_daily.csv": "6b2028dfc0737f9b60f38b0b9170a4bab30228c1cc17da17f5e0c674aaf2861e",
+    "data/clean/VX_contract_calendar.csv": "cf9772d8dab041a53640727e09502a698155a2f956a7c88d3d7058b538be1d3d",
+    "data/clean/VX_contract_daily.csv": "8c1959bf1433645ce06723f149a8e2990fd86830d8b91c1e21db06632da28329",
+    "data/clean/VX_front_three.csv": "9a96d03cfea421f0be30f923f68dbc2914605ee29a865c0386fd635c5368dcc4",
+    "data/clean/equity_sessions.csv": "ffd5ab0cdf15f3348e141c523464a9d807909a3357ad15be7be58cf02f11ce6d"
+  },
+  "raw_manifest_sha256": "2314fb8bfdd9defc99d5ad8e2db633ee677a084691a483aa51d11365c65b70ec",
+  "config_sha256": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+  "failures_preserved": true
+}

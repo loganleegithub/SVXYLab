@@ -1,0 +1,27 @@
+{
+  "stage": "P2",
+  "checked_at": "2026-09-07T00:07:41.709344+00:00",
+  "run_record": "runs/p2/20260907T000150426421Z/baselines_run.json",
+  "checks": {
+    "all_report_local_links_exist": true,
+    "no_web_service_or_script_required": true,
+    "source_files_match_executed_version": true,
+    "all_result_files_match_run_record": true,
+    "three_short_real_examples": true,
+    "independent_decimal_recalculation_passed": true,
+    "repeated_csv_hashes_identical": true,
+    "pytest_no_failure": true,
+    "no_model_fitted": true
+  },
+  "missing_links": [],
+  "browser_confirmation": {
+    "method": "cua.getState browser tab inventory",
+    "browser": "Chrome",
+    "tab_id": "542466146",
+    "title": "SVXYLab · P2 时钟与连续账本",
+    "url": "file:///Users/logan/SVXYLab/reports/baselines.html",
+    "opened_at": "2026-09-07T00:01:53.728Z"
+  },
+  "plot_verification": "已通过 view_image 查看 Matplotlib 真实 CSV 净值与回撤图；字体、图例和数据曲线可读",
+  "remaining_blocker": null
+}

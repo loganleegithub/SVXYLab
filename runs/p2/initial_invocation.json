@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab baselines",
+  "started_at": "2026-09-06T23:56:43.721224+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 17.689,
+  "output": "P2 报告：/Users/logan/SVXYLab/reports/baselines.html\n普通 pytest：38 通过，0 失败\n真实账本：6 × 1930 行；标签 1924 完整，6 未成熟。\nMatplotlib is building the font cache; this may take a moment.\n"
+}

@@ -33,7 +33,13 @@ P1 数据复算与报告：
 ```sh
 .venv/bin/python -m svxylab data
 ```
-2026-09-07 实际退出码 0；核心共同样本 1930 日，冻结至 2026-09-04；内部普通 pytest 18 项通过。加 `--open` 后，macOS 打开 `reports/data.html` 的命令也已实际返回 0；随后浏览器工具提示 Mac 锁屏，页面显示确认仍待解锁。每次运行记录与 pytest XML 在 `runs/p1/<UTC时间>/`。优先验证并复用原件缓存，不刷新冻结截止日。
+P1 历史运行退出码 0；核心共同样本 1930 日，冻结至 2026-09-04，当时普通 pytest 18 项通过。macOS 打开报告命令返回 0；当时的工具锁屏记录保留。用户现已明确验收 P1，检查点为 `dc3d4ff`。每次运行记录与 pytest XML 在 `runs/p1/<UTC时间>/`。优先验证并复用原件缓存，不刷新冻结截止日。
+
+P2 总回报、时钟、标签与连续账本：
+```sh
+.venv/bin/python -m svxylab baselines
+```
+2026-09-07 实际退出码 0，普通 pytest 38 项通过；六个对照各 1930 行，五日标签 1924 行完整、6 行尚未成熟。加 `--open` 生成后由 macOS 打开 `reports/baselines.html`。只读取 P1 冻结文件，不调用取数或模型；每次 CSV/图保存在 `data/clean/p2/<UTC时间>/`，运行 JSON 与测试结果在 `runs/p2/<UTC时间>/`，已有结果不覆盖。页面净值与汇总展示 2019–2023；2024 年后仅用于公司行动核账和时钟示例。
 
 独立普通测试：
 ```sh
@@ -47,10 +53,10 @@ P0 已验证的环境报告入口：
 ```
 历史 P0 运行退出码 0、4 项合成测试通过；原报告和 `runs/p0/` 保留。今后再运行会检查当前环境，并引用最新 P1 覆盖记录，不用文件数量推定行情覆盖。
 
-P1 依赖锁定在 `pyproject.toml` 和实际版本快照 `requirements-lock.txt`。已成功执行的本地包元数据刷新命令：
+依赖锁定在 `pyproject.toml` 和实际版本快照 `requirements-lock.txt`；P2 在同一虚拟环境加入 Matplotlib 3.11.1。已成功执行的本地包元数据刷新命令：
 ```sh
 .venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .
 ```
 原始安装、失败及成功结果在 `runs/p0/setup.json`、`runs/p1/dependency_install.json`、`runs/p1/yfinance_install_failure.json`、`runs/p1/yfinance_install_cached.json` 和 `runs/p1/editable_refresh.json`。
 
-正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异。P1 没有实现总回报、标签、持仓账本或模型；验收后才能进入 P2。本地已验收检查点 `f3cc00f`，无 Git 远端，未改全局 Git 配置。
+正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异以及 P2 的 SPY 分红总回报与供应商复权参考差异。P2 已实现总回报、标签和连续账本，未实现 P3 特征或联合模型；阶段验收后再继续。P0 检查点 `f3cc00f`、P1 检查点 `dc3d4ff`，无 Git 远端，未改全局 Git 配置。

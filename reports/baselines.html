@@ -1,0 +1,104 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>SVXYLab · P2 时钟与连续账本</title><style>
+body{margin:0;font:16px/1.7 -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;color:#22313d;background:white}
+main{max-width:1240px;margin:auto;padding:28px 24px 70px}h1{font-size:28px}h2{font-size:22px;margin-top:32px}h3{font-size:18px}
+a{color:#165b8a}.status,.calculation{background:#f2f5f7;padding:12px 18px;border-left:4px solid #5d7786}
+.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #d6dfe6;padding:8px;text-align:left;vertical-align:top}th{background:#f3f6f8}
+img{max-width:100%;height:auto}code,pre{font:13px/1.6 ui-monospace,monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere}details{border-bottom:1px solid #ddd;padding:9px 0}summary{cursor:pointer;overflow-wrap:anywhere}
+</style></head><body><main><h1>SVXYLab · P2 时钟与连续账本</h1><p>2026-09-07T08:01:50.426421+08:00 · RESEARCH_ONLY · 已验收 P1 检查点 dc3d4ff</p>
+<div class='status'><p><strong>工程：</strong>完成；普通 pytest 38 项，通过 38，失败/错误 0。六条连续账户已按资金、份额、现金与成交成本对账。</p>
+<p><strong>研究结果：</strong>本页只呈现预定对照的真实账本，不包含联合模型、训练或参数优选；这些结果不证明模型有收益优势。</p>
+<p><strong>真实数据：</strong>2019-01-02 至 2026-09-04，1930 个交易日；复用 P1 冻结原件，核对 141 条原始保存记录。SKEW 的两日缺失不参与本阶段账本。</p></div>
+<h2>预定对照净值：2019-01-02 至 2023-12-29</h2>
+<p>净值图与汇总采用 1258 个交易日，起始现金 100,000 美元，单边成本 5bp，现金收益 0。
+所有账户最早在 2019-01-03 收盘换仓。固定权重每日收盘再平衡；曲线规则用上一交易日 F2>F1 决定 100% 持有，否则现金。
+2024 年后的全段账本已保存在 CSV，供会计核对；本页不做封存模型评分或按其结果调参，模型封存评估仍在 P7。</p>
+<img src='../data/clean/p2/20260907T000150426421Z/baselines.png' alt='根据真实逐日账户生成的六个预定对照净值与收盘回撤图'>
+<p><a href='../data/clean/p2/20260907T000150426421Z/baselines.svg'>下载矢量图</a>。图由 Matplotlib 根据下方可复算 CSV 生成，无模拟行情。</p>
+<div class='scroll'><table><thead><tr><th>对照</th><th>期末资产 $</th><th>年化收益</th><th>最大收盘回撤</th><th>最差单日</th><th>最差连续五日</th><th>平均旧仓位</th><th>年均单边换手倍数</th><th>累计成本 $</th></tr></thead><tbody><tr><td>现金</td><td>100,000.0000</td><td>0.0000%</td><td>0.0000%</td><td>0.0000%</td><td>0.0000%</td><td>0.0000%</td><td>0.0000</td><td>0.0000</td></tr><tr><td>固定 25%</td><td>133,888.9168</td><td>6.0249%</td><td>-20.5405%</td><td>-4.8835%</td><td>-8.0587%</td><td>24.9801%</td><td>0.8270</td><td>223.7473</td></tr><tr><td>固定 50%</td><td>171,643.2613</td><td>11.4384%</td><td>-37.3920%</td><td>-9.7658%</td><td>-15.8296%</td><td>49.9602%</td><td>1.1391</td><td>327.1450</td></tr><tr><td>固定 75%</td><td>210,465.5372</td><td>16.0879%</td><td>-51.1097%</td><td>-14.6469%</td><td>-23.3020%</td><td>74.9403%</td><td>0.9320</td><td>275.5204</td></tr><tr><td>固定 100%</td><td>246,537.0512</td><td>19.8283%</td><td>-62.1851%</td><td>-19.5268%</td><td>-30.4659%</td><td>99.9204%</td><td>0.2004</td><td>49.9750</td></tr><tr><td>F2&gt;F1 持有，否则现金</td><td>183,745.9327</td><td>12.9710%</td><td>-46.0337%</td><td>-16.9314%</td><td>-18.3522%</td><td>86.5553%</td><td>13.8287</td><td>3,660.9064</td></tr></tbody></table></div>
+<p>年化收益按首末收盘实际日历跨度 / 365.25 换算；回撤从连续账户历史收盘峰值计算。平均敞口采用每日损益发生前的旧权重。
+换手为实际成交额 / 执行前资产，年均值除以相同年数；不是相邻目标权重之差。五日账户损益只作路径统计，不产生额外交易。末日保留持仓按市值计价，没有虚构清仓或现金利息。</p>
+<p>扣费公式：执行前资产为 E、实际股仓为 u、扣费后目标为 w、单边费率 c=0.0005。
+买入时 E_new=E×(1+c×u)/(1+c×w)；卖出时 E_new=E×(1−c×u)/(1−c×w)。
+新股市值为 w×E_new，费用为 c×|w×E_new−u×E|；余款为现金。这个公式保证费用来自实际成交额，并使新权重在扣费后仍等于目标。</p>
+<h2>三段可手算的真实账本</h2><p>每段不超过五行。表内金额显示四位小数，CSV 保留计算精度；“旧仓位”来自上一收盘，“新仓位”是本次收盘扣费后的实际权重。</p>
+<h3>普通行情：固定 50%，每天按实际偏离再平衡</h3><p>目标虽然连续为 50%，价格波动会改变执行前权重，因此可能产生实际换手和成本。</p><div class='scroll'><table><thead><tr><th>日期</th><th>期初资产 $</th><th>旧仓位</th><th>SVXY 当日总回报</th><th>旧持仓损益 $</th><th>成本 $</th><th>新仓位</th><th>期末资产 $</th></tr></thead><tbody><tr><td>2019-07-01</td><td>113,907.7815</td><td>50.0000%</td><td>2.7659%</td><td>1,575.2997</td><td>0.3939</td><td>50.0000%</td><td>115,482.6873</td></tr><tr><td>2019-07-02</td><td>115,482.6873</td><td>50.0000%</td><td>1.7522%</td><td>1,011.7264</td><td>0.2530</td><td>50.0000%</td><td>116,494.1607</td></tr><tr><td>2019-07-03</td><td>116,494.1607</td><td>50.0000%</td><td>0.4261%</td><td>248.1657</td><td>0.0621</td><td>50.0000%</td><td>116,742.2643</td></tr><tr><td>2019-07-05</td><td>116,742.2643</td><td>50.0000%</td><td>-0.3005%</td><td>-175.4107</td><td>0.0438</td><td>50.0000%</td><td>116,566.8097</td></tr></tbody></table></div><p class='calculation'>2019-07-01：期初 113,907.7815 + 持有损益 1,575.2997 − 成本 0.3939 = 期末 115,482.6873 美元。执行前实际权重 50.6820%，上一信息日目标 50.0000%；成交额 787.8468 × 0.0005 = 成本 0.3939。</p><h3>换仓：2020 年首次从持有转为现金</h3><p>退出当日的收盘前损益仍归旧持仓；上一交易日曲线决定本次退出。</p><div class='scroll'><table><thead><tr><th>日期</th><th>期初资产 $</th><th>旧仓位</th><th>SVXY 当日总回报</th><th>旧持仓损益 $</th><th>成本 $</th><th>新仓位</th><th>期末资产 $</th></tr></thead><tbody><tr><td>2020-01-24</td><td>128,483.4103</td><td>100.0000%</td><td>-2.8153%</td><td>-3,617.1545</td><td>0.0000</td><td>100.0000%</td><td>124,866.2558</td></tr><tr><td>2020-01-27</td><td>124,866.2558</td><td>100.0000%</td><td>-5.3158%</td><td>-6,637.6592</td><td>0.0000</td><td>100.0000%</td><td>118,228.5967</td></tr><tr><td>2020-01-28</td><td>118,228.5967</td><td>100.0000%</td><td>2.9491%</td><td>3,486.6322</td><td>60.8576</td><td>0.0000%</td><td>121,654.3713</td></tr><tr><td>2020-01-29</td><td>121,654.3713</td><td>0.0000%</td><td>-0.1379%</td><td>0.0000</td><td>60.7968</td><td>100.0000%</td><td>121,593.5745</td></tr><tr><td>2020-01-30</td><td>121,593.5745</td><td>100.0000%</td><td>0.8744%</td><td>1,063.1738</td><td>0.0000</td><td>100.0000%</td><td>122,656.7483</td></tr></tbody></table></div><p class='calculation'>2020-01-28：期初 118,228.5967 + 持有损益 3,486.6322 − 成本 60.8576 = 期末 121,654.3713 美元。执行前实际权重 100.0000%，上一信息日目标 0.0000%；成交额 121,715.2289 × 0.0005 = 成本 60.8576。</p><h3>公司行动：2024-04-11 的 2:1 拆分</h3><p>拆分让份额翻倍、每份价格约减半；不能把价格减半记作亏损 50%。这四行仅核对公司行动，不进行封存模型评价。</p><div class='scroll'><table><thead><tr><th>日期</th><th>期初资产 $</th><th>旧仓位</th><th>SVXY 当日总回报</th><th>旧持仓损益 $</th><th>成本 $</th><th>新仓位</th><th>期末资产 $</th></tr></thead><tbody><tr><td>2024-04-09</td><td>261,582.0045</td><td>100.0000%</td><td>0.3828%</td><td>1,001.4034</td><td>0.0000</td><td>100.0000%</td><td>262,583.4079</td></tr><tr><td>2024-04-10</td><td>262,583.4079</td><td>100.0000%</td><td>-0.8717%</td><td>-2,288.9298</td><td>0.0000</td><td>100.0000%</td><td>260,294.4781</td></tr><tr><td>2024-04-11</td><td>260,294.4781</td><td>100.0000%</td><td>0.9068%</td><td>2,360.4742</td><td>0.0000</td><td>100.0000%</td><td>262,654.9523</td></tr><tr><td>2024-04-12</td><td>262,654.9523</td><td>100.0000%</td><td>-4.1757%</td><td>-10,967.8136</td><td>0.0000</td><td>100.0000%</td><td>251,687.1387</td></tr></tbody></table></div><p class='calculation'>2024-04-11：期初 260,294.4781 + 持有损益 2,360.4742 − 成本 0.0000 = 期末 262,654.9523 美元。执行前实际权重 100.0000%，上一信息日目标 100.0000%；成交额 0.0000 × 0.0005 = 成本 0.0000。 拆分前份额 2,384.3041 ÷ 0.5 = 拆分后份额 4,768.6083，当日每份收盘 55.0800。</p>
+<h2>总回报与公司行动口径</h2><p>每天总回报 = (当日收盘 + 每份现金分红 + 每份资本利得分配) / (拆分价格因子 × 前日收盘) − 1。
+首日 TR 锚定为 100，首日以前的回报保持空；没有使用 2019 年前数据。总回报按除息日确认分配并在收盘再投资，是研究计算口径，不声称当天已收到实际现金。</p>
+<p>SPY 仅建立后续输入需要的总回报，不进入 SVXY/CASH 账户。例如 2019-03-15，前收盘 281.1600、当日收盘 281.3100、每份分红 1.2330 美元：
+(281.3100 + 1.2330) / 281.1600 − 1 = 0.4919%。
+本段 SVXY 没有报告现金分配；其 2024 年拆分已在上方真实账本核对。基金费用已在真实基金价格中体现，不再扣管理费。</p>
+<div class='scroll'><table><thead><tr><th>标的</th><th>与供应商复权参考差异最大的日子</th><th>最大日差（bp）</th><th>本项目总回报</th><th>供应商复权收盘变动</th></tr></thead><tbody><tr><td>SVXY</td><td>2023-11-14</td><td>0.000000</td><td>0.2830%</td><td>0.2830%</td></tr><tr><td>SPY</td><td>2020-03-20</td><td>2.520235</td><td>-4.2842%</td><td>-4.3094%</td></tr></tbody></table></div>
+<p>主计算使用 P1 当时份额价格与公司行动，provider_adjusted_close 只用于交叉核对。供应商复权方法、事件金额精度及修订可产生差异，全部保留在 returns CSV；不强行令两条方法相等或覆盖源值。
+P1 的来源差异和历史发布时间限制仍然适用，详见 <a href='data.html'>数据报告</a>。</p>
+<p>2020-03-20 的 SPY 方法诊断：以 C_t/(C_前日−分红)−1 重算，与供应商复权参考只差约 0.000988bp；
+主算法仍为 (C_t+分红)/C_前日−1，即除息日收盘现金再投资的总回报。这是该日差异的可复算解释，不声称恢复了供应商全部历史算法。
+<a href='../runs/p2/return_reference_diagnostic.json'>原值与两种算术</a>。</p>
+<h2>真实交易时钟与五日标签</h2><p>信息 t → t+1 收盘前 60 分钟决策 → t+1 收盘执行；R5 从 t+1 收盘到 t+6 收盘。
+L5 是相对入场点的未来每日收盘最差损失，下限 0；不取盘中最低价或期间峰谷回撤。Y10 表示这种损失达到 10%，不是模型概率。</p>
+<div class='scroll'><table><thead><tr><th>信息日</th><th>入场收盘日</th><th>五日终点</th><th>R5</th><th>L5</th><th>Y10</th><th>结果发生/成熟时间 UTC</th><th>假设可用时间 UTC</th></tr></thead><tbody><tr><td>2019-01-02</td><td>2019-01-03</td><td>2019-01-10</td><td>8.1107%</td><td>0.0000%</td><td>0</td><td>2019-01-10T21:00:00+00:00</td><td>2019-01-11T20:00:00+00:00</td></tr><tr><td>2019-07-01</td><td>2019-07-02</td><td>2019-07-10</td><td>0.0355%</td><td>1.3492%</td><td>0</td><td>2019-07-10T20:00:00+00:00</td><td>2019-07-11T19:00:00+00:00</td></tr><tr><td>2020-03-16</td><td>2020-03-17</td><td>2020-03-24</td><td>8.4112%</td><td>9.0689%</td><td>0</td><td>2020-03-24T20:00:00+00:00</td><td>2020-03-25T19:00:00+00:00</td></tr><tr><td>2026-09-04</td><td>2026-09-08</td><td>2026-09-15</td><td>尚未成熟</td><td>尚未成熟</td><td>尚未成熟</td><td>2026-09-15T20:00:00+00:00</td><td>2026-09-16T19:00:00+00:00</td></tr></tbody></table></div>
+<p>已取得完整标签 1924 行，尚不完整 6 行；最后一个完整标签的信息日为 2026-08-27。
+尾部标签保持空，未来日期只来自交易日历，不填造收益。成熟指结果已发生；历史 published_at 不明，所以另存保守的次交易日截止可用时间。训练只能读取已成熟且已到假设可用时间的标签，本阶段没有训练。</p>
+<div class='scroll'><table><thead><tr><th>信息日</th><th>下一交易日</th><th>决策时间（纽约）</th><th>执行收盘 UTC</th></tr></thead><tbody><tr><td>2024-03-08</td><td>2024-03-11</td><td>2024-03-11T15:00:00-04:00</td><td>2024-03-11T20:00:00+00:00</td></tr><tr><td>2024-11-27</td><td>2024-11-29</td><td>2024-11-29T12:00:00-05:00</td><td>2024-11-29T18:00:00+00:00</td></tr></tbody></table></div>
+<p>日历使用 exchange_calendars 4.13.2，逐日核对 P1 原排程；夏令时、周末、节假日和半日市按实际股票交易日处理。
+缺失信号时保留已有股数和现金，继续计持仓损益；持有价格缺失则报错，不跳过该日制造净值。</p>
+<h2>真实账本对账与普通测试</h2>
+<div class='scroll'><table><thead><tr><th>对照</th><th>实际结果</th><th>资产等式最大误差 $</th><th>现金等式最大误差 $</th><th>成本等式最大误差 $</th></tr></thead><tbody><tr><td>现金</td><td>全部对账通过</td><td>0</td><td>0</td><td>0</td></tr><tr><td>固定 25%</td><td>全部对账通过</td><td>5.82e-11</td><td>7.28e-11</td><td>0</td></tr><tr><td>固定 50%</td><td>全部对账通过</td><td>5.82e-11</td><td>7.28e-11</td><td>0</td></tr><tr><td>固定 75%</td><td>全部对账通过</td><td>5.82e-11</td><td>5.09e-11</td><td>0</td></tr><tr><td>固定 100%</td><td>全部对账通过</td><td>1.46e-11</td><td>1.13e-11</td><td>0</td></tr><tr><td>F2&gt;F1 持有，否则现金</td><td>全部对账通过</td><td>2.91e-11</td><td>2.06e-11</td><td>0</td></tr></tbody></table></div>
+<p>零成本全仓账户与从首次执行收盘起的总回报路径独立对照，最大金额差为 9.31e-10 美元。
+pytest 的合成夹具覆盖拆分、分红、执行先后、实际换手、未来扰动、缺信号仍记损益、标签成熟边界及半日市；夹具不写入真实行情或净值。</p>
+<details><summary>展开本次 38 项普通 pytest 的逐项结果</summary><div class='scroll'><table><thead><tr><th>普通 pytest 测试</th><th>实际结果</th></tr></thead><tbody><tr><td>test_synthetic_daily_minus_half_compounding</td><td>通过</td></tr><tr><td>test_synthetic_invalid_index_is_rejected[levels0]</td><td>通过</td></tr><tr><td>test_synthetic_invalid_index_is_rejected[levels1]</td><td>通过</td></tr><tr><td>test_synthetic_invalid_index_is_rejected[levels2]</td><td>通过</td></tr><tr><td>test_expiration_day_rolls_and_does_not_relabel_missing_front</td><td>通过</td></tr><tr><td>test_catalog_uses_only_monthly_and_rejects_gap</td><td>通过</td></tr><tr><td>test_vx_uses_settlement_and_checks_identity</td><td>通过</td></tr><tr><td>test_reject_duplicate_or_invalid_index[01/02/2019,12\n01/02/2019,13\n]</td><td>通过</td></tr><tr><td>test_reject_duplicate_or_invalid_index[01/02/2019,nan\n]</td><td>通过</td></tr><tr><td>test_reject_duplicate_or_invalid_index[01/02/2019,-1\n]</td><td>通过</td></tr><tr><td>test_coverage_does_not_count_off_calendar_values</td><td>通过</td></tr><tr><td>test_local_import_checks_hash_and_preserves_original</td><td>通过</td></tr><tr><td>test_empty_content_type_http_failure_is_preserved</td><td>通过</td></tr><tr><td>test_yahoo_preserves_provider_values_and_restores_then_share_units</td><td>通过</td></tr><tr><td>test_absent_dividend_request_is_not_zero_dividends</td><td>通过</td></tr><tr><td>test_dividend_is_preserved_in_then_share_units</td><td>通过</td></tr><tr><td>test_yahoo_rejects_missing_bar_without_filling</td><td>通过</td></tr><tr><td>test_yahoo_rejects_wrong_symbol</td><td>通过</td></tr><tr><td>test_split_creates_shares_not_return</td><td>通过</td></tr><tr><td>test_dividend_is_not_lost_or_double_counted</td><td>通过</td></tr><tr><td>test_split_and_dividend_use_same_current_share_units</td><td>通过</td></tr><tr><td>test_old_position_owns_execution_day_profit</td><td>通过</td></tr><tr><td>test_exact_buy_cost_and_post_fee_weight</td><td>通过</td></tr><tr><td>test_exact_sell_cost</td><td>通过</td></tr><tr><td>test_fixed_target_drift_still_has_real_turnover</td><td>通过</td></tr><tr><td>test_missing_signal_holds_shares_and_keeps_losses</td><td>通过</td></tr><tr><td>test_missing_front_signal_is_not_a_cash_exit</td><td>通过</td></tr><tr><td>test_future_prices_and_signals_do_not_change_prior_account</td><td>通过</td></tr><tr><td>test_label_uses_next_close_through_sixth_close_and_entry_relative_loss</td><td>通过</td></tr><tr><td>test_missing_future_path_does_not_become_zero_label</td><td>通过</td></tr><tr><td>test_label_maturity_and_assumed_availability_are_separate</td><td>通过</td></tr><tr><td>test_future_changes_do_not_change_already_matured_labels</td><td>通过</td></tr><tr><td>test_real_early_close_and_dst_clock</td><td>通过</td></tr><tr><td>test_continuous_account_has_no_five_day_overlapping_leverage</td><td>通过</td></tr><tr><td>test_ledger_reconciles_cash_shares_cost_and_equity</td><td>通过</td></tr><tr><td>test_missing_or_invalid_held_price_is_rejected[nan]</td><td>通过</td></tr><tr><td>test_missing_or_invalid_held_price_is_rejected[0]</td><td>通过</td></tr><tr><td>test_missing_or_invalid_held_price_is_rejected[-1]</td><td>通过</td></tr></tbody></table></div></details>
+<h2>复算文件、命令和状态</h2><p><a href='../data/clean/p2/20260907T000150426421Z/SPY_returns.csv'>SPY_returns.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/SVXY_returns.csv'>SVXY_returns.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/clock.csv'>clock.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/labels.csv'>labels.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_cash.csv'>ledger_cash.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_curve.csv'>ledger_curve.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_fixed_100.csv'>ledger_fixed_100.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_fixed_25.csv'>ledger_fixed_25.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_fixed_50.csv'>ledger_fixed_50.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/ledger_fixed_75.csv'>ledger_fixed_75.csv</a> · <a href='../data/clean/p2/20260907T000150426421Z/metrics_2019_2023.csv'>metrics_2019_2023.csv</a></p>
+<p>唯一入口：<code>.venv/bin/python -m svxylab baselines --open</code>；独立测试：<code>.venv/bin/python -m pytest -q</code>。</p>
+<details><summary>退出码 0 · <code>/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check</code></summary><pre>No broken requirements found.
+</pre></details><details><summary>退出码 0 · <code>/Users/logan/SVXYLab/.venv/bin/python -m pytest -q --junitxml /Users/logan/SVXYLab/runs/p2/20260907T000150426421Z/pytest.xml</code></summary><pre>......................................                                   [100%]
+- generated xml file: /Users/logan/SVXYLab/runs/p2/20260907T000150426421Z/pytest.xml -
+38 passed in 0.46s
+</pre></details><details><summary>退出码 0 · <code>git diff --check</code></summary><pre>（无输出）</pre></details><details><summary>退出码 0 · <code>git rev-parse HEAD</code></summary><pre>dc3d4ffc75397fac3702c7882e56ad3a98f4a27d
+</pre></details><details><summary>退出码 0 · <code>git remote</code></summary><pre>（无输出）</pre></details><details><summary>退出码 0 · <code>/usr/bin/open /Users/logan/SVXYLab/reports/baselines.html</code></summary><pre>（无输出）</pre></details><p>Python 3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]；平台 macOS-26.6.2-arm64-arm-64bit。</p>
+<details><summary>实际依赖版本</summary><pre>{
+  &quot;beautifulsoup4&quot;: &quot;4.15.0&quot;,
+  &quot;certifi&quot;: &quot;2026.7.22&quot;,
+  &quot;cffi&quot;: &quot;2.1.1&quot;,
+  &quot;charset-normalizer&quot;: &quot;3.5.1&quot;,
+  &quot;contourpy&quot;: &quot;1.3.3&quot;,
+  &quot;curl_cffi&quot;: &quot;0.16.3&quot;,
+  &quot;cycler&quot;: &quot;0.12.1&quot;,
+  &quot;exchange_calendars&quot;: &quot;4.13.2&quot;,
+  &quot;fonttools&quot;: &quot;4.64.0&quot;,
+  &quot;idna&quot;: &quot;3.19&quot;,
+  &quot;iniconfig&quot;: &quot;2.3.0&quot;,
+  &quot;kiwisolver&quot;: &quot;1.5.1&quot;,
+  &quot;korean_lunar_calendar&quot;: &quot;0.4.0&quot;,
+  &quot;lxml&quot;: &quot;6.1.3&quot;,
+  &quot;matplotlib&quot;: &quot;3.11.1&quot;,
+  &quot;multitasking&quot;: &quot;0.0.13&quot;,
+  &quot;numpy&quot;: &quot;2.4.3&quot;,
+  &quot;packaging&quot;: &quot;26.0&quot;,
+  &quot;pandas&quot;: &quot;3.0.3&quot;,
+  &quot;peewee&quot;: &quot;4.5.0&quot;,
+  &quot;pillow&quot;: &quot;12.3.0&quot;,
+  &quot;pip&quot;: &quot;25.0.1&quot;,
+  &quot;platformdirs&quot;: &quot;4.11.7&quot;,
+  &quot;pluggy&quot;: &quot;1.6.0&quot;,
+  &quot;protobuf&quot;: &quot;7.36.1&quot;,
+  &quot;pycparser&quot;: &quot;3.0&quot;,
+  &quot;Pygments&quot;: &quot;2.19.2&quot;,
+  &quot;pyluach&quot;: &quot;2.3.0&quot;,
+  &quot;pyparsing&quot;: &quot;3.3.2&quot;,
+  &quot;pytest&quot;: &quot;8.4.2&quot;,
+  &quot;python-dateutil&quot;: &quot;2.9.0.post0&quot;,
+  &quot;pytz&quot;: &quot;2026.3.post1&quot;,
+  &quot;requests&quot;: &quot;2.34.2&quot;,
+  &quot;setuptools&quot;: &quot;84.0.0&quot;,
+  &quot;six&quot;: &quot;1.17.0&quot;,
+  &quot;soupsieve&quot;: &quot;2.9.2&quot;,
+  &quot;svxylab&quot;: &quot;0.0.1&quot;,
+  &quot;toolz&quot;: &quot;1.1.0&quot;,
+  &quot;typing_extensions&quot;: &quot;4.16.0&quot;,
+  &quot;tzdata&quot;: &quot;2026.3&quot;,
+  &quot;urllib3&quot;: &quot;2.7.0&quot;,
+  &quot;websockets&quot;: &quot;17.1&quot;,
+  &quot;yfinance&quot;: &quot;1.7.0&quot;
+}</pre></details>
+<p><a href='../runs/p2/20260907T000150426421Z/baselines_run.json'>本次运行记录与数据/代码/结果摘要</a> · <a href='../runs/p2/experiment_record.json'>计算前记录的实现口径</a> · <a href='../runs/p2/dependency_install.json'>实际依赖安装记录</a> · <a href='../STATUS.md'>STATUS.md</a></p>
+<p>工程完成不代表预测或经济研究完成。仍未实现 P3 特征、联合预测或日常交易系统。停在 P2，等待用户验收。</p></main></body></html>

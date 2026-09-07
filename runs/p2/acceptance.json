@@ -1,0 +1,24 @@
+{
+  "stage": "P2",
+  "accepted_at": "2026-09-07T00:36:13.496265+00:00",
+  "authorization_quote": "我验收的是本阶段交付完整、结果真实且可复算，不代表模型有收益优势。请先保存本地 Git 检查点并更新 STATUS.md，然后仅执行 TASKS.md 中的下一个阶段；保留既有原始数据与失败结果，不重建架构，不连接远端或交易账户。",
+  "accepted_run": "runs/p2/20260907T000150426421Z/baselines_run.json",
+  "accepted_run_sha256": "fe8f819dfaf3de8e03bacdc4d2ed1c92cdefe458a6e1b8790d7bf1c071d733f6",
+  "accepted_artifact_sha256": {
+    "data/clean/p2/20260907T000150426421Z/SPY_returns.csv": "8ffa1e1a2a853fda646d440557aca9b17ad56dc43c7483686f418696eaf6fdf0",
+    "data/clean/p2/20260907T000150426421Z/SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+    "data/clean/p2/20260907T000150426421Z/baselines.png": "a29863d28b4877e1897665f68d0d973bb32e4880e39f7e313863ed4805cfbdce",
+    "data/clean/p2/20260907T000150426421Z/baselines.svg": "57a1b88275a3079f3675e682ef13534bfaebb82bc5d77005cdf4483ff8089c9e",
+    "data/clean/p2/20260907T000150426421Z/clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+    "data/clean/p2/20260907T000150426421Z/labels.csv": "6af6fa44000e648f533dae6cb525bfd30a7fee3aa51a6698c5ac476937e09127",
+    "data/clean/p2/20260907T000150426421Z/ledger_cash.csv": "e4ca4a31d04758d4c08861eeb5d32d36f5cbbbb5ea2e946e3c65cbe95bd7287f",
+    "data/clean/p2/20260907T000150426421Z/ledger_curve.csv": "a19ad28dd59fe8fe0fa6f4095c9507c9cea7cd3b8f3f34d1d7989591060b0c01",
+    "data/clean/p2/20260907T000150426421Z/ledger_fixed_100.csv": "7c501db3d4ed639aa8413fc61ac3b5e4fe0b8796bd4cb197be0075b9f757306f",
+    "data/clean/p2/20260907T000150426421Z/ledger_fixed_25.csv": "41068514333e88edcf89f8cde5ae4a8f77ba754c384dcbdc3a7695114b1d6d67",
+    "data/clean/p2/20260907T000150426421Z/ledger_fixed_50.csv": "da6dadc9990e2f34708dfbfffb91f9f6bc8cc0f2c7d18bd36aeb376ca2ea9b01",
+    "data/clean/p2/20260907T000150426421Z/ledger_fixed_75.csv": "017811dd5118634b54dbc60a3f51ad2556b42d11e4bdf74d051a9973c9456a26",
+    "data/clean/p2/20260907T000150426421Z/metrics_2019_2023.csv": "fb197e89b7acfeae6c808481db513a086366a27f0f0ff89d8d0e46cec427b8cd"
+  },
+  "research_advantage_accepted": false,
+  "next_stage": "P3"
+}

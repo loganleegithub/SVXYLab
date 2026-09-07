@@ -1,0 +1,35 @@
+{
+  "stage": "P2",
+  "recorded_at": "2026-09-07T00:01:53.908850+00:00",
+  "previous_run": "runs/p2/20260906T235644089606Z/baselines_run.json",
+  "repeated_run": "runs/p2/20260907T000150426421Z/baselines_run.json",
+  "checks": {
+    "same_11_csv_results": true,
+    "p1_clean_inputs_unchanged": true,
+    "raw_manifest_unchanged": true,
+    "same_baseline_metrics": true,
+    "opened_command_exit_zero": true
+  },
+  "csv_sha256_by_name": {
+    "SPY_returns.csv": "8ffa1e1a2a853fda646d440557aca9b17ad56dc43c7483686f418696eaf6fdf0",
+    "SVXY_returns.csv": "5b193589ab27f7011628f83e2d56b78865f4a966c02b43a8669d40f0452e9b1b",
+    "clock.csv": "2ba0cb66bb1d21dd8b288f9b634417f920db7612886437cc96b9d88d01ec3ddf",
+    "labels.csv": "6af6fa44000e648f533dae6cb525bfd30a7fee3aa51a6698c5ac476937e09127",
+    "ledger_cash.csv": "e4ca4a31d04758d4c08861eeb5d32d36f5cbbbb5ea2e946e3c65cbe95bd7287f",
+    "ledger_curve.csv": "a19ad28dd59fe8fe0fa6f4095c9507c9cea7cd3b8f3f34d1d7989591060b0c01",
+    "ledger_fixed_100.csv": "7c501db3d4ed639aa8413fc61ac3b5e4fe0b8796bd4cb197be0075b9f757306f",
+    "ledger_fixed_25.csv": "41068514333e88edcf89f8cde5ae4a8f77ba754c384dcbdc3a7695114b1d6d67",
+    "ledger_fixed_50.csv": "da6dadc9990e2f34708dfbfffb91f9f6bc8cc0f2c7d18bd36aeb376ca2ea9b01",
+    "ledger_fixed_75.csv": "017811dd5118634b54dbc60a3f51ad2556b42d11e4bdf74d051a9973c9456a26",
+    "metrics_2019_2023.csv": "fb197e89b7acfeae6c808481db513a086366a27f0f0ff89d8d0e46cec427b8cd"
+  },
+  "actual_command": {
+    "command": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab baselines --open",
+    "started_at": "2026-09-07T00:01:50.060347+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 3.84,
+    "output": "P2 报告：/Users/logan/SVXYLab/reports/baselines.html\n普通 pytest：38 通过，0 失败\n真实账本：6 × 1930 行；标签 1924 完整，6 未成熟。\n"
+  },
+  "pytest_passed": 38,
+  "pytest_failed": 0
+}

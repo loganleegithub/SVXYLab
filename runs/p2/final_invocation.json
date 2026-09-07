@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab baselines --open",
+  "started_at": "2026-09-07T00:01:50.060347+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 3.84,
+  "output": "P2 报告：/Users/logan/SVXYLab/reports/baselines.html\n普通 pytest：38 通过，0 失败\n真实账本：6 × 1930 行；标签 1924 完整，6 未成熟。\n"
+}

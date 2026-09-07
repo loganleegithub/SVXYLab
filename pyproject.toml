@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "svxylab"
 version = "0.0.1"
-description = "SVXYLab local daily research: environment and data verification"
+description = "SVXYLab local daily research: verified data and continuous ledgers"
 requires-python = ">=3.12"
-dependencies = ["numpy==2.4.3", "pandas==3.0.3", "exchange-calendars==4.13.2", "yfinance==1.7.0", "curl_cffi==0.16.3"]
+dependencies = ["numpy==2.4.3", "pandas==3.0.3", "exchange-calendars==4.13.2", "yfinance==1.7.0", "curl_cffi==0.16.3", "matplotlib==3.11.1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

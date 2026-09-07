@@ -1,0 +1,14 @@
+{
+  "stage": "P2",
+  "observed_at": "2026-09-07T00:00:02.943798+00:00",
+  "source": "P1 Yahoo raw fields; derived diagnostic, not a universal vendor methodology claim",
+  "session": "2020-03-20",
+  "previous_close": 240.5099945068359,
+  "close": 228.8000030517578,
+  "cash_dividend": 1.406,
+  "project_cash_reinvestment_return": -0.04284225890989,
+  "provider_adjusted_close_return": -0.0430942824282815,
+  "backward_dividend_factor_diagnostic_return": -0.04309418366820095,
+  "diagnostic_minus_provider_bps": 0.0009876008055104135,
+  "interpretation": "该日用 C_t/(C_prev-D_t)-1 诊断复算，与供应商复权参考接近；主计算仍使用 (C_t+D_t)/C_prev-1。记录方法差异，不用供应商参考覆盖公司行动总回报。"
+}
