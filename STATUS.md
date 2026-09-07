@@ -1,8 +1,8 @@
 # 当前进度
 
-更新日期：2026-09-07（Asia/Shanghai）。状态：**P5_COMPLETE_AWAITING_ACCEPTANCE**。
+更新日期：2026-09-07（Asia/Shanghai）。状态：**P5_ACCEPTED_P6_AUTHORIZED**。
 
-用户已验收P4交付完整、计算可复算及负结果忠实保留；这不代表认可预测或投资优势。验收后已保存本地P4检查点 **de8b43d44461891cc2f89f540223700bb93546ba**，接续原参考提交0810f1a；未重置或丢弃既有工作。验收记录见[runs/p4/acceptance.json](runs/p4/acceptance.json)，检查点记录见[runs/p4/accepted_checkpoint.json](runs/p4/accepted_checkpoint.json)。当前P5修改尚未提交，等待本阶段验收后再保存检查点。已有origin保持原样，本轮未fetch、push或上传。
+用户已验收P4交付完整、计算可复算及负结果忠实保留；这不代表认可预测或投资优势。验收后已保存本地P4检查点 **de8b43d44461891cc2f89f540223700bb93546ba**，接续原参考提交0810f1a；未重置或丢弃既有工作。验收记录见[runs/p4/acceptance.json](runs/p4/acceptance.json)，检查点记录见[runs/p4/accepted_checkpoint.json](runs/p4/accepted_checkpoint.json)。用户现已验收P5，先保存本地检查点，再仅执行P6；验收记录见runs/p5/acceptance.json。已有origin保持原样，本轮未fetch、push或上传。
 
 ## 工程执行：P5完成
 
@@ -76,4 +76,4 @@ P1冻结截止2026-09-04保持不变，P5仅将2024以前记录选为数值研�
 
 [中文经济报告](reports/economics.html)已实际调用macOS打开，退出0；图已检查，页面本地链接和数据摘要已核验。基础两种口径的24份逐日账本在报告内直接可点；[全部账户指标](data/clean/p5/20260907T024118182655Z/account_metrics.csv)、[全部净账户成交](data/clean/p5/20260907T024118182655Z/trades.csv)、[共同起点M2主映射账本](data/clean/p5/20260907T024118182655Z/ledgers/common_base_M2_main.csv)可直接核查。最终检查记录在[runs/p5/final_validation.json](runs/p5/final_validation.json)。行情与派生CSV继续留在本地Git忽略目录，不默认分享或上传。
 
-**工程阻塞项：无。当前停在P5，等待用户验收。** 未执行P6既定消融、两个挑战者或21/63日时间块不确定性；未消耗2024年后的封存评价，未连接账户、下单或自动晋升模型。研究较差结果不阻止交付完成。
+**工程阻塞项：无。P5已验收，本轮仅推进P6。** 未执行P6既定消融、两个挑战者或21/63日时间块不确定性；未消耗2024年后的封存评价，未连接账户、下单或自动晋升模型。研究较差结果不阻止交付完成。
