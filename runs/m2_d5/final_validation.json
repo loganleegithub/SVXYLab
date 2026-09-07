@@ -1,0 +1,278 @@
+{
+  "stage": "M2_D5",
+  "status": "DELIVERED_AWAITING_ACCEPTANCE",
+  "recorded_at_utc": "2026-09-07T11:43:19.802337+00:00",
+  "accepted_D1_D4_checkpoint": "6920be071cce47b1a214fa5065b557ab413e3134",
+  "current_HEAD": "6920be071cce47b1a214fa5065b557ab413e3134",
+  "user_instruction": "验收 D1—D4，按照方案执行 D5",
+  "candidate": "M2_MU_ALPHA100_D5",
+  "engineering": {
+    "calculation_complete": true,
+    "ordinary_tests": {
+      "tests": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "validation": {
+      "fit_count": 73,
+      "changed_alpha_fits": 12,
+      "training_memberships_verified": 73,
+      "refit_coefficient_max_error": 4.8606951796870135e-15,
+      "original_prediction_max_error": 3.5908775952719907e-16,
+      "event_cluster_count": 1260,
+      "deletion_refits": 2520,
+      "deletion_svd_max_error": 5.575401251789458e-15,
+      "prediction_days": 1503,
+      "score_days": 1493,
+      "unchanged_alpha_prediction_days": 1251,
+      "changed_alpha_prediction_days": 252,
+      "unchanged_Q90_P10_rows": 1503,
+      "bootstrap_valid_scalars": 220000,
+      "account_count": 12,
+      "account_rows": 9030,
+      "account_max_error": 7.479684427380562e-09,
+      "accounts": [
+        {
+          "scope": "development",
+          "account": "original_M2",
+          "rows": 832,
+          "max_amount_error": 2.066371962428093e-09
+        },
+        {
+          "scope": "development",
+          "account": "D5",
+          "rows": 832,
+          "max_amount_error": 2.066371962428093e-09
+        },
+        {
+          "scope": "development",
+          "account": "M2_risk",
+          "rows": 832,
+          "max_amount_error": 1.949956640601158e-09
+        },
+        {
+          "scope": "development",
+          "account": "M0",
+          "rows": 832,
+          "max_amount_error": 9.604264050722122e-10
+        },
+        {
+          "scope": "development",
+          "account": "fixed50",
+          "rows": 832,
+          "max_amount_error": 7.479684427380562e-09
+        },
+        {
+          "scope": "development",
+          "account": "fixed100",
+          "rows": 832,
+          "max_amount_error": 5.820766091346741e-10
+        },
+        {
+          "scope": "revealed",
+          "account": "original_M2",
+          "rows": 673,
+          "max_amount_error": 2.9103830456733704e-10
+        },
+        {
+          "scope": "revealed",
+          "account": "D5",
+          "rows": 673,
+          "max_amount_error": 6.693881005048752e-10
+        },
+        {
+          "scope": "revealed",
+          "account": "M2_risk",
+          "rows": 673,
+          "max_amount_error": 6.548361852765083e-10
+        },
+        {
+          "scope": "revealed",
+          "account": "M0",
+          "rows": 673,
+          "max_amount_error": 7.130438461899757e-10
+        },
+        {
+          "scope": "revealed",
+          "account": "fixed50",
+          "rows": 673,
+          "max_amount_error": 3.5070115700364113e-09
+        },
+        {
+          "scope": "revealed",
+          "account": "fixed100",
+          "rows": 673,
+          "max_amount_error": 1.8917489796876907e-10
+        }
+      ],
+      "protected_files": 9533,
+      "real_sessions": 1930,
+      "real_first": "2019-01-02",
+      "real_last": "2026-09-04",
+      "market_downloads": 0,
+      "D5_executed": true,
+      "candidate": "M2_MU_ALPHA100_D5",
+      "second_intervention": false
+    },
+    "independent_validation": "runs/m2_d5/independent_validation_20260907T113723474987Z.json",
+    "independent_validation_sha256": "a24b6d106867a0d0aa55b97c48cb2e4c6b3bd0fc4d855b93a1ce61e797a2f8a7",
+    "independent_account_max_error": 5.573383532464504e-09,
+    "CSV_byte_identical": 80,
+    "JSON_byte_identical": 1335,
+    "ledger_CSV_byte_identical": 12,
+    "preserved_files": 9533,
+    "P7_frozen_files_compatibly_verified": 49,
+    "changed_original_source_files": [
+      "src/svxylab/release.py",
+      "src/svxylab/__main__.py"
+    ],
+    "runtime_compatibility": "runs/m2_d5/runtime_compatibility.json",
+    "git_diff_check": 0
+  },
+  "research": {
+    "attribute": "POST_REVEAL_LIMITED_FALSIFICATION",
+    "candidate": "M2_MU_ALPHA100_D5",
+    "revealed_MSE_relative_change": -0.1605452220353698,
+    "2024_MSE_relative_change": -0.2770775193334091,
+    "revealed_original_net_return": -0.1587511845586298,
+    "revealed_D5_net_return": 0.030768944499975248,
+    "revealed_net_return_delta": 0.18952012905860505,
+    "changed_alpha_deletion_comparisons": 498,
+    "lower_max_sensitivity_count": 452,
+    "higher_max_sensitivity_count": 46,
+    "revealed_gate_crossings": [
+      106,
+      118
+    ],
+    "revealed_gate_disagreements": 42,
+    "control_prediction_days": 1251,
+    "next_intervention_started": false,
+    "largest_original_event_counterexample": {
+      "scope": "revealed",
+      "fit_id": "2024-12-02_M2",
+      "original_alpha": 1.0,
+      "event_id": "2020-02-14_2020-03-26",
+      "variant": "fixed_delete",
+      "removed_rows": 22,
+      "later_prediction_rows": 21,
+      "original_max_abs_delta": 0.1695244846324539,
+      "d5_max_abs_delta": 0.18419809969878723,
+      "original_rms_delta": 0.03774824279895693,
+      "d5_rms_delta": 0.041020916209646464,
+      "original_gate_changes": 4,
+      "d5_gate_changes": 8,
+      "max_sensitivity_change": 0.014673615066333329
+    },
+    "largest_event_full_delete_counterexample": {
+      "scope": "revealed",
+      "fit_id": "2024-12-02_M2",
+      "original_alpha": 1.0,
+      "event_id": "2020-02-14_2020-03-26",
+      "variant": "full_delete",
+      "removed_rows": 22,
+      "later_prediction_rows": 21,
+      "original_max_abs_delta": 0.16258082508068905,
+      "d5_max_abs_delta": 0.21536633685749584,
+      "original_rms_delta": 0.036294470668142946,
+      "d5_rms_delta": 0.04780561048714107,
+      "original_gate_changes": 4,
+      "d5_gate_changes": 8,
+      "max_sensitivity_change": 0.05278551177680679
+    },
+    "2024Q1_counterexample": {
+      "scope": "revealed",
+      "period_type": "quarter",
+      "period": "2024Q1",
+      "MSE_delta": 8.127669480859599e-05,
+      "D5": 0.10624239573594685,
+      "original_M2": 0.14076663174283333,
+      "net_return_delta": -0.03452423600688648,
+      "classification": "未同时改善／连续状态差异"
+    },
+    "interpretation": "Partial mean-error and typical sensitivity improvement; strongest event sensitivity, gate churn and extreme portfolio tail not repaired. No trading rescue or independent edge."
+  },
+  "real_data": {
+    "downloads": 0,
+    "first": "2019-01-02",
+    "last": "2026-09-04",
+    "sessions": 1930,
+    "core_complete": 1909,
+    "prediction_days": [
+      831,
+      672
+    ],
+    "score_days": [
+      826,
+      667
+    ],
+    "unchanged_alpha_prediction_days": 1251,
+    "changed_mean_days": 252,
+    "Q90_P10_unchanged_days": 1503,
+    "historical_PIT_claim": false,
+    "no_service_initial_requests": 175
+  },
+  "delivery": {
+    "report": "reports/falsification.html",
+    "report_sha256": "e158a35c12519e7678f46e4473a996e33a53e745215b434f265c11994c10ff9c",
+    "output_dir": "data/clean/m2_d5/20260907T113723474987Z",
+    "actual_run": "runs/m2_d5/20260907T113723474987Z/falsification_run.json",
+    "command": [
+      "/Users/logan/SVXYLab/.venv/bin/python",
+      "-m",
+      "svxylab",
+      "falsification"
+    ],
+    "launcher": "M2有限反证.command",
+    "presentation_validation": "runs/m2_d5/presentation_validation.json",
+    "browser_visual_check_complete": false,
+    "browser_limit": "Prior browser URL policy blocked localHTML; no workaround. Final plot viewed, links/HTML/JS checked."
+  },
+  "final_source_sha256": {
+    "src/svxylab/__init__.py": "d3397222b01a8ef545ad28764d7b96d24f8c63c9e12a37d2e35ecde9d2a34498",
+    "src/svxylab/__main__.py": "89435b6890a3e99d6c3f1df7eb14443b446225851169dceacaab2ea5f2440957",
+    "src/svxylab/arithmetic.py": "d6abddbe64ba38e642baca4667cee410e58e15ef3bb517730372c81235aaf36b",
+    "src/svxylab/baselines.py": "cb997febfe3cdfb7924c3680b30d3d55c482206e81b31f3b5ffcca99c4d0c4cb",
+    "src/svxylab/baselines_report.py": "cdfa8d0646e854517e5268de57ef24841548eaaf5148dfc3ce33b5eae7bf708b",
+    "src/svxylab/capital.py": "5fe1627bd34af9cc43684d8ce1cfbb8d9f5e30d53fe0478cfa62cbf89f72590e",
+    "src/svxylab/capital_audit.py": "a8c24c628ea13d8f014da2d9e8de88ded7ed41474a5419ab03db45b46fcdfaa8",
+    "src/svxylab/capital_data.py": "5114fd35da35d11a613a2c4fae0a6dee38622466ad5807cd86d93067e0f44bee",
+    "src/svxylab/capital_report.py": "098b482b6c3ce6da6ab2de47e0f1828c5a9a5a622cf9c0ea3a1778e9b0a46c34",
+    "src/svxylab/daily.py": "30a653b93021de284192cfa604eea763b8a4ad3be4d382cb8c19802b03826df8",
+    "src/svxylab/data.py": "d5bf6401de90db315296e114a48ebee8715e87d59ba2bf0fefc90f935ec33a41",
+    "src/svxylab/data_report.py": "78e3ad68914b0b4811a32a0d051c4497c26b9ca4b6760aff72a79fe36c0c2bcb",
+    "src/svxylab/diagnostic_models.py": "8a4888df02d8f6f924b7be4bc9163c862cc67ab468e03674dc6628c3653c3a20",
+    "src/svxylab/diagnostics.py": "edee793fa85688f0e8f3cdf804999c35a06c6bd81a9f80b1ba841819a6fc31da",
+    "src/svxylab/diagnostics_audit.py": "a1ee71a883366c271c416136647792236bee08690e25a458dcbd8ecb800b7c3a",
+    "src/svxylab/diagnostics_report.py": "aa65c5e7035a4dbb6b81d2ae73d4f393c30e9e160dd23a8725a5d94b5735daaa",
+    "src/svxylab/downloads.py": "551cd821f83fe6bb0ef2dcce7471fcd485e0bb657ff303273659c84106ccbe8d",
+    "src/svxylab/economics.py": "b013365d89f765db08be68e5e0775011b8677f266c421373b8d1e8af3832331c",
+    "src/svxylab/economics_audit.py": "721420e8cafc740442bc3175317d5cdf54ad7591d74af6fd9a926b6a4b9abaca",
+    "src/svxylab/economics_report.py": "4fd43b29e3cd663d71f2e6edb3bea77bdf96efdb663dcbae1e7483add907b844",
+    "src/svxylab/environment.py": "775e6a8ad06b14f1535d85d3f2ef5a7928049b3f72d461cc20ed365165ab9f77",
+    "src/svxylab/etf.py": "a653689b314af685e546ccc5cc1c53199355b14e2d4553c0ad1df7dfd8fbf08e",
+    "src/svxylab/falsification.py": "9663addfa2e4fcdfbd789ee81ceae3adde2e72d1f13940bf0ef02ad69887b4b3",
+    "src/svxylab/falsification_report.py": "930addcac2c7cd3193e5a2e404ed53b348bcd4d2e8f3ae3b9c878130f52d5aab",
+    "src/svxylab/features.py": "b3bc22cbbd96c8ae30ce721487ab9499f10e5b51eaada32f33cca359b1fac20f",
+    "src/svxylab/features_report.py": "cc2734818cc2cfd7ff363ce77b768667806a0624a5ba23053a75a2839aaec6f0",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/mechanism.py": "4059c2f8a19eb92f9348340bf1a96f0339afaddad8a19051439dad8ca730be0f",
+    "src/svxylab/mechanism_report.py": "e9dfde5e0f7f4d8472720faa154b1d3de46881637de4887ddddfddc27dcf8357",
+    "src/svxylab/models.py": "c8a52e4c082ce53b4d4060f3d5581c791cf378ff68ce672351eced2064b3e69a",
+    "src/svxylab/prediction_data.py": "a303189bd121c40c6d082a64e9c887ef808f3714b88847fc1b8f3f31b9932555",
+    "src/svxylab/prediction_review.py": "f8cbac97e5a975aebf141d52099a5cf6235c3e8a1ffd57293ae585c63edeaded",
+    "src/svxylab/predictions.py": "8fd0ad69b397fbf76fca8509cbd8d3b8163a5b8febd8d8eba76b7c981a11eab9",
+    "src/svxylab/predictions_report.py": "81c7572eb2b4d5a2715cb8df2f9abb6ab4717a88729c7e63512d590fe19867ef",
+    "src/svxylab/release.py": "efd7af1a3d3d908f86e7e00dfc09a30e9b2d5189164543b959eba27b93f074ce",
+    "src/svxylab/release_audit.py": "bbad2bd563391ec5c7c48754d47403646ade67c64cc50fee276c8e9703f506bc",
+    "src/svxylab/release_report.py": "76838ca0325ed7965b8637c35d65a06f5a1e31ae7845290905350a7182328601",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc"
+  },
+  "source_unchanged_since_final_complete_run": true,
+  "D5_user_acceptance_recorded": false,
+  "D5_committed": false,
+  "pushed_this_turn": false,
+  "second_intervention": false,
+  "stop": "Await D5 acceptance; no automatic promotion, next intervention, funding or account use."
+}

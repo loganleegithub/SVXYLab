@@ -1,0 +1,13 @@
+{
+  "first_calculation": "data/clean/m2_d5/20260907T113134120077Z",
+  "calculation_changes": [],
+  "presentation_changes": [
+    "Move largest-event deterioration, gate/cost increases,2024Q1 counterexample and retained losses into opening interpretation",
+    "Reduce plot date tick density after direct image inspection"
+  ],
+  "independent_audit_first_attempt": {
+    "failure": "CSV dtype-only difference in mu_projected/q_projected: full request CSV includes missing pre-service rows, so selected actual bool values retained object dtype. Independent comparison stopped before calculations.",
+    "fix": "Verify every selected value is an actual nonmissing bool, then normalize these two known columns only and keep exact full-column comparison. No numerical assertion loosened."
+  },
+  "first_report_preserved_in_first_output": true
+}

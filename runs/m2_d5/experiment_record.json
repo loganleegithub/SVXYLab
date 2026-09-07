@@ -1,0 +1,73 @@
+{
+  "stage": "M2_D5",
+  "recorded_before_calculation_at_utc": "2026-09-07T11:22:38.060904+00:00",
+  "user_instruction": "验收 D1—D4，按照方案执行 D5",
+  "approved_proposal": "runs/m2_mechanism/D5_proposal.md",
+  "approved_proposal_sha256": "b15c03500c60b73ea603c89fa1806b67d1cfa2160d6808a37c851ffd9d760ed9",
+  "candidate": "M2_MU_ALPHA100_D5",
+  "attribute": "POST_REVEAL_LIMITED_FALSIFICATION",
+  "hypothesis": "2024 mean alpha reduction 100 to 1 increased finite historical-event sensitivity; hard mean gate amplified error into trades. Fixed100 is a single counterfactual, not causal proof or independent validation.",
+  "changed_variable": {
+    "mu5_ridge_alpha": 100,
+    "objective": "sum squared R5 residuals + alpha times squared coefficients; unpenalized intercept"
+  },
+  "fixed": [
+    "All 73 original mature monthly training memberships",
+    "Original 19 inputs and saved 63-column transforms",
+    "Original R5 conditional mean target and prediction clipping at -1",
+    "Published Q90/P10 and their raw values",
+    "Original timing, requested service dates, label maturity and score_observed",
+    "Original B=.05, single-sided c=.0005, gate mu>2c, target B/Q capped1, cash0, capital100000",
+    "No grid, no other model or intervention"
+  ],
+  "prediction_controls": "Refit all73 with alpha100 and independently solve; original-alpha100 published means copied exactly after numerical identity verification. Only2024 has changed forecasts. Do not overwrite accepted outputs.",
+  "evaluation_scopes": [
+    [
+      "development",
+      "2020-09-11",
+      "2023-12-29"
+    ],
+    [
+      "revealed",
+      "2024-01-02",
+      "2026-09-04"
+    ]
+  ],
+  "scoring": "Only original score_observed rows, published mu5 MSE; preserve original cross2024 and unripe tails. All/year/quarter calendar groups. Paired squared-error differences D5-original. No selection after scores.",
+  "event_diagnostics": "Reuse all1260 original monthly mature event clusters and deletion identities. Compare original vs alpha100 fixed-original-transform deletion, and separately full-transform deletion using each accepted D3 saved deletion transform. No event deleted from production fit or evaluation. Save all pairwise changed predictions. No target replacement intervention.",
+  "stability_metrics": [
+    "cluster maximum/RMS absolute raw mean change",
+    "gate changes on deletion",
+    "effective degrees of freedom excluding intercept and penalized condition",
+    "conditional fixed-design Newey-West prediction SE, lags21/63; no bias/selection/transform uncertainty included"
+  ],
+  "account_comparators": [
+    "original M2 main",
+    "D5 main",
+    "original M2 risk-only (also exact D5 risk-only)",
+    "original M0 main",
+    "fixed50",
+    "fixed100"
+  ],
+  "account_paths": "Each scope rebuilt from common100000 cash at original execution close; all strategies same start/end and same original calendar. Years/quarters slice continuous paths, no recapitalization; holding PnL precedes current trade. Missing forecast holds actual shares. No forced final liquidation.",
+  "account_metrics": [
+    "net total return",
+    "local-period max drawdown incl opening equity",
+    "inherited full-scope drawdown",
+    "average old actual exposure",
+    "fees, turnover, worst daily and compounded5-session return within period",
+    "target jumps and gate crossings, paired per-date chain, holding-PnL and cost change"
+  ],
+  "bootstrap": {
+    "widths": [
+      21,
+      63
+    ],
+    "draws": 1000,
+    "seed": 1707,
+    "algorithm": "paired circular calendar blocks; same indices for both models, no compression of missing labels; per all/year/quarter. MSE difference mean over observed selections; sparse empty draws kept missing with valid counts. Account realized return paths sampled as pairs, compute mean daily difference, compounded return difference and max-drawdown difference; conditional on realized trading/costs, not reoptimized tradable bootstrap paths. 95% percentile intervals; overlapping five-day labels and post-reveal multiple comparisons are not independent evidence.",
+    "short_period_rule": "When full period has fewer sessions than requested21/63, keep period point metrics but report that block interval unavailable; do not shrink block or pad sample. Recorded before first D5 calculation."
+  },
+  "interpretation": "Profit-only improvement without MSE/stability does not establish estimator repair. MSE/stability without economy does not rescue trading. Preserve every year/quarter and worse cases, including alpha100 control years. No automatic second intervention/promotion/funding.",
+  "dependencies": "Existing Python3.12.13/.venv; no installs, downloads or accounts."
+}

@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-09-07T11:38:48.806361+00:00",
+  "HTML": [
+    {
+      "path": "reports/falsification.html",
+      "link_count": 19,
+      "unique_element_ids": 11
+    },
+    {
+      "path": "data/clean/m2_d5/20260907T113723474987Z/report.html",
+      "link_count": 19,
+      "unique_element_ids": 11
+    }
+  ],
+  "inline_script_syntax_returncode": 0,
+  "local_data_script_syntax_returncode": 0,
+  "daily_records": 1503,
+  "launcher_zsh_syntax_returncode": 0,
+  "figure_direct_view": "Final 2240x1360 plot directly inspected: complete curves/legends, no date tick overlap after6-month locator correction.",
+  "browser_visual_interaction_check": "Not performed: previously returned browser URL policy rejection for local HTML; no workaround attempted.",
+  "macOS_open_run": false
+}

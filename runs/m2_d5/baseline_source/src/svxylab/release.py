@@ -74,18 +74,6 @@ def verify_release(root):
                 raise ValueError('M2诊断兼容记录旧摘要不符：'+path)
             verify_hashes(root,{'runs/m2_mechanism/baseline_source/'+path:item['before']})
             sources[path]=item['after']
-    d5_amendment=root/'runs/m2_d5/runtime_compatibility.json'
-    if d5_amendment.exists():
-        change=read_json(d5_amendment)
-        if (change['p7_freeze_sha256']!=digest(root/'runs/p7/freeze.json')
-                or not mechanism_amendment.exists()
-                or change['mechanism_amendment_sha256']!=digest(mechanism_amendment)):
-            raise ValueError('D5兼容记录引用的历史版本不符')
-        for path,item in change['changed_frozen_files'].items():
-            if sources.get(path)!=item['before']:
-                raise ValueError('D5兼容记录旧摘要不符：'+path)
-            verify_hashes(root,{'runs/m2_d5/baseline_source/'+path:item['before']})
-            sources[path]=item['after']
     verify_hashes(root,sources)
     for stage in ['p4','p5','p6']:
         a=read_json(root/f'runs/{stage}/acceptance.json')

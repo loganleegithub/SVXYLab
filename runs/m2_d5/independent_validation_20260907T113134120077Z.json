@@ -1,0 +1,21 @@
+{
+  "output_dir": "data/clean/m2_d5/20260907T113134120077Z",
+  "fit_count": 73,
+  "independent_svd_coefficient_max_error": 4.8606951796870135e-15,
+  "independent_mean_prediction_max_error": 1.7931836571172255e-14,
+  "independent_calendar_HAC_max_error": 3.837208328860697e-15,
+  "deletion_prediction_rows": 51896,
+  "deletion_prediction_max_error": 5.551115123125783e-17,
+  "accounts": 12,
+  "account_rows": 9030,
+  "account_equation_max_error": 5.573383532464504e-09,
+  "continuous_period_metrics_checked": 204,
+  "period_metric_max_error": 3.552713678800501e-15,
+  "bootstrap_scalar_values": 220000,
+  "bootstrap_scalar_max_error": 8.43769498715119e-15,
+  "bootstrap_interval_max_error": 4.551914400963142e-15,
+  "original_prediction_columns_exact": true,
+  "Q90_P10_exact_rows": 1503,
+  "preserved_files": 9533,
+  "scope": "Independent spline tails, sklearn SVD, maturity membership, calendar-HAC, saved deletions, cash/share conservation, continuous period metrics and log-compounded paired bootstrap; no downloads."
+}
