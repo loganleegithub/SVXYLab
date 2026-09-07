@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q tests/test_models.py --junitxml /Users/logan/SVXYLab/runs/p4/model_tests_initial.xml",
+  "started_at": "2026-09-07T01:17:16.096742+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 2.317,
+  "output": "..............                                                           [100%]\n--- generated xml file: /Users/logan/SVXYLab/runs/p4/model_tests_initial.xml ---\n14 passed in 2.06s\n"
+}

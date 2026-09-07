@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m svxylab predictions --pilot",
+  "started_at": "2026-09-07T01:21:10.660981+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 5.983,
+  "output": "拟合 2020-09-11：成熟训练 400 行、阳性 35、重叠事件簇 7；年度选参 + M0/M1/M2 完成，0.51 秒。\nP4 首月试运行：/Users/logan/SVXYLab/reports/predictions.html\n14 日有预测，175 日无预测；3 份模型。\n普通 pytest：83 通过，0 失败。\n"
+}

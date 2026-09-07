@@ -14,3 +14,5 @@ data/raw/*
 !data/raw/.gitkeep
 data/clean/*
 !data/clean/.gitkeep
+# 合成扰动测试的大型衍生文件保留本地；摘要、XML 和审计代码仍进检查点。
+runs/p4/*/SYNTHETIC_TEST_ONLY/

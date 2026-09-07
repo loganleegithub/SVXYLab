@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-07T01:25:55.765753+00:00",
+  "run_record": "runs/p4/20260907T012156654955Z/predictions_run.json",
+  "audit_source_sha256": "514c00d1bd8b9b35a8bb2d1b1d714e4b96d89a00c3834e649911d7b69996589d",
+  "method": "直接从P3原始特征/P2标签选择成熟成员，独立重建训练尺度、样条、交互和已保存系数的全部预测；逐标量重算候选损失及评估，无生产模型/评分函数。",
+  "monthly_models_checked": 120,
+  "forecast_rows_replayed": 2493,
+  "prediction_values_checked": 14958,
+  "annual_selections_checked": 4,
+  "inner_head_fits_checked": 216,
+  "metric_rows_checked": 57,
+  "training_cutoffs_and_membership_match": true,
+  "no_locked_labels_used": true,
+  "max_absolute_errors": {
+    "raw_scaler": 3.375077994860476e-14,
+    "spline_knots": 3.730349362740526e-14,
+    "output_scaler": 3.1086244689504383e-15,
+    "predictions": 1.2878587085651816e-14,
+    "cv_losses": 1.7763568394002505e-15,
+    "metrics": 1.2212453270876722e-15,
+    "m0_constants": 8.326672684688674e-17,
+    "support": 7.216449660063518e-16
+  },
+  "passed": true
+}

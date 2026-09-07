@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python runs/p4/reproduce_compare.py",
+  "started_at": "2026-09-07T01:34:29.504259+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 0.445,
+  "output": "{\"passed\": true, \"csv_files\": 17, \"snapshots\": {\"models\": {\"count\": 120, \"parameters_and_transformations_exactly_equal\": true}, \"selections\": {\"count\": 4, \"parameters_and_transformations_exactly_equal\": true}}, \"pilot_rows\": 567, \"final_run\": \"runs/p4/20260907T013333116356Z/predictions_run.json\"}\n"
+}

@@ -1,0 +1,98 @@
+{
+  "stage": "P4",
+  "recorded_before_model_fitting_at": "2026-09-07T01:09:39.209746+00:00",
+  "accepted_p3_checkpoint": "541178bb763f029e5b53d792939985f03e56946e",
+  "accepted_p3_run": "runs/p3/20260907T005629664263Z/features_run.json",
+  "unchanged_experiment_toml_sha256": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+  "unchanged_FEATURES_json_sha256": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+  "scope": "仅 P4：M0/M1/M2 与 μ5/Q90(L5)/P10；不作持仓映射、消融、SKEW挑战者或封存段评估。",
+  "data_boundary": {
+    "history_start": "2019-01-01",
+    "decision_session_requested_start": "2020-01-02",
+    "decision_session_end": "2023-12-29",
+    "locked_start": "2024-01-01",
+    "axis": "开发区间按实际决策/执行交易日；首个候选信息日为2019-12-31。",
+    "evaluation_labels": "只评价 label_end_session<2024-01-01 的结果；跨界标签在P4输入中置空并标记，不读取为数值。预测可保留未评分尾部。"
+  },
+  "training": {
+    "calendar_window": "以当前信息日t为窗口末端的最多1260个完整股票交易日，再取特征完整且已可得、标签已成熟且已可得的行。",
+    "outer_min_rows": 400,
+    "inner_min_rows": 200,
+    "label_gate": "label_matures_at < cutoff AND label_available_at <= cutoff；特征 assumed_available_at <= cutoff。",
+    "first_fit": "从请求首日逐日等候全部条件满足，之后按决策月份第一个合资格日重估。",
+    "annual_selection": "首次拟合及此后每年第一次拟合，按同一窗口末尾3个63股票交易日验证块选择；不将缺失日期压缩成连续行号。",
+    "inner_purge": "每块训练行限于块首个决策截止以前已成熟可得的外层窗口内样本；验证标签须在年度选择时已成熟可得。",
+    "inner_weighting": "三个等长验证块的逐行损失合并平均；保存全部候选、每块及总分。",
+    "tie_rule": "损失相差<=1e-12时取更强收缩：Ridge/Quantile更大alpha，Logistic更小C。"
+  },
+  "transforms": {
+    "M0": "同一完整成熟训练集的R5均值、numpy.quantile(method=linear)的L5第90分位、Jeffreys事件率(n_positive+0.5)/(n+1)。",
+    "M1": "StandardScaler训练拟合19项原始核心输入；19维联合线性。",
+    "M2": "先训练拟合19项StandardScaler；每项3个quantile节点、二次、include_bias=False、linear外推，产生57个样条基；加6个预定义标准化输入乘积；对这63个输出列再用训练StandardScaler确定尺度。",
+    "snapshots": "保存所有训练均值/尺度、样条节点与基系数、输出列尺度、回归系数与截距，使用普通JSON。",
+    "support": "按每期训练原值min/max标记外推，另报距边界的训练标准差；不裁剪特征。"
+  },
+  "estimators": {
+    "ridge": {
+      "solver": "svd",
+      "fit_intercept": true
+    },
+    "logistic": {
+      "solver": "lbfgs",
+      "l1_ratio": 0.0,
+      "class_weight": null,
+      "tol": 1e-08,
+      "max_iter": 3000,
+      "random_state": 1707
+    },
+    "quantile": {
+      "solver": "highs",
+      "quantile": 0.9,
+      "fit_intercept": true
+    },
+    "threads": "同一进程依次拟合，threadpoolctl将可管理数值线程限定为1；无并行写入。",
+    "single_class": "Logistic只在训练有两类时拟合；否则固定用同训练集Jeffreys事件率并标记，保留其他两头。",
+    "failed_fit": "收敛警告/非有限输出作为计算失败保留；不以零值顶替，不因测试集结果换参数。"
+  },
+  "projection": {
+    "mu5": "max(raw,-1)",
+    "Q90": "clip(raw,0,1)",
+    "P10": "logistic/Jeffreys自然在[0,1]；log_loss仅按机器epsilon避免log(0)。",
+    "all_scoring": "内外层均用相同投影，保存raw和投影次数。"
+  },
+  "evaluation": {
+    "mean": "MSE",
+    "probability": "log_loss与Brier，五个固定概率区间[0,.2),[.2,.4),[.4,.6),[.6,.8),[.8,1]，空组保留。",
+    "quantile": "0.9 pinball loss与L5<=Q90覆盖；按真实样本数报告。",
+    "periods": "全开发有效共同日期、日历年与季度；不得仅给总准确率。",
+    "risk_groups": "按各模型预测Q90的经验五分位做事后描述，边界重复时少于5组并注明；不用于拟合或调参。",
+    "comparisons": "同日期配对相对M0、M2相对M1；不评价经济仓位优势。"
+  },
+  "interaction_diagnostic": "每月M2给出6个交互的条件斜率贡献：在伙伴变量训练z分布Q25/Q50/Q75下，对本变量增加1个训练标准差的交互部分作用；μ原始值、Q90原始值、P10的log-odds分别报告。另给同月3个真实联合状态的局部数值导数，说明样条与交互总和；非因果权重。",
+  "time_labels": "simulation_decision_at为历史重放截止，computed_at_utc是本次真实计算时间；不声称预测在当年实际生成。",
+  "pilot": "先执行首个合资格历史月，保存耗时与结果，再以完全相同实现运行全开发段。",
+  "validation": "至少一次未来扰动、一次标签成熟边界、训练期变换和内层清除验证，普通pytest；独立复算已保存系数/样条及评估指标。",
+  "new_data_downloads": false,
+  "parameter_grid_changed": false,
+  "historical_PIT_claim": "NO_FULL_HISTORICAL_PIT_CLAIM",
+  "official_library_docs": [
+    "https://scikit-learn.org/1.9/modules/generated/sklearn.preprocessing.SplineTransformer.html",
+    "https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.Ridge.html",
+    "https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LogisticRegression.html",
+    "https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.QuantileRegressor.html"
+  ],
+  "actual_library_versions": {
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.1",
+    "numpy": "2.4.3",
+    "pandas": "3.0.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "inspected_local_signatures": {
+    "StandardScaler": "(*, copy=True, with_mean=True, with_std=True)",
+    "SplineTransformer": "(n_knots=5, degree=3, *, knots='uniform', extrapolation='constant', include_bias=True, order='C', handle_missing='error', sparse_output=False)",
+    "Ridge": "(alpha=1.0, *, fit_intercept=True, copy_X=True, max_iter=None, tol=0.0001, solver='auto', positive=False, random_state=None)",
+    "LogisticRegression": "(penalty='deprecated', *, C=1.0, l1_ratio=0.0, dual=False, tol=0.0001, fit_intercept=True, intercept_scaling=1, class_weight=None, random_state=None, solver='lbfgs', max_iter=100, verbose=0, warm_start=False, n_jobs=None)",
+    "QuantileRegressor": "(*, quantile=0.5, alpha=1.0, fit_intercept=True, solver='highs', solver_options=None)"
+  }
+}

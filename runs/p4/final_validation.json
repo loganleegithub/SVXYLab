@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-09-07T01:36:36.202921+00:00",
+  "run_record": "runs/p4/20260907T013333116356Z/predictions_run.json",
+  "report": "reports/predictions.html",
+  "report_sha256": "22906acfec652620975834405a9ca2a35672ede6853410a5623a93e5360ca804",
+  "local_references_checked": 32,
+  "missing_references": [],
+  "plots_visually_inspected": [
+    "data/clean/p4/20260907T013333116356Z/predictions.png",
+    "data/clean/p4/20260907T013333116356Z/calibration.png"
+  ],
+  "plot_review": "两个 PNG 已实际查看：中文标签、单位、图例可读；横轴只显示有效开发段预测，校准标出每组样本数。未创建账户净值图。",
+  "browser_observation": {
+    "tool": "cua.getState",
+    "browser": "Chrome",
+    "tab_id": "542466155",
+    "title": "SVXYLab · P4 联合预测",
+    "url": "file:///Users/logan/SVXYLab/reports/predictions.html",
+    "last_opened": "2026-09-07T01:33:48.137Z",
+    "scope": "浏览器清单实际确认 URL 与标题；未声明读取本地页面 DOM 或截图。"
+  },
+  "open_after_audit_record": "runs/p4/report_open_after_audit.json",
+  "source_hashes_verified": 33,
+  "artifact_hashes_verified": 144,
+  "preserved_accepted_files": {
+    "reports/environment.html": "c67e6d65e787050208c7f3ab35a17be8890b98acc120cfc3c8bbe93d31e52a2e",
+    "reports/data.html": "a275690f4b45f4270013bfff370cd1b17cae7c7d310c6fb13e104bc193f95e58",
+    "reports/baselines.html": "70dec22d983283dd08e9a58adbe3529310154d022b1b1246348578a35be557c1",
+    "reports/features.html": "bfb6e852c62abc1b802458c50a710372e17ae2cb2578866f058215a353400e40",
+    "runs/p2/independent_recalculation.json": "4c7269338af05e8832127d897311b048e1924c0bfdb912c284432ae7032c0894",
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef",
+    "TASKS.md": "29598054d75e239e0bb2c7769908bef3cb698010c794ca6bb32518e30cb150d0",
+    "SOURCES.md": "63daf99294521a400f68adc0cc5fef7e2ab7b66e666c037b63f85d6e744fb7af"
+  },
+  "reproducibility": "runs/p4/reproducibility.json",
+  "independent_validation": "runs/p4/20260907T013333116356Z/independent_validation.json",
+  "future_perturbation_test": "runs/p4/20260907T012156654955Z/real_future_perturbation.json",
+  "synthetic_fixture_retained_locally": true,
+  "synthetic_large_outputs_git_ignored": true,
+  "actual_commands": [
+    {
+      "command": "git diff --check",
+      "started_at": "2026-09-07T01:36:36.172020+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.011,
+      "output": ""
+    },
+    {
+      "command": "git remote",
+      "started_at": "2026-09-07T01:36:36.183180+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.009,
+      "output": ""
+    },
+    {
+      "command": "git status --short",
+      "started_at": "2026-09-07T01:36:36.192477+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.01,
+      "output": " M .gitignore\n M AGENTS.md\n M README.md\n M RESEARCH_SPEC.md\n M STATUS.md\n M pyproject.toml\n M requirements-lock.txt\n M src/svxylab/__main__.py\n?? reports/predictions.html\n?? runs/p4/\n?? src/svxylab/models.py\n?? src/svxylab/prediction_data.py\n?? src/svxylab/predictions.py\n?? src/svxylab/predictions_report.py\n?? tests/test_models.py\n"
+    }
+  ],
+  "tests_passed": 83,
+  "additional_actual_quote_future_fixture_tests_passed": 1,
+  "p4_engineering_complete": true,
+  "research_advantage_accepted": false,
+  "p5_performed": false,
+  "true_stage_blocker": null,
+  "passed": true
+}

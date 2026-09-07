@@ -1,0 +1,158 @@
+{
+  "checked_at": "2026-09-07T01:34:29.944980+00:00",
+  "command": ".venv/bin/python runs/p4/reproduce_compare.py",
+  "comparison_source_sha256": "d38a7d8a83c6e445c0198e4e795534c97c789a100f8b6459ccb965050f73b19b",
+  "pilot_run": "runs/p4/20260907T012111771913Z/predictions_run.json",
+  "initial_run": "runs/p4/20260907T012156654955Z/predictions_run.json",
+  "final_run": "runs/p4/20260907T013333116356Z/predictions_run.json",
+  "runtime_fields_excluded": [
+    "computed_at_utc",
+    "elapsed_seconds"
+  ],
+  "csv_comparisons": [
+    {
+      "file": "calibration.csv",
+      "rows": 15,
+      "equal": true,
+      "normalized_sha256": "123d85991afd7002167d30b1d2cfbad67e8986ede57e9baef23f0b504a4cfe0b",
+      "byte_equal": true
+    },
+    {
+      "file": "cv_scores.csv",
+      "rows": 216,
+      "equal": true,
+      "normalized_sha256": "ac6c64279298bbd0c9c9cd3fd473f7fddeee8264387bdafb611521433678a076",
+      "byte_equal": true
+    },
+    {
+      "file": "cv_totals.csv",
+      "rows": 72,
+      "equal": true,
+      "normalized_sha256": "3db1e12b0d483344c8cb1be80741e4821d3a5d9dd0cbec50bedc862920fe6e5d",
+      "byte_equal": true
+    },
+    {
+      "file": "daily_losses.csv",
+      "rows": 2478,
+      "equal": true,
+      "normalized_sha256": "b28a834e330680ea6eeef7735de83b3c84a41db78ae49467e3d5f25ef34e9e44",
+      "byte_equal": true
+    },
+    {
+      "file": "fits.csv",
+      "rows": 120,
+      "equal": true,
+      "normalized_sha256": "5979bf95119bd26b1e3322081b5accedd821c4352d0ede0244314bb3bfa0ccd4",
+      "byte_equal": false
+    },
+    {
+      "file": "inner_rows.csv",
+      "rows": 6951,
+      "equal": true,
+      "normalized_sha256": "fa48bed690201e7ea3cd8dc706faaa749adcc60bc93cd6a843e1eee0e67e5740",
+      "byte_equal": true
+    },
+    {
+      "file": "interaction_conditions.csv",
+      "rows": 2160,
+      "equal": true,
+      "normalized_sha256": "e1730709279850c926ddf5c7ee1a2360c14ebcf0ada9f2bed3725cf00514f097",
+      "byte_equal": true
+    },
+    {
+      "file": "local_effects.csv",
+      "rows": 6840,
+      "equal": true,
+      "normalized_sha256": "02ae7be96e28c5183d3e104bcf566bbcfdab07168cc64b17983f15fea72f15f7",
+      "byte_equal": true
+    },
+    {
+      "file": "metrics.csv",
+      "rows": 57,
+      "equal": true,
+      "normalized_sha256": "bd99dcb6c7dab445e7cb43d9fb07e9990c584339ff2291ed065a8434873faaea",
+      "byte_equal": true
+    },
+    {
+      "file": "model_disagreement.csv",
+      "rows": 3,
+      "equal": true,
+      "normalized_sha256": "f18d49481d1ba5c5e323045c98f91667e52be059d39c8569d8f891be056e3b80",
+      "byte_equal": true
+    },
+    {
+      "file": "prediction_service.csv",
+      "rows": 1006,
+      "equal": true,
+      "normalized_sha256": "f726f3d9e7d91da4d8511be0d13518fdc114cc2e8d3712e3ab4462c3953a5803",
+      "byte_equal": true
+    },
+    {
+      "file": "predictions.csv",
+      "rows": 3018,
+      "equal": true,
+      "normalized_sha256": "c7d3de205f20ce4e799b779fb2086c010988c55fd04a441ecfde76e1a0ca4295",
+      "byte_equal": false
+    },
+    {
+      "file": "projections.csv",
+      "rows": 3,
+      "equal": true,
+      "normalized_sha256": "6ce048c2fb4d643b574cc6be4d16e50946c6eef9f7c25576d770c0017fe0f673",
+      "byte_equal": true
+    },
+    {
+      "file": "risk_groups.csv",
+      "rows": 15,
+      "equal": true,
+      "normalized_sha256": "b5e514c45bc765227651363321f6c0c9a2fcd17fd57b5f507c5ebb1ff511161b",
+      "byte_equal": true
+    },
+    {
+      "file": "selected_parameters.csv",
+      "rows": 8,
+      "equal": true,
+      "normalized_sha256": "0b12152fa0b0bd79723e6fe64696a62720e01414b591c24e45f95dbce7941101",
+      "byte_equal": true
+    },
+    {
+      "file": "support.csv",
+      "rows": 8,
+      "equal": true,
+      "normalized_sha256": "35a982bdd34fddd0c1e82e78ecb0988ec62989ae9ffe4bea8995a87f6181706d",
+      "byte_equal": true
+    },
+    {
+      "file": "training_rows.csv",
+      "rows": 32073,
+      "equal": true,
+      "normalized_sha256": "adbb4a981025b5d7b4da638f6c52df1402d8f67ae4a89a2b4bb997ac33ffff75",
+      "byte_equal": true
+    }
+  ],
+  "snapshot_comparisons": {
+    "models": {
+      "count": 120,
+      "parameters_and_transformations_exactly_equal": true
+    },
+    "selections": {
+      "count": 4,
+      "parameters_and_transformations_exactly_equal": true
+    }
+  },
+  "pilot_first_month_prediction_rows_exactly_equal": 567,
+  "forecast_model_rows": 2493,
+  "frozen_inputs_identical": true,
+  "algorithm_sources_identical": [
+    "prediction_data.py",
+    "models.py",
+    "predictions.py"
+  ],
+  "unchanged_accepted_specification": {
+    "experiment.toml": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+    "FEATURES.json": "231240360b7ca9d76b5e5fa0853e49d98b1d8683016e5ee3f174ab4ecacffeef"
+  },
+  "future_perturbation_record": "runs/p4/20260907T012156654955Z/real_future_perturbation.json",
+  "future_test_applies_to_initial_run_with_identical_final_predictions": true,
+  "passed": true
+}

@@ -7,11 +7,17 @@ from svxylab.environment import build_environment_report
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="SVXYLab 本地研究程序（P0 环境 / P1 数据 / P2 账本 / P3 特征）")
-    parser.add_argument("command", choices=["environment", "data", "baselines", "features"], help="生成环境、数据、连续账本或联合特征报告")
+    parser = argparse.ArgumentParser(description="SVXYLab 本地研究程序（P0 环境至 P4 联合预测）")
+    parser.add_argument("command", choices=["environment", "data", "baselines", "features", "predictions"], help="生成当前阶段的本地研究报告")
     parser.add_argument("--open", action="store_true", help="生成后用 macOS 默认应用打开报告")
+    parser.add_argument("--pilot", action="store_true", help="P4：只试运行首个符合条件的历史月")
     args = parser.parse_args()
+    if args.pilot and args.command != "predictions":
+        parser.error("--pilot 仅用于 predictions")
     try:
+        if args.command == "predictions":
+            from svxylab.predictions_report import build_predictions_report
+            return build_predictions_report(Path.cwd(), open_report=args.open, pilot=args.pilot)
         if args.command == "features":
             from svxylab.features_report import build_features_report
             return build_features_report(Path.cwd(), open_report=args.open)

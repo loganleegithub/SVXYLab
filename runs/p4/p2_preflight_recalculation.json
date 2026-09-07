@@ -1,0 +1,46 @@
+{
+  "stage": "P2",
+  "checked_at": "2026-09-07T01:06:19.088085+00:00",
+  "command": ".venv/bin/python runs/p2/independent_recalculation.py",
+  "run_record": "runs/p2/20260907T000150426421Z/baselines_run.json",
+  "method": "Decimal 40-digit signed-trade equation from original P1 inputs",
+  "audit": {
+    "cash": {
+      "rows": 1930,
+      "max_equity_error_dollars": 0.0,
+      "max_cost_error_dollars": 0.0,
+      "passed": true
+    },
+    "fixed_25": {
+      "rows": 1930,
+      "max_equity_error_dollars": 1.438949379980981e-08,
+      "max_cost_error_dollars": 1.839990522368951e-13,
+      "passed": true
+    },
+    "fixed_50": {
+      "rows": 1930,
+      "max_equity_error_dollars": 1.9879838854750593e-08,
+      "max_cost_error_dollars": 3.24273562853702e-13,
+      "passed": true
+    },
+    "fixed_75": {
+      "rows": 1930,
+      "max_equity_error_dollars": 1.0956677141069267e-09,
+      "max_cost_error_dollars": 2.8418947719542385e-14,
+      "passed": true
+    },
+    "fixed_100": {
+      "rows": 1930,
+      "max_equity_error_dollars": 2.1871848646623623e-10,
+      "max_cost_error_dollars": 6.5617191404297854e-15,
+      "passed": true
+    },
+    "curve": {
+      "rows": 1930,
+      "max_equity_error_dollars": 6.626427174184523e-10,
+      "max_cost_error_dollars": 2.758226024794456e-13,
+      "passed": true
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m pytest -q runs/p4/test_real_causality.py --junitxml /Users/logan/SVXYLab/runs/p4/real_future_perturbation_initial.xml",
+  "started_at": "2026-09-07T01:27:55.017738+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 12.583,
+  "output": ".                                                                        [100%]\n- generated xml file: /Users/logan/SVXYLab/runs/p4/real_future_perturbation_initial.xml -\n1 passed in 12.31s\n"
+}

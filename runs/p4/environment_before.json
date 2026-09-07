@@ -1,0 +1,101 @@
+{
+  "checked_at": "2026-09-07T01:06:00.493570+00:00",
+  "python": "3.12.13 (main, Mar  8 2026, 10:42:17) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "prefix": "/Users/logan/SVXYLab/.venv",
+  "commands": [
+    {
+      "command": "/usr/bin/uname -m",
+      "started_at": "2026-09-07T01:06:00.256625+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "output": "arm64\n"
+    },
+    {
+      "command": "/usr/bin/sw_vers",
+      "started_at": "2026-09-07T01:06:00.258920+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.008,
+      "output": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python --version",
+      "started_at": "2026-09-07T01:06:00.266760+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.004,
+      "output": "Python 3.12.13\n"
+    },
+    {
+      "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip --disable-pip-version-check check",
+      "started_at": "2026-09-07T01:06:00.271211+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.184,
+      "output": "No broken requirements found.\n"
+    },
+    {
+      "command": "git --version",
+      "started_at": "2026-09-07T01:06:00.455532+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.01,
+      "output": "git version 2.50.1 (Apple Git-155)\n"
+    },
+    {
+      "command": "git remote -v",
+      "started_at": "2026-09-07T01:06:00.465676+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 0.009,
+      "output": ""
+    }
+  ],
+  "existing_packages": {
+    "svxylab": "0.0.1",
+    "kiwisolver": "1.5.1",
+    "toolz": "1.1.0",
+    "lxml": "6.1.3",
+    "exchange_calendars": "4.13.2",
+    "iniconfig": "2.3.0",
+    "pandas": "3.0.3",
+    "charset-normalizer": "3.5.1",
+    "requests": "2.34.2",
+    "pyluach": "2.3.0",
+    "pytz": "2026.3.post1",
+    "contourpy": "1.3.3",
+    "yfinance": "1.7.0",
+    "tzdata": "2026.3",
+    "curl_cffi": "0.16.3",
+    "matplotlib": "3.11.1",
+    "multitasking": "0.0.13",
+    "pip": "25.0.1",
+    "setuptools": "84.0.0",
+    "soupsieve": "2.9.2",
+    "pycparser": "3.0",
+    "python-dateutil": "2.9.0.post0",
+    "pytest": "8.4.2",
+    "fonttools": "4.64.0",
+    "idna": "3.19",
+    "cffi": "2.1.1",
+    "certifi": "2026.7.22",
+    "platformdirs": "4.11.7",
+    "cycler": "0.12.1",
+    "pyparsing": "3.3.2",
+    "numpy": "2.4.3",
+    "pluggy": "1.6.0",
+    "Pygments": "2.19.2",
+    "websockets": "17.1",
+    "packaging": "26.0",
+    "urllib3": "2.7.0",
+    "typing_extensions": "4.16.0",
+    "beautifulsoup4": "4.15.0",
+    "korean_lunar_calendar": "0.4.0",
+    "pillow": "12.3.0",
+    "protobuf": "7.36.1",
+    "peewee": "4.5.0",
+    "six": "1.17.0"
+  },
+  "model_library_present": {
+    "scipy": false,
+    "sklearn": false,
+    "joblib": false,
+    "threadpoolctl": false
+  }
+}

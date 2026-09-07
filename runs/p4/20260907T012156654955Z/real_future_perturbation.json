@@ -1,0 +1,16 @@
+{
+  "fixture_kind": "SYNTHETIC_TEST_ONLY",
+  "baseline_run": "runs/p4/20260907T012156654955Z/predictions_run.json",
+  "test_source_sha256": "34bac4fc8a367fc25cf47719bc94bd7f8a2f3400f43a431552532d00e3a14c0a",
+  "quote_mutation_begins_after_information_session": "2021-06-15",
+  "last_unchanged_decision_session": "2021-06-16",
+  "earlier_rows_compared": 1101,
+  "earlier_actual_forecast_rows": 576,
+  "earlier_predictions_identical": true,
+  "later_predictions_changed": true,
+  "past_features_identical": true,
+  "frozen_input_hashes_unchanged": true,
+  "elapsed_replay_seconds": 11.126334165979642,
+  "fixture_dir": "runs/p4/20260907T012156654955Z/SYNTHETIC_TEST_ONLY/20260907T012756248097Z",
+  "passed": true
+}

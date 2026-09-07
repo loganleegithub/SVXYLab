@@ -1,0 +1,7 @@
+{
+  "reason": "P4 前置复核只改变 checked_at；复核结果另存 P4，P2 已验收命名记录恢复原字节。",
+  "new_record": "runs/p4/p2_preflight_recalculation.json",
+  "accepted_record": "runs/p2/independent_recalculation.json",
+  "accepted_commit": "541178b",
+  "only_changed_field": "checked_at"
+}

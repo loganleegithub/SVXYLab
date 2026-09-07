@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .",
+  "started_at": "2026-09-07T01:09:38.561750+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 0.648,
+  "output": "Obtaining file:///Users/logan/SVXYLab\n  Checking if build backend supports build_editable: started\n  Checking if build backend supports build_editable: finished with status 'done'\n  Preparing editable metadata (pyproject.toml): started\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: svxylab\n  Building editable for svxylab (pyproject.toml): started\n  Building editable for svxylab (pyproject.toml): finished with status 'done'\n  Created wheel for svxylab: filename=svxylab-0.0.1-0.editable-py3-none-any.whl size=1350 sha256=7cbdba7f8ca5583ebefbb592721aae8db38688d3e58ec4a0faf45b2a67b5a24d\n  Stored in directory: /private/var/folders/rc/q_xk0j116zgbqlwwkb79v92m0000gn/T/pip-ephem-wheel-cache-mu5cc0_v/wheels/65/bf/00/8ab7572a3497ce027520da5f0d059a85848efb5ac47537961f\nSuccessfully built svxylab\nInstalling collected packages: svxylab\n  Attempting uninstall: svxylab\n    Found existing installation: svxylab 0.0.1\n    Uninstalling svxylab-0.0.1:\n      Successfully uninstalled svxylab-0.0.1\nSuccessfully installed svxylab-0.0.1\n"
+}

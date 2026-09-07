@@ -1,0 +1,7 @@
+{
+  "command": "/Users/logan/SVXYLab/.venv/bin/python runs/p4/independent_validation.py",
+  "started_at": "2026-09-07T01:34:29.949521+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 1.488,
+  "output": "{\n  \"checked_at\": \"2026-09-07T01:34:31.399755+00:00\",\n  \"run_record\": \"runs/p4/20260907T013333116356Z/predictions_run.json\",\n  \"audit_source_sha256\": \"514c00d1bd8b9b35a8bb2d1b1d714e4b96d89a00c3834e649911d7b69996589d\",\n  \"method\": \"直接从P3原始特征/P2标签选择成熟成员，独立重建训练尺度、样条、交互和已保存系数的全部预测；逐标量重算候选损失及评估，无生产模型/评分函数。\",\n  \"monthly_models_checked\": 120,\n  \"forecast_rows_replayed\": 2493,\n  \"prediction_values_checked\": 14958,\n  \"annual_selections_checked\": 4,\n  \"inner_head_fits_checked\": 216,\n  \"metric_rows_checked\": 57,\n  \"training_cutoffs_and_membership_match\": true,\n  \"no_locked_labels_used\": true,\n  \"max_absolute_errors\": {\n    \"raw_scaler\": 3.375077994860476e-14,\n    \"spline_knots\": 3.730349362740526e-14,\n    \"output_scaler\": 3.1086244689504383e-15,\n    \"predictions\": 1.2878587085651816e-14,\n    \"cv_losses\": 1.7763568394002505e-15,\n    \"metrics\": 1.2212453270876722e-15,\n    \"m0_constants\": 8.326672684688674e-17,\n    \"support\": 7.216449660063518e-16\n  },\n  \"passed\": true\n}\n"
+}

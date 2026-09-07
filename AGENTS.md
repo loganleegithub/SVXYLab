@@ -51,7 +51,16 @@ P3 原始联合特征与信息重叠：
 ```sh
 .venv/bin/python -m pytest -q
 ```
-合成夹具只检查复利算术、日期/合约选择、字段/公司行动解析、账本、特征公式及时间边界，不是真实回测；真实数据核对另见各阶段报告。
+合成夹具只检查复利算术、日期/合约选择、字段/公司行动解析、账本、特征公式、训练时钟和预测计算，不是真实回测；真实数据核对另见各阶段报告。
+
+P4 受约束联合预测：
+```sh
+.venv/bin/python -m svxylab predictions --pilot
+.venv/bin/python -m svxylab predictions --open
+```
+先在首个合资格月试运行，再重放决策日 2020–2023。M0/M1/M2 共用同一批完整成熟训练行；每月拟合、每年三个时间块内层选择有限参数。首个预测信息日 2020-09-10、决策日 2020-09-11，此前 175 个请求决策日没有预测。首次完整运行退出 0、普通 pytest 83 项通过：831 个预测日、120 份月度模型快照、4 次年度选参；826 日的目标在 2024 年前结束，可评分。未读取封存段标签值用于拟合或评分，未实现 P5 仓位映射。
+
+报告为 `reports/predictions.html`；每次 CSV、模型/变换 JSON 和图保存在新的 `data/clean/p4/<UTC时间>/`，实际命令、测试、代码及输入摘要保存在 `runs/p4/<UTC时间>/`。计算前口径记录在 `runs/p4/experiment_record.json`。独立数值审计脚本为 `runs/p4/independent_validation.py`；真实输入上的合成未来扰动 pytest 为 `runs/p4/test_real_causality.py`，实际结果和复算对照见 `runs/p4/reproducibility.json`。后者的合成行情只存在明确标记的测试夹具目录中，原始数据保持不变。日常使用唯一项目入口即可。
 
 P0 已验证的环境报告入口：
 ```sh
@@ -59,10 +68,10 @@ P0 已验证的环境报告入口：
 ```
 历史 P0 运行退出码 0、4 项合成测试通过；原报告和 `runs/p0/` 保留。今后再运行会检查当前环境，并引用最新 P1 覆盖记录，不用文件数量推定行情覆盖。
 
-依赖锁定在 `pyproject.toml` 和实际版本快照 `requirements-lock.txt`；P2 在同一虚拟环境加入 Matplotlib 3.11.1。已成功执行的本地包元数据刷新命令：
+依赖锁定在 `pyproject.toml` 和实际版本快照 `requirements-lock.txt`；P2 在同一虚拟环境加入 Matplotlib 3.11.1，P4 加入 scikit-learn 1.9.0、SciPy 1.18.1 及其依赖。使用 macOS arm64 二进制包，没有系统级安装或重建环境；网络/安装结果在 `runs/p4/dependency_probe.json` 和 `runs/p4/dependency_install.json`。已成功执行的本地包元数据刷新命令：
 ```sh
 .venv/bin/python -m pip --isolated --disable-pip-version-check install --no-build-isolation --no-deps --no-index -e .
 ```
 原始安装、失败及成功结果在 `runs/p0/setup.json`、`runs/p1/dependency_install.json`、`runs/p1/yfinance_install_failure.json`、`runs/p1/yfinance_install_cached.json` 和 `runs/p1/editable_refresh.json`。
 
-正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异以及 P2 的 SPY 分红总回报与供应商复权参考差异。P3 已实现原始特征，未实现联合模型；停在 P3，验收后再继续。P0 检查点 `f3cc00f`、P1 检查点 `dc3d4ff`、P2 检查点 `5912f3b`，无 Git 远端，未改全局 Git 配置。P2 验收仅代表交付完整、真实与可复算，不代表模型有收益优势。
+正式 ETF 仅用 Yahoo Chart 原件；`provider_*` 为供应商值，OHLCV 当时份额复原字段有明确标记。保留 Nasdaq/QC 参考差异以及 P2 的 SPY 分红总回报与供应商复权参考差异。当前停在 P4，验收后再继续。P0 检查点 `f3cc00f`、P1 检查点 `dc3d4ff`、P2 检查点 `5912f3b`、P3 检查点 `541178b`，无 Git 远端，未改全局 Git 配置。验收只代表交付完整、真实与可复算，不代表模型有收益优势。M1/M2 在当前开发段的主要平均预测损失未优于 M0，原结果保留。
