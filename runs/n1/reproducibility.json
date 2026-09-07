@@ -1,0 +1,8 @@
+{
+  "earlier_dir": "data/clean/n1/20260907T062451688773Z",
+  "final_dir": "data/clean/n1/20260907T063015893302Z",
+  "csv_files_byte_identical": 131,
+  "ledger_csv_files_byte_identical": 114,
+  "three_audit_json_equal": true,
+  "note": "两次完整计算均重新从真实已存输入生成82个账户；首轮N1报表语义问题修正之前的计算不冒充已修复版本。"
+}

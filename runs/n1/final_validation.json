@@ -1,0 +1,98 @@
+{
+  "validated_at_utc": "2026-09-07T06:31:40.570141+00:00",
+  "run_record": "runs/n1/20260907T063015893302Z/capital_run.json",
+  "original_p7_related_files_unchanged": 2685,
+  "p7_freeze_unchanged_sha256": "4e86b7908819e22788335b26ffc447415bc979f59c65ce97bcdfe408d39bc8ca",
+  "explicit_compatibility_changes": [
+    "src/svxylab/__main__.py",
+    "src/svxylab/daily.py",
+    "src/svxylab/release.py",
+    "experiment.toml",
+    "RESEARCH_SPEC.md"
+  ],
+  "active_source_files_verified": 49,
+  "original_config_sections_unchanged": true,
+  "ordinary_tests": 127,
+  "ordinary_test_failures": 0,
+  "synthetic_clock_regressions": [
+    {
+      "completion": "2026-09-08T19:00:00.100Z",
+      "deadline": "2026-09-08T19:00:00+00:00",
+      "created": false,
+      "exit_code": 1,
+      "status": "MISSED_DECISION_DEADLINE",
+      "forecast_value_parity": false,
+      "project_writes": 0,
+      "network_requests": 0
+    },
+    {
+      "completion": "2026-09-08T19:00:00.000Z",
+      "deadline": "2026-09-08T19:00:00+00:00",
+      "created": false,
+      "exit_code": 1,
+      "status": "MISSED_DECISION_DEADLINE",
+      "forecast_value_parity": false,
+      "project_writes": 0,
+      "network_requests": 0
+    },
+    {
+      "completion": "2026-09-08T18:59:59.999Z",
+      "deadline": "2026-09-08T19:00:00+00:00",
+      "created": true,
+      "exit_code": 0,
+      "status": "FORWARD_FORECAST_AVAILABLE",
+      "forecast_value_parity": true,
+      "project_writes": 0,
+      "network_requests": 0
+    }
+  ],
+  "reproducibility": {
+    "earlier_dir": "data/clean/n1/20260907T062451688773Z",
+    "final_dir": "data/clean/n1/20260907T063015893302Z",
+    "csv_files_byte_identical": 131,
+    "ledger_csv_files_byte_identical": 114,
+    "three_audit_json_equal": true,
+    "note": "两次完整计算均重新从真实已存输入生成82个账户；首轮N1报表语义问题修正之前的计算不冒充已修复版本。"
+  },
+  "original_p5_p7_accounts_compared": 24,
+  "original_p5_p7_max_equity_difference": 7.566995918750763e-10,
+  "period_account_days": {
+    "continuous_common": 1503,
+    "development_common": 831,
+    "revealed_2024": 672,
+    "since_2019": 1929
+  },
+  "independent_audit": {
+    "accounts": 82,
+    "account_rows_including_anchors": 97078,
+    "maximum_absolute_numerical_difference": 7.275957614183426e-10,
+    "equations": "shares, splits, distributions, both-leg costs, cash conservation, no pool transfers, metrics, recovery, terminal attribution"
+  },
+  "html_local_links": [
+    {
+      "file": "reports/capital.html",
+      "verified_local_links": 94,
+      "embedded_charts": 2
+    },
+    {
+      "file": "data/clean/n1/20260907T063015893302Z/report.html",
+      "verified_local_links": 94,
+      "embedded_charts": 2
+    }
+  ],
+  "open_command": {
+    "args": [
+      "/usr/bin/open",
+      "/Users/logan/SVXYLab/reports/capital.html"
+    ],
+    "exit_code": 0,
+    "stderr": ""
+  },
+  "charts_visually_inspected": true,
+  "html_browser_visual_check": "NOT_COMPLETED: browser URL security policy rejected file://; no bypass attempted. Native macOS open exit 0, local HTML links checked, PNG charts visually inspected.",
+  "paid_purchases": 0,
+  "option_quote_rows": 0,
+  "accounts_connected": false,
+  "orders": false,
+  "git_committed_or_pushed": false
+}

@@ -76,3 +76,15 @@ bootstrap_block_sensitivity_sessions = 63
 bootstrap_draws = 1000
 fixed_weight_baselines = [0.25, 0.50, 0.75, 1.0]
 no_automatic_model_promotion = true
+
+# N1仅新增经济基准研究；以上P0-P7配置值不变。
+[n1]
+stage = "CAPITAL_AND_ECONOMIC_BENCHMARKS"
+research_attribute = "POST_REVEAL_DESCRIPTIVE_RESEARCH"
+fixed_svxy_weights = [0.05, 0.10]
+risk_pool_initial_fractions = [0.05, 0.10]
+cash_proxy_symbol = "BIL"
+cash_proxy_method = "observed_daily_close_plus_actual_distributions"
+cost_one_way_bps = 5.0
+capital = 100000.0
+cutoff = "2026-09-04"

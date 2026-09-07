@@ -1,0 +1,27 @@
+{
+  "status": "DOCUMENTATION_VERIFIED_SVXY_QUOTES_NOT_ACQUIRED",
+  "checked_date": "2026-09-07",
+  "paid_data_purchased": false,
+  "accounts_accessed": false,
+  "verified_svxy_quote_rows": 0,
+  "sources": [
+    {"name":"Cboe Option Quotes", "url":"https://datashop.cboe.com/option-quote-intervals", "finding":"当前产品页2012-01起，分钟/自定义间隔NBBO。2026-06-22起size取最近价格变化时数量；此前取区间最新价量。早收市文件标签和实际时刻须分开。"},
+    {"name":"Cboe EOD Summary", "url":"https://datashop.cboe.com/option-eod-summary", "finding":"2012-01起，15:45及收市快照；当日EOD不能作为15:00已知输入。"},
+    {"name":"Quotes字段说明", "url":"https://datashop.cboe.com/documents/Option_Quotes_Layout.pdf", "finding":"区间结束东部时间、NBBO、size、区间OHLC/成交量、同期标的报价；零OHLC可为无交易。未确认逐条最后更新时间字段。"},
+    {"name":"EOD字段说明", "url":"https://datashop.cboe.com/documents/Option_EOD_Summary_Layout.pdf", "finding":"报价快照和OI可得时刻需结合供应商字段版核实。"},
+    {"name":"IvyDB US", "url":"https://optionmetrics.com/united-states/", "finding":"EOD声明1996起美国股票/ETF/指数期权，含公司行动及永久ID；尚无SVXY样本。"},
+    {"name":"IvyDB US Intraday", "url":"https://optionmetrics.com/united-states-intraday/", "finding":"2018起，10:00/14:00/15:45快照；不是任意15:00/16:00。页面EST字样的夏令时含义待核。"},
+    {"name":"OCC #54366", "url":"https://infomemo.theocc.com/infomemos?number=54366", "finding":"2024-04-11 SVXY 2:1拆股：合约数量×2、执行价÷2、root SVXY、每张100股、权利金美元乘数100。"},
+    {"name":"OCC #43647", "url":"https://infomemo.theocc.com/infomemos?date=201809&lastModifiedDate=09%2F12%2F2018+11%3A04%3A46&number=43647", "finding":"2018-09-18 1:4反拆：旧root SVXY1、交割25股、美元乘数100、执行价不除4；需确认跨2019遗留合约，不能默认所有合约100股。"},
+    {"name":"OCC ETF规格", "url":"https://www.theocc.com/clearance-and-settlement/clearing/etf-options", "finding":"标准ETF期权美式、实物交割。"},
+    {"name":"OCC #53901", "url":"https://infomemo.theocc.com/infomemos?number=53901", "finding":"2024-05-28起T+1，此前T+2。"},
+    {"name":"OCC #54580", "url":"https://infomemo.theocc.com/infomemos?number=54580", "finding":"T+1生产转换日期复核。"},
+    {"name":"Cboe数据许可", "url":"https://datashop.cboe.com/documents/Cboe_LiveVol_DataShop_License_Agreement.pdf", "finding":"内部研究与留存受适用产品/订单/合同约束；不能从购买推定第三方传送或公开报价许可，可还原报价的派生数据也需审核。"},
+    {"name":"Cboe历史数据政策", "url":"https://datashop.cboe.com/documents/DataShop_Policies_for_Historical_Data_Services.pdf", "finding":"保留期限与使用权限需按适用订单核对；本轮未接受许可。"},
+    {"name":"OptionMetrics网站条款", "url":"https://optionmetrics.com/terms-of-use/", "finding":"网站条款不等于IvyDB客户数据许可；研究、保存、云端处理和发布权限未知。"}
+  ],
+  "sample_attempts": "Cboe公开样本链接经web工具返回内部错误；一次本地只读产品页HTTP请求403后停止。未绕过限制。OptionMetrics未取得SVXY样本。此状态不表示供应商没有数据。",
+  "required_fields": ["永久标的/合约ID、历史root、put/call、原始执行价、到期/最后交易日、上市退市时间、标准/调整标志", "报价日期时间、时区/DST、bid/ask、各自size、报价条件/最后更新时间、同期标的原始股价和NBBO", "成交量、OI及其真实可得日；IV/Greeks仅作为供应商估计值", "权利金美元乘数、合约数量调整、交割股数/现金、OCC公告/有效日、美式行权/交割周期", "来源/原件/下载时间/摘要/字段版本/修订/许可"],
+  "sample_acceptance_windows": ["2019起点及可能SVXY1遗留", "2020压力期", "2024-04-11拆股前后", "2024-05-28交割转换", "2026-06-22数量口径变化", "2026-09-04截止"],
+  "next_stage_limit": "先获准取得真实样本并核对覆盖/价差/零bid/陈旧/交叉报价/整数张数/未覆盖零股，才可预先记录保护期限、执行价、滚动和成本；不得生成假期权价格。2024—2026已揭示，不可重新称未见验证。"
+}

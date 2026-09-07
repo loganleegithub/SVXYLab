@@ -1,0 +1,37 @@
+{
+  "stage": "N1",
+  "recorded_at_utc": "2026-09-07T06:30:13.840490+00:00",
+  "p7_freeze_sha256": "4e86b7908819e22788335b26ffc447415bc979f59c65ce97bcdfe408d39bc8ca",
+  "authorization": "本轮用户已授权截止修复和N1；本记录不是新P7冻结或模型规格选择。",
+  "changed_frozen_files": {
+    "src/svxylab/__main__.py": {
+      "before": "3925302b63fb59f5459384d6796cd78eee0a6b8c6c7f88d7ba8f9f3dd8053de1",
+      "after": "32f3b0319f5e4c2cef40ea55116d04342ed721d26f53d10596b1e52361253449",
+      "reason": "增加capital命令，旧命令路由不变。"
+    },
+    "src/svxylab/daily.py": {
+      "before": "2704c45f866f62e5a4ddd2e0df34a2fac43f9e3ec78906e3be119a119253b11c",
+      "after": "30a653b93021de284192cfa604eea763b8a4ad3be4d382cb8c19802b03826df8",
+      "reason": "推理/元数据完成后重新取时并检查截止，准确生成时间；新增兼容记录摘要以区分修复运行版本。"
+    },
+    "src/svxylab/release.py": {
+      "before": "3e5994c1a9cb730f2d344e8555598c02ce017deb9993b63b24fbad67e7598107",
+      "after": "804410dbf28c381646231ea1bd1ede5d4f2e9e6d74fb922f8aebc742e9d63aa8",
+      "reason": "保留原冻结清单和原源码副本，核对N1明确的旧/新摘要并返回实际运行源码摘要；不改模型或历史计算。"
+    },
+    "experiment.toml": {
+      "before": "7d5a16d0aef7ac3dac3516eb7328b408ccbd5832a14f61f71dce89782780a3cd",
+      "after": "ff656540fb8fbc10e63f3a6f6f7a447e6d2ca58e892fda826c1d0e83c70ab0fc",
+      "reason": "仅新增[n1]资本基准参数，所有原节完全不变。"
+    },
+    "RESEARCH_SPEC.md": {
+      "before": "a3fd2b0c1b85e85a79366abad0372301a1d8b4b9cc182de53aa535c59670b32e",
+      "after": "959943977862e4953807c45dca6283b9c77dd2c691f96d60cd079af42caf219d",
+      "reason": "更新阶段状态并追加N1用户授权范围，原P7规格副本不变。"
+    }
+  },
+  "original_config_sections_equal": true,
+  "historical_predictions_models_labels_ledgers_and_reports": "UNCHANGED_SHA_VERIFIED",
+  "original_counterexample": "runs/n1/deadline_before.log",
+  "repaired_regression": "runs/n1/deadline_after.json"
+}

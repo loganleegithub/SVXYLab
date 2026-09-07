@@ -1,0 +1,22 @@
+{
+  "symbol": "BIL",
+  "rows": 1930,
+  "first": "2019-01-02",
+  "last": "2026-09-04",
+  "raw_file": "data/raw/n1/data/raw/yahoo/BIL_history_full-20260907T061038573564Z-aba8a17ff3e2.response",
+  "raw_sha256": "aba8a17ff3e216d6a3f766da401092e694fb5885d3c244e2aead1c4d8574b478",
+  "retrieved_at": "2026-09-07T06:10:38.573564+00:00",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BIL?period1=1546318800&period2=1788580800&interval=1d&events=div%2Csplits%2CcapitalGains",
+  "fund_document": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-bloomberg-1-3-month-t-bill-etf-bil",
+  "distribution_events": 70,
+  "split_events": 0,
+  "max_daily_difference_to_provider_adjusted_bps": 0.02469647598424274,
+  "full_tr_return": 0.22239568036832114,
+  "provider_adjusted_reference_return": 0.22244636253251526,
+  "accounting": "EX_DATE_CLOSE_REINVESTMENT_PROXY_NOT_PAYABLE_DATE_CASH",
+  "actual_user_cash_return": false,
+  "today_yield_used": false,
+  "full_historical_vintages_available": false,
+  "redistribution_authorized": false,
+  "original_fund_fees_deducted_again": false
+}

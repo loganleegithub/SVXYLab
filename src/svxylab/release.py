@@ -51,12 +51,27 @@ def source_files(root):
 
 def verify_release(root):
     freeze=read_json(root/'runs/p7/freeze.json')
-    verify_hashes(root,freeze['source_sha256'])
+    sources=dict(freeze['source_sha256'])
+    amendment=root/'runs/n1/runtime_compatibility.json'
+    if amendment.exists():
+        # P7清单与原源码副本不改写；仅接受N1明确记录的兼容修订。
+        change=read_json(amendment)
+        if change['p7_freeze_sha256']!=digest(root/'runs/p7/freeze.json'):
+            raise ValueError('N1兼容记录引用的P7冻结版本不符')
+        for path, item in change['changed_frozen_files'].items():
+            if sources.get(path)!=item['before']:
+                raise ValueError('N1兼容记录旧摘要不符：'+path)
+            verify_hashes(root,{'runs/p7/frozen_source/'+path:item['before']})
+            sources[path]=item['after']
+    verify_hashes(root,sources)
     for stage in ['p4','p5','p6']:
         a=read_json(root/f'runs/{stage}/acceptance.json')
         report=a.get('accepted_report','reports/predictions.html' if stage=='p4' else None)
         verify_hashes(root,{a['accepted_run']:a['accepted_run_sha256'],report:a['accepted_report_sha256']})
         verify_hashes(root,a['accepted_artifact_sha256'])
+    if amendment.exists():
+        return {**freeze,'source_sha256':sources,'original_source_sha256':freeze['source_sha256'],
+                'runtime_amendment_sha256':digest(amendment)}
     return freeze
 
 

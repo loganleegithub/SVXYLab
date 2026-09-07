@@ -1,0 +1,22 @@
+{
+  "stage":"N1",
+  "review_mode":"只读子智能体；主线程单写入",
+  "first_computation":"data/clean/n1/20260907T061535485611Z",
+  "fixed_computation":"data/clean/n1/20260907T062451688773Z",
+  "findings":[
+    {"problem":"定长Unicode数组把initial_execution截断成initial_e/init", "impact":"首日费用归因状态可能漏/误显示，财富桥接总金额不变", "fix":"两处分类数组转object，加入普通回归断言", "verification":"实际产物完整保留initial_execution"},
+    {"problem":"风险池组合old_cash遗漏独立储备", "impact":"5%/10%池锚点字段漏95000/90000美元；组合净值本身正确", "fix":"合计期初现金，显式保留BIL腿股数/价格/拆分/交易/费用；独立检查现金守恒", "verification":"所有风险池old_cash与两个子池之和差0"},
+    {"problem":"单资产指标1-old_weight把BIL敞口误列为现金", "impact":"已揭示5%固定+BIL被误报约95.01%现金，实际现金均值约0.1488%", "fix":"N1按old_cash/equity_start计算现金；单列SVXY/SPY/BIL敞口，原P5/P7代码不变", "verification":"82账户四种平均权重之和与1最大差4.44e-16"}
+  ],
+  "additional_read_only_checks":{
+    "first_computation_return_rows":96996,
+    "self_financing_max_dollar_error":8.73e-11,
+    "two_asset_return_max_error":5.35e-16,
+    "separate_piecewise_analytic_two_asset_rebalance_max_dollar_error":[9.76e-9,8.38e-9],
+    "terminal_bridge_max_dollar_error":7.28e-10,
+    "drawdown_recovery_accounts_verified":82
+  },
+  "report_followup":"三项实际产物修正已确认；资本/收益/路径解释未发现新增实质误导。新增实际持有/空仓案例及2019起恢复时间与CSV吻合。",
+  "historical_p7_impact":"无；原P7预测/模型/标签/账本/报告保持原摘要。",
+  "not_a_claim":"不是模型或投资优势认证。"
+}

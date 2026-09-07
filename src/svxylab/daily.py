@@ -198,8 +198,6 @@ def update_daily(root, *, open_report=False):
                     saved={m:read_json(sorted(model_dir.glob('*_'+m+'.json'))[-1]) for m in ['M0','M1','M2']}
                 config=tomllib.loads((root/'experiment.toml').read_text());dictionary=read_json(root/'FEATURES.json')
                 saved,refit=fit_forward_if_due(frame,config,dictionary,saved,timing,issued_at,directory)
-                finished=pd.Timestamp(datetime.now(timezone.utc))
-                if finished>=pd.Timestamp(timing['decision_at']):raise ValueError('拟合完成已过决策截止，本次无新预测')
                 model_file=directory/'model_state.json';write_json(model_file,saved)
                 write_json(pointer,{'model_state_file':str(model_file.relative_to(root)),'sha256':digest(model_file)})
                 raw=frame.loc[[timing['as_of_session']],CORE_IDS].to_numpy();pred=[]
@@ -211,14 +209,21 @@ def update_daily(root, *, open_report=False):
                     outside=[] if transform is None else [k for k,x,lo,hi in zip(CORE_IDS,raw[0],transform['raw_min'],transform['raw_max']) if x<lo or x>hi]
                     pred.append({'model':model,'fit_id':state['fit']['fit_id'],**values,'main':main,'risk_only':risk,
                         'mode':'RESEARCH_ONLY','outside_training_range':outside,'R5':None,'L5':None,'Y10':None,'score_observed':False})
-                issued={'created_at_utc':finished.isoformat(),'timing':timing,'inputs':inputs,'predictions':pred,
+                # 保存模型和全部推理均可能跨过截止；生成时间只能在数值完成后取得。
+                issued={'timing':timing,'inputs':inputs,'predictions':pred,
                     'core_features':frame.loc[timing['as_of_session'],CORE_IDS].to_dict(),
                     'model_state_file':str(model_file.relative_to(root)),'model_state_sha256':digest(model_file),
                     'freeze_sha256':digest(root/'runs/p7/freeze.json'),'monthly_refit_this_run':refit,
+                    'runtime_amendment_sha256':digest(root/'runs/n1/runtime_compatibility.json') if (root/'runs/n1/runtime_compatibility.json').exists() else None,
                     'forecast_kind':'ACTUAL_FORWARD_RECORD','historical_pit_claim':False,'primary':'M2','orders':False}
-                write_json(existing,issued)
-                record.update(forecast_file=str(existing.relative_to(root)),forecast_sha256=digest(existing),
-                    forecast_created_at=issued['created_at_utc'],new_prediction_created=True,monthly_refit=refit)
+                finished=pd.Timestamp(datetime.now(timezone.utc))
+                issued['created_at_utc']=finished.isoformat()
+                if finished>=pd.Timestamp(timing['decision_at']):
+                    record.update(status='MISSED_DECISION_DEADLINE',inference_finished_at=finished.isoformat())
+                else:
+                    write_json(existing,issued)
+                    record.update(forecast_file=str(existing.relative_to(root)),forecast_sha256=digest(existing),
+                        forecast_created_at=issued['created_at_utc'],new_prediction_created=True,monthly_refit=refit)
         record['finished_at']=datetime.now(timezone.utc).isoformat()
     except Exception as error:
         record.update(status='UPDATE_FAILED_NO_NEW_FORECAST',error_type=type(error).__name__,error=str(error))
