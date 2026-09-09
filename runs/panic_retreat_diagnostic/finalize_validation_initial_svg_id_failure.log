@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/logan/SVXYLab/runs/panic_retreat_diagnostic/finalize_validation.py", line 99, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/logan/SVXYLab/runs/panic_retreat_diagnostic/finalize_validation.py", line 27, in main
+    assert digest(p)==digest(b/p.name),p.name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: timeline_2020-10-28.svg

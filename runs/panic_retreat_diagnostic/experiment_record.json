@@ -1,0 +1,12 @@
+{
+  "saved_at_utc": "2026-09-09T18:16:15.258220+00:00",
+  "user_plan": "本轮只交付七事件阶段覆盖、固定原35信号四格归因和三张平列机制证据卡；不选择或修改机制。H10为主，H5/H20完整附列。",
+  "baseline_commit": "25d96bbb39e9f74c421ab9fbeec029dabbc282b0",
+  "accepted_E1": "runs/panic_retreat/20260909T171926132199Z/run.json",
+  "accepted_inputs_manifest": "runs/panic_retreat/20260909T171926132199Z/inputs.json",
+  "implementation_sha256": "06dff8d485212e40516de19e6cfedaa4aa521ecefec629f33c83011307e12862",
+  "calculation_conventions": "因果状态与未来收益分层；后续B真状态逐日独立路径；四格(e,u),(e+1,u),(e,u+1),(e+1,u+1)；两序平均归因；原时钟、5bp双边、份额/现金会计不变。",
+  "engineering_probe_note": "模块保存后已启动一次本地工程冒烟计算，未写正式运行结果；本记录在读取该探针数值前保存。正式入口还会在任何新收益计算前保存完整口径和输入摘要。探针保留，不称为结果揭示前预注册。",
+  "changes_allowed": "修复实现与展示，不按收益修改本轮口径；已揭示后诊断。",
+  "stop": "等待用户选择及验收，不提交推送。"
+}

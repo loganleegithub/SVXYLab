@@ -1,0 +1,70 @@
+计算前口径已保存：runs/panic_retreat_diagnostic/20260909T182632181793Z
+{
+  "output_dir": "data/clean/panic_retreat_diagnostic/20260909T182632181793Z",
+  "report": "reports/panic_retreat_diagnostic.html",
+  "open_exit_code": 0,
+  "validation": {
+    "engineering": "COMPUTED; ordinary tests/reproducibility/page checks recorded separately at final delivery",
+    "research": "Descriptive diagnostic complete; no mechanism tested or selected",
+    "coverage": {
+      "sessions": 1930,
+      "start": "2019-01-02",
+      "end": "2026-09-04",
+      "episodes": 7,
+      "original_signals": 35,
+      "four_cells": 420,
+      "later_dates": 202,
+      "later_paths": 606,
+      "candidate_statuses": {
+        "MATURE": 606
+      }
+    },
+    "audited_accounts": 1026,
+    "audited_rows": 12996,
+    "max_account_error": 1.4551915228366852e-11,
+    "reconciliation": [
+      {
+        "reference": "E1_MAIN_105",
+        "trades": 105,
+        "max_numeric_error": 4.547473508864641e-12
+      },
+      {
+        "reference": "E1_LAG2_H10_35",
+        "trades": 35,
+        "max_numeric_error": 4.547473508864641e-12
+      }
+    ],
+    "attribution_max_error": 0.0,
+    "segment_max_error_dollars": 3.8767211663071066e-11,
+    "old_input_files_unchanged": true,
+    "historical_actual_publication_proven": false,
+    "downloaded_data": false,
+    "mechanism_selected": null,
+    "mechanism_executed": false,
+    "commit_or_push": false
+  },
+  "source_sha256": {
+    "src/svxylab/panic_retreat_diagnostic.py": "118ed2c6c5245b36dc80d36156053fe68212fac65169fb8acf7646ed282957cf",
+    "src/svxylab/panic_retreat_diagnostic_report.py": "e15a6c64e8dc640a73da29f873e372dac065ee3bfcc44a80d39bd3c58600e8c6"
+  },
+  "csv_sha256": {
+    "attribution.csv": "a0bae2270aa7f8f8ffbb3c38ba6853c0247a05c850ccb02a4d5ca755fc8ea0c7",
+    "availability.csv": "4c5a3cf23604e9cb240706e57f5b4d6baff8210bfb221360a43f386f6bb4849d",
+    "candidate_ledgers.csv": "9daa39b848cea00d836779b289c17df83f14eb1a8895c5fbaf1869b1d2b4ad98",
+    "candidate_summary.csv": "36656a9bd3b9f5d9697674880ee422aa535662955181ff2295448f0aa7451468",
+    "candidates.csv": "8160c3708315565b084c62a9832f3134fd4cc36457db076437528e89fc073d35",
+    "cell_ledgers.csv": "e811c2060862145d86d69bdd0adb13f208446844525330f74c0bb76e767c8e55",
+    "common_paths.csv": "e3da2db81caf36461078e4716db1d0f9ea32dbccf0045ceafc5215d64ae12c97",
+    "coverage_days.csv": "659b5bde36f108db7b52755763160c3c3e51751babb4e6fd2cfbe931f536ee88",
+    "episode_coverage.csv": "a9e28fa25bca8f0acbd72b4174d9294dec95f4714866285945161dc81dc0e898",
+    "episodes.csv": "3f250dd7269252d613bf2df433757a72bbd0281a783aeb5c7b18dd1810bcb579",
+    "four_cells.csv": "9e3e548cf2e235382c97856c297a8d267732827d2bc8127d5e63e10ca27d6b05",
+    "holding_outcomes.csv": "516321bc858583fa5f467e9d830d8fabc19dcf4e90127b08f0a4d8c98fe104cd",
+    "holding_segments.csv": "41584b37e7272aee49e2b995cacb07bcd1b194e8d9ee81172db7c5b89ff7b5d3",
+    "holding_states.csv": "4aefd6f928bbf2558e11d5080c46b15a19e08cb97313d4f38ec438ee5fbba687",
+    "independent_audit.csv": "bb33a2c682e9ca53cdecd95bcb67ad39bc86f77899d6e43089898ea63ada5dd2",
+    "original_reconciliation.csv": "044228f04fee983acd74582ffb198ae707ae2922bf72c95f21313ae4c141c353",
+    "signals.csv": "ba1adbc25fb4c185b4b0ff20f2f7efc74a20db63e03fe149ed42e1328163bdea",
+    "timeline.csv": "915114f8f168ee8d975a26edea80e45864bd8b02487f6773a8ebeeecdd064d3c"
+  }
+}

@@ -1,5 +1,9 @@
 # SVXYLab：本地研究工作区
 
+最新确认（2026-09-10）：用户已确认E1补充诊断交付并明确“提交推送”，本检查点按授权提交推送origin/main，记录见[诊断验收](runs/panic_retreat_diagnostic/acceptance.json)。停在本诊断，等待用户另行选择机制；不自动执行修改或进入下一实验。原报告和下方交付记录保留其历史状态，已披露限制继续有效。
+
+当前交付（2026-09-10）：**E1补充诊断完成，等待你选择及验收。** 打开[中文诊断报告](reports/panic_retreat_diagnostic.html)，或运行`.venv/bin/python -m svxylab.panic_retreat_diagnostic --open`。固定原七事件与35信号，交付完整时间轴、后续候选覆盖、四格执行归因、可得时点及三张平列机制证据卡。169项普通测试通过，1026条路径独立核账及两次复算一致。2020全部反例保留；没有修改机制、提交或推送。详细结果和页面核验限制见[STATUS.md](STATUS.md)。以下为旧E1与旧阶段历史记录。
+
 最新确认（2026-09-10）：用户已确认E1交付并明确“提交推送”，本检查点按授权提交至origin/main；确认记录见[runs/panic_retreat/acceptance.json](runs/panic_retreat/acceptance.json)。停在E1；原交付报告及以下历史状态保留，已披露限制继续有效。
 
 当前交付（2026-09-10）：**E1恐慌退潮事件研究已完成，等待验收**。直接打开[中文报告](reports/panic_retreat.html)，或在本目录运行`.venv/bin/python -m svxylab.panic_retreat --open`。这是同包独立研究模块的局部入口例外；旧M2和冻结研究不改。7轮冲击中，主B持有10日平均净收益+3.40%，最差−40.93%；再晚一天执行均值变为−0.04%。数据截至2026-09-04，全部是揭示后历史；157项普通测试通过，未提交推送、未进入下一实验。详细范围、复算和页面检查限制见[当前进度](STATUS.md)；以下旧阶段正文保留为历史记录。

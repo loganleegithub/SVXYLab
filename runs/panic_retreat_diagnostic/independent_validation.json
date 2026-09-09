@@ -1,0 +1,44 @@
+{
+  "status": "COMPLETED",
+  "real_input_prefixes": 252,
+  "future_signal_perturbations": 47,
+  "availability_prefix_and_future_checks": 47,
+  "price_perturbation_candidate_dates_unchanged": true,
+  "retrospective_peak_absent_from_causal_API": true,
+  "synthetic_values_persisted_as_real_data": false,
+  "original_reconciliation": [
+    {
+      "reference": "E1_MAIN_105",
+      "trades": 105,
+      "max_numeric_error": 4.547473508864641e-12
+    },
+    {
+      "reference": "E1_LAG2_H10_35",
+      "trades": 35,
+      "max_numeric_error": 4.547473508864641e-12
+    }
+  ],
+  "independent_accounts": 1026,
+  "independent_account_rows": 12996,
+  "max_account_error": 2.9103830456733704e-11,
+  "exchange_calendar_execution_checks": 1026,
+  "common_account_paths": 420,
+  "lifecycle_2020_complete": true,
+  "coverage_rows": 223,
+  "later_dates": 202,
+  "outside_2020_true": 97,
+  "outside_2020_sustained": 95,
+  "outside_2020_renewed": 2,
+  "historical_publish_timestamp_proven": false,
+  "static_html_links": 37,
+  "chart_images": 7,
+  "pending_final_record_links": [
+    "runs/panic_retreat_diagnostic/final_validation.json",
+    "runs/panic_retreat_diagnostic/reproducibility.json"
+  ],
+  "full_page_visual_check": "NOT_VERIFIED_BROWSER_POLICY_BLOCK",
+  "protected_files": 146,
+  "protected_files_unchanged": true,
+  "audited_output_dir": "data/clean/panic_retreat_diagnostic/20260909T182632181793Z",
+  "provenance_note": "审计时运行目录补录；计算验证未改变。"
+}

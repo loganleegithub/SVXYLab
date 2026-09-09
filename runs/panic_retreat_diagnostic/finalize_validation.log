@@ -1,0 +1,80 @@
+{
+  "stage": "E1_SUPPLEMENTAL_DIAGNOSTIC",
+  "completed_at_utc": "2026-09-09T18:33:10.060130+00:00",
+  "engineering": "计算、测试、独立核账和复算完成；整页工具视觉核验受限",
+  "research": "揭示后有限诊断完成；三项机制证据平列；未选择或执行机制",
+  "real_data": {
+    "sessions": 1930,
+    "start": "2019-01-02",
+    "end": "2026-09-04",
+    "episodes": 7,
+    "original_signals": 35,
+    "four_cells": 420,
+    "later_dates": 202,
+    "later_paths": 606,
+    "candidate_statuses": {
+      "MATURE": 606
+    }
+  },
+  "baseline_commit": "25d96bbb39e9f74c421ab9fbeec029dabbc282b0",
+  "final_run": "runs/panic_retreat_diagnostic/20260909T182924254458Z/run.json",
+  "output_dir": "data/clean/panic_retreat_diagnostic/20260909T182924254458Z",
+  "report": "reports/panic_retreat_diagnostic.html",
+  "report_sha256": "6dc28c6ac39ea67b5bb43f634d41561a473aeb431dd607e8689a4f332e4c763d",
+  "ordinary_pytest": {
+    "tests": 169,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "independent_validation": "runs/panic_retreat_diagnostic/independent_validation.json",
+  "real_input_prefix_checks": 252,
+  "future_and_information_checks": 47,
+  "independent_accounts": 1026,
+  "independent_account_rows": 12996,
+  "independent_max_amount_error": 2.9103830456733704e-11,
+  "original_105_and_delayed_35_match": true,
+  "attribution_identity_max_error": 0.0,
+  "reproducibility": {
+    "csv_byte_identical": 18,
+    "json_byte_identical": 2,
+    "png_byte_identical": 7,
+    "svg_internal_ids_normalized_identical": 7
+  },
+  "original_E1_inputs_sources_and_report_unchanged": 146,
+  "old_tracked_changes": [
+    "AGENTS.md",
+    "README.md",
+    "STATUS.md"
+  ],
+  "m2_or_original_E1_logic_changed": false,
+  "visual": {
+    "macos_open_exit_codes": [
+      0,
+      0
+    ],
+    "seven_pngs_directly_inspected": true,
+    "final_pngs_match_inspected": true,
+    "full_page_screenshot_verified": false,
+    "interactive_details_verified": false,
+    "limitation": "浏览器工具此前拒绝本地HTML；未绕过。macOS打开、图表目视与静态链接不等于整页截图验收。",
+    "static_links_verified": 37,
+    "broken_links": 0
+  },
+  "limitations": [
+    "历史实际发布与接收时刻未证明；lag=1没有新增完成日线可做成交前复查",
+    "候选日高度重叠，不能作为独立样本，也不是再入场账户或可实时执行的策略证明",
+    "路径风险仅有日收盘；没有盘中成交或盘中最大损失证据",
+    "工程探针早于单独根记录，记录在experiment_record.json；正式入口每次在新收益计算前保存完整口径与输入摘要，不称揭示前预注册"
+  ],
+  "source_sha256": {
+    "src/svxylab/panic_retreat_diagnostic.py": "118ed2c6c5245b36dc80d36156053fe68212fac65169fb8acf7646ed282957cf",
+    "src/svxylab/panic_retreat_diagnostic_report.py": "0ee7c3cf89a45ea4ca884760bed43cb8fc11156259a8df18e73b829bdb1c050d"
+  },
+  "test_sha256": "fdaf99cc4fd6c5f445efd2928bc22158455c9eb93a236fbc869dd7239d633f5c",
+  "mechanism_selected": null,
+  "mechanism_executed": false,
+  "committed": false,
+  "pushed": false,
+  "stop": "等待用户选择及验收；不开始下一实验"
+}
