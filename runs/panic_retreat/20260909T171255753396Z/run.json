@@ -1,0 +1,12 @@
+{
+  "status": "COMPUTATION_COMPLETE",
+  "output_dir": "data/clean/panic_retreat/20260909T171255753396Z",
+  "report": "reports/panic_retreat.html",
+  "episodes": 7,
+  "clusters": 7,
+  "accounts": 50,
+  "independent_trades": 319,
+  "exit_code": 0,
+  "open_exit_code": 0,
+  "finished_at_utc": "2026-09-09T17:13:23.040777+00:00"
+}

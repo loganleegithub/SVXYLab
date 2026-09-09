@@ -1,0 +1,90 @@
+{
+  "task_id": "PANIC_RETREAT_EVENT_STUDY_V1",
+  "started_at_utc": "2026-09-09T17:19:31.541383+00:00",
+  "command": [
+    "/Users/logan/SVXYLab/.venv/bin/python",
+    "-m",
+    "svxylab.panic_retreat",
+    "--as-of",
+    "2024-08-07",
+    "--signal-only"
+  ],
+  "config": {
+    "task_id": "PANIC_RETREAT_EVENT_STUDY_V1",
+    "history_attribute": "揭示后历史研究；不是新盲测或独立OOS",
+    "main_rule": "B_RETREAT",
+    "start": "2019-01-02",
+    "end": "2026-09-04",
+    "level": 30.0,
+    "rise": 0.4,
+    "lookback": 5,
+    "retreat": 0.1,
+    "window": 10,
+    "rearm_level": 25.0,
+    "rearm_days": 5,
+    "horizons": [
+      5,
+      10,
+      20
+    ],
+    "main_horizon": 10,
+    "lag": 1,
+    "cost": 0.0005,
+    "capital": 100000.0,
+    "cash_return": 0.0,
+    "seed": 1707,
+    "bootstrap_repetitions": 1000,
+    "interval": 0.95,
+    "cost_sensitivities": [
+      0.0,
+      0.0015,
+      0.003
+    ],
+    "delay_sensitivity": 2,
+    "availability": "ASSUMED_NEXT_SESSION_60MIN_BEFORE_CLOSE; not full historical PIT",
+    "distribution_policy": "Split shares divide by split_factor; cash distributions remain cash; no fund fee duplication",
+    "missing_vix_policy": "Break low streak; unknown running peak until lifecycle ends; do not infer retreat across gap",
+    "missing_vx_policy": "Skip unjudgeable day, continue original window; first observed signal allowed but first-trigger gap excluded from complete paired evidence",
+    "missing_price_policy": "No interpolation or postponed fill; unknown transaction result remains null; continuous ledger stops before first unvalued date",
+    "overlap_policy": "Skip new entry if entry <= existing planned exit; no queue",
+    "path_policy": "Close-only fixed-share path after entry; MAE/MFE relative to post-buy equity before sale cost; net drawdown also separate",
+    "period_policy": "Events assigned by shock start; trades/opportunities require maturity by period end; continuous slices never reset capital",
+    "cluster_policy": "Connected overlap of [s,s+window+lag+max(horizons)] under main configuration; never feeds signals",
+    "baseline_policy": "Common 2019-01-02 cash anchor; earliest baseline purchase 2019-01-03 close; no forced terminal sale",
+    "bil_policy": "Independent N1 total-return reinvestment proxy, entry 5bp, no terminal forced sale; not SVXY/BIL rotation",
+    "neighborhood": {
+      "level": [
+        25.0,
+        35.0
+      ],
+      "rise": [
+        0.3,
+        0.5
+      ],
+      "retreat": [
+        0.05,
+        0.15
+      ],
+      "window": [
+        5,
+        15
+      ],
+      "rearm_days": [
+        3,
+        10
+      ]
+    }
+  },
+  "git_head": "d04b2ebb3ae2599aea3c24e2c8c8d7d5046fdaa3",
+  "registered_before_outcome_calculation": true,
+  "history_already_revealed": true,
+  "source_sha256": {
+    "panic_retreat.toml": "dbd7344955d30dd6dd617a4e996094f5ff21e1094eaf6fd5c83f92a49e8e0d3d",
+    "src/svxylab/panic_retreat.py": "6c844df09b18430fbfb60dd49c01240bdbc638838ff7cd9274a3664254c80403",
+    "src/svxylab/panic_retreat_report.py": "a49edc35f313b04848df6b2cde21900ee9ebdc5071e1aa07419c53640cd9f636",
+    "src/svxylab/ledger.py": "d70f1570acb03bb9a67578262e899f4e84a94d44a7b3bf21a911cc40ad24b685",
+    "src/svxylab/returns.py": "1f052bef80dca1743641d06216ef4a33fbbac72ec95d33594914ffab40157348",
+    "src/svxylab/timing.py": "738a64f3375f59182d8baa776ad4f1793d75db00fe11f57599e53c74350227dc"
+  },
+  "scope": "E1 only; no M2 fits or old release verification; stop for acceptance; no commit or push"
+}

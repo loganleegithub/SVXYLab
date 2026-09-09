@@ -1,0 +1,158 @@
+{
+  "status": "VERIFIED",
+  "first_run": "runs/panic_retreat/20260909T171832358005Z",
+  "second_run": "runs/panic_retreat/20260909T171926132199Z",
+  "equal_csv_files": 28,
+  "equal_calculation_json_files": 3,
+  "csv_identity": [
+    {
+      "file": "account_summary.csv",
+      "sha256": "60c3636de3b6870e261b6d630c0558e643da7068dafb56aa2cb55575fde5f5e1"
+    },
+    {
+      "file": "bootstrap_scalars.csv",
+      "sha256": "284b5de1682b84aca915687110176a034051bcaa4480571fe258c6d09b3db0ad"
+    },
+    {
+      "file": "case_paths.csv",
+      "sha256": "3af4d7ef6448faf59c6c0669475a6bcbe5aef4be4c4bb38cdbaa749dc7a08090"
+    },
+    {
+      "file": "cluster_intervals.csv",
+      "sha256": "aeca149678b7ee082da4d57d881ec00fd54701ca59f526d066817ba4c4afdb62"
+    },
+    {
+      "file": "episode_daily.csv",
+      "sha256": "a0b901fc8d098a8fe79d6f1756c071fc535c55a35492b4f84dc4abd44b12af60"
+    },
+    {
+      "file": "episodes.csv",
+      "sha256": "caf15e3ba7852929c3c33373e7146086c8a6cfebd2cc1f315b83dac5f6c8ddb8"
+    },
+    {
+      "file": "event_summary.csv",
+      "sha256": "3d6d94cc9e3efd3a4d2fc0d0a66b8e027edddad7e97ba964a3398a17e170ad87"
+    },
+    {
+      "file": "execution_opportunities.csv",
+      "sha256": "dad4aecd2ec112aab25eb110f25bc99dfde741db50aae0c5143e834887c5543c"
+    },
+    {
+      "file": "execution_pairs.csv",
+      "sha256": "686ed9e146af6669bda43addd0c39b12829c00f2ba6c710edd73ba1577865319"
+    },
+    {
+      "file": "execution_summary.csv",
+      "sha256": "f96e0bfe1b280915c0607cd353ba66180864314d0b718c5b606ddb6af12e9651"
+    },
+    {
+      "file": "execution_trades.csv",
+      "sha256": "4c302251e401b9b5cf2cb41af22a95490dbc1d99c959352b9edffc663f886916"
+    },
+    {
+      "file": "independent_trade_audit.csv",
+      "sha256": "882bcb7f28e6d066ac88a4cdfe453cd748536ed6263843ded36cb43b7727eadf"
+    },
+    {
+      "file": "inference_clusters.csv",
+      "sha256": "ca654fd3811bd70d1d5005a99fc813dcf10f34b14be2c53330418d1ba121f89a"
+    },
+    {
+      "file": "leave_one_cluster_out.csv",
+      "sha256": "edd43c2c7a2eab3c18a7f0f9aeb6e715042688f34e15e2f774586fefcb25e182"
+    },
+    {
+      "file": "ledgers.csv",
+      "sha256": "32aafc54c4cd5206830fa7971a50ac7927feaf3915611d5f3cbb10c371f91a8e"
+    },
+    {
+      "file": "neighborhood_episodes.csv",
+      "sha256": "dba0108de5ff98659d7a6274413fc9a45ede8e8c3034f39db793419fc4866b1b"
+    },
+    {
+      "file": "neighborhood_opportunities.csv",
+      "sha256": "f00439b5e271aa5393bce788f593e05e9801d8d9b5f81fcae2cec2ef7cc68462"
+    },
+    {
+      "file": "neighborhood_signals.csv",
+      "sha256": "2865e8bb22dfc0088e3b91cf105630844c0d2ab8529e2fb5e375a34820de3bc0"
+    },
+    {
+      "file": "neighborhood_summary.csv",
+      "sha256": "fbf6a80f3ca751c37500e3542029e186564d96c6a2a3a3c011ed72d71fe8033e"
+    },
+    {
+      "file": "neighborhood_trades.csv",
+      "sha256": "a912489c838ce1ca8c41c3b526f61a3b84f4440224fa28c67bc024e346245ac7"
+    },
+    {
+      "file": "opportunity_results.csv",
+      "sha256": "ac47fe060e03947271b4c8e451c4d4cca98bdc08abf910e0cf6dc5b91af1a99e"
+    },
+    {
+      "file": "paired_events.csv",
+      "sha256": "7dd11fd7d56881de270a2846b20166a1264eeb76a61b1b3088de0006008e80a9"
+    },
+    {
+      "file": "paired_summary.csv",
+      "sha256": "181792d3b043b706c6fbaa3a9fd1f4c29d094e4da86a758da56350f6645a27e4"
+    },
+    {
+      "file": "participation.csv",
+      "sha256": "db771113a69df7865aff330e8138b9d962df5aa844936828084d0914a145572c"
+    },
+    {
+      "file": "signal_inputs.csv",
+      "sha256": "24e16e30fa89d29d67efc7623b62e2c364bdc3c8485678e5481a4be61de15819"
+    },
+    {
+      "file": "signals.csv",
+      "sha256": "ba1adbc25fb4c185b4b0ff20f2f7efc74a20db63e03fe149ed42e1328163bdea"
+    },
+    {
+      "file": "trade_paths.csv",
+      "sha256": "120fc747a73751e31073eac6fe29d144858920b546e1030693cc563f347346d9"
+    },
+    {
+      "file": "trades.csv",
+      "sha256": "e3f9b11030037abecb755dc0a8be2f5da2494df3cb4b8aa027ad63facf8c4509"
+    }
+  ],
+  "non_calculation_json_annotations_excluded": {
+    "summary.json": [
+      "engineering"
+    ]
+  },
+  "inputs_verified": 107,
+  "protected_legacy_files_unchanged": [
+    "experiment.toml",
+    "RESEARCH_SPEC.md",
+    "src/svxylab/__main__.py",
+    "src/svxylab/release.py",
+    "src/svxylab/ledger.py",
+    "src/svxylab/returns.py",
+    "src/svxylab/timing.py"
+  ],
+  "bootstrap_scalars_independently_recomputed": 14000,
+  "bootstrap_max_error": 8.465450562766819e-16,
+  "episodes": 7,
+  "signals": 35,
+  "opportunity_rows": 105,
+  "ordinary_pytest": {
+    "tests": 157,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "local_html_targets_exist": true,
+  "html_targets_checked": 54,
+  "test_source_sha256": "559ccc74f95ebc21588a174e17b5d8c87799a7da2f0fcbd7fa331c941342bec5",
+  "visual_check": {
+    "browser_page": "BLOCKED_BY_LOCAL_FILE_URL_SECURITY_POLICY; no workaround attempted",
+    "macos_open": "exit 0; not evidence of page inspection",
+    "chart_files": "continuous and worst 2020 case viewed directly; legible Chinese, axes and legends",
+    "full_page_screenshot_verified": false
+  },
+  "no_commit_or_push": true,
+  "user_acceptance": "PENDING"
+}

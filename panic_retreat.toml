@@ -1,0 +1,41 @@
+task_id = "PANIC_RETREAT_EVENT_STUDY_V1"
+history_attribute = "揭示后历史研究；不是新盲测或独立OOS"
+main_rule = "B_RETREAT"
+start = "2019-01-02"
+end = "2026-09-04"
+level = 30.0
+rise = 0.40
+lookback = 5
+retreat = 0.10
+window = 10
+rearm_level = 25.0
+rearm_days = 5
+horizons = [5, 10, 20]
+main_horizon = 10
+lag = 1
+cost = 0.0005
+capital = 100000.0
+cash_return = 0.0
+seed = 1707
+bootstrap_repetitions = 1000
+interval = 0.95
+cost_sensitivities = [0.0, 0.0015, 0.0030]
+delay_sensitivity = 2
+availability = "ASSUMED_NEXT_SESSION_60MIN_BEFORE_CLOSE; not full historical PIT"
+distribution_policy = "Split shares divide by split_factor; cash distributions remain cash; no fund fee duplication"
+missing_vix_policy = "Break low streak; unknown running peak until lifecycle ends; do not infer retreat across gap"
+missing_vx_policy = "Skip unjudgeable day, continue original window; first observed signal allowed but first-trigger gap excluded from complete paired evidence"
+missing_price_policy = "No interpolation or postponed fill; unknown transaction result remains null; continuous ledger stops before first unvalued date"
+overlap_policy = "Skip new entry if entry <= existing planned exit; no queue"
+path_policy = "Close-only fixed-share path after entry; MAE/MFE relative to post-buy equity before sale cost; net drawdown also separate"
+period_policy = "Events assigned by shock start; trades/opportunities require maturity by period end; continuous slices never reset capital"
+cluster_policy = "Connected overlap of [s,s+window+lag+max(horizons)] under main configuration; never feeds signals"
+baseline_policy = "Common 2019-01-02 cash anchor; earliest baseline purchase 2019-01-03 close; no forced terminal sale"
+bil_policy = "Independent N1 total-return reinvestment proxy, entry 5bp, no terminal forced sale; not SVXY/BIL rotation"
+
+[neighborhood]
+level = [25.0, 35.0]
+rise = [0.30, 0.50]
+retreat = [0.05, 0.15]
+window = [5, 15]
+rearm_days = [3, 10]

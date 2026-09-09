@@ -1,0 +1,395 @@
+{
+  "ledgers": [
+    {
+      "account": "A_SHOCK",
+      "H": 5,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 5,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 2.9103830456733704e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 5,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 5,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 5,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 10,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 10,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.1311840353300795e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 20,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 20,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 20,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 20,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 20,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "cash",
+      "H": 0,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 0.0
+    },
+    {
+      "account": "fixed_50",
+      "H": 0,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 7.275957614183426e-11
+    },
+    {
+      "account": "curve",
+      "H": 0,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 2.7998794255301718e-11
+    },
+    {
+      "account": "SVXY_BUY_HOLD",
+      "H": 0,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.1311840353300795e-11
+    },
+    {
+      "account": "BIL_TR_REFERENCE",
+      "H": 0,
+      "scenario": "BASE",
+      "rows": 1930,
+      "max_error_dollars": 1.1311840353300795e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 10,
+      "scenario": "COST_0BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "COST_0BP",
+      "rows": 1930,
+      "max_error_dollars": 0.0
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 10,
+      "scenario": "COST_0BP",
+      "rows": 1930,
+      "max_error_dollars": 0.0
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_0BP",
+      "rows": 1930,
+      "max_error_dollars": 7.275957614183426e-12
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_0BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 10,
+      "scenario": "COST_15BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "COST_15BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 10,
+      "scenario": "COST_15BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_15BP",
+      "rows": 1930,
+      "max_error_dollars": 1.205762573119884e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_15BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 10,
+      "scenario": "COST_30BP",
+      "rows": 1930,
+      "max_error_dollars": 1.574562702444382e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "COST_30BP",
+      "rows": 1930,
+      "max_error_dollars": 1.3358203432289883e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 10,
+      "scenario": "COST_30BP",
+      "rows": 1930,
+      "max_error_dollars": 1.574562702444382e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_30BP",
+      "rows": 1930,
+      "max_error_dollars": 1.3358203432289883e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "COST_30BP",
+      "rows": 1930,
+      "max_error_dollars": 1.4949819160392508e-11
+    },
+    {
+      "account": "A_SHOCK",
+      "H": 10,
+      "scenario": "LAG_2",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "LAG_2",
+      "rows": 1930,
+      "max_error_dollars": 1.1311840353300795e-11
+    },
+    {
+      "account": "C_RETREAT_VX",
+      "H": 10,
+      "scenario": "LAG_2",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D3_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "LAG_2",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "D5_CLOCK_WAIT",
+      "H": 10,
+      "scenario": "LAG_2",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "level_25",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "level_35",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "rise_0.3",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "rise_0.5",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "retreat_0.05",
+      "rows": 1930,
+      "max_error_dollars": 1.2887539993511332e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "retreat_0.15",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "window_5",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "window_15",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "rearm_days_3",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    },
+    {
+      "account": "B_RETREAT",
+      "H": 10,
+      "scenario": "rearm_days_10",
+      "rows": 1930,
+      "max_error_dollars": 1.4551915228366852e-11
+    }
+  ],
+  "ledger_accounts": 50,
+  "ledger_rows": 96500,
+  "independent_mature_trades": 319,
+  "max_trade_return_error": 4.440892098500626e-16,
+  "max_trade_fee_error_dollars": 1.1368683772161603e-13,
+  "episode_opportunity_count_reconciled": true,
+  "positive_real_examples": [
+    {
+      "episode_id": "E_2020-10-28",
+      "rule_id": "A_SHOCK",
+      "H": 5,
+      "lag": 1,
+      "cost_rate": 0.0005,
+      "entry_session": "2020-10-29",
+      "exit_session": "2020-11-05",
+      "net_return": 0.07262327604134144,
+      "independent_cash_end": 107262.32760413412,
+      "independent_fees": 103.63300529221942,
+      "cash_distributions": 0.0,
+      "return_error": 2.220446049250313e-16,
+      "fee_error_dollars": 0.0
+    }
+  ],
+  "negative_real_examples": [
+    {
+      "episode_id": "E_2020-02-27",
+      "rule_id": "A_SHOCK",
+      "H": 5,
+      "lag": 1,
+      "cost_rate": 0.0005,
+      "entry_session": "2020-02-28",
+      "exit_session": "2020-03-06",
+      "net_return": -0.13626035854883667,
+      "independent_cash_end": 86373.96414511632,
+      "independent_fees": 93.18359885949415,
+      "cash_distributions": 0.0,
+      "return_error": 1.1102230246251565e-16,
+      "fee_error_dollars": 1.4210854715202004e-14
+    }
+  ],
+  "natural_no_trigger_examples": []
+}

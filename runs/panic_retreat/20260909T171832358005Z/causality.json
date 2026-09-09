@@ -1,0 +1,30 @@
+{
+  "fixture": "SYNTHETIC_FUTURE_PERTURBATION_OF_REAL_INPUT_IN_MEMORY_ONLY",
+  "checks": [
+    {
+      "cutoff": "2020-03-06",
+      "signal_and_daily_prefix_equal": true,
+      "five_account_prefixes_equal": true
+    },
+    {
+      "cutoff": "2020-03-20",
+      "signal_and_daily_prefix_equal": true,
+      "five_account_prefixes_equal": true
+    },
+    {
+      "cutoff": "2024-08-07",
+      "signal_and_daily_prefix_equal": true,
+      "five_account_prefixes_equal": true
+    },
+    {
+      "cutoff": "2025-04-09",
+      "signal_and_daily_prefix_equal": true,
+      "five_account_prefixes_equal": true
+    },
+    {
+      "cutoff": "2026-09-04",
+      "signal_and_daily_prefix_equal": true,
+      "five_account_prefixes_equal": true
+    }
+  ]
+}
